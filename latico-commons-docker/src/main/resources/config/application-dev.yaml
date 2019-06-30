@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: demo
+
+
+logging:
+  #  引入日志配置文件,logback的jar跟log4j2的jar不能共存，日志配置根据实际情况配置
+
+  #  如果是使用jar方式启动
+  config: classpath:config/logback-spring.xml
+
+  #  如果是使用外部web容器方式启动，使用该日志,但是不生效，只会读取类路径根目录下规范配置
+  #  config: classpath:log4j2.xml
+
+  #  配置包的日志打印等级
+#  level:
+#    com.latico.archetype.springboot: DEBUG
+#    com.latico.commons: INFO
+
+#http编码配置
+http:
+  encoding:
+    charset: UTF-8
+    force: true
+    enabled: true

@@ -1,0 +1,26 @@
+1、maven添加依赖；
+<dependency>
+			<groupId>com.latico.commons</groupId>
+			<artifactId>latico-commons-net</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+2、
+    @Test
+    public void ping() {
+    //SSH模式
+        CmdClient cmdClient = CmdClientFactory.getCmdClient(CmdClientTypeEnum.SSH);
+        if (cmdClient.login("172.168.10.7", 22, "laticosoft", "laticoosft")) {
+            String receiveData = cmdClient.execCmdAndReceiveData("ping www.baidu.com -c 5");
+            System.out.println(receiveData);
+        }
+        cmdClient.close();
+    }
+    @Test
+    public void ping2() {
+    //telnet模式
+        CmdClient cmdClient = CmdClientFactory.getCmdClient(CmdClientTypeEnum.Telnet);
+        if (cmdClient.login("10.24.89.13", 23, "admin", "admin")) {
+            cmdClient.execCmdAndReceiveData("ping 192.168.100.100");
+        }
+        cmdClient.close();
+    }

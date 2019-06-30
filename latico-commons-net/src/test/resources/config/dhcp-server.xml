@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config hint="程序配置文件（全量配置）">
+	<common>
+		<defaultLeaseTime caption="默认租期" hint="单位毫秒">172800</defaultLeaseTime>
+		<serverListenSocket caption="服务器监听的SOCKET">127.0.0.1:67</serverListenSocket>
+
+		<threadPoolSize>5</threadPoolSize>
+		<threadPoolMaxSize>20</threadPoolMaxSize>
+		<threadPoolQueueSize>10000</threadPoolQueueSize>
+	</common>
+
+	<dhcpIpPools caption="DHCP服务器IP池配置" hint="可以配置多个">
+		<dhcpIpPool caption="IP池配置" hint="">
+			<id caption="IP池的ID">1</id>
+			<serverIp caption="DHCP互通的服务器IP，必填" hint="">192.168.0.1</serverIp>
+			<relayIp caption="中继的IP" hint="如果没有中继那就是:0.0.0.0" default="0.0.0.0">0.0.0.0</relayIp>
+			<startIp caption="IP池开始IP" hint="IP形式">192.168.0.100</startIp>
+			<endIp caption="IP池结束IP" hint="IP形式">192.168.0.200</endIp>
+			<netmask caption="掩码" hint="可以是IP形式也可以是数字形式">24</netmask>
+			<serverName caption="服务器名称" hint="">CattDhcpServer</serverName>
+			<serverMessage caption="服务器报文" hint="">latico-dhcp-server</serverMessage>
+			<serverDomainName caption="服务器域名" hint=""></serverDomainName>
+			<leaseTime caption="租期" hint="单位毫秒">172800</leaseTime>
+		</dhcpIpPool>
+	</dhcpIpPools>
+
+</config>

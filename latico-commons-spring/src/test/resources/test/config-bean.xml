@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- ConfigBean 配置类 -->
+  <bean id="Config" class="com.latico.commons.spring.test.bean.ConfigBean">
+  	<property name="autoAssignTask" value="true" />  <!-- 是否自动启动集群任务分发，同一个程序如果只是部署一套，也就是没有用到集群模式（启动多套会自动启动集群模式），那就可以设置成true，比如是打包成批量任务的时候，就可以设置成true  -->
+  	<property name="assignWaitTime" value="0" />  <!-- 分发前等待几分钟启动任务分发模块，默认2分钟 -->
+  	<property name="jobExecInterval" value="5" />  <!-- 单位分钟多久执行一次工作,默认5分钟 -->
+	<property name="sendAlarm" value="true" />  <!-- 是否推送告警给告警处理，默认true -->
+  	
+  	<!-- 下面的参数是为了方便调测代码，现场部署必须关掉 -->
+  	<property name="testOneNeTask" value="false" />  <!-- 是否测试某个网元任务 -->
+  	<property name="testObjId" value="4004473" />  <!-- 测试的对象ID，对应nm_task_info表的objid,也就是网元ID -->
+  	<property name="testSubObjTypeId" value="PORT_FLOW" />  <!-- 测试的对象子类型ID，对应nm_task_info表的kpi，也就是某个任务类型 -->
+  </bean>
+
+</beans>

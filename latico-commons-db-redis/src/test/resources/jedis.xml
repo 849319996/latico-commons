@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <JedisPoolConfig caption="连接池配置">
+        <maxTotal caption="池中最多可以有多少个jedis实例，默认值是8">8</maxTotal>
+        <maxIdle caption="池中最多有多少个空闲的jedis实例，默认值是8">8</maxIdle>
+        <minIdle caption="池中最小有多少个空闲的jedis实例，默认值是0">0</minIdle>
+        <maxWaitMillis caption="获取jedis实例的最大等待毫秒数，默认值是-1">15000</maxWaitMillis>
+        <connectionTimeout caption="连接超时">5000</connectionTimeout>
+        <soTimeout caption="socket超时">5000</soTimeout>
+        <testOnBorrow caption="在borrow一个jedis实例的时候，是否要进行验证操作，如果赋值true。则得到的jedis实例肯定是可以用的，默认false。">false</testOnBorrow>
+        <testOnReturn caption="在return一个jedis实例的时候，是否要进行验证操作，如果赋值true。则放回jedispool的jedis实例肯定是可以用的，默认false。">false</testOnReturn>
+        <blockWhenExhausted caption="连接耗尽的时候，是否阻塞，false会抛出异常，true阻塞直到超时。默认为true。">true</blockWhenExhausted>
+        <password caption="授权密码，假如redis配置了密码的时候用到"></password>
+
+        <clusterName caption="哨兵用到，主节点名字">master</clusterName>
+        <database caption="哨兵用到，数据库ID">0</database>
+        <clientName caption="哨兵用到，客户端名称"></clientName>
+        <maxAttempts caption="最大尝试次数">3</maxAttempts>
+    </JedisPoolConfig>
+
+    <HostAndPorts caption="主机和端口，可以多个，socket字符串">
+        <HostAndPort></HostAndPort>
+    </HostAndPorts>
+</config>
