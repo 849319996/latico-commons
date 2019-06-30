@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config hint="提供给Config类进行配置加载">
+	<common>
+		<id>2</id>
+	</common>
+
+</config>

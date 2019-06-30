@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config hint="程序配置文件（全量配置）">
+	<common caption="公共参数" hint="">
+		<cmdLineEndRegex caption="行结束正则" hint="判断到达命令行结束时用到的正则"><![CDATA[[\s\S]*?.+?(\$ *|# *|> *|: *|\] *)$]]></cmdLineEndRegex>
+		<netconfLineEndRegex caption="行结束正则" hint="判断到达命令行结束时用到的正则"><![CDATA[[\s\S]*?\]\]>\]\]>$]]></netconfLineEndRegex>
+		<cmdLastLineEndRegex caption="命令行最后一行结束正则" hint="判断到达命令命令行最后一行结束时用到的正则,比cmdLineEndRegex优先级高"><![CDATA[^\S.+?(\$ *|# *|> *|: *|\] *)$]]></cmdLastLineEndRegex>
+		<cmdFailInfoRegex caption="命令行失败信息正则" hint="判断执行的命令是否有出错"><![CDATA[(?i)[\s\S]*?(incorrect|login\S* +fail|error:|%Error |incomplete|denied| bad |reject|unknow|closed|time out|'\^'| \^ |\% *Invalid|Unknow[\s\S]*command|Unrecognized +command|\% +Failed)[\s\S]*?]]></cmdFailInfoRegex>
+		<specialCmdCheckLineEndRegex caption="指定命令格式的允许校验结束的" hint=""><![CDATA[(?i) *(dis\S*? +?cur|sh\S*? +?run).*]]></specialCmdCheckLineEndRegex>
+		<promptUnChangeCmdRegex caption="结束符不会改变的命令正则" hint=""><![CDATA[(?i) *?(dis|show).*]]></promptUnChangeCmdRegex>
+		<pwdPromptRegex caption="密码提示符信息" hint="判断是否提示输入密码"><![CDATA[(?i)[\s\S]*?Password[\s\S]*?]]></pwdPromptRegex>
+		<loginRedoTagRegex caption="登录尝试标志正则" hint="当登录失败的时候，叫你重新输入用户名，说明登录重试"><![CDATA[[\s\S]*(?i)(login:|username|user) *]]></loginRedoTagRegex>
+		<yesOrNoQuestionRegex caption="匹配命令行Yes|No问题正则" hint="判断执行的命令是否有提问回答"><![CDATA[[\s\S]*?((?i)[\(\[] *(y\S*) *[/|] *(n[^ \?|]*)[ \?]*[\)\]][ \?:]*)$]]></yesOrNoQuestionRegex>
+
+		<cmdConnTimeout caption="命令行连接登陆的超时时间" hint="单位毫秒" default="15000">15000</cmdConnTimeout>
+		<cmdAllowCheckLineEndTime caption="多长时间从数据流中获取不到数据，才允许校验命令行是否结束" hint="单位毫秒" default="100">50</cmdAllowCheckLineEndTime>
+		<specialCmdCheckLineEndTime caption="指定的特殊命令specialCmdCheckLineEndRegex，多长时间从数据流中获取不到数据，才允许校验命令行是否结束" hint="单位毫秒" default="100">50</specialCmdCheckLineEndTime>
+		<cmdSessionTimeout caption="命令行会话无操作超时" hint="单位毫秒，默认10分钟" default="600000">600000</cmdSessionTimeout>
+		<cmdConnFailRegex caption="命令行方式连接失败正则" hint="" default=""><![CDATA[(?i)[\s\S]*?(connection +error\.|Trying \d+\.\d+\.\d+\.\d+\s*\.\.\.)[\s\S]*?]]></cmdConnFailRegex>
+	</common>
+
+	<devDefaultUserPwds caption="设备的默认用户名密码" hint="厂家字段忽略大小写，用户名在前面，密码在后面，用斜杠分隔">
+		<devDefaultUserPwd manufacturer="huawei" connType="SSH" enable="false" enablePwd="" model="">root/Changeme_123</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="hw" connType="SSH" enable="false" enablePwd="" model="">root/Changeme_123</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="zte" connType="telnet" enable="true" enablePwd="zxr10" model="">who/who</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="zx" connType="telnet" enable="true" enablePwd="zxr10" model="">who/who</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="raisecom" connType="SSH" enable="false" enablePwd="raisecom" model="">raisecom/raisecom</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="rc" connType="SSH" enable="false" enablePwd="raisecom" model="">raisecom/raisecom</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="fiberHome" connType="SSH" enable="false" enablePwd="" model="">test/fiberHome</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="fh" connType="SSH" enable="false" enablePwd="" model="">test/fiberHome</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="fenghu" connType="SSH" enable="false" enablePwd="" model="">test/fiberHome</devDefaultUserPwd>
+		<devDefaultUserPwd manufacturer="fenghuo" connType="SSH" enable="false" enablePwd="" model="">test/fiberHome</devDefaultUserPwd>
+	</devDefaultUserPwds>
+
+	<devPageBreakCmds caption="设备非分页输出命令">
+		<devPageBreakCmd manufacturer="huawei" model="" pageBreakCmd="screen-length 0 temporary"/>
+		<devPageBreakCmd manufacturer="hw" model="" pageBreakCmd="screen-length 0 temporary"/>
+		<devPageBreakCmd manufacturer="zte" model="" pageBreakCmd="terminal length 0"/>
+		<devPageBreakCmd manufacturer="zx" model="" pageBreakCmd="terminal length 0"/>
+		<devPageBreakCmd manufacturer="fiberHome" model="" pageBreakCmd="terminal length 0"/>
+		<devPageBreakCmd manufacturer="fh" model="" pageBreakCmd="terminal length 0"/>
+		<devPageBreakCmd manufacturer="fenghuo" model="" pageBreakCmd="terminal length 0"/>
+		<devPageBreakCmd manufacturer="fenghu" model="" pageBreakCmd="terminal length 0"/>
+		<devPageBreakCmd manufacturer="Cisco" model="" pageBreakCmd="terminal length 0"/>
+		<devPageBreakCmd manufacturer="Raisecom" model="" pageBreakCmd="terminal page-break disable"/>
+		<devPageBreakCmd manufacturer="rc" model="" pageBreakCmd="terminal page-break disable"/>
+	</devPageBreakCmds>
+
+	<enableModels caption="指定要enable的厂家和型号" hint="厂家可以为空，型号也可以为空，但是两者不能同时为空">
+		<enableModel manufacturer="huawei" model="" enable="false" enablePwd=""/>
+		<enableModel manufacturer="hw" model="" enable="false" enablePwd=""/>
+		<enableModel manufacturer="zte" model="" enable="true" enablePwd="zxr10"/>
+		<enableModel manufacturer="zx" model="" enable="true" enablePwd="zxr10"/>
+		<enableModel manufacturer="Raisecom" model="" enable="false" enablePwd="raisecom"/>
+		<enableModel manufacturer="rc" model="" enable="false" enablePwd="raisecom"/>
+		<enableModel manufacturer="FiberHome" model="" enable="false" enablePwd=""/>
+		<enableModel manufacturer="fh" model="" enable="false" enablePwd=""/>
+		<enableModel manufacturer="fenghuo" model="" enable="false" enablePwd=""/>
+		<enableModel manufacturer="fenghu" model="" enable="false" enablePwd=""/>
+	</enableModels>
+
+	<forceCheckHasYesNoQuestionWithAnswerRegex caption="强制检查回答问题和拿到答案" hint="正则表达式，regexGroupIndex是读取正则的数据group号作为答案">
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)The password needs to be changed\. Change now\? \[Y/(N)\]:* *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)authenticated\. *Continue to access it\? *\[(Y)/N\] *:* *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)Save the server's public srcKey\? *\[(Y)/N\] *:* *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)Please select \[(R), D, Enter or Ctrl_C\]:*\s*]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)Please select \[(R)/D/E\]:*\s*]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)commit them before exiting\? *\[(Y)\(yes\)/N\(no\)/C\(cancel\)\]:*\s*]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)Please choose 'YES', 'NO' or 'CANCEL' first before pressing 'Enter'\. \[(Y)/N/C\]:*\s*]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)disable the DCN function\. Continue\? *\[(Y)/N\]: *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)disable DCN function, Continue\? *\[(Y)/N\] *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)disable dcn mode vlan function\. Continue\? \[(Y)/N\]:* *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)Please select public srcKey type for user authentication \[(R) for RSA/D for DSA\]:* *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)local/remote command is configured, a broadcast storm may occur\.Continue\? \[(Y)/N\]: *]]></questionWithAnswerRegex>
+		<questionWithAnswerRegex regexGroupIndex="1"><![CDATA[(?i)The specified VSI will be deleted\. Continue\? \[(Y)/N\]: *]]></questionWithAnswerRegex>
+	</forceCheckHasYesNoQuestionWithAnswerRegex>
+
+
+</config>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <common commonId="commonIdValue" commonName="commonNameValue">
+        <name1>value1</name1>
+        <name2 a="1" ag="3" >value2</name2>
+        <name3>3</name3>
+        <name4>3</name4>
+        <name5>5</name5>
+        <name6></name6>
+    </common>
+</config>

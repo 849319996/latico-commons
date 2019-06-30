@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>C:/mavenRepository</localRepository>
+    <pluginGroups>
+        <pluginGroup>org.mortbay.jetty</pluginGroup>
+        <pluginGroup>org.codehaus.cargo</pluginGroup>
+        <pluginGroup>com.latico.plugin</pluginGroup>
+    </pluginGroups>
+    <proxies>
+    </proxies>
+    <servers>
+        <!--发布到私服时使用的仓库名字和登陆用户名密码-->
+        <server>
+            <id>Releases</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+        <server>
+            <id>Snapshots</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+    </servers>
+
+    <!--配置镜像仓库-->
+    <profiles>
+
+        <!--配置阿里云-->
+        <profile>
+            <id>alimaven</id>
+            <repositories>
+                <repository>
+                    <id>nexus</id>
+                    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>never</updatePolicy>
+                        <!--
+                            <checksumPolicy>warn|fail|ignore</checksumPolicy>
+                            <updatePolicy>daily|never|always|interval 10</updatePolicy>
+                         -->
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>nexus</id>
+                    <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                        <updatePolicy>never</updatePolicy>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+        <!--配置公司私服-->
+        <profile>
+            <id>nexus</id>
+            <repositories>
+                <repository>
+                    <id>nexus</id>
+                    <url>http://172.168.10.100:8081/nexus/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <!--
+                            <checksumPolicy>warn|fail|ignore</checksumPolicy>
+                            <updatePolicy>daily|never|always|interval 10</updatePolicy>
+                         -->
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>nexus</id>
+                    <url>http://172.168.10.100:8081/nexus/content/groups/public</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+
+    </profiles>
+
+    <!-- 激活maven镜像，在这里可以指定激活多个 -->
+    <activeProfiles>
+        <activeProfile>alimaven</activeProfile>
+        <activeProfile>nexus</activeProfile>
+    </activeProfiles>
+</settings>

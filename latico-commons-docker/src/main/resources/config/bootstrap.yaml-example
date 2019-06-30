@@ -1,0 +1,35 @@
+#  配置服务客户端配置，调用获取配置文件信息，如果把该文件改成bootstrap.yaml，那么就是支持配置服务客户端
+#  Spring Cloud会创建一个Bootstrap Context，作为Spring应用的Application Context的父上下文。
+#  初始化的时候，Bootstrap Context负责从外部源加载配置属性并解析配置。
+#  这两个上下文共享一个从外部获取的Environment。Bootstrap属性有高优先级，
+#  默认情况下，它们不会被本地配置覆盖。 Bootstrap context和Application Context有着不同的约定，
+#  所以新增了一个bootstrap.yml文件，而不是使用application.yml (或者application.properties)。
+#  保证Bootstrap Context和Application Context配置的分离。
+#  推荐在bootstrap.yml or application.yml里面配置spring.application.name. 你可以通过设置spring.cloud.bootstrap.enabled=false来禁用bootstrap
+
+spring:
+
+  cloud:
+    config:
+      label: master
+#      配置文件前缀
+      name: service-config
+#      可以多个，逗号分隔
+      profile: dev
+      #      单机模式，通过uri指定配置中心地址
+      #      uri: http://localhost:8888/
+
+      #      分布式，从注册中心中发现配置服务
+      discovery:
+        enabled: true
+        serviceId: server-config
+    management:
+      security:
+        enabled: false
+
+# 分布式时，通过eureka注册中心服务器调用
+eureka:
+  client:
+    serviceUrl:
+      #      defaultZone: http://localhost:8001/eureka/,http://localhost:8002/eureka/,http://localhost:8003/eureka/
+      defaultZone: http://localhost:8000/eureka/

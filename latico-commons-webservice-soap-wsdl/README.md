@@ -1,0 +1,1 @@
+大部分Soap的jar包都是在SoapUI安装后的lib目录下，需要使用maven命令安装jar到本地仓库，或者上传到私服。
