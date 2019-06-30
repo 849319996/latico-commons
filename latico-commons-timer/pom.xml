@@ -6,14 +6,14 @@
 
     <groupId>com.latico.commons</groupId>
     <artifactId>latico-commons-timer</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <!--邮件管理列表-->
     <mailingLists>
         <mailingList>
             <name>Development List</name>
-            <subscribe>dev-subscribe@qq.com</subscribe>
-            <unsubscribe>dev-unsubscribe@qq.com</unsubscribe>
-            <post>dev@qq.com</post>
+            <subscribe>dev-subscribe@mail.com</subscribe>
+            <unsubscribe>dev-unsubscribe@mail.com</unsubscribe>
+            <post>dev@mail.com</post>
         </mailingList>
     </mailingLists>
 
@@ -37,7 +37,7 @@
 
     <!--组织机构-->
     <organization>
-        <name>laticosoft</name>
+        <name>latico</name>
         <url>https://github.com/latico</url>
     </organization>
 
