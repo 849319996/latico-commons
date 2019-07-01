@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mTOP DDP - Framework - Copyright TeleManagement Forum 2007 -->
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:hdr="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:not="http://www.tmforum.org/mtop/fmw/xsd/notmsg/v1" xmlns:tns="http://www.tmforum.org/mtop/fmw/wsdl/notp/v1-0" name="mTOP-NotificationProducerV1-0" targetNamespace="http://www.tmforum.org/mtop/fmw/wsdl/notp/v1-0">
+  <wsdl:documentation>
+    <p>DDP: Framework</p>
+    <p>Module: NotificationProducer Service Interface WSDL Messages Module</p>
+    <p>Description: This module contains all the mTOP NotificationProducer Service Interface WSDL message definitions.</p>
+    <p>Version: 1.0</p>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/notmsg/v1" schemaLocation="../../xsd/NotificationMessages.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/rscoc/v1" schemaLocation="../../../../NetworkResourceBasic/IIS/xsd/EventResourceObjectCreation.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/rscodel/v1" schemaLocation="../../../../NetworkResourceBasic/IIS/xsd/EventResourceObjectDeletion.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/rscavc/v1" schemaLocation="../../../../NetworkResourceBasic/IIS/xsd/EventResourceAttributeValueChange.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/rscsc/v1" schemaLocation="../../../../NetworkResourceBasic/IIS/xsd/EventResourceStateChange.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/rscodis/v1" schemaLocation="../../../../NetworkResourceBasic/IIS/xsd/EventResourceObjectDiscovery.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nra/xsd/tca/v1" schemaLocation="../../../../NetworkResourceAssurance/IIS/xsd/EventThresholdCrossingAlert.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nra/xsd/eps/v1" schemaLocation="../../../../NetworkResourceAssurance/IIS/xsd/EventEquipmentProtectionSwitch.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/nra/xsd/ps/v1" schemaLocation="../../../../NetworkResourceAssurance/IIS/xsd/EventProtectionSwitch.xsd"/>
+	  <xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/fts/v1" schemaLocation="../../xsd/EventFileTransferStatus.xsd"/>
+	  <xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/hbt/v1" schemaLocation="../../xsd/EventHeartbeat.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/elc/v1" schemaLocation="../../xsd/EventLossCleared.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/elo/v1" schemaLocation="../../xsd/EventLossOccured.xsd"/>
+      <xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/vdn/v1" schemaLocation="../../xsd/EventVendorNotification.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="subscribeRequest">
+    <wsdl:documentation>
+      <p>The Subscribe request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="not:subscribeRequest"/>
+  </wsdl:message>
+  <wsdl:message name="subscribeResponse">
+    <wsdl:documentation>
+      <p>The Subscribe response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="not:subscribeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="subscribeException">
+    <wsdl:documentation>
+      <p>The Subscribe exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="not:subscribeException"/>
+  </wsdl:message>
+  <wsdl:message name="unsubscribeRequest">
+    <wsdl:documentation>
+      <p>The Unsubscribe request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="not:unsubscribeRequest"/>
+  </wsdl:message>
+  <wsdl:message name="unsubscribeResponse">
+    <wsdl:documentation>
+      <p>The Unsubscribe response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="not:unsubscribeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="unsubscribeException">
+    <wsdl:documentation>
+      <p>The Unsubscribe exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="not:unsubscribeException"/>
+  </wsdl:message>
+</wsdl:definitions>

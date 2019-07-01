@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:com="http://www.tmforum.org/mtop/nrf/xsd/com/v1" xmlns:gen="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" xmlns:cc="http://www.tmforum.org/mtop/nrf/xsd/cc/v1" xmlns:lr="http://www.tmforum.org/mtop/nrb/xsd/lay/v1" xmlns:tns="http://www.tmforum.org/mtop/mri/xsd/mlsnr/v1" xmlns:msg="http://www.tmforum.org/mtop/fmw/xsd/msg/v1" xmlns:nam="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" xmlns:tpdata="http://www.tmforum.org/mtop/nrf/xsd/tpdata/v1" xmlns:coi="http://www.tmforum.org/mtop/fmw/xsd/coi/v1" xmlns:lp="http://www.tmforum.org/mtop/nrb/xsd/lp/v1" xmlns:crcd="http://www.tmforum.org/mtop/nrb/xsd/crcd/v1" xmlns:mlsn="http://www.tmforum.org/mtop/nrf/xsd/mlsn/v1" targetNamespace="http://www.tmforum.org/mtop/mri/xsd/mlsnr/v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:annotation>
+		<xsd:documentation>
+			<p>DDP: Manage Resource Inventory</p>
+			<p>Module:  Message XSD Module</p>
+			<p>Description: This module contains the XML Schema type definitions of all the mTOP MLSN Retrieval SI XML message structures.</p>
+		</xsd:documentation>
+	</xsd:annotation>
+	<!-- ================ -->
+	<xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" schemaLocation="../../../Framework/IIS/xsd/GeneralDefinitions.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/msg/v1" schemaLocation="../../../Framework/IIS/xsd/MessageDefinitions.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" schemaLocation="../../../Framework/IIS/xsd/NamingDefinitions.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/coi/v1" schemaLocation="../../../Framework/IIS/xsd/CommonObjectInfo.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrf/xsd/mlsn/v1" schemaLocation="../../../NetworkResourceFulfillment/IIS/xsd/Mlsn.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/crcd/v1" schemaLocation="../../../NetworkResourceBasic/IIS/xsd/CommonResourceCreateDataType.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/lp/v1" schemaLocation="../../../NetworkResourceBasic/IIS/xsd/LayeredParameters.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/lay/v1" schemaLocation="../../../NetworkResourceBasic/IIS/xsd/LayerRates.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrf/xsd/com/v1" schemaLocation="../../../NetworkResourceFulfillment/IIS/xsd/CommonTypes.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrf/xsd/cc/v1" schemaLocation="../../../NetworkResourceFulfillment/IIS/xsd/Cc.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrf/xsd/tpdata/v1" schemaLocation="../../../NetworkResourceFulfillment/IIS/xsd/TpData.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/nrb/xsd/crcd/v1" schemaLocation="../../../NetworkResourceBasic/IIS/xsd/CommonResourceCreateDataType.xsd"/>
+	<!-- ================ -->
+	<xsd:element name="getAllMultiLayerSubnetworksWrtOsRequest">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the getAllMultiLayerSubnetworksWrtOs operation</p>
+				<p>This operation returns all Multi Layer Subnetworks (MLSNs) managed by the provided subordinate OS AND contained by the provided Management Domain (MD).</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="osRef" type="nam:NamingAttributeType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<p>This parameter provides the name of the subordinate OS whose managed Multi Layer Subnetworks are in scope of the request.</p>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="mdRef" type="nam:NamingAttributeType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<p>The name of the Management Domain whose contained MEs are being requested.</p>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getAllMultiLayerSubnetworksWrtOsResponse" type="tns:MultipleObjectsResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the getAllMultiLayerSubnetworksWrtOs operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="getAllMultiLayerSubnetworksWrtOsException">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the getAllMultiLayerSubnetworksWrtOs operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="msg:AllExceptionsType">
+					<xsd:choice>
+						<xsd:element ref="msg:commLoss"/>
+						<xsd:element ref="msg:entityNotFound"/>
+						<xsd:element ref="msg:internalError"/>
+						<xsd:element ref="msg:invalidInput"/>
+						<xsd:element ref="msg:notImplemented"/>
+						<xsd:element ref="msg:tooManyOpenIterators"/>
+						<xsd:element ref="msg:unableToComply"/>
+					</xsd:choice>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getAllTopLevelMultiLayerSubnetworksRequest">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the getAllTopLevelMultiLayerSubnetworks operation</p>
+				<p>This operation returns all top level Multi Layer Subnetworks contained by a provided Management Domain.</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="mdRef" type="nam:NamingAttributeType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<p>The name of the Management Domain whose contained MLSNs are being requested.</p>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getAllTopLevelMultiLayerSubnetworksResponse" type="tns:MultipleObjectsResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the getAllTopLevelMultiLayerSubnetworks operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="getAllTopLevelMultiLayerSubnetworksException">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the getAllTopLevelMultiLayerSubnetworks operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="msg:AllExceptionsType">
+					<xsd:choice>
+						<xsd:element ref="msg:commLoss"/>
+						<xsd:element ref="msg:entityNotFound"/>
+						<xsd:element ref="msg:internalError"/>
+						<xsd:element ref="msg:invalidInput"/>
+						<xsd:element ref="msg:notImplemented"/>
+						<xsd:element ref="msg:tooManyOpenIterators"/>
+						<xsd:element ref="msg:unableToComply"/>
+					</xsd:choice>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getContainingMultiLayerSubnetworkNamesRequest">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the getContainingMultiLayerSubnetworkNames operation</p>
+				<p>This operation returns the list of MLSN names that the Managed Element supplied as an input parameter belongs to.</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="meRef" type="nam:NamingAttributeType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<p>The name of the ME for which to retrieve the containing MLSN names</p>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getContainingMultiLayerSubnetworkNamesResponse" type="tns:MultipleObjectNamesResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the getContainingMultiLayerSubnetworkNames operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="getContainingMultiLayerSubnetworkNamesException">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the getContainingMultiLayerSubnetworkNames operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="msg:AllExceptionsType">
+					<xsd:choice>
+						<xsd:element ref="msg:commLoss"/>
+						<xsd:element ref="msg:entityNotFound"/>
+						<xsd:element ref="msg:internalError"/>
+						<xsd:element ref="msg:invalidInput"/>
+						<xsd:element ref="msg:notImplemented"/>
+						<xsd:element ref="msg:unableToComply"/>
+					</xsd:choice>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getMultiLayerSubnetworkRequest">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the getMultiLayerSubnetwork operation</p>
+				<p>This operation retrieves the details of a Multi Layer Subnetwork given its name.</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="mlsnRef" type="nam:NamingAttributeType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<p>The name of the MLSN to retrieve.</p>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getMultiLayerSubnetworkResponse" type="tns:SingleObjectResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the getMultiLayerSubnetwork operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="getMultiLayerSubnetworkException">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the getMultiLayerSubnetwork operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="msg:AllExceptionsType">
+					<xsd:choice>
+						<xsd:element ref="msg:commLoss"/>
+						<xsd:element ref="msg:entityNotFound"/>
+						<xsd:element ref="msg:internalError"/>
+						<xsd:element ref="msg:invalidInput"/>
+						<xsd:element ref="msg:notImplemented"/>
+						<xsd:element ref="msg:unableToComply"/>
+					</xsd:choice>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="calculateSNCRouteRequest">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the calculateSNCRoute operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="createData" type="tns:calculateSNCRouteDataType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Data about the potential SNC.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="tolerableImpact" type="com:GradesOfImpactType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>The maximum tolerable impact allowed.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="osFreedomLevel" type="com:FreedomLevelType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>This parameter indicates the maximum level of freedom allowed to the target OS
+            to perform the creation and activation.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="tpDataListToModify" type="tpdata:TerminationPointDataListType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>A list of TPs and parameters to apply.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="calculateSNCRouteResponse" type="mlsn:CandidateRouteListType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the calculateSNCRoute operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="calculateSNCRouteException">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the calculateSNCRoute operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="msg:AllExceptionsType">
+					<xsd:choice>
+						<xsd:element ref="msg:commLoss"/>
+						<xsd:element ref="msg:entityNotFound"/>
+						<xsd:element ref="msg:internalError"/>
+						<xsd:element ref="msg:invalidInput"/>
+						<xsd:element ref="msg:notImplemented"/>
+						<xsd:element ref="msg:unableToComply"/>
+					</xsd:choice>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="takeOverSNCRequest">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the takeOverSNC operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="NEList" type="nam:NamingAttributeListType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>NEs which need to takeover SNC.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="isIncrement" type="xsd:boolean" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Whether it is increment search.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="takeOverSNCResponse">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the takeOverSNC operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="takeOverSNCException">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the takeOverSNC operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="msg:AllExceptionsType">
+					<xsd:choice>
+						<xsd:element ref="msg:commLoss"/>
+						<xsd:element ref="msg:internalError"/>
+						<xsd:element ref="msg:invalidInput"/>
+						<xsd:element ref="msg:notImplemented"/>
+						<xsd:element ref="msg:unableToComply"/>
+					</xsd:choice>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- ================= -->
+	<!-- Definitions of Iterator messages for Object and Object Name retrievals  -->
+	<!-- ================= -->
+	<xsd:element name="getMultiLayerSubnetworksIteratorRequest" type="msg:GetAllDataIteratorRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the getMultiLayerSubnetworksIterator operation</p>
+				<p>This is the iterator request to return the next batch of MLSNs from the OS to which an MLSN retrieval request was initially sent.</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ================== -->
+	<xsd:element name="getMultiLayerSubnetworksIteratorResponse" type="tns:MultipleObjectsResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the getMultiLayerSubnetworksIterator operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ================== -->
+	<xsd:element name="getMultiLayerSubnetworksIteratorException" type="msg:GetAllDataIteratorExceptionType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the getMultiLayerSubnetworksIterator operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ================= -->
+	<!-- == Local Data Types == -->
+	<!-- ================ -->
+	<xsd:simpleType name="TakeOverPolicyEnumType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>policy for takeover, possible value is FULL/INCREMENTAL.</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="MINOR_EXT"/>
+			<xsd:enumeration value="FULL">
+				<xsd:annotation>
+					<xsd:documentation>
+						<p>remove all existed SNCs and recover them back based on crossConnection etc info.</p>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="INCREMENTAL">
+				<xsd:annotation>
+					<xsd:documentation>
+						<p>just find out new SNC based on existed XC etc info.</p>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="MultipleObjectNamesResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure for a set of object names</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="mlsnRefList" type="nam:NamingAttributeListType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<p>The list of object names.</p>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ================== -->
+	<xsd:complexType name="SingleObjectResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure for a single MLSN object</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="mlsn" type="mlsn:MultiLayerSubnetworkType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<p>The retrieved MLSN.</p>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ================== -->
+	<xsd:complexType name="MultipleObjectsResponseType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure for a set of MLSN objects</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="mlsnList" type="mlsn:MultiLayerSubnetworkListType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<p>The list of MLSNs.</p>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- ================== -->
+	<xsd:complexType name="TopoNodeListType">
+		<xsd:sequence>
+			<xsd:element name="node" type="tns:TopoNodeType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TopoNodeType">
+		<xsd:complexContent>
+			<xsd:extension base="coi:CommonObjectInfoType">
+				<xsd:sequence>
+					<xsd:element name="type" type="xsd:string" minOccurs="0"/>
+					<xsd:element name="xPos" type="xsd:int" minOccurs="0"/>
+					<xsd:element name="yPos" type="xsd:int" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="getAllTopoNodeListRequest">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Request message structure of the getAllTopoNodeList operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="snName" type="nam:NamingAttributeType" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getAllTopoNodeListResponse">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Response message structure of the getAllTopoNodeList operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="nodeList" type="tns:TopoNodeListType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>
+							<p>This parameter returns the Topological Link object selected by the given name.</p>
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getAllTopoNodeListException">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>Exception message structure of the getAllTopoNodeList operation</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="msg:AllExceptionsType">
+					<xsd:choice>
+						<xsd:element ref="msg:commLoss"/>
+						<xsd:element ref="msg:entityNotFound"/>
+						<xsd:element ref="msg:internalError"/>
+						<xsd:element ref="msg:invalidInput"/>
+						<xsd:element ref="msg:notImplemented"/>
+						<xsd:element ref="msg:tooManyOpenIterators"/>
+						<xsd:element ref="msg:unableToComply"/>
+					</xsd:choice>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="calculateSNCRouteDataType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>The attributes required for the creation of a subnetworkConnection on the Target OS are packaged together in this data structure which the Requesting OS will pass to the Target OS at SNC creation time.</p>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="crcd:CommonResourceCreateDataType">
+				<xsd:sequence>
+					<xsd:element name="transmissionParametersList" type="lp:LayeredParametersListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>SNC transmissionParametersList.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="direction" type="com:ConnectionDirectionType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The connection directionality must be specified by the Requesting OS.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="staticProtectionLevel" type="com:StaticProtectionLevelType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The Requesting OS must specify the requested staticProtectionLevel as specified in SNC Types.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="protectionEffort" type="com:ProtectionEffortType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The Requesting OS must specify the protectionEffort as specified in SNC Types.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="rerouteAllowed" type="com:RerouteType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>This attribute indicates if the Target OS/MEs are allowed and/or required to reroute this SNC if there is a failure on this SNC, periodically to optimize the routes, or for any other reason. It is an Target OS/ME implementation whether this is done using network routing protocols or if the Target OS/MEs detect the failure and take appropriate action to attempt to fix the SNC.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="networkRouted" type="com:NetworkRoutedType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>This attribute specifies if the network is allowed/required to route this SNC.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="type" type="com:SubnetworkConnectionTypeType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The Requesting OS must specify the sncType as specified in SNC Types.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="layerRate" type="lr:LayerRateType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Identifies the layer at which the SNC is to be made.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="ccInclusionList" type="cc:CrossConnectListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Specifies a list of cross-connects that must be used by the SNC. The list must be empty if no cross-connect constraints are required.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="inclusionResourceRefList" type="nam:NamingAttributeListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Specifies a list of MEs, GTPs, TLs, PTPs, FTPs and/or CTPs that must be used by the SNC when carrying out a full reroute or adding a routing leg. The list must be empty if no ME/TL/PTP/CTP/FTP constraints are required. Specifying both inclusion and exclusion constraints is not supported, therefore this list must be empty if exclusionRefList is not empty.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="exclusionResourceRefList" type="nam:NamingAttributeListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Specifies a list of MEs, TLs, PTPs, FTPs, CTPs, and/or SNCs to be excluded. This is applicable for adding the leg or doing a full reroute and the route must not use any of the NEs, TLs, PTPs, FTPs and CTPs specified, nor any resource used by the SNCs specified. Specifying both inclusion and exclusion constraints is not supported, therefore this list must be empty if inclusionResourceRefList or ccInclusionList is not empty.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="aEndTpRefList" type="nam:NamingAttributeListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The Requesting OS must specify the aEnd (CTP/FTP) as specified in SNC Types. Is also used to indicate the Source TP when adding a leg to an existing broadcast system. If the TP is an FTP the Requesting OS is allowed to specify a generic end point within a ME, the Target OS will choose the appropriate TP instance. See Object Naming for further detail.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="zEndTpRefList" type="nam:NamingAttributeListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>The Requesting OS must specify the zEnd (CTP/FTP) as specified in SNC Types. Is also used to indicate the Sink TP when adding a leg to an existing broadcast system. If the Requesting OS supplies an invalid combination of TPs in aEnd and zEnd, then the Target OS will throw an INVALID_INPUT exception. Aend and Zend TPs have to be on the same subnetwork If the TP is an FTP the Requesting OS is allowed to specify a generic end point within a ME, the Target OS will choose the appropriate TP instance. See Object Naming for further detail.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="aEndTpRoleList" type="com:EndPointRoleListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+          Defines the element that defines the end point role of all aEnd TPs of an SNC. This is an ordered list indexed with the aEndTpRefList of the SNC.
+          </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="isReportingAlarms" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+Provides an indication whether alarm reporting for this instance is active or not.
+          </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="networkReroute" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Indicates if the reroute of an SNC (if allowed) should be computed by the network, by the Target OS, or if it does not matter. Values are "Yes", "No", "NotSet".</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="isRevertive" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Takes value "True" when an SNC can be switched back to its original route.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="isRevertiveReroute" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Indicates whether the rerouting of an SNC is revertive or not.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="intendedRouteAEnds" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Must be specified when creating an SNC with multiple routes in case the end points of the intended route are a subset of SNC end points. Value is "aEnd-i-j-k-..." where i, j, k are the indexes of SNC aEnd points.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="isIntendedRouteExclusive" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Specifies when creating an SNC with multiple routes if the intended route is ECCLUSIVE or not; if ECCLUSIVE, then the Target OS must find a route that does not conflict or shared CCs or CTPs with any other existing SNC route, in any state (pending/partial/current). Once an ECCLUSIVE (intended) route has been created by the Target OS, any further creation operation which conflicts with the exclusive route shall be rejected.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="intendedRouteZEnds" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Must be specified when creating an SNC with multiple routes in case the end points of the intended route are a subset of SNC end points. Value is "zEnd-i-j-k-..." where i, j, k are the indexes of SNC zEnd points.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="priority" type="xsd:unsignedInt" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>The SNC creation priority.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="zEndTpRoleList" type="com:EndPointRoleListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Defines the element that defines the end point role of all zEnd TPs of an SNC. This is an ordered list indexed with the zEndTpRefList of the SNC.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="asapRef" type="nam:NamingAttributeType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Indicates the assignment of an ASAP to this SNC object. Value is the ASAP name.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="blsrDirection" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Used in conjunction with when the Target OS cannot use the routing constraints for a BLSR case.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="isBundledSnc" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Indicates whether the SNC constitutes a Bundled SNC service (value or not.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="mustRemoveGtps" type="xsd:boolean" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>This attribute defines that the target OS has to delete all the interior Group Termination Points (GTPs) supporting the bundled Subnetwork Connection (SNC) when the SNC is deleted. The attribute is only used when creating bundled SNCs.</p>
+								<p>It can take on two possible values:<uL>
+										<li>true (the target OS must make a best-effort attempt to remove the interior GTPs that once belonged to the SNC) and</li>
+										<li>false (the requesting OS doesn't care if the target OS removes the interior GTPs or not).</li>
+									</uL>
+								</p>
+								<p>In the case that mustRemoveGtps is set to "true" and the target OS cannot remove all the interior GTPs, the target OS should return a list of the GTPs that could not be removed in the errorReason field of the deactivateAndDeleteSnc and deleteSnc operations. The errorReason will be "not all interior GTPs could be deleted" - this will be followed by the names of the GTPs that could not be deleted.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="potentialFutureSetupIndicator" type="com:PotentialFutureSetupIndicatorType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Refers to data type.</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="routingConstraintEffort" type="xsd:string" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>The effort required for routing constraint application.</p>
+								<p>Legal Values are:<ul>
+										<li>BEST_EFFORT</li>
+										<li>EXACT_MATCH</li>
+									</ul>
+								</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="timeslot" type="xsd:integer" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>Used in conjunction with lsrDirection</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="additionalCreationInfo" type="gen:NameAndValueStringListType" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>
+								<p>additional creation infomation</p>
+							</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

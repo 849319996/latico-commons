@@ -233,11 +233,13 @@
         <!--HTTP工具-->
 
         <!-- 轻量级密码术包: 用于提供对TLSv1.2协议支持 -->
+        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.60</version>
+            <version>1.62</version>
         </dependency>
+
 
     </dependencies>
 </project>

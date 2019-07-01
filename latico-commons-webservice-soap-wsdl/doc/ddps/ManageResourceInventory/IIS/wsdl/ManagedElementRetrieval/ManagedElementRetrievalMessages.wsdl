@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mTOP DDP - OM ManageResourceInventory - Copyright TeleManagement Forum 2007 -->
+<wsdl:definitions name="mTOP-ManagedElementRetrievalV1-0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:hdr="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" xmlns:mer="http://www.tmforum.org/mtop/mri/xsd/mer/v1" xmlns:tns="http://www.tmforum.org/mtop/mri/wsdl/mer/v1-0" targetNamespace="http://www.tmforum.org/mtop/mri/wsdl/mer/v1-0">
+  <wsdl:documentation>
+    <p>DDP: ManageResourceInventory</p>
+    <p>Module: ManagedElementRetrieval Service Interface WSDL Message Module</p>
+    <p>Description: This module contains all the mTOP ManagedElementRetrieval Service Interface WSDL message definitions.</p>
+    <p>Version: 1.0</p>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://www.tmforum.org/mtop/mri/xsd/mer/v1" schemaLocation="../../xsd/ManagedElementRetrievalMessages.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getAllManagedElementsRequest">
+    <wsdl:documentation>
+      <p>The getAllManagedElements request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsResponse">
+    <wsdl:documentation>
+      <p>The getAllManagedElements response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsException">
+    <wsdl:documentation>
+      <p>The getAllManagedElements exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsException"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsPassingFilterRequest">
+    <wsdl:documentation>
+      <p>The getAllManagedElementsPassingFilter request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsPassingFilterRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsPassingFilterResponse">
+    <wsdl:documentation>
+      <p>The getAllManagedElementsPassingFilter response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsPassingFilterResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsPassingFilterException">
+    <wsdl:documentation>
+      <p>The getAllManagedElementsPassingFilter exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsPassingFilterException"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsWrtOsRequest">
+    <wsdl:documentation>
+      <p>The getAllManagedElementsWrtOs request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsWrtOsRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsWrtOsResponse">
+    <wsdl:documentation>
+      <p>The getAllManagedElementsWrtOs response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsWrtOsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getAllManagedElementsWrtOsException">
+    <wsdl:documentation>
+      <p>The getAllManagedElementsWrtOs exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="mer:getAllManagedElementsWrtOsException"/>
+  </wsdl:message>
+  <wsdl:message name="getManagedElementRequest">
+    <wsdl:documentation>
+      <p>The getManagedElement request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getManagedElementRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getManagedElementResponse">
+    <wsdl:documentation>
+      <p>The getManagedElement response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getManagedElementResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getManagedElementException">
+    <wsdl:documentation>
+      <p>The getManagedElement exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="mer:getManagedElementException"/>
+  </wsdl:message>
+  <wsdl:message name="getManagedElementsIteratorRequest">
+    <wsdl:documentation>
+      <p>The getManagedElementsIterator request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getManagedElementsIteratorRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getManagedElementsIteratorResponse">
+    <wsdl:documentation>
+      <p>The getManagedElementsIterator response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getManagedElementsIteratorResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getManagedElementsIteratorException">
+    <wsdl:documentation>
+      <p>The getManagedElementsIterator exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="mer:getManagedElementsIteratorException"/>
+  </wsdl:message>
+  
+  <!--=============-->
+  <wsdl:message name="getObjectTimeRequest">
+    <wsdl:documentation>
+      <p>The getObjectTime request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getObjectTimeRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getObjectTimeResponse">
+    <wsdl:documentation>
+      <p>The getObjectTime response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getObjectTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getObjectTimeException">
+    <wsdl:documentation>
+      <p>The getObjectTime exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="mer:getObjectTimeException"/>
+  </wsdl:message>  
+  
+  <wsdl:message name="getMEClockSynchronizationRequest">
+    <wsdl:documentation>
+      <p>The getMEClockSynchronization request message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getMEClockSynchronizationRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getMEClockSynchronizationResponse">
+    <wsdl:documentation>
+      <p>The getMEClockSynchronization response message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopHeader" element="hdr:header"/>
+    <wsdl:part name="mtopBody" element="mer:getMEClockSynchronizationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getMEClockSynchronizationException">
+    <wsdl:documentation>
+      <p>The getMEClockSynchronization exception message.</p>
+    </wsdl:documentation>
+    <wsdl:part name="mtopBody" element="mer:getMEClockSynchronizationException"/>
+  </wsdl:message>    
+  
+  	<wsdl:message name="getTpListExtraAttrRequest">
+		<wsdl:documentation>
+			<p>The getTpListExtraAttr request message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopHeader" element="hdr:header"/>
+		<wsdl:part name="mtopBody" element="mer:getTpListExtraAttrRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getTpListExtraAttrResponse">
+		<wsdl:documentation>
+			<p>The getTpListExtraAttr response message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopHeader" element="hdr:header"/>
+		<wsdl:part name="mtopBody" element="mer:getTpListExtraAttrResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getTpListExtraAttrException">
+		<wsdl:documentation>
+			<p>The getTpListExtraAttr exception message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopBody" element="mer:getTpListExtraAttrException"/>
+	</wsdl:message>
+	<wsdl:message name="getAllCCCapacityRequest">
+		<wsdl:documentation>
+			<p>The getAllCCCapacity request message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopHeader" element="hdr:header"/>
+		<wsdl:part name="mtopBody" element="mer:getAllCCCapacityRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getAllCCCapacityResponse">
+		<wsdl:documentation>
+			<p>The getAllCCCapacity response message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopHeader" element="hdr:header"/>
+		<wsdl:part name="mtopBody" element="mer:getAllCCCapacityResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getAllCCCapacityException">
+		<wsdl:documentation>
+			<p>The getAllCCCapacity exception message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopBody" element="mer:getAllCCCapacityException"/>
+	</wsdl:message>
+    <wsdl:message name="getAllDeviceCapacityRequest">
+		<wsdl:documentation>
+			<p>The getAllDeviceCapacity request message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopHeader" element="hdr:header"/>
+		<wsdl:part name="mtopBody" element="mer:getAllDeviceCapacityRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getAllDeviceCapacityResponse">
+		<wsdl:documentation>
+			<p>The getAllDeviceCapacity response message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopHeader" element="hdr:header"/>
+		<wsdl:part name="mtopBody" element="mer:getAllDeviceCapacityResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getAllDeviceCapacityException">
+		<wsdl:documentation>
+			<p>The getAllDeviceCapacity exception message.</p>
+		</wsdl:documentation>
+		<wsdl:part name="mtopBody" element="mer:getAllDeviceCapacityException"/>
+	</wsdl:message>
+</wsdl:definitions>

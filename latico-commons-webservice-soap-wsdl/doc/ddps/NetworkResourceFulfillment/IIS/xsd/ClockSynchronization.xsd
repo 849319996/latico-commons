@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mTOP DDP - Network Resource Fulfillment - Copyright TeleManagement Forum 2008 -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tmforum.org/mtop/nrf/xsd/cs/v1" xmlns:gen="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" xmlns:nam="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" targetNamespace="http://www.tmforum.org/mtop/nrf/xsd/cs/v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/gen/v1" schemaLocation="../../../Framework/IIS/xsd/GeneralDefinitions.xsd"/>
+	<xsd:import namespace="http://www.tmforum.org/mtop/fmw/xsd/nam/v1" schemaLocation="../../../Framework/IIS/xsd/NamingDefinitions.xsd"/>
+	<!-- ================ -->
+		<xsd:complexType name="MEClockSynchronizationListType">
+		<xsd:sequence>
+			<xsd:element name="clockSynchronizationList" type="tns:MEClockSynchronizationType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MEClockSynchronizationType">
+		<xsd:sequence>
+			<xsd:element name="clockSynchronizationRef" type="nam:NamingAttributeType" minOccurs="0"/>
+			<xsd:element name="clockSourceType" type="tns:ClockType" minOccurs="0"/>
+			<xsd:element name="workingStatus" type="tns:ClockWorkingStatusType" minOccurs="0"/>
+			<xsd:element name="ports" type="tns:ClockSynchronizationPortListType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="ClockType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CT_MASTER"/>
+			<xsd:enumeration value="CT_SLAVE"/>
+			<xsd:enumeration value="CT_INDEPENDENT"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ClockWorkingStatusType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CWS_FREE_RUNNING"/>
+			<xsd:enumeration value="CWS_LOCKED"/>
+			<xsd:enumeration value="CWS_HOLD_OVER"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="ClockSynchronizationPortListType">
+		<xsd:sequence>
+			<xsd:element name="portList" type="tns:ClockSynchronizationPortType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ClockSynchronizationPortType">
+		<xsd:sequence>
+			<xsd:element name="portRef" type="nam:NamingAttributeListType" minOccurs="0"/>
+			<xsd:element name="direction" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="clockSourceType" type="tns:ClockSourceType" minOccurs="0"/>
+			<xsd:element name="priority" type="xsd:int" minOccurs="0"/>
+			<xsd:element name="venderExtension" type="gen:AnyListType" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="ClockSourceType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CST_LINE"/>
+			<xsd:enumeration value="CST_BITS"/>
+			<xsd:enumeration value="CST_ETHERNET"/>
+			<xsd:enumeration value="CST_INTERNAL"/>
+			<xsd:enumeration value="CST_EXTERNAL"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
