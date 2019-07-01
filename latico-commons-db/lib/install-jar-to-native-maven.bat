@@ -1,6 +1,6 @@
 title jar install to native maven repository
 @echo off
-@rem 因为mvn命令也是脚本,在BAT文件里面执行Maven的mvn命令后，mvn之后的命令不会被执行，
+@rem 注意：必须使用CRLF换行符格式。因为mvn命令也是脚本,在BAT文件里面执行Maven的mvn命令后，mvn之后的命令不会被执行，
 @rem 这是由于mvn本身也是BAT文件，并且其结束时执行了退出命令。要让mvn命令不使当前脚本自动退出，只需要在mvn之前加上“call”命令
 @rem 如果运行报mvn命令找不到，就配置好maven环境变量，如果还是找不到，请使用管理员方式运行脚本
 
