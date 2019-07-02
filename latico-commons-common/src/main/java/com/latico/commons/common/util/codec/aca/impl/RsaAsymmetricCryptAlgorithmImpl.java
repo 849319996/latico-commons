@@ -117,6 +117,14 @@ public class RsaAsymmetricCryptAlgorithmImpl extends AbstractAsymmetricCryptAlgo
         return sign(content.getBytes(charset));
     }
 
+    /**
+     * 用公钥来验证签名是否正常，而不是网上说的用公钥生成签名然后跟对方发来的签名进行比较，
+     * 因为公钥不能用来生成签名
+     * @param data
+     * @param sign 数字签名
+     * @return
+     * @throws Exception
+     */
     @Override
     public boolean verifySign(byte[] data, String sign) throws Exception {
         // 取公钥匙对象
