@@ -6,7 +6,7 @@
 
     <groupId>com.latico.commons</groupId>
     <artifactId>latico-commons-orm-mybatis</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <!--邮件管理列表-->
     <mailingLists>
         <mailingList>
@@ -37,7 +37,7 @@
 
     <!--组织机构-->
     <organization>
-        <name>laticosoft</name>
+        <name>latico</name>
         <url>https://github.com/latico</url>
     </organization>
 

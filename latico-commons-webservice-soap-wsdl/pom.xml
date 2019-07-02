@@ -6,7 +6,7 @@
 
     <groupId>com.latico.commons</groupId>
     <artifactId>latico-commons-webservice-soap-wsdl</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <!--邮件管理列表-->
     <mailingLists>
         <mailingList>
@@ -37,7 +37,7 @@
 
     <!--组织机构-->
     <organization>
-        <name>laticosoft</name>
+        <name>latico</name>
         <url>https://github.com/latico</url>
     </organization>
 
@@ -232,7 +232,7 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.60</version>
+            <version>1.62</version>
         </dependency>
         <!-- soapUI: webservice-client -->
         <!-- https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
@@ -248,42 +248,12 @@
             <artifactId>jgoodies-binding</artifactId>
             <version>2.13.0</version>
         </dependency>
-
-        <!-- In-app analytics soapUI分析器 -->
-        <dependency>
-            <groupId>com.smartbear.utils.analytics</groupId>
-            <artifactId>analytics-core</artifactId>
-            <version>5.1.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.smartbear.utils.analytics</groupId>
-            <artifactId>out-app-analytics-provider</artifactId>
-            <version>5.1.0</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/com.jgoodies/jgoodies-looks -->
         <dependency>
             <groupId>com.jgoodies</groupId>
             <artifactId>jgoodies-looks</artifactId>
             <version>2.7.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>net.webservices</groupId>
-            <artifactId>soapui</artifactId>
-            <version>5.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.xmlbeans</groupId>
-            <artifactId>xmlbeans</artifactId>
-            <version>3.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>net.webservices.client</groupId>
-            <artifactId>soapui-xmlbeans</artifactId>
-            <version>1.7</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.fifesoft/rsyntaxtextarea -->
         <dependency>
             <groupId>com.fifesoft</groupId>
@@ -297,12 +267,45 @@
             <artifactId>proxy-vole</artifactId>
             <version>20131209</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/bouncycastle/bcprov-jdk15 -->
+        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15 -->
         <dependency>
-            <groupId>bouncycastle</groupId>
+            <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15</artifactId>
-            <version>144</version>
+            <version>1.44</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
+        <dependency>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <!--下面的jar需要手工install到本地仓库，是从soapUI安装包获取的-->
+        <dependency>
+            <groupId>com.smartbear.utils.analytics</groupId>
+            <artifactId>analytics-core</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.smartbear.utils.analytics</groupId>
+            <artifactId>out-app-analytics-provider</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.webservices</groupId>
+            <artifactId>soapui</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.webservices.client</groupId>
+            <artifactId>soapui-xmlbeans</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+
 
     </dependencies>
 </project>

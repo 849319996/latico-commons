@@ -40,7 +40,7 @@
  二、类加载器介绍，每个类加载器都只能加载自己控制范围内的类，
  每个类只能被加载一次，委托机制是为了确保类存在的加载优先级（上层类加载器的类优先级比下层高，防止下层类加载器复写了上层类加载器的类），
 
- 1、BootStrap，引导（Bootstrap）类加载器,使用C/C++代码编写，封装到JVM内核，加载<Java_Home>/jre/lib下面的jar下面的核心类库或-Xbootclasspath选项指定的jar包。
+ 1、BootStrap，引导(或叫启动)类加载器,使用C/C++代码编写，封装到JVM内核，加载<Java_Home>/jre/lib下面的jar下面的核心类库或-Xbootclasspath选项指定的jar包。
  由native方法实现加载过程，程序无法直接获取到该类加载器，
  无法对其进行任何操作,是ExtClassLoader的父类加载器。
 
