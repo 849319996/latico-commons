@@ -5,6 +5,7 @@ import com.latico.commons.common.util.system.SystemUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
+import java.net.URL;
 import java.util.Map;
 
 public class ClassLoaderUtilsTest {
@@ -106,4 +107,6 @@ public class ClassLoaderUtilsTest {
         System.out.println(ClassLoaderUtilsTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/abc4.txt"));
         System.out.println(ClassLoaderUtilsTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/log4j.properties"));
     }
+
+
 }
