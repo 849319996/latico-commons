@@ -234,4 +234,9 @@ public class SystemUtilsTest {
     public void getLocalHost() {
         System.out.println(SystemUtils.getLocalHost());
     }
+
+    @Test
+    public void getBootstrapClassPath() {
+        System.out.println(SystemUtils.getBootstrapClassPath());
+    }
 }

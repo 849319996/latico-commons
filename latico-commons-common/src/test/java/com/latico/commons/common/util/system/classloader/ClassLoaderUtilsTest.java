@@ -1,7 +1,7 @@
-package com.latico.commons.common.util.reflect;
+package com.latico.commons.common.util.system.classloader;
 
 import com.latico.commons.common.util.logging.LogUtilsTest;
-import com.latico.commons.common.util.system.classloader.ClassLoaderUtils;
+import com.latico.commons.common.util.system.SystemUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
@@ -86,7 +86,7 @@ public class ClassLoaderUtilsTest {
 
     @Test
     public void getBootStrapClassLoaderLoadFileInfo() {
-        System.out.println(ClassLoaderUtils.getBootStrapClassLoaderLoadFileInfo());
+        System.out.println(SystemUtils.getBootStrapClassLoaderLoadFileInfo());
     }
 
     @Test
@@ -98,12 +98,12 @@ public class ClassLoaderUtilsTest {
     }
     @Test
     public void test2() {
-        System.out.println(ClassLoaderUtilsTest.class.getResourceAsStream("com/latico/commons/abc3.txt"));
+        System.out.println(ClassLoaderUtilsTest.class.getResourceAsStream("com/latico/commons/common/util/system/classloader/abc3.txt"));
 //        System.out.println(ClassLoaderUtilsTest.class.getResourceAsStream("abc4.txt"));
 //        System.out.println(ClassLoaderUtilsTest.class.getResourceAsStream("log4j.properties"));
 
-        System.out.println(ClassLoaderUtils.getAppClassLoader().getResourceAsStream("/com/latico/commons/abc3.txt"));
-        System.out.println(ClassLoaderUtilsTest.class.getClassLoader().getResourceAsStream("com/latico/commons/abc4.txt"));
-        System.out.println(ClassLoaderUtilsTest.class.getClassLoader().getResourceAsStream("com/latico/commons/log4j.properties"));
+        System.out.println(ClassLoaderUtils.getAppClassLoader().getResourceAsStream("/com/latico/commons/common/util/system/classloader/abc3.txt"));
+        System.out.println(ClassLoaderUtilsTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/abc4.txt"));
+        System.out.println(ClassLoaderUtilsTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/log4j.properties"));
     }
 }

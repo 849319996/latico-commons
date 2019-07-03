@@ -21,7 +21,7 @@
  。
  类装载，Class.forName()和ClassLoader.LoadClass()的区别(ClassLoader.loadClass(className)方法不对类进行初始化操作)
 
- Class.forName(className)方法，内部实际调用的方法是  Class.forName(className,true,classloader);
+ Class.forName(className)方法，内部实际调用的方法是  Class.forName0(className, true, ClassLoader.getClassLoader(caller), caller);
  第2个boolean参数表示类是否需要初始化，  Class.forName(className)默认是需要初始化。
  一旦初始化，就会触发目标对象的 static块代码执行，static参数也也会被再次初始化。
  ClassLoader.loadClass(className)方法，内部实际调用的方法是  ClassLoader.loadClass(className,false);
@@ -29,7 +29,7 @@
  不进行链接意味着不进行包括初始化等一些列步骤，那么静态块和静态对象就不会得到执行
 
  ====================================================
- 一、核心类加载器的初始化，可以看{@link sun.misc.Launcher}的构造方法,
+ 一、JVM核心类加载器的初始化，可以看{@link sun.misc.Launcher}的构造方法,
 
  // 创建并初始化扩展类加载器ExtClassLoader
  extclassloader = ExtClassLoader.getExtClassLoader();
@@ -45,7 +45,8 @@
  无法对其进行任何操作,是ExtClassLoader的父类加载器。
 
  2、ExtClassLoader，扩展（Extension）类加载器，是java类编写，加载<Java_Home>/jre/lib/ext/*.jar,
- 是AppClassLoader的父类加载器，是BootStrap的子类加载器,由sun.misc.Launcher.ExtClassLoader实现的。
+ 是AppClassLoader的父类加载器，没有父类加载器,由sun.misc.Launcher.ExtClassLoader实现的。
+ sun.misc.Launcher.ExtClassLoader#ExtClassLoader(java.io.File[])
 
  3、AppClassLoader，应用/系统（System）类加载器,由sun.misc.Launcher.AppClassLoader实现,加载System.getProperty("java.class.path")所指定的路径或jar。
  在使用Java运行程序时，也可以加上-cp来覆盖原有的Classpath设置，例如： java -cp ./lavasoft/classes HelloWorld，
@@ -95,7 +96,7 @@
 
  每个类加载器加载类时，又先委托给其上级类加载器当所有祖宗类加载器没有加载到类，
  回到发起者类加载器，还加载不了，则会抛出ClassNotFoundException,不是再去找发起者类加载器的儿子，
- 因为没有getChild()方法。例如：如上图所示： MyClassLoader->AppClassLoader->Ext->ClassLoader->BootStrap.
+ 因为没有getChild()方法。例如：如上图所示： MyClassLoader->AppClassLoader->ExtClassLoader->BootStrap.
 
  自定定义的MyClassLoader1首先会先委托给AppClassLoader,
  AppClassLoader会委托给ExtClassLoader,ExtClassLoader会委托给BootStrap，

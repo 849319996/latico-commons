@@ -85,7 +85,7 @@ public class URLClassLoaderImpl extends URLClassLoader {
 
     private URLClassLoaderImpl() {
         //指定父类加载器
-        super(new URL[]{}, ClassLoaderUtils.getCurrentThreadContextClassLoader());
+        super(new URL[]{}, Thread.currentThread().getContextClassLoader());
     }
 
     /**
