@@ -83,7 +83,7 @@ public class ClassLoaderImpl extends ClassLoader {
 
     private ClassLoaderImpl() {
         //指定父类加载器
-        super(ClassLoaderUtils.getCurrentThreadContextClassLoader());
+        super(Thread.currentThread().getContextClassLoader());
     }
 
     /**
@@ -148,7 +148,7 @@ public class ClassLoaderImpl extends ClassLoader {
         }
 
         //找不到使用父类
-        return loadClass(name);
+        return super.findClass(name);
     }
 
     @Override

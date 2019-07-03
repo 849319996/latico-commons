@@ -6,6 +6,8 @@ import com.latico.commons.common.util.logging.LoggerFactory;
 import com.latico.commons.common.util.other.PathUtils;
 import com.latico.commons.common.util.string.StringUtils;
 import com.sun.management.OperatingSystemMXBean;
+import sun.misc.Launcher;
+import sun.misc.URLClassPath;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
@@ -201,6 +203,17 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
      */
     public static String getJavaClassPath() {
         return JAVA_CLASS_PATH;
+    }
+
+    /**
+     * 获得根类加载器所加载的核心类库,并会看到本机安装的Java环境变量指定的jdk中提供的核心jar包路径
+     *
+     * @return
+     */
+    public static URLClassPath getBootstrapClassPath() {
+        URLClassPath bootstrapClassPath = Launcher.getBootstrapClassPath();
+
+        return bootstrapClassPath;
     }
 
     /**

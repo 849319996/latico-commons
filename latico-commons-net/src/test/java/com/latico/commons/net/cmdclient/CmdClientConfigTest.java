@@ -1,5 +1,6 @@
 package com.latico.commons.net.cmdclient;
 
+import com.latico.commons.common.util.logging.LogUtils;
 import com.latico.commons.net.cmdclient.enums.CmdClientTypeEnum;
 import org.junit.Test;
 
@@ -7,6 +8,7 @@ public class CmdClientConfigTest {
 
     @Test
     public void getInstance() {
+        LogUtils.loadLogBackConfigDefault();
         CmdClientConfig.getInstance();
     }
 

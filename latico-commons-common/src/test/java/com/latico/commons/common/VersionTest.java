@@ -33,8 +33,8 @@ public class VersionTest {
         System.out.println(VersionTest.class.getResourceAsStream("abc4.txt"));
         System.out.println(VersionTest.class.getResourceAsStream("log4j.properties"));
 
-        System.out.println(VersionTest.class.getClassLoader().getResourceAsStream("com/latico/commons/abc3.txt"));
-        System.out.println(VersionTest.class.getClassLoader().getResourceAsStream("com/latico/commons/abc4.txt"));
-        System.out.println(VersionTest.class.getClassLoader().getResourceAsStream("com/latico/commons/log4j.properties"));
+        System.out.println(VersionTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/abc3.txt"));
+        System.out.println(VersionTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/abc4.txt"));
+        System.out.println(VersionTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/log4j.properties"));
     }
 }
