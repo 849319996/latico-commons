@@ -4,8 +4,14 @@ import com.latico.commons.common.util.logging.LogUtilsTest;
 import com.latico.commons.common.util.system.SystemUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
+import sun.reflect.CallerSensitive;
+import sun.reflect.Reflection;
 
+import java.io.File;
+import java.io.InputStream;
+import java.net.URI;
 import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.Map;
 
 public class ClassLoaderUtilsTest {
@@ -108,5 +114,47 @@ public class ClassLoaderUtilsTest {
         System.out.println(ClassLoaderUtilsTest.class.getClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/log4j.properties"));
     }
 
+
+    /**
+     *
+     */
+    @Test
+    public void test3(){
+        InputStream resourceAsStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("com/latico/test.properties");
+
+
+    }
+
+    /**
+     *
+     */
+    @Test
+    public void test(){
+
+        System.out.println(ClassLoaderUtils.class.getResourceAsStream("abc3.txt"));
+        System.out.println(ClassLoaderUtils.getAppClassLoader().getResourceAsStream("com/latico/commons/common/util/system/classloader/abc3.txt"));
+    }
+    /**
+     *
+     */
+    @Test
+    public void testURLClassLoader() throws Exception {
+        File file = new File("./doc/latico.jar");
+        URL uri = file.toURL();
+        URLClassLoader urlClassLoader = new URLClassLoader(new URL[]{uri});
+        Class c = urlClassLoader.loadClass("com.latico.web.Main");
+        System.out.println(c);
+        if (c != null) {
+            System.out.println(c.getClassLoader().toString());
+        }
+    }
+
+    /**
+     *
+     */
+    @Test
+    public void test4(){
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+    }
 
 }
