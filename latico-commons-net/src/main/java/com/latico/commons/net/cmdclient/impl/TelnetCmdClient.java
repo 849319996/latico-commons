@@ -26,7 +26,7 @@ import java.io.PrintStream;
  * 3.中文乱码的问题。
  * </PRE>
  * @project   <B>项目：VPDN-Ping</B>
- * @copyright <B>技术支持：广东凯通软件开发技术有限公司 (c)</B>
+ * @copyright <B>技术支持：latico</B>
  * @version   <B>V1.0 2016年3月31日</B>
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>

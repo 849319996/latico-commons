@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * 线程监控心跳工具
  * </PRE>
  * @project   <B>项目</B>
- * @copyright <B>技术支持：广东凯通软件开发技术有限公司 (c)</B>
+ * @copyright <B>技术支持：latico</B>
  * @version   <B>V1.0 2016年7月22日</B>
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>

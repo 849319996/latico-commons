@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * 
  * </PRE>
  * <B>项    目：</B>凯通J2SE开发平台(KTJSDP)
- * <B>技术支持：</B>广东凯通软件开发技术有限公司 (c) 2014
+ * <B>技术支持：</B>latico 2014
  * @version   1.0 2014-09-12
  * @author    廖权斌：liaoquanbin@qq.com
  * @since     jdk版本：jdk1.6
