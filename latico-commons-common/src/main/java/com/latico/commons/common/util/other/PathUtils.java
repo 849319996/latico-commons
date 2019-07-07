@@ -16,15 +16,10 @@ import java.util.regex.Pattern;
 /**
  * <PRE>
  * 路径处理工具.
- * 	处理原则： 本工具类的所有函数返回值, 只要是路径, 就一定【不以】 分隔符 结尾.
- *
- * 	JDK1.7后自带的路径工具类{@link java.nio.file.Paths}
  * </PRE>
- * <B>PROJECT：</B> exp-libs
- * <B>SUPPORT：</B> EXP
- * @version   1.0 2015-12-27
- * @author    EXP: 272629724@qq.com
- * @since     jdk版本：jdk1.6
+ * @Author: latico
+ * @Date: 2019-07-07 19:42:33
+ * @Version: 1.0
  */
 public class PathUtils {
 
@@ -162,6 +157,8 @@ public class PathUtils {
 	 */
 	public static String getProjectCompilePath() {
 
+//		也可以使用类加载器的方式，效果一样
+//		URL resource = Thread.currentThread().getContextClassLoader().getResource("");
 		URL resource = PathUtils.class.getResource("/");
 		if (resource != null) {
 			String path = resource.getPath();
