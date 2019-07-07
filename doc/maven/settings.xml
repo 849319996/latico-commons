@@ -33,7 +33,7 @@
             <id>alimaven</id>
             <repositories>
                 <repository>
-                    <id>nexus</id>
+                    <id>alimaven</id>
                     <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
                     <releases>
                         <enabled>true</enabled>
@@ -51,7 +51,7 @@
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
-                    <id>nexus</id>
+                    <id>alimaven</id>
                     <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
                     <releases>
                         <enabled>true</enabled>

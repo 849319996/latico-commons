@@ -239,4 +239,9 @@ public class SystemUtilsTest {
     public void getBootstrapClassPath() {
         System.out.println(SystemUtils.getBootstrapClassPath());
     }
+
+    @Test
+    public void getAvailableProcessors() {
+        System.out.println(SystemUtils.getAvailableProcessors());
+    }
 }

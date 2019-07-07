@@ -14,21 +14,18 @@ import java.util.regex.Pattern;
 
 /**
  * <PRE>
- * 系统命令行操作工具.
+ *  系统命令行操作工具.
  * </PRE>
- * <B>PROJECT : </B> exp-libs
- * <B>SUPPORT : </B> <a href="http://www.exp-blog.com" target="_blank">www.exp-blog.com</a>
- *
- * @author EXP: 272629724@qq.com
- * @version 2015-12-27
- * @since jdk版本：jdk1.6
+ * @Author: latico
+ * @Date: 2019-07-07 18:45:41
+ * @Version: 1.0
  */
 public class CmdUtils {
 
     /**
      * LOG 日志工具
      */
-    private static final Logger log =
+    private static final Logger LOG =
             LoggerFactory.getLogger(CmdUtils.class);
 
     /**
@@ -61,24 +58,24 @@ public class CmdUtils {
         CmdResult cmdRst = CmdResult.DEFAULT;
         try {
             Process process = Runtime.getRuntime().exec(cmd);
-            cmdRst = _execute(process, debug);
+            cmdRst = execute(process, debug);
             process.destroy();
 
         } catch (Exception e) {
-            log.error("执行控制台命令失败: {}", cmd, e);
+            LOG.error("执行控制台命令失败: {}", cmd, e);
         }
         return cmdRst;
     }
 
-    private static CmdResult _execute(Process process, boolean debug) {
+    private static CmdResult execute(Process process, boolean debug) {
         CmdResult cmdRst = new CmdResult();
         try {
             InputStream infoIs = process.getInputStream();
-            cmdRst.setInfo(_readProcessLine(infoIs));
+            cmdRst.setInfo(readProcessLine(infoIs));
 
             if (debug == true) {
                 InputStream errIs = process.getErrorStream();
-                cmdRst.setErr(_readProcessLine(errIs));
+                cmdRst.setErr(readProcessLine(errIs));
 
                 // 此方法会阻塞, 直到命令执行结束
                 int errCode = process.waitFor();
@@ -90,7 +87,7 @@ public class CmdUtils {
 
         } catch (Exception e) {
             cmdRst = CmdResult.DEFAULT;
-            log.error("执行控制台命令失败", e);
+            LOG.error("执行控制台命令失败", e);
         }
         return cmdRst;
     }
@@ -102,7 +99,7 @@ public class CmdUtils {
      * @return 执行结果
      * @throws IOException
      */
-    private static String _readProcessLine(InputStream is) throws IOException {
+    private static String readProcessLine(InputStream is) throws IOException {
         StringBuilder sb = new StringBuilder();
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(is, CharsetType.DEFAULT));
@@ -110,7 +107,8 @@ public class CmdUtils {
         String line = null;
         while ((line = reader.readLine()) != null) {
             sb.append(line).append(LineSeparator.CRLF);
-            System.out.println(line);    // 实时打印命令行执行结果
+            // 实时打印命令行执行结果
+            LOG.info(line);
         }
         return sb.toString();
     }

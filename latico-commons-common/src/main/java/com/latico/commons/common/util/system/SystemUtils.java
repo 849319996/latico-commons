@@ -462,5 +462,13 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
         return inetAddresses;
     }
 
+    /**
+     * 返回可用的CPU核数
+     * 假如是用了双线程技术的话，4核8线程，那么会返回8
+     * @return
+     */
+    public static int getAvailableProcessors() {
+        return Runtime.getRuntime().availableProcessors();
+    }
 
 }

@@ -3,13 +3,11 @@ package com.latico.commons.common.util.system.cmd;
 
 /**
  * <PRE>
- * 系统命令行返回结果.	
+ *  系统命令行返回结果.
  * </PRE>
- * <B>PROJECT : </B> exp-libs
- * <B>SUPPORT : </B> <a href="http://www.exp-blog.com" target="_blank">www.exp-blog.com</a> 
- * @version   2015-12-27
- * @author    EXP: 272629724@qq.com
- * @since     jdk版本：jdk1.6
+ * @Author: latico
+ * @Date: 2019-07-07 18:46:47
+ * @Version: 1.0
  */
 public class CmdResult {
 

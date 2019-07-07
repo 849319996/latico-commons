@@ -18,13 +18,11 @@ import java.util.*;
 
 /**
  * <PRE>
- * Java工具类.
+ *  // 实时打印命令行执行结果
  * </PRE>
- * <B>PROJECT：</B> exp-libs
- * <B>SUPPORT：</B> EXP
- * @version   1.0 2016-02-13
- * @author    EXP: 272629724@qq.com
- * @since     jdk版本：jdk1.6
+ * @Author: latico
+ * @Date: 2019-07-07 18:50:46
+ * @Version: 1.0
  */
 public class JavaUtils {
 
