@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
 
  2）SAX是基于事件驱动的，查询事件监听器继承自DefaultHandler，定义了检索xml过程中遇到开始标签、结束标签时执行的事件函数，从而查找需要的信息并返回而不是把整个文档都加载进来。
 
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/09 3:48
  * @Version: 1.0
  */

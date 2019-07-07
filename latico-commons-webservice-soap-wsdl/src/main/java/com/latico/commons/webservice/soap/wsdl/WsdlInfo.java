@@ -5,7 +5,7 @@ package com.latico.commons.webservice.soap.wsdl;
  * wsdl
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-24 21:22
  * @Version: 1.0
  */

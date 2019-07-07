@@ -12,7 +12,7 @@ import java.util.List;
  * 泛型工具类
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-17 10:23:28
  * @Version: 1.0
  */

@@ -12,7 +12,7 @@ import org.apache.zookeeper.ZooKeeper;
  * zookeeper客户端对象
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-23 13:53
  * @Version: 1.0
  */

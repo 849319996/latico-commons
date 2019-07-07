@@ -10,7 +10,7 @@ import java.util.logging.Level;
  * <PRE>
  *  JDK日志实现类
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:49:29
  * @Version: 1.0
  */

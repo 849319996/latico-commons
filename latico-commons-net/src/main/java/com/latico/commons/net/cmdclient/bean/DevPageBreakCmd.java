@@ -5,7 +5,7 @@ package com.latico.commons.net.cmdclient.bean;
  * 设备非分页输出命令
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-04-09 17:21
  * @Version: 1.0
  */

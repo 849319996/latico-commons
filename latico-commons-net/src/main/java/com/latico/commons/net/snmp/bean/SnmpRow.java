@@ -53,7 +53,7 @@ import java.io.Serializable;
  public static final int MAX_OID_LENGTH = 127;
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-21 15:53
  * @Version: 1.0
  */

@@ -9,14 +9,14 @@ import com.latico.commons.common.util.string.StringUtils;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2018年10月23日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public class SnmpUtils {
 
     /**
      * 是不是空的结果
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param obj
      * @return
      */
@@ -33,7 +33,7 @@ public class SnmpUtils {
     
     /**
      * 非空OID结果
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param obj
      * @return
      */
@@ -43,7 +43,7 @@ public class SnmpUtils {
     
     /**
      * 获取列号，table节点的OID组成结构：table节点OID.列号.行号
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param oid 当前节点的OID，包括前缀.列号.行号
      * @param prefix 采集数据前的OID，也就是OID前缀，比如采集一个接口table节点的前缀是:.1.3.6.1.2.1.2.2，也就是table节点所有列OID的前缀
      * @return
@@ -58,7 +58,7 @@ public class SnmpUtils {
     
     /**
      * 
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param oid 一个OID
      * @param colId 列ID
      * @param prefix OID前缀
@@ -74,7 +74,7 @@ public class SnmpUtils {
     
     /**
      * 格式化OID
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param oid
      * @return
      */

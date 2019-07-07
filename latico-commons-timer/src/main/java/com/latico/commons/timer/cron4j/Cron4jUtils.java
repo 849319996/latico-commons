@@ -5,7 +5,7 @@ package com.latico.commons.timer.cron4j;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-06 23:08
  * @Version: 1.0
  */

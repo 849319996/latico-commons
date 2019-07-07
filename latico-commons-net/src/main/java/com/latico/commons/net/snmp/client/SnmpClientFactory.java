@@ -14,15 +14,13 @@ import com.latico.commons.common.util.logging.LoggerFactory;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2017年3月20日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public class SnmpClientFactory {
 	/** 日志 */
 	private static final Logger LOG = LoggerFactory.getLogger(SnmpClientFactory.class);
 	
-	private SnmpClientFactory() {
-	}
 	public static SnmpClientFactory getInstance() {
 		return SingletonHolder.INSTANCE;
 	}
@@ -32,7 +30,7 @@ public class SnmpClientFactory {
 	
 	/**
 	 * 获取连接器
-	 * @param connectType
+	 * @param snmpTypeEnum
 	 * @return
 	 */
 	public static SnmpClient getSnmpClient(SnmpClientTypeEnum snmpTypeEnum){

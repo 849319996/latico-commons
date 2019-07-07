@@ -22,7 +22,7 @@ import java.util.*;
  * <PRE>
  *  数据库操作通用工具
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:46:33
  * @Version: 1.0
  */

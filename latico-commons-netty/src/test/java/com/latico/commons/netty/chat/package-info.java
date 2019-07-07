@@ -3,7 +3,7 @@
  * 聊天室程序
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-24 14:16
  * @Version: 1.0
  */

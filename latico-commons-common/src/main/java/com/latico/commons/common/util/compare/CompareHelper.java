@@ -70,7 +70,7 @@ import java.util.*;
  System.out.println(CompareHelper.diffCompareDataByAnnotion(newObjs, oldObjs));
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-28 23:34:07
  * @Version: 1.0
  */

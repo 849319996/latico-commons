@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  * 对称加密算法类型枚举
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-03 14:53
  * @Version: 1.0
  */

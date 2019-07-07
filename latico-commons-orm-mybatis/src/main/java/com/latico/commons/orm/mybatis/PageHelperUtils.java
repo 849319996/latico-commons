@@ -8,7 +8,7 @@ import com.github.pagehelper.PageHelper;
  * mybatis的分页插件
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-29 10:46
  * @Version: 1.0
  */

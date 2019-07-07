@@ -24,7 +24,7 @@ import java.util.List;
  * <PRE>
  *  WSDL解析工具，可以拿到WSDL地址的请求和响应XML报文
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-04-09 11:50:37
  * @Version: 1.0
  */

@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  *  自动递增字段标注，效果跟{@link CompareAnnotation#autoIncrementFieldName()}一样
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-13 16:39:20
  * @Version: 1.0
  */

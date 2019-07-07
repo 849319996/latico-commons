@@ -10,7 +10,7 @@ import com.latico.commons.common.util.regex.RegexUtils;
  * <PRE>
  *  校验工具，建议可以使用hibernate的
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-30 01:27:14
  * @Version: 1.0
  */

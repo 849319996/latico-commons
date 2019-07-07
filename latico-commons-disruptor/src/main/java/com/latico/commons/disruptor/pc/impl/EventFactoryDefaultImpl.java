@@ -7,7 +7,7 @@ import com.lmax.disruptor.EventFactory;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-22 16:36
  * @Version: 1.0
  */

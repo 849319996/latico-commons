@@ -21,7 +21,7 @@ import java.util.List;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2018年11月7日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public class QuartzManager {
@@ -68,7 +68,7 @@ public class QuartzManager {
     }
     /**
      * 初始化调度工厂
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @throws SchedulerException 
      */
     private void initSchedulerFactory() throws SchedulerException {
@@ -81,7 +81,7 @@ public class QuartzManager {
 
     /**
      * 创建新的调度器
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param schedulerName 调度器名称
      * @param maxWorkThreadCount 最大的工作线程数量，如果小于等于0，那就使用默认的
      * @return true:创建成功,false:已经存在或者创建失败
@@ -204,7 +204,7 @@ public class QuartzManager {
 
     /**
      * 指定调度器名称启动所有定时任务 
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param schedulerName 调度器名称
      */
     public void startScheduler(String schedulerName) {
@@ -235,7 +235,7 @@ public class QuartzManager {
 
     /**
      * 指定调度器名称关闭调度器所有工作
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param schedulerName 调度器名称
      */
     public void shutdownScheduler(String schedulerName) {
@@ -274,7 +274,7 @@ public class QuartzManager {
 
     /**
      * 获取调度器
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @return
      * @throws SchedulerException
      */
@@ -285,7 +285,7 @@ public class QuartzManager {
 
     /**
      * 通过名称获取调度器
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param schedulerName 调度器名称
      * @return
      * @throws SchedulerException

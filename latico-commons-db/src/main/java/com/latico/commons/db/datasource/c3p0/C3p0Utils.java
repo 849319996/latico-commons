@@ -13,7 +13,7 @@ import java.beans.PropertyVetoException;
  * 3、每个数据源只能实例化一次；
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-02 21:02
  * @Version: 1.0
  */

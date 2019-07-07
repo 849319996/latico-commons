@@ -13,7 +13,7 @@ import java.io.File;
  * 文件监控器工具
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-20 14:07
  * @Version: 1.0
  */

@@ -17,7 +17,7 @@ import java.util.jar.JarFile;
 
 /**
  * jar工具
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/16 02:53:04
  * @Version: 1.0
  */

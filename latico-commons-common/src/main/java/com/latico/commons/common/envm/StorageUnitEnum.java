@@ -4,7 +4,7 @@ package com.latico.commons.common.envm;
  * <PRE>
  *  枚举类：计算机存储单位
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-30 01:26:08
  * @Version: 1.0
  */

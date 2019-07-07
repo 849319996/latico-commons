@@ -16,7 +16,7 @@ import java.util.Map;
  * 对称加密算法工厂类
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-03 14:50
  * @Version: 1.0
  */

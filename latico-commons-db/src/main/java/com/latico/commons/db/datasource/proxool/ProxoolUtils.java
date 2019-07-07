@@ -18,7 +18,7 @@ import java.util.Properties;
  * proxool数据源，应该是最轻量级
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-02 15:40
  * @Version: 1.0
  */

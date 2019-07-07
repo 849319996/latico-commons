@@ -4,7 +4,7 @@
  * 服务端可以独立启动，这里的服务端是可以集成进我们自己的项目代码中启动
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-12 17:47
  * @Version: 1.0
  */

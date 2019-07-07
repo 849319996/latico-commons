@@ -9,7 +9,7 @@ package com.latico.commons.common.util.reflect;
  * 4、{@link AnnotationUtils};
  * 5、{@link ResourcesUtils};
  * 6、{@link ObjectUtils};
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/12 0:37
  * @Version: 1.0
  */

@@ -5,7 +5,7 @@ package com.latico.commons.net.httpclient;
  * HTTP响应结果
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-03 0:34
  * @Version: 1.0
  */

@@ -44,7 +44,7 @@ import java.util.jar.JarFile;
  对资源路径进行了处理
  {@link Class# resolveName(java.lang.String)}
 
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/11 1:34
  * @Version: 1.0
  */

@@ -15,7 +15,7 @@ import java.io.Reader;
  * Mybatis工具类
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-31 21:51
  * @Version: 1.0
  */

@@ -2,7 +2,7 @@ package com.latico.commons.net.syslog.server;
 
 /**
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/05 23:21:26
  * @Version: 1.0
  */

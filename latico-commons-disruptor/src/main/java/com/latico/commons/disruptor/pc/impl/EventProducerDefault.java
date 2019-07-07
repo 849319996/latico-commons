@@ -11,7 +11,7 @@ import com.lmax.disruptor.dsl.Disruptor;
  * 把消息推送到RingBuffer队列中
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-22 17:02
  * @Version: 1.0
  */

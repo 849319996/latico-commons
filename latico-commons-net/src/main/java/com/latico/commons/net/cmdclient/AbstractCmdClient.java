@@ -28,7 +28,7 @@ import java.util.regex.Matcher;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  *
- * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @version <B>V1.0 2017年3月18日</B>
  * @since <B>JDK1.6</B>
  */
@@ -1662,7 +1662,7 @@ public abstract class AbstractCmdClient implements CmdClient {
     /**
      * 端口映射
      *
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      */
     protected void portIpMap() {
         InetSocketAddress socketAddr = IpPortMaper.getInstance().getConvertedIpPort(remoteIp, remotePort);

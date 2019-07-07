@@ -15,7 +15,7 @@ package com.latico.commons.mq.rocketmq;
  二、linux方式启动
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-26 22:05
  * @Version: 1.0
  */

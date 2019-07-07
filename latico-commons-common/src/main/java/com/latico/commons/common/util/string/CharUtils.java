@@ -4,7 +4,7 @@ package com.latico.commons.common.util.string;
  * <PRE>
  *  枚举类：行终止符
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:50:55
  * @Version: 1.0
  */

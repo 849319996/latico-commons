@@ -21,7 +21,7 @@ package com.latico.commons.common.util.json;
  3、jackson在各阶段数据量都有很不错的性能，而fastjson在数据量较多的情况下也有很好性能。
 
  4、jettison性能不错，但只提供json和其JSONObject对象相互转化的方法，转为自定义bean时需要再手动将JSONObject对象转为需要的bean。
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/07 18:43
  * @Version: 1.0
  */

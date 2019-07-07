@@ -4,7 +4,7 @@ import com.latico.commons.common.util.other.IDUtils;
 import org.junit.Test;
 
 /**
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/08 14:02
  * @Version: 1.0
  */

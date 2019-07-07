@@ -5,7 +5,7 @@ package com.latico.commons.common.util.json;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-26 9:28
  * @Version: 1.0
  */

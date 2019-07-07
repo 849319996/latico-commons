@@ -5,7 +5,7 @@ package com.latico.commons.common.util.logging;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-31 18:15
  * @Version: 1.0
  */

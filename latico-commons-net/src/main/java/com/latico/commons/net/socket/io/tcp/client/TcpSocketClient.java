@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * 创建连接后，创建一个SocketHandler进行流操作
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-16 16:09
  * @Version: 1.0
  */

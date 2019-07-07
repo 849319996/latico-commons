@@ -22,7 +22,7 @@ import java.util.Map;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2017年3月28日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public interface SnmpClient {
@@ -37,7 +37,7 @@ public interface SnmpClient {
 	 * <B>项	       目：</B>
 	 * <B>技术支持：</B>
 	 * @version   <B>V1.0 2017年3月28日</B>
-	 * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @since     <B>JDK1.6</B>
 	 */
 	public static enum AuthProtocolEnum {
@@ -175,7 +175,7 @@ public interface SnmpClient {
 	
 	/**
 	 * get一个值
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param oid
 	 * @return
 	 */
@@ -242,7 +242,7 @@ public interface SnmpClient {
 	
 	/**
 	 * 获取对象形式的SNMP Table
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param tableOid
 	 * @param columnIndexs
 	 * @return

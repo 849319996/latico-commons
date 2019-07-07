@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * 该注解标志的字段，会作为比较的值来关联
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-13 16:39:43
  * @Version: 1.0
  */

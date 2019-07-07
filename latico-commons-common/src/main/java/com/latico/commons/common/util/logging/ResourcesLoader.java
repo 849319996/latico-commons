@@ -16,7 +16,7 @@ import java.util.jar.JarFile;
  * <PRE>
  *  资源加载
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:48:00
  * @Version: 1.0
  */

@@ -54,7 +54,7 @@ import java.util.Collection;
 
  * @param <E> 元素类型
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/16 03:04:59
  * @Version: 1.0
  */

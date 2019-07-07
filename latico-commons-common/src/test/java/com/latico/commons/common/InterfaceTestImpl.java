@@ -5,7 +5,7 @@ package com.latico.commons.common;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-26 16:49
  * @Version: 1.0
  */

@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * 也可以使用{@link javax.persistence.Table}
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-23 15:40
  * @Version: 1.0
  */

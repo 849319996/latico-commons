@@ -47,7 +47,7 @@ import java.util.*;
  4）子结点文本值：node.elementText("子结点名")
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/16 03:03:43
  * @Version: 1.0
  */

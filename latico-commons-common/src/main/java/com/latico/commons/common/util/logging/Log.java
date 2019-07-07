@@ -11,7 +11,7 @@ package com.latico.commons.common.util.logging;
  5、使用包扫描实现类和注解标志日志具体实现类；
  6、每新增一种日志类型，只需要添加枚举和实现类，其他代码不需要改动；
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:46:56
  * @Version: 1.0
  */

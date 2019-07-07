@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
  *  可以用于：java.util.concurrent.Executors#newSingleThreadScheduledExecutor(java.util.concurrent.ThreadFactory)
  *  让定时器自动生成的线程统一线程名字，打印日志的时候会更好核查跟踪
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-27 22:21:12
  * @Version: 1.0
  */

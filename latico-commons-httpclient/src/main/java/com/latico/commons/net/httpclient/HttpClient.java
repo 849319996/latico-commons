@@ -7,7 +7,7 @@ import java.io.Closeable;
  * http客户端
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-03 0:31
  * @Version: 1.0
  */

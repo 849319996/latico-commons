@@ -15,7 +15,7 @@ import java.net.InetSocketAddress;
  * JGroups工具类
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-10 17:36
  * @Version: 1.0
  */

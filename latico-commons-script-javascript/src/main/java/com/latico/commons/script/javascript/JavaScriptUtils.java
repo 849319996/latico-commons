@@ -2,7 +2,7 @@ package com.latico.commons.script.javascript;
 
 /**
  * javascript工具
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/08 20:50:25
  * @Version: 1.0
  */

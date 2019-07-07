@@ -19,7 +19,7 @@
  还有一类特殊的交换机：Dead Letter Exchange（死信交换机）
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 22:17
  * @Version: 1.0
  */

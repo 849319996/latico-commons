@@ -7,7 +7,7 @@ import com.lmax.disruptor.EventTranslatorOneArg;
  * 一个参数的事件
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-22 16:09
  * @Version: 1.0
  */

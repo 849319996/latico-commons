@@ -3,7 +3,7 @@ package com.latico.commons.common.util.thread;
 import org.junit.Test;
 
 /**
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/08 23:37
  * @Version: 1.0
  */

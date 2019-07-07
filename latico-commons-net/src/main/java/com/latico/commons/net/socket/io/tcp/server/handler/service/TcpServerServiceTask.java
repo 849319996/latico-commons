@@ -7,7 +7,7 @@ import com.latico.commons.net.socket.io.tcp.common.SocketHandler;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-17 13:54
  * @Version: 1.0
  */

@@ -7,7 +7,7 @@ package com.latico.commons.common.util.version;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  *
- * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @version <B>V1.0 2018年12月5日</B>
  * @since <B>JDK1.6</B>
  */
@@ -25,7 +25,7 @@ public class VersionExample extends AbstractVersion {
     /**
      * 执行方法，输出所有更新记录
      *
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      */
     public static void printVersionInfo() {
         System.out.println(version.getVersionInfo());
@@ -49,14 +49,14 @@ public class VersionExample extends AbstractVersion {
     @Override
     protected void addUpdateHistory() {
         /////////////////////////////////升级记录////////////////////////////////////////
-        addCurrentVersionInfo("0", "2018-12-05 18:00:00", "蓝鼎栋");
+        addCurrentVersionInfo("0", "2018-12-05 18:00:00", "latico");
         addUpdateNode("20181205", "项目新建");
 
         ///////////////////////////////////////////////////////////////
-        addCurrentVersionInfo("1.0", "2018-12-05 18:00:00", "蓝鼎栋");
+        addCurrentVersionInfo("1.0", "2018-12-05 18:00:00", "latico");
 
-        addUpdateNode("蓝鼎栋", "20181205", "项目提交到GitLab");
-        addUpdateNode("蓝鼎栋", "20181205", "整理项目结构");
+        addUpdateNode("latico", "20181205", "项目提交到GitLab");
+        addUpdateNode("latico", "20181205", "整理项目结构");
     }
 
 }

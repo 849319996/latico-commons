@@ -7,7 +7,7 @@ import com.latico.commons.common.util.version.VersionExample;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-22 16:58
  * @Version: 1.0
  */

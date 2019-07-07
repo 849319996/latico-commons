@@ -7,7 +7,7 @@ import com.latico.commons.common.envm.CharsetType;
  * 数据源参数
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-02 14:09
  * @Version: 1.0
  */

@@ -7,7 +7,7 @@
   http://localhost:8080/latico-commons-websocket-tomcat/websocket.jsp
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-13 18:18
  * @Version: 1.0
  */

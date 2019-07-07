@@ -5,7 +5,7 @@ package com.latico.commons.net.dhcp.server.common;
  * 租约枚举类型
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-07 23:00
  * @Version: 1.0
  */

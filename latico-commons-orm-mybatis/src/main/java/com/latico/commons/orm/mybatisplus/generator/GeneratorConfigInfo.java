@@ -12,7 +12,7 @@ import java.util.List;
  * 代码生成器所需的配置信息
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-31 23:39
  * @Version: 1.0
  */

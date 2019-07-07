@@ -8,7 +8,7 @@ import net.sf.cglib.proxy.MethodInterceptor;
  * Cglib动态代理
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-21 17:53
  * @Version: 1.0
  */

@@ -12,7 +12,7 @@ import java.util.List;
  * apache的QueryRunner工具
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-11 1:32
  * @Version: 1.0
  */

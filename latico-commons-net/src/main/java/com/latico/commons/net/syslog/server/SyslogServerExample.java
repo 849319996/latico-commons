@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  *  2、{@link SyslogServerSessionlessEventHandlerIF}
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-31 18:11:00
  * @Version: 1.0
  */

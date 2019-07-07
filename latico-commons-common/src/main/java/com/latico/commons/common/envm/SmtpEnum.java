@@ -5,7 +5,7 @@ package com.latico.commons.common.envm;
  * 枚举类：常用邮箱SMTP服务
  * 	(提供服务地址和SMTP端口)
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-30 01:25:55
  * @Version: 1.0
  */

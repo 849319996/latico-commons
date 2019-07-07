@@ -2,7 +2,7 @@ package com.latico.commons.common.envm;
 
 /**
  * 枚举类：编码
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/16 02:50:41
  * @Version: 1.0
  */

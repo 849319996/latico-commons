@@ -11,7 +11,7 @@ import java.util.Properties;
 
 /**
  * properties文件工具
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/11 1:25
  * @Version: 1.0
  */

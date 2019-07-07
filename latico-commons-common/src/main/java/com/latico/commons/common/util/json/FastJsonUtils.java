@@ -17,7 +17,7 @@ import com.latico.commons.common.util.string.StringUtils;
  * JSONArray：fastJson提供json数组对象。
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-26 9:23
  * @Version: 1.0
  */

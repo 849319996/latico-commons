@@ -10,7 +10,7 @@ import java.util.*;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  *
- * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @version <B>V1.0 2018年6月22日</B>
  * @since <B>JDK1.6</B>
  */

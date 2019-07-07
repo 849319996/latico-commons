@@ -40,7 +40,7 @@ import java.util.Set;
  既然是分布式，肯定是需要你获取一个一个redis连接，然后搞一个List放进去，然后写上你需要的一些hash算法，选取规则什么的，这就得到了一个redisPool
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-22 15:58
  * @Version: 1.0
  */

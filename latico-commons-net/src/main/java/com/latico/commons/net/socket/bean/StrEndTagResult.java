@@ -7,7 +7,7 @@ import java.util.List;
  * 指定的结束符把字符串切割成每段结果
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-17 17:16
  * @Version: 1.0
  */

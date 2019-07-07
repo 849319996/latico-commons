@@ -15,7 +15,7 @@ import java.util.List;
  * 数值处理工具
  * JDK自带的数学计算工具 {@link Math}
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:45:31
  * @Version: 1.0
  */

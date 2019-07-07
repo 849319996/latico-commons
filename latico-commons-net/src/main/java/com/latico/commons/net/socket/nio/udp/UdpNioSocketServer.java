@@ -31,7 +31,7 @@ import java.util.Iterator;
  *        使用datagramChannel.write(write);代替datagramChannel.send(write,socketAddress);发送数据
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-21 0:37
  * @Version: 1.0
  */

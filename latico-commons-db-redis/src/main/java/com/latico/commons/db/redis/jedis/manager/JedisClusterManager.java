@@ -13,7 +13,7 @@ import java.util.Set;
  * 集群模式，单例管理
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-24 20:52
  * @Version: 1.0
  */

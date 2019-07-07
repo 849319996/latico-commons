@@ -14,7 +14,7 @@ import java.net.Socket;
  * 2、客户端：指定服务端的IP和端口，创建连接，会获得一个跟服务端连接的socket。
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-15 10:12
  * @Version: 1.0
  */

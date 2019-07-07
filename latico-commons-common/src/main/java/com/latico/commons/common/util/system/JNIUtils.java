@@ -8,7 +8,7 @@ import java.io.File;
  无论是 Linux，Windows 还是 Mac OS，或者一些汇编语言写的底层硬件驱动都是 C/C++ 写的。Java和C/C++不同 ，它不会直接编译成平台机器码，而是编译成虚拟机可以运行的Java字节码的.class文件，通过JIT（Just-In-Time）技术即时编译成本地机器码，所以有效率就比不上C/C++代码，JNI技术就解决了这一痛点，JNI 可以说是 C 语言和 Java 语言交流的适配器、中间件。其实主要是定义了一些JNI函数，让开发者可以通过调用这些函数实现Java代码调用C/C++的代码，C/C++的代码也可以调用Java的代码，这样就可以发挥各个语言的特点了。
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-05 22:39
  * @Version: 1.0
  */

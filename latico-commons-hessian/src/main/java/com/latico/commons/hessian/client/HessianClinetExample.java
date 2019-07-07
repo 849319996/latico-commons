@@ -9,7 +9,7 @@ import com.latico.commons.hessian.common.bean.BeanExample;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-09 23:00
  * @Version: 1.0
  */

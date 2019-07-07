@@ -9,7 +9,7 @@ package com.latico.commons.common.envm;
  *  不同不稳健类型, 可能存在相同的文件头(如：DOC、XLS、PPT)
  *  存在某些文件类型没有文件头(如：TXT)
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-30 01:24:46
  * @Version: 1.0
  */

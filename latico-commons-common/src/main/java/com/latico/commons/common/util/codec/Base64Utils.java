@@ -10,7 +10,7 @@ import sun.misc.BASE64Encoder;
  *  Base64编解码工具
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-28 23:33:51
  * @Version: 1.0
  */

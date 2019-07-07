@@ -126,7 +126,7 @@ MQTT一般用于手机android移动端
 
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-30 9:36
  * @Version: 1.0
  */

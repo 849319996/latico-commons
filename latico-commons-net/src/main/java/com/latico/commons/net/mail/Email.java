@@ -31,7 +31,7 @@ import java.util.Properties;
  * mail.send("title-1", "content-abcdefg");
  * mail.send("title-2", "content-xyzzyx");
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-30 01:11:53
  * @Version: 1.0
  */

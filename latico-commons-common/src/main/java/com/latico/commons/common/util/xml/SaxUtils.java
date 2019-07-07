@@ -26,7 +26,7 @@ package com.latico.commons.common.util.xml;
  3：通过解析器的parse()方法，对指定xml文档以指定handler之类进行解析查询：htmlparser.parse(xmlFile, new MySaxListener())；
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-26 9:12
  * @Version: 1.0
  */

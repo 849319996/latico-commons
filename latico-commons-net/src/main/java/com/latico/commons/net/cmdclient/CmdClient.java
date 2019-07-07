@@ -25,7 +25,7 @@ import java.util.regex.Pattern;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2017年3月18日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public interface CmdClient extends Closeable {
@@ -467,14 +467,14 @@ public interface CmdClient extends Closeable {
 	
 	/**
 	 * 是不是netconf协议
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @return
 	 */
 	public boolean isNetconf();
 	
 	/**
 	 * 是否有错误信息
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param info
 	 * @return
 	 */
@@ -484,7 +484,7 @@ public interface CmdClient extends Closeable {
 	
 	/**
 	 * 是否有正确信息
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param info
 	 * @return
 	 */
@@ -494,14 +494,14 @@ public interface CmdClient extends Closeable {
 	
 	/**
 	 * 获取最后的响应信息
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @return
 	 */
 	public String getLastReplyInfo();
 	
 	/**
 	 * 最后的发送信息
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @return
 	 */
 	public String getLastSendInfo();

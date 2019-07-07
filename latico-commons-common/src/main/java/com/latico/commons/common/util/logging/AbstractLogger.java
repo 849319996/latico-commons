@@ -5,7 +5,7 @@ package com.latico.commons.common.util.logging;
  * <PRE>
  *  抽象的日志对象
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:47:28
  * @Version: 1.0
  */

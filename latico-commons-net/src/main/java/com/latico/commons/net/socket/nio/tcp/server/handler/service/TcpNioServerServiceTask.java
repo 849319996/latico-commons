@@ -7,7 +7,7 @@ import com.latico.commons.net.socket.nio.tcp.common.SelectionKeyHandler;
  * 注意使用是单次任务
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-17 13:54
  * @Version: 1.0
  */

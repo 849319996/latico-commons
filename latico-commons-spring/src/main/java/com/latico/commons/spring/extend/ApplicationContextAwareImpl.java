@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * spring要使用该类，必须要把该bean注册进spring容器中
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-20 18:56
  * @Version: 1.0
  */

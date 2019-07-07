@@ -25,7 +25,7 @@ import java.util.Hashtable;
  * @project   <B>项目：VPDN-Ping</B>
  * @copyright <B>技术支持：广东凯通软件开发技术有限公司 (c)</B>
  * @version   <B>V1.0 2016年3月31日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public class SshCmdClient extends AbstractCmdClient {
@@ -68,7 +68,7 @@ public class SshCmdClient extends AbstractCmdClient {
 	 * <B>项	       目：</B>
 	 * <B>技术支持：</B>
 	 * @version   <B>V1.0 2017年3月20日</B>
-	 * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @since     <B>JDK1.6</B>
 	 */
 	public class DefaultUserInfo implements UserInfo {

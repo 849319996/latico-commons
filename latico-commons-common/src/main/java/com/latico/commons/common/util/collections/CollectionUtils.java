@@ -10,7 +10,7 @@ import java.util.*;
  * jdk自带有{@link Collections}工具类，建议同时使用
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/08 20:44:00
  * @Version: 1.0
  */

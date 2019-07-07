@@ -11,7 +11,7 @@ import java.util.Properties;
  * apache的DBCP数据源
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-02 17:44
  * @Version: 1.0
  */

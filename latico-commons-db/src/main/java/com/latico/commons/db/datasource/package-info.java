@@ -20,7 +20,7 @@
  后来阿里巴巴的druid开源了，可以是前无古人后无来者，最强没有之一，是否的稳定，在大并发中表现十分好
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-19 10:13
  * @Version: 1.0
  */

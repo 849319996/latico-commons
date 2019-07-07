@@ -5,7 +5,7 @@ package com.latico.commons.common.util.reflect.bean;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-24 0:39
  * @Version: 1.0
  */

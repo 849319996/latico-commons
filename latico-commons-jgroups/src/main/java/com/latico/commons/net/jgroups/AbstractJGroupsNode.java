@@ -20,7 +20,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 2、如果集群创建者退出集群，那么其他节点会选任新的节点作为集群创建者；
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-10 18:20
  * @Version: 1.0
  */

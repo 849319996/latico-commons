@@ -28,7 +28,7 @@ import java.util.Vector;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2017年4月9日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public class AdventnetTrapReceiver extends AbstractTrapReceiver implements TrapParserListener,TrapListener {

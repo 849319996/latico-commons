@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * SelectionKey：选择键，跟一个客户端连接的保持者
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-20 20:08
  * @Version: 1.0
  */

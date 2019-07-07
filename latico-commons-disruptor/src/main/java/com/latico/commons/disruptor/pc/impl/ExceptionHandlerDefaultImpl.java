@@ -9,7 +9,7 @@ import com.lmax.disruptor.ExceptionHandler;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-22 16:56
  * @Version: 1.0
  */

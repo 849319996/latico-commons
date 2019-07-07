@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  * <PRE>
  *  日期/时间工具
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/16 03:03:19
  * @Version: 1.0
  */

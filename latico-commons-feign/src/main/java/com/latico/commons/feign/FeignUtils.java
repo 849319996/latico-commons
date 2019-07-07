@@ -12,7 +12,7 @@ import feign.jaxrs.JAXRSContract;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-03-05 17:10
  * @Version: 1.0
  */

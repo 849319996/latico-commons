@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2018年4月3日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public abstract class AbstractVersion {
@@ -107,7 +107,7 @@ public abstract class AbstractVersion {
 	
 	/**
 	 * 添加更新节点
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param updateTime 更新时间
 	 * @param updateContent 更新内容
 	 */
@@ -117,7 +117,7 @@ public abstract class AbstractVersion {
 	
 	/**
 	 * 添加更新节点
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param author 更新作者
 	 * @param updateTime 更新时间
 	 * @param updateContent 更新内容
@@ -128,7 +128,7 @@ public abstract class AbstractVersion {
 	
 	/**
 	 * 添加更新节点
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param objs
 	 */
 	protected void addUpdateNode(Object... objs) {

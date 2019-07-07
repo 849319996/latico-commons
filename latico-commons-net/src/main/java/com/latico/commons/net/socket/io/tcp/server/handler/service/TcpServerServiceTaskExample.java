@@ -8,7 +8,7 @@ import com.latico.commons.common.util.logging.LoggerFactory;
  * TcpServerServiceTask示例
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-17 11:01
  * @Version: 1.0
  */

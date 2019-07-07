@@ -18,7 +18,7 @@ import java.nio.charset.Charset;
  * netty工具类，tcp、udp等
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-30 11:29
  * @Version: 1.0
  */

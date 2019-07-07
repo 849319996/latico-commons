@@ -9,7 +9,7 @@ import java.util.Collection;
  * <PRE>
  * 布尔数据处理工具
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/08 20:43:32
  * @Version: 1.0
  */

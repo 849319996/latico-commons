@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * <PRE>
  *  主函数的抽象类
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 13:39:32
  * @Version: 1.0
  */

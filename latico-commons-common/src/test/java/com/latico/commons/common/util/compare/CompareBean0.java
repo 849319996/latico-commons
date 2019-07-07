@@ -4,7 +4,7 @@ import com.latico.commons.common.util.compare.extendsmode.AbstractCompareObj;
 
 
 /**
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/05 16:00
  * @Version: 1.0
  */

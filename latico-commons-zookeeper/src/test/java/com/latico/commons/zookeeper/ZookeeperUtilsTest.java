@@ -12,7 +12,7 @@ import java.util.Properties;
  *  jajg
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-23 13:44:00
  * @Version: 1.0
  */

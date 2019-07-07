@@ -20,7 +20,7 @@ import io.netty.handler.codec.string.StringEncoder;
  * netty工具类，tcp、udp等
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-30 11:29
  * @Version: 1.0
  */

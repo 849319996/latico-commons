@@ -12,7 +12,7 @@ import org.quartz.spi.JobStore;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-06 21:33
  * @Version: 1.0
  */
@@ -65,7 +65,7 @@ public class QuartzUtils {
 
     /**
      * 通过名称获取调度器
-     * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
      * @param schedulerName 调度器名称
      * @return
      * @throws SchedulerException

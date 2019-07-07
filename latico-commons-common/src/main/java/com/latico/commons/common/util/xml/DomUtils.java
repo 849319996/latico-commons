@@ -14,7 +14,7 @@ package com.latico.commons.common.util.xml;
  a、由于整个文档都需要载入内存，对于大文档成本高
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-26 9:11
  * @Version: 1.0
  */

@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * <B>项	       目：</B>
  * <B>技术支持：</B>
  * @version   <B>V1.0 2017年3月21日</B>
- * @author    <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+ * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
 public class IpPortMaper extends AbstractConfig {

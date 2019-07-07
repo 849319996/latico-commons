@@ -10,7 +10,7 @@ import java.util.UUID;
  * <PRE>
  *  唯一性ID生成器工具.
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/16 02:57:38
  * @Version: 1.0
  */

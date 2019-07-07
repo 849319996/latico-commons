@@ -14,7 +14,7 @@ import java.util.Base64;
  * RSA算法工具类
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-03 21:33
  * @Version: 1.0
  */

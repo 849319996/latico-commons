@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * UDP客户端
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-15 15:07
  * @Version: 1.0
  */

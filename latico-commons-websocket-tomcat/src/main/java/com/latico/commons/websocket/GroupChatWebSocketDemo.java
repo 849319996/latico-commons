@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * * 注解的值将被用于监听用户连接的终端访问URL地址,客户端可以通过这个URL来连接到WebSocket服务器端
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-04 11:01:33
  * @Version: 1.0
  */

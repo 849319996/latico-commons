@@ -24,7 +24,7 @@ import java.util.Map;
  * 对于数据库字段名，假如没有使用DBFieldNameAnnotation或者 javax.persistence.Column注解，那么就是使用bean对象的字段名称
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-24 1:17
  * @Version: 1.0
  */

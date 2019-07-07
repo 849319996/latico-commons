@@ -7,7 +7,7 @@ import com.latico.commons.spring.test.Study;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-01 17:26
  * @Version: 1.0
  */

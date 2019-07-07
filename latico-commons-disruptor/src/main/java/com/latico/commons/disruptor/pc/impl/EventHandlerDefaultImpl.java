@@ -10,7 +10,7 @@ import com.lmax.disruptor.EventHandler;
  * 继承EventHandlerDefaultImpl后，子类需要重写onEvent方法
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-05-22 17:16
  * @Version: 1.0
  */

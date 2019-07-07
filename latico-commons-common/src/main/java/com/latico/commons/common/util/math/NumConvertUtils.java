@@ -10,7 +10,7 @@ import com.latico.commons.common.util.string.StringUtils;
  * D:dec
  * H:hex
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:45:40
  * @Version: 1.0
  */

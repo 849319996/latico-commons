@@ -10,7 +10,7 @@ import java.util.Random;
  * <PRE>
  *  随机生成器工具.
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:45:53
  * @Version: 1.0
  */

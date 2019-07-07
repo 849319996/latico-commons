@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * 有点像Proactor模式，轮询一次SelectionKey，不管上次的SelectionKey执行完成没有，都去轮询下一次
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-20 22:10
  * @Version: 1.0
  */

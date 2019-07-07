@@ -8,7 +8,7 @@ import com.latico.commons.common.util.logging.LogTypeEnum;
  * <PRE>
  * apache的日志实现类
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:48:50
  * @Version: 1.0
  */

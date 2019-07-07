@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * javascript工具
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/08 20:50:25
  * @Version: 1.0
  */
@@ -31,7 +31,7 @@ public class JavaScriptUtils {
 	/**
 	 *
 	 * 执行和通过key获取返回结果，只传了一个入参
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param script JavaScript脚本
 	 * @param inParamKey 入参的key
 	 * @param inParamValue 入参的value
@@ -45,7 +45,7 @@ public class JavaScriptUtils {
 
 	/**
 	 * 执行和通过key获取返回结果，只传了一个入参
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param script JavaScript脚本
 	 * @param inParamKey 入参的key
 	 * @param inParamValue 入参的value
@@ -68,7 +68,7 @@ public class JavaScriptUtils {
 
 	/**
 	 * 执行和通过key获取返回结果
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param script JavaScript脚本
 	 * @param paramMap 全局变量
 	 * @param resultKey 获取返回结果的时候的key
@@ -93,7 +93,7 @@ public class JavaScriptUtils {
 
 	/**
 	 * 执行JavaScript脚本
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param script JavaScript脚本
 	 * @param paramMap 全局变量
 	 * @throws Exception
@@ -111,7 +111,7 @@ public class JavaScriptUtils {
 
 	/**
 	 * 执行一个JavaScript方法
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param script JavaScript脚本
 	 * @param methodName 执行的JavaScript方法名称
 	 * @param clazz 返回结果的数据类型
@@ -136,7 +136,7 @@ public class JavaScriptUtils {
 
 	/**
 	 * 执行一个JavaScript方法
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param script JavaScript脚本
 	 * @param methodName 执行的JavaScript方法名称
 	 * @param clazz 返回结果的数据类型
@@ -167,7 +167,7 @@ public class JavaScriptUtils {
 
 	/**
 	 * 执行一个JavaScript方法
-	 * @author <B><a href="mailto:latico@qq.com"> 蓝鼎栋 </a></B>
+	 * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
 	 * @param script JavaScript脚本
 	 * @param methodName 执行的JavaScript方法名称
 	 * @param clazz 返回结果的数据类型

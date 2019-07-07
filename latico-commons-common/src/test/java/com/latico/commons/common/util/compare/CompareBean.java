@@ -8,7 +8,7 @@ import com.latico.commons.common.util.db.dao.NotDBFieldAnnotation;
 
 
 /**
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/05 16:00
  * @Version: 1.0
  */

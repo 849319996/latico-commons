@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * 线程工具
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/09 00:44:23
  * @Version: 1.0
  */

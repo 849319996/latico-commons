@@ -11,7 +11,7 @@ import org.ehcache.config.builders.ResourcePoolsBuilder;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-06 23:16
  * @Version: 1.0
  */

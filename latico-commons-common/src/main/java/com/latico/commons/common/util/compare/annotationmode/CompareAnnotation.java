@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  *  差异比较的注解，也可以指定父类所有字段
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-13 16:40:01
  * @Version: 1.0
  */

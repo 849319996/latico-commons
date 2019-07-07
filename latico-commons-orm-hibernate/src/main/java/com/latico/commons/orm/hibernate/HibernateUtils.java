@@ -5,7 +5,7 @@ package com.latico.commons.orm.hibernate;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-31 23:07
  * @Version: 1.0
  */

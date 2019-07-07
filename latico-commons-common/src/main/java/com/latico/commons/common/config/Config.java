@@ -6,7 +6,7 @@ package com.latico.commons.common.config;
  * 对于一些比较大量的，bean类型的配置，建议使用spring的上下文getBean方法加载初始化。
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:24:41
  * @Version: 1.0
  */

@@ -14,7 +14,7 @@ import java.util.List;
  * 所以会把补完整剩下部分也保留下来，用于跟后面接收的新数据进行组拼
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-17 17:15
  * @Version: 1.0
  */

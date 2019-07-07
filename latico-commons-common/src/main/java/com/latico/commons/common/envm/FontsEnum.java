@@ -4,7 +4,7 @@ package com.latico.commons.common.envm;
  * <PRE>
  *  枚举类：字体
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-30 01:25:02
  * @Version: 1.0
  */

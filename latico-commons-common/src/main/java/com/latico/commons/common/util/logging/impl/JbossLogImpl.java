@@ -11,7 +11,7 @@ import org.jboss.logging.Logger;
  * JBOSS日志实现类
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-09 17:20
  * @Version: 1.0
  */

@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  * 用于构建URL路径的子路径
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-10 0:50
  * @Version: 1.0
  */

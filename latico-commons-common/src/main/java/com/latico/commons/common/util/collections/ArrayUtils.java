@@ -4,7 +4,7 @@ package com.latico.commons.common.util.collections;
  * 数组工具类
  *
  * JDK自带的数组工具类{@link java.util.Arrays}
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018/12/12 22:06
  * @Version: 1.0
  */

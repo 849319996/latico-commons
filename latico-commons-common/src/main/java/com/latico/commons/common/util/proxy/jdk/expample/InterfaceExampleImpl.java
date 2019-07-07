@@ -5,7 +5,7 @@ package com.latico.commons.common.util.proxy.jdk.expample;
  * 接口实现类
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2018-12-31 19:53
  * @Version: 1.0
  */

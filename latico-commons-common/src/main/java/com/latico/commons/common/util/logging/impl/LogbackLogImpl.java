@@ -11,7 +11,7 @@ import org.slf4j.spi.LocationAwareLogger;
  * <PRE>
  *  logback日志实现类
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-27 11:49:59
  * @Version: 1.0
  */

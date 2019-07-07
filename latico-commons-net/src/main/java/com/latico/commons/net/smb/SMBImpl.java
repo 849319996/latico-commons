@@ -14,7 +14,7 @@ import java.util.List;
  * <PRE>
  *  smb共享工具类
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-30 01:11:37
  * @Version: 1.0
  */

@@ -26,7 +26,7 @@ import java.nio.charset.Charset;
  * UNICODEstr -> UNICODEbyte -> ISOstr -> ISObyte -> UNICODEstr
  *  
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-24 00:27:46
  * @Version: 1.0
  */

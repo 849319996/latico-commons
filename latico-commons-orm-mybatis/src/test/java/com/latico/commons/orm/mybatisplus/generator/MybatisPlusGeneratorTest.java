@@ -14,7 +14,7 @@ import java.util.List;
  *
  *
  * </PRE>
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-06-06 15:15:24
  * @Version: 1.0
  */
@@ -38,7 +38,7 @@ public class MybatisPlusGeneratorTest {
 
         config.setOutputDir("./_generator/" + DateTimeUtils.toStr(new Date(System.currentTimeMillis()), "yyyyMMddHHmmss"));
 
-        config.setAuthor("landingdong");
+        config.setAuthor("latico");
 
         config.setDbType(DbType.MYSQL);
         config.setDriverName(DBTypeEnum.MYSQL.DRIVER);

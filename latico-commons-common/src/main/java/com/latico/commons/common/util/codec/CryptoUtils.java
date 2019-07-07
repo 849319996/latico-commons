@@ -15,7 +15,7 @@ import com.latico.commons.common.util.codec.sea.common.SymmetricEncryptAlgorithm
  * 非对称加密：RSA
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-07-05 10:12
  * @Version: 1.0
  */

@@ -3,7 +3,7 @@
  * 日期时间工具（日期/时间格式处理）
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-02-06 22:19
  * @Version: 1.0
  */

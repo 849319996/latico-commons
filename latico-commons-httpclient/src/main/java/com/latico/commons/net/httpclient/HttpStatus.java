@@ -5,7 +5,7 @@ package com.latico.commons.net.httpclient;
  *
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-06 18:55
  * @Version: 1.0
  */

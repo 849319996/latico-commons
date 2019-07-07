@@ -10,7 +10,7 @@ package com.latico.commons.selenium;
  * .Net、Java、Perl等不同语言的测试脚本。
  * </PRE>
  *
- * @Author: LanDingDong
+ * @Author: latico
  * @Date: 2019-01-07 0:21
  * @Version: 1.0
  */
