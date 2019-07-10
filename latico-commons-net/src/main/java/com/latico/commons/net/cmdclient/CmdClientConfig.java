@@ -3,6 +3,7 @@ package com.latico.commons.net.cmdclient;
 
 import com.latico.commons.common.config.AbstractConfig;
 import com.latico.commons.common.config.FieldConfigNameAnnotation;
+import com.latico.commons.common.util.collections.CollectionUtils;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import com.latico.commons.common.util.other.PathUtils;
@@ -16,10 +17,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 
 import java.text.ParseException;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -365,27 +363,38 @@ public class CmdClientConfig extends AbstractConfig {
         if (devDefaultUserPwdsEle == null) {
             return;
         }
-        List<Element> devDefaultUserPwdEles = devDefaultUserPwdsEle.elements("devPageBreakCmd");
-        if (devDefaultUserPwdEles == null) {
+        List<Element> devPageBreakCmdEles = devDefaultUserPwdsEle.elements("devPageBreakCmd");
+        if (devPageBreakCmdEles == null) {
             return;
         }
         final String defaultName = "all";
-        for (Element devDefaultUserPwdEle : devDefaultUserPwdEles) {
-            DevPageBreakCmd devDefaultUserPwd = new DevPageBreakCmd();
+        for (Element devDefaultUserPwdEle : devPageBreakCmdEles) {
+            DevPageBreakCmd devPageBreakCmd = new DevPageBreakCmd();
             Map<String, String> allAttributeNameValueMap = Dom4jUtils.getAllAttributeNameValueMap(devDefaultUserPwdEle);
-            writeFieldValue(devDefaultUserPwd, allAttributeNameValueMap);
+            writeFieldValue(devPageBreakCmd, allAttributeNameValueMap);
 
-            devDefaultUserPwd.setManufacturer(unifyManufacturerHandle(devDefaultUserPwd.getManufacturer()));
-            Map<String, DevPageBreakCmd> modelDevInfo = devPageBreakCmds.get(devDefaultUserPwd.getManufacturer());
+            if (devPageBreakCmd.getPageBreakCmd().contains(";")) {
+
+                String[] cmds = devPageBreakCmd.getPageBreakCmd().split("\\s*;\\s*");
+                List<String> list = CollectionUtils.toList(cmds);
+                devPageBreakCmd.setPageBreakCmds(list);
+            } else {
+                List<String> cmds = new ArrayList<>();
+                cmds.add(devPageBreakCmd.getPageBreakCmd());
+                devPageBreakCmd.setPageBreakCmds(cmds);
+            }
+
+            devPageBreakCmd.setManufacturer(unifyManufacturerHandle(devPageBreakCmd.getManufacturer()));
+            Map<String, DevPageBreakCmd> modelDevInfo = devPageBreakCmds.get(devPageBreakCmd.getManufacturer());
             if (modelDevInfo == null) {
                 modelDevInfo = new HashMap<>();
-                devPageBreakCmds.put(devDefaultUserPwd.getManufacturer(), modelDevInfo);
+                devPageBreakCmds.put(devPageBreakCmd.getManufacturer(), modelDevInfo);
             }
-            String model = devDefaultUserPwd.getModel();
+            String model = devPageBreakCmd.getModel();
             if (StringUtils.isEmpty(model)) {
                 model = defaultName;
             }
-            modelDevInfo.put(model, devDefaultUserPwd);
+            modelDevInfo.put(model, devPageBreakCmd);
         }
     }
 

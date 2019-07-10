@@ -1528,14 +1528,22 @@ public abstract class AbstractCmdClient implements CmdClient {
 
     @Override
     public boolean modifyCmdOutputAllDataImmediate(String manufacturer) {
-        DevPageBreakCmd devPageBreakCmd = CmdClientConfig.getInstance().getDevPageBreakCmd(manufacturer, null);
+        return modifyCmdOutputAllDataImmediate(manufacturer, model);
+    }
+
+    @Override
+    public boolean modifyCmdOutputAllDataImmediate(String manufacturer, String model) {
+        DevPageBreakCmd devPageBreakCmd = CmdClientConfig.getInstance().getDevPageBreakCmd(manufacturer, model);
         if (devPageBreakCmd != null) {
-            if (!execCommand(devPageBreakCmd.getPageBreakCmd())) {
-                return false;
+            for (String pageBreakCmd : devPageBreakCmd.getPageBreakCmds()) {
+                if (!execCommand(pageBreakCmd)) {
+                    return false;
+                }
+                return hasError(readData(10000));
             }
-            return hasError(readData(10000));
+
         } else {
-            LOG.error("{} 暂不支持该厂家进入非分页输出模式", getLoginInfo());
+            LOG.warn("{} 暂不支持该厂家进入非分页输出模式", getLoginInfo());
         }
         return false;
     }
@@ -1640,7 +1648,7 @@ public abstract class AbstractCmdClient implements CmdClient {
 
         loginStatus = login(ip, port, username, password, enable, enablePwd);
         if (loginStatus) {
-            modifyCmdOutputAllDataImmediate(manufacturer);
+            modifyCmdOutputAllDataImmediate(manufacturer, model);
         }
         return loginStatus;
     }
@@ -1662,7 +1670,7 @@ public abstract class AbstractCmdClient implements CmdClient {
     /**
      * 端口映射
      *
-     * @author <B><a href="mailto:latico@qq.com"> latico </a></B>
+     * @author <B><a href="mailto:landingdong@gdcattsoft.com"> 蓝鼎栋 </a></B>
      */
     protected void portIpMap() {
         InetSocketAddress socketAddr = IpPortMaper.getInstance().getConvertedIpPort(remoteIp, remotePort);

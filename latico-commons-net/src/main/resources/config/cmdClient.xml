@@ -43,6 +43,17 @@
 		<devPageBreakCmd manufacturer="Cisco" model="" pageBreakCmd="terminal length 0"/>
 		<devPageBreakCmd manufacturer="Raisecom" model="" pageBreakCmd="terminal page-break disable"/>
 		<devPageBreakCmd manufacturer="rc" model="" pageBreakCmd="terminal page-break disable"/>
+
+		<devPageBreakCmd manufacturer="fiberHome" model="CiTRANS R8000-10" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+		<devPageBreakCmd manufacturer="fh" model="CiTRANS R8000-10" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+		<devPageBreakCmd manufacturer="fenghuo" model="CiTRANS R8000-10" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+		<devPageBreakCmd manufacturer="fenghu" model="CiTRANS R8000-10" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+
+		<devPageBreakCmd manufacturer="fiberHome" model="CiTRANS R8000-5" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+		<devPageBreakCmd manufacturer="fh" model="CiTRANS R8000-5" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+		<devPageBreakCmd manufacturer="fenghuo" model="CiTRANS R8000-5" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+		<devPageBreakCmd manufacturer="fenghu" model="CiTRANS R8000-5" pageBreakCmd="config terminal;terminal length 0;terminal length 0;exit"/>
+
 	</devPageBreakCmds>
 
 	<enableModels caption="指定要enable的厂家和型号" hint="厂家可以为空，型号也可以为空，但是两者不能同时为空">

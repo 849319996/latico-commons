@@ -127,4 +127,10 @@ public class CmdClientConfigTest {
         System.out.println(CmdClientConfig.getInstance().getDevDefaultUserPwd("fiberhome", null));
         System.out.println(CmdClientConfig.getInstance().getDevDefaultUserPwd("cisco", null));
     }
+
+    @Test
+    public void getDevDefaultUserPwd2() {
+        System.out.println(CmdClientConfig.getInstance().getDevPageBreakCmd("fiberhome", "CiTRANS R8000-5"));
+        System.out.println(CmdClientConfig.getInstance().getDevPageBreakCmd("fh", "CiTRANS R8000-10"));
+    }
 }
