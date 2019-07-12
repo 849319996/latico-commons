@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Premain-Class: com.latico.commons.javaagent.onload.JavaAgentExample
+Agent-Class: com.latico.commons.javaagent.runtime.AgentMainTraceAgent
+

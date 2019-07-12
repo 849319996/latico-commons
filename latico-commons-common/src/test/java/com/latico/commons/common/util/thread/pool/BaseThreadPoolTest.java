@@ -2,6 +2,7 @@ package com.latico.commons.common.util.thread.pool;
 
 import org.junit.Test;
 
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -45,6 +46,16 @@ public class BaseThreadPoolTest {
 
         //等待线程池最大等待10s
         threadPool.awaitTerminationWithIntervalCheck(10000, 1000);
+
+    }
+
+    @Test
+    public void getCurrrentThreadPool() {
+        BaseThreadPool<Object> threadPool = new BaseThreadPool<Object>(10,10,60, TimeUnit.SECONDS, 10000, new ThreadPoolExecutor.CallerRunsPolicy());
+
+        ThreadPoolExecutor threadPoolExecutor = threadPool.getCurrrentThreadPool();
+
+        BlockingQueue<Runnable> queue = threadPoolExecutor.getQueue();
 
     }
 }

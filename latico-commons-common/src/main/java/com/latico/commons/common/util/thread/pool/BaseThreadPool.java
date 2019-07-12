@@ -316,6 +316,13 @@ public class BaseThreadPool<T> {
     }
 
     /**
+     * @return  当前使用的线程池
+     */
+    public ThreadPoolExecutor getCurrrentThreadPool() {
+        return threadPool;
+    }
+
+    /**
      * 一直等待线程池到达Terminated状态
      *
      * @param maxWaitTime 最大等待时间，单位毫秒
