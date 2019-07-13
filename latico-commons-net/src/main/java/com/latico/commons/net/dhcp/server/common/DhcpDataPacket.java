@@ -675,6 +675,7 @@ public class DhcpDataPacket implements Cloneable, Serializable {
     }
 
     /**
+     * 构造DHCP报文的字节形势
      * Converts the object to a byte array ready to be sent on the wire.
      *
      * @param maxSize the maximum buffer size in bytes

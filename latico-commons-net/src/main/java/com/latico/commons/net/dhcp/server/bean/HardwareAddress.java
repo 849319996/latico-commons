@@ -25,10 +25,13 @@ import java.util.Arrays;
 
 
 /**
+ * <PRE>
  * Class is immutable.
- * 
- * @author Stephan Hadinger
- * @version 1.00
+ * 硬件地址MAC
+ * </PRE>
+ * @Author: latico
+ * @Date: 2019-07-13 14:06:44
+ * @Version: 1.0
  */
 public class HardwareAddress implements Serializable {
 

@@ -17,7 +17,7 @@
 			<startIp caption="IP池开始IP" hint="IP形式">192.168.0.100</startIp>
 			<endIp caption="IP池结束IP" hint="IP形式">192.168.0.200</endIp>
 			<netmask caption="掩码" hint="可以是IP形式也可以是数字形式">24</netmask>
-			<serverName caption="服务器名称" hint="">CattDhcpServer</serverName>
+			<serverName caption="服务器名称" hint="">DhcpServer</serverName>
 			<serverMessage caption="服务器报文" hint="">latico-dhcp-server</serverMessage>
 			<serverDomainName caption="服务器域名" hint=""></serverDomainName>
 			<leaseTime caption="租期" hint="单位毫秒">172800</leaseTime>

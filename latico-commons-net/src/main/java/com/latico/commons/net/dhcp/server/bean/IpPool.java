@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 
 /**
  * <PRE>
- * 某个IP段信息
+ * IP池，某个IP段信息
  * </PRE>
  * <B>项	       目：</B>
  * <B>技术支持：</B>
@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
  * @since     <B>JDK1.6</B>
  */
 public class IpPool {
-	private static final Logger logger = LoggerFactory.getLogger(IpPool.class.getName().toLowerCase());
+	private static final Logger logger = LoggerFactory.getLogger(IpPool.class);
 
 	/** id 该池的唯一ID，报文的giaddr字段,默认是0.0.0.0，也就是没有DHCP Relay的情况 */
 	private String id = "0.0.0.0";

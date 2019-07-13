@@ -1,6 +1,6 @@
-package com.latico.commons.net.ftp.impl;
+package com.latico.commons.net.ftp.client.impl;
 
-import com.latico.commons.net.ftp.FtpClient;
+import com.latico.commons.net.ftp.client.FtpClient;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import com.latico.commons.common.util.string.StringUtils;

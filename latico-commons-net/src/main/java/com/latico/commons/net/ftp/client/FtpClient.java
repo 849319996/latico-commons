@@ -1,11 +1,11 @@
-package com.latico.commons.net.ftp;
+package com.latico.commons.net.ftp.client;
 
 import java.util.List;
 import java.util.Map;
 
 /**
  * <PRE>
- * FTP连接操作接口
+ * FTP/SFTP连接操作接口
  * 全部路径字符串都转换成Linux模式
  * </PRE>
  * <B>项	       目：</B>
