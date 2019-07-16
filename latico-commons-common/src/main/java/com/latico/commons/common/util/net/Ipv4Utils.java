@@ -34,8 +34,9 @@ import java.util.regex.Pattern;
 
 /**
  * <PRE>
- *  IPV4工具
+ * IPV4工具
  * </PRE>
+ *
  * @Author: latico
  * @Date: 2019-06-27 11:45:06
  * @Version: 1.0
@@ -196,6 +197,10 @@ public class Ipv4Utils {
         return (inetAddress2Int(addr) & 0xFFFFFFFFL);
     }
 
+    /**
+     * @param ip
+     * @return
+     */
     public static InetAddress getInetAddress(String ip) {
         try {
             if (StringUtils.isEmpty(ip)) {
@@ -280,6 +285,7 @@ public class Ipv4Utils {
 
     /**
      * 把整形IP转成字符串形式
+     *
      * @param ip
      * @return
      */
@@ -287,6 +293,10 @@ public class Ipv4Utils {
         return byteToIp(intToByte(ip));
     }
 
+    /**
+     * @param ip
+     * @return
+     */
     public static InetAddress byteToAddr(byte[] ip) {
         return getInetAddress(byteToIp(ip));
     }
@@ -533,7 +543,7 @@ public class Ipv4Utils {
      */
     public static long getIpCompareValue(int[] ip) {
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         String s = null;
         int zeroNum = 0;
         for (int i : ip) {
@@ -555,6 +565,7 @@ public class Ipv4Utils {
 
     /**
      * IP是否在这个范围
+     *
      * @param ip
      * @param ipStart
      * @param ipEnd
@@ -593,7 +604,7 @@ public class Ipv4Utils {
      */
     public static String getIpV4GW(String ipV4, String maskV4) {
         maskV4 = formatNetmaskToIpType(maskV4);
-        StringBuffer result = new StringBuffer("");
+        StringBuilder result = new StringBuilder("");
         if (isIpv4(ipV4) || isMask(maskV4)) {
             String[] ips = ipV4.split("\\.");
             String[] masks = maskV4.split("\\.");
@@ -630,20 +641,23 @@ public class Ipv4Utils {
 
     /**
      * 获取ipv4的网段地址 如ip为4.108.3.5 掩码为255.255.255.252 结果为4.108.3.4
+     * 网段地址如：192.168.1.0/255.255.255.0
+     * 网段的网络IP是第一个IP：192.168.1.1
+     * 网段的广播IP是最后一个IP：192.168.1.255
+     * 有效IP：网络IP和广播IP之间的所有IP
      *
-     * @param ipV4
-     * @param maskV4
-     * @return
+     * @param ipV4   一个IP
+     * @param maskV4 一个掩码，支持数字形式
+     * @return 网段IP 如：网段地址如：192.168.1.5/255.255.255.0  返回的是192.168.1.0
      */
-    public static String getIpV4Link(String ipV4, String maskV4) {
+    public static String getNetworkSegmentIp(String ipV4, String maskV4) {
         maskV4 = formatNetmaskToIpType(maskV4);
-        StringBuffer result = new StringBuffer("");
-        if (isIpv4(ipV4) || isMask(maskV4)) {
+        StringBuilder result = new StringBuilder("");
+        if (isIpv4(ipV4) && isMask(maskV4)) {
             String[] ips = ipV4.split("\\.");
             String[] masks = maskV4.split("\\.");
             for (int i = 0; i < 4; i++) {
-                result.append(
-                        Integer.valueOf(ips[i]) & Integer.valueOf(masks[i]));
+                result.append(Integer.valueOf(ips[i]) & Integer.valueOf(masks[i]));
                 if (i != 3) {
                     result.append(".");
                 }
@@ -651,6 +665,7 @@ public class Ipv4Utils {
         }
         return result.toString();
     }
+
 
     /**
      * 判断ip v4掩码地址是否合法
@@ -661,7 +676,7 @@ public class Ipv4Utils {
     public static boolean isMask(String netMask) {
         boolean result = false;
         if (isIpv4(netMask)) {
-            StringBuffer temp = new StringBuffer();
+            StringBuilder temp = new StringBuilder();
             String[] ips = netMask.split("\\.");
             for (int i = 0; i < ips.length; i++) {
                 int tempI = Integer.valueOf(ips[i]);
@@ -697,8 +712,8 @@ public class Ipv4Utils {
     public static int getMaskLength(String mask) {
         int result = -1;
         if (isIpv4(mask)) {
-            StringBuffer temp = new StringBuffer();
-            StringBuffer temp2 = new StringBuffer();
+            StringBuilder temp = new StringBuilder();
+            StringBuilder temp2 = new StringBuilder();
             String[] ips = mask.split("\\.");
             for (int i = 0; i < ips.length; i++) {
                 int tempI = Integer.valueOf(ips[i]);
@@ -734,7 +749,7 @@ public class Ipv4Utils {
     public static String getReverseNetmask(String mask) {
         mask = formatNetmaskToIpType(mask);
         if (isIpv4(mask)) {
-            StringBuffer strBuf = new StringBuffer();
+            StringBuilder strBuf = new StringBuilder();
             String temp[] = mask.split("\\.");
             for (int i = 0; i < temp.length; i++) {
                 strBuf.append(255 - Integer.valueOf(temp[i]));
@@ -893,7 +908,7 @@ public class Ipv4Utils {
         netmask = formatNetmaskToIpType(netmask);
         String[] ips = ip.split("\\.");
         String[] masks = netmask.split("\\.");
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < ips.length; i++) {
             ips[i] = String.valueOf(
                     (~Integer.parseInt(masks[i])) | (Integer.parseInt(ips[i])));
@@ -937,7 +952,7 @@ public class Ipv4Utils {
      */
     public static String turnBinaryStrToIp(String str) {
         String[] ips = str.split("\\.");
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < ips.length; i++) {
             sb.append(turnBinaryByteToInt(ips[i]));
             sb.append(".");
@@ -1153,7 +1168,7 @@ public class Ipv4Utils {
      * @return
      */
     public static String getSameNetworkMinDiffIp(String srcIp, String mask) {
-        String network = getIpV4Link(srcIp, mask);
+        String network = getNetworkSegmentIp(srcIp, mask);
         String broadcastAddress = getBroadcastAddress(srcIp, mask);
 
         String ip = network;
@@ -1187,7 +1202,7 @@ public class Ipv4Utils {
     }
 
     /**
-     * 获取同网段所有IP
+     * 获取同网段所有有效IP，不包括网络IP和广播IP
      *
      * @param ip
      * @param mask
@@ -1209,8 +1224,15 @@ public class Ipv4Utils {
         return ips;
     }
 
+    /**
+     * 获取一个网段中的所有IP，包括了网络IP和广播IP
+     *
+     * @param ip
+     * @param mask
+     * @return
+     */
     public static List<String> getAllSameNetworkIpWithNetworkAndBroadcastIp(String ip, String mask) {
-        String gw = getIpV4Link(ip, mask);
+        String gw = getNetworkSegmentIp(ip, mask);
         List<String> ips = new ArrayList<String>();
         String nextIp = gw;
         while (true) {
