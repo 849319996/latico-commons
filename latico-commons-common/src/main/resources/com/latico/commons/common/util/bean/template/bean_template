@@ -3,13 +3,10 @@ package @{package_path}@;
 /**
  * <PRE>
  * Table Name : @{table_name}@
- * Class Name : @{class_name}@
  * </PRE>
- * <B>project:</B> KTJ2SE Development Platform
- * <B>company:</B> GD CATTSOFT(c) @{year}@
- * @version   1.0.0.0 @{date}@
- * @author    {Chinese Name}:{who}@qq.com
- * @since     jdk version : jdk 1.6
+ * @Author: DBBeanUtils
+ * @Date: 2019-01-22 0:46
+ * @Version: 1.0
  */
 public class @{class_name}@  {
 @{class_member}@
@@ -17,7 +14,7 @@ public class @{class_name}@  {
 
     /**
      * get table name
-     * @return String
+     * @return table name
      */
     public static String getTableName() {
         return "@{table_name}@";
@@ -25,7 +22,7 @@ public class @{class_name}@  {
 
     /**
      * get class name
-     * @return String
+     * @return class name
      */
     public static String getClassName() {
         return "@{class_name}@";
@@ -33,7 +30,7 @@ public class @{class_name}@  {
     
     /**
      * toString
-     * @return String
+     * @return
      */
     @Override
     public String toString() {

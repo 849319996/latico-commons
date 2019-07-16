@@ -4,13 +4,10 @@ package com.latico.commons.common.util.bean.template;
  * <PRE>
  * 占位符名称定义。
  * 要求所有模板文件中用到的占位符都要先在此处定义，以便管理。
- * 
  * </PRE>
- * <B>项    目：</B>凯通J2SE开发平台(KTJSDP)
- * <B>技术支持：</B>latico 2014
- * @version   1.0 2014-09-12
- * @author    廖权斌：liaoquanbin@qq.com
- * @since     jdk版本：jdk1.6
+ * @Author: latico
+ * @Date: 2019-07-16 17:40:02
+ * @Version: 1.0
  */
 public class Placeholders {
 

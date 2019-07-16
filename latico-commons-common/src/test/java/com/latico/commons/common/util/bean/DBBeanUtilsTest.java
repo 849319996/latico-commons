@@ -26,7 +26,7 @@ public class DBBeanUtilsTest {
 
     @Test
     public void getBeanFromDB2() {
-        Connection conn = DBUtils.getConnectionByOracle("172.168.27.7", 1522, "latico11g", "IPRAN2", "IPRAN2");
+        Connection conn = DBUtils.getConnectionByOracle("172.168.27.7", 1521, "orcl", "root", "root");
         try {
             List<String> table = new ArrayList<String>();
 

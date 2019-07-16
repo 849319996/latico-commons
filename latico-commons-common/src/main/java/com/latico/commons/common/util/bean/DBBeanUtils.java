@@ -310,7 +310,9 @@ public class DBBeanUtils {
             colName = col.getKey();
             colType = col.getValue();
             String humpColName = getHumpName(colName);
-            sb.append("    /** ").append(colName).append(" */\r\n");
+            sb.append("    /**\n" +
+                    "     * \n" +
+                    "     */\r\n");
             sb.append("    private ").append(colType).append(" ");
             sb.append(humpColName).append(";\r\n\r\n");
         }
@@ -327,8 +329,8 @@ public class DBBeanUtils {
 
             //getter
             sb.append("    /**\r\n");
-            sb.append("     * get").append(uppHumpColName).append("\r\n");
-            sb.append("     * @return ").append(colType).append("\r\n");
+            sb.append("     * \r\n");
+            sb.append("     * @return ").append("\r\n");
             sb.append("     */\r\n");
             sb.append("    public ").append(colType);
             sb.append(" get").append(uppHumpColName).append("() {\r\n");
@@ -337,7 +339,7 @@ public class DBBeanUtils {
 
             //setter
             sb.append("    /**\r\n");
-            sb.append("     * set").append(uppHumpColName).append("\r\n");
+            sb.append("     * \r\n");
             sb.append("     * @param ").append(lowHumpColName);
             sb.append(" ").append(lowHumpColName).append(" to set\r\n");
             sb.append("     */\r\n");

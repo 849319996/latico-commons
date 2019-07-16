@@ -12,17 +12,15 @@ import java.util.regex.Pattern;
  * <PRE>
  * 模板文件加载类。
  * 提供加载模板、替换模板占位符、获取替换后文件内容的方法。
- * 
+ *
  * 注意：
  * （1）所有模板文件都必须与TemplateFile在同一目录下，否则无法用read方法加载。
  * （2）模板文件中的占位符为  @{占位符名称}@，而代码替换只需 set(占位符名称, 值)。
- * 
+ *
  * </PRE>
- * <B>项    目：</B>凯通J2SE开发平台(KTJSDP)
- * <B>技术支持：</B>latico 2014
- * @version   1.0 2014-09-12
- * @author    廖权斌：liaoquanbin@qq.com
- * @since     jdk版本：jdk1.6
+ * @Author: latico
+ * @Date: 2019-07-16 17:40:13
+ * @Version: 1.0
  */
 public class Template {
 	
