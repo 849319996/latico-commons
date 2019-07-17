@@ -42,16 +42,17 @@ public abstract class AbstractCallableThread<T> implements Callable<T> {
 
 	@Override
 	public T call() {
+		T result = null;
 		runStatus = true;
 		LOG.info("线程:[{}] 启动", threadName);
 		try {
-			return dealProcess();
+			result = dealProcess();
 		} catch (Throwable e) {
 			runStatus = false;
 			LOG.error("线程:[" + threadName + "] 执行任务发生异常", e);
 		}
 		LOG.info("线程:[{}] 关闭", threadName);
-		return null;
+		return result;
 	}
 	
 	

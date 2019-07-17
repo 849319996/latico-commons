@@ -1925,4 +1925,91 @@ public class DBUtils {
         return new javax.sql.rowset.serial.SerialClob(str.toCharArray());
     }
 
+    /**
+     * 打开自动提交
+     * @param conn
+     * @throws SQLException
+     */
+    public static void openAutoCommit(Connection conn) throws SQLException {
+        if (conn != null) {
+            conn.setAutoCommit(true);
+        }
+    }
+
+    /**
+     * 关闭自动提交
+     * @param conn
+     * @throws SQLException
+     */
+    public static void closeAutoCommit(Connection conn) throws SQLException {
+        if (conn != null) {
+            conn.setAutoCommit(false);
+        }
+    }
+
+    /**
+     * 在代码调用这个方法的地方，创建一个保存点
+     * @param conn
+     * @throws SQLException
+     */
+    public static Savepoint createSavepoint(Connection conn) throws SQLException {
+        if (conn != null) {
+            return conn.setSavepoint();
+        }
+        return null;
+    }
+
+    /**
+     * 在代码调用这个方法的地方，创建一个保存点
+     * @param conn
+     * @param savepointName 保存点的名字
+     * @throws SQLException
+     * @return
+     */
+    public static Savepoint createSavepoint(Connection conn, String savepointName) throws SQLException {
+        if (conn != null) {
+            return conn.setSavepoint(savepointName);
+        }
+        return null;
+    }
+
+    /**
+     * 提交事务
+     * @param conn
+     * @throws SQLException
+     */
+    public static void commit(Connection conn) throws SQLException {
+        if (conn != null) {
+            conn.commit();
+        }
+    }
+
+    /**
+     * 回滚事务所有
+     * @param conn
+     * @throws SQLException
+     */
+    public static void rollbackAll(Connection conn) throws SQLException {
+        if (conn != null) {
+            conn.rollback();
+        }
+    }
+
+    /**
+     * 回滚到指定保存点
+     * @param conn
+     * @param savepoint 回滚到这个保存点，如果这个保存点为空，就报错
+     * @throws SQLException
+     */
+    public static void rollback(Connection conn, Savepoint savepoint) throws SQLException {
+        if (conn != null) {
+            if (savepoint == null) {
+                throw new SQLException("保存点不能为空");
+            }
+
+            conn.rollback(savepoint);
+
+        }
+    }
+
 }
