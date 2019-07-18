@@ -1,6 +1,5 @@
 package com.latico.commons.db.datasource;
 
-import com.latico.commons.common.envm.CharsetType;
 
 /**
  * <PRE>
@@ -26,7 +25,7 @@ public class DataSourceParam {
     /**
      * 数据库字符集,默认UTF-8
      */
-    private String charset = CharsetType.UTF8;
+    private String charset = "UTF-8";
     /**
      * 数据库类型，某些连接池的某些数据库可能会用到
      */
@@ -98,13 +97,16 @@ public class DataSourceParam {
     /**
      * 是否保持连接
      */
-    private boolean keepAlive;
+    private boolean keepAlive = true;
 
     /**
      * 使用前是否测试是否可用
      */
     private boolean testBeforeUse;
-
+    /**
+     * 检测数据库用的SQL，Mysql可以使用SELECT 'x'，oracle可以使用：SELECT 'x'  FROM DUAL
+     */
+    private String validationQuerySql;
     /**
      * 默认构造函数，需要手动set参数
      */
@@ -254,6 +256,14 @@ public class DataSourceParam {
         this.keepAlive = keepAlive;
     }
 
+    public String getValidationQuerySql() {
+        return validationQuerySql;
+    }
+
+    public void setValidationQuerySql(String validationQuerySql) {
+        this.validationQuerySql = validationQuerySql;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("DataSourceParam{");
@@ -276,6 +286,7 @@ public class DataSourceParam {
         sb.append(", minIdle=").append(minIdle);
         sb.append(", keepAlive=").append(keepAlive);
         sb.append(", testBeforeUse=").append(testBeforeUse);
+        sb.append(", validationQuerySql='").append(validationQuerySql).append('\'');
         sb.append('}');
         return sb.toString();
     }

@@ -44,6 +44,7 @@ public class DruidUtils {
         ds.setInitialSize(dsp.getInitialSize());
         ds.setMaxWait(dsp.getMaxActiveTime());
         ds.setMinIdle(dsp.getMinIdle());
+        ds.setValidationQuery(dsp.getValidationQuerySql());
 
         return ds;
     }
