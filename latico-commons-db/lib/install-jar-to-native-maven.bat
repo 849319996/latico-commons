@@ -15,4 +15,10 @@ set jarArtifactId=ojdbc6
 set jarVersion=12.1.0.1
 call mvn install:install-file -Dfile=%jarAbsoluteDir%/%jarFileName% -DgroupId=%jarGroupId% -DartifactId=%jarArtifactId% -Dversion=%jarVersion% -Dpackaging=jar
 
+set jarFileName=avalon-framework-api-4.1.5-dev.jar
+set jarGroupId=avalon-framework
+set jarArtifactId=avalon-framework-api
+set jarVersion=4.1.5-dev
+call mvn install:install-file -Dfile=%jarAbsoluteDir%/%jarFileName% -DgroupId=%jarGroupId% -DartifactId=%jarArtifactId% -Dversion=%jarVersion% -Dpackaging=jar
+
 pause
