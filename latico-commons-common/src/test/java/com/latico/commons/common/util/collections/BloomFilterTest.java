@@ -64,6 +64,7 @@ public class BloomFilterTest {
         long l = 1;
 
         System.out.println(l << 2);
+        System.out.println(l << 63);
         System.out.println(l << 64);
         System.out.println(l << 65);
     }
