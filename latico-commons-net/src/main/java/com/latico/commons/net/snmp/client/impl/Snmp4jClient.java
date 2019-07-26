@@ -655,7 +655,8 @@ public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
         List<SnmpLine> lines = new ArrayList<SnmpLine>();
         snmpTable.setLines(lines);
 
-        for (int i = 0; i < list.size(); ++i) {
+		int resultSize = list.size();
+		for (int i = 0; i < oidSize && i < resultSize; i++) {
             TableEvent te = list.get(i);
             int status = te.getStatus();
             if (status != 0) {

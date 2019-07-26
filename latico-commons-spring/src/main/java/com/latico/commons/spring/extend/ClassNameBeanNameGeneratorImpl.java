@@ -8,7 +8,7 @@ import org.springframework.beans.factory.support.BeanNameGenerator;
  * <PRE>
  * 自定义bean命名策略，使用类全名称
  * spring核心配置文件需要做如下配置：
- * <context:component-scan base-package="com.latico.commons.spring" name-generator="ClassNameBeanNameGeneratorImpl"/>
+ * <context:component-scan base-package="com.latico.commons.spring" name-generator="com.latico.commons.spring.extend.ClassNameBeanNameGeneratorImpl"/>
  *
  * 当使用了本自定义名称策略后，
  * 1、如果是通过bean的名称，也就是ID，从ApplicationContext中获取bean的时候，需要使用实现类bean的类全名称；

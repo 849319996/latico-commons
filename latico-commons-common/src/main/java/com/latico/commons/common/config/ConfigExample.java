@@ -36,7 +36,7 @@ public class ConfigExample extends AbstractConfig {
     private static volatile ConfigExample instance = null;
 
     /**
-     * datanet数据源
+     * 数据源
      */
     private volatile DataSource dataSource;
 
