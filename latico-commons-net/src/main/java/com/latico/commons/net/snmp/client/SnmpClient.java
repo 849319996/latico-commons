@@ -256,7 +256,25 @@ public interface SnmpClient {
 	 * @return
 	 */
 	public SnmpTable getSnmpTable(String tableOid, Object... columnIndexs);
-	
+
+
+	/**
+	 * 通过walk方式进行SNMP Table采集
+	 * 因为有些设备，使用getSnmpTable会采集不全，所以建议getSnmpTableByWalk，但是getSnmpTableByWalk效率会比getSnmpTable低
+	 * @param tableOid
+	 * @param columnIndexs
+	 * @return
+	 */
+	public SnmpTable getSnmpTableByWalk(String tableOid, List<Object> columnIndexs);
+
+	/**
+	 * 因为有些设备，使用getSnmpTable会采集不全，所以建议getSnmpTableByWalk，但是getSnmpTableByWalk效率会比getSnmpTable低
+	 * @param tableOid
+	 * @param columnIndexs
+	 * @return
+	 */
+	public SnmpTable getSnmpTableByWalk(String tableOid, Object... columnIndexs);
+
 	/**
 	 * 关闭snmp连接
 	 */

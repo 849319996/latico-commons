@@ -647,47 +647,9 @@ public class AdventnetSnmpClient extends AbstractSnmpClient {
 		        .replaceAll(" ", ":");
 	}
 
-    @Override
-    public SnmpTable getSnmpTable(String tableOid, List<Object> columnIndexs) {
-        if(!status){
-            return null;
-        }
-        if (tableOid == null || columnIndexs == null || columnIndexs.size() == 0) {
-            return null;
-        }
-        tableOid = SnmpUtils.formatterOid(tableOid);
-        // 设备节点信息
-        List<Map<String, String>> valueMaps = new ArrayList<Map<String, String>>();
-        int colOidSize = columnIndexs.size();
-        String oid = null;
-        Map<String, String> valueMap = null;
-        for (int i = 0; i < colOidSize; i++) {
-            oid = StringUtils.join(tableOid, ".", columnIndexs.get(i));
-            valueMap = walkOriginal(oid);
-            if (valueMap == null) {
-                LOG.error("{}:getTable时walk节点 [{}] 获取不到数据", ip, oid);
-                valueMap = new LinkedHashMap<String, String>();
-            }
-            valueMaps.add(valueMap);
-        }
-        SnmpTable snmpTable = new SnmpTable();
-        List<SnmpLine> lines = new ArrayList<SnmpLine>();
-        snmpTable.setLines(lines);
-        for(Map<String, String> map : valueMaps) {
-            
-            for(Map.Entry<String, String> entry : map.entrySet()) {
-                SnmpLine line = new SnmpLine();
-                lines.add(line);
-                Map<String, String> columnIdValues = new LinkedHashMap<String, String>();
-                line.setColumnIdValues(columnIdValues);
-                String key = entry.getKey();
-                String colID = SnmpUtils.getColID(key, tableOid);
-                line.setId(SnmpUtils.getRowID(key, colID, tableOid));
-                columnIdValues.put(colID, entry.getValue());
-            }
-                
-        }
-        return snmpTable;
-    }
+	@Override
+	public SnmpTable getSnmpTable(String tableOid, List<Object> columnIndexs) {
+		return getSnmpTableByWalk(tableOid, columnIndexs);
+	}
 
 }
