@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
 import com.latico.commons.common.envm.CharsetType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import com.latico.commons.common.util.logging.Logger;
+import com.latico.commons.common.util.logging.LoggerFactory;
 import com.latico.commons.common.util.string.CharUtils;
 
 /**
