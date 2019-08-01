@@ -635,59 +635,64 @@ public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
 	}
 
     @Override
-    public SnmpTable getSnmpTable(String tableOid, List<Object> columnIndexs) {
-        if(!status){
-            return null;
-        }
-        if (tableOid == null || columnIndexs == null || columnIndexs.size() == 0) {
-            return null;
-        }
-        int oidSize = columnIndexs.size();
-        OID[] oids = new OID[oidSize];
+	public SnmpTable getSnmpTable(String tableOid, List<Object> columnIndexs) {
+		if(!status){
+			return null;
+		}
+		if (tableOid == null || columnIndexs == null || columnIndexs.size() == 0) {
+			return null;
+		}
+		int oidSize = columnIndexs.size();
+		OID[] oids = new OID[oidSize];
 
-        for (int i = 0; i < oidSize; i++) {
-            oids[i] = new OID(StringUtils.join(tableOid, ".", columnIndexs.get(i)));
-        }
+		for (int i = 0; i < oidSize; i++) {
+			oids[i] = new OID(StringUtils.join(tableOid, ".", columnIndexs.get(i)));
+		}
 
-        TableUtils tu = new TableUtils(this.snmp, this);
-        List<TableEvent> list = tu.getTable(target, oids, null, null);
-        SnmpTable snmpTable = new SnmpTable();
-        List<SnmpLine> lines = new ArrayList<SnmpLine>();
-        snmpTable.setLines(lines);
+		TableUtils tu = new TableUtils(this.snmp, this);
+		List<TableEvent> list = tu.getTable(target, oids, null, null);
+		SnmpTable snmpTable = new SnmpTable();
+		List<SnmpLine> lines = new ArrayList<SnmpLine>();
+		snmpTable.setLines(lines);
 
 		int resultSize = list.size();
-		for (int i = 0; i < oidSize && i < resultSize; i++) {
-            TableEvent te = list.get(i);
-            int status = te.getStatus();
-            if (status != 0) {
-                String oid = oids[i].toString();
-                LOG.error("{}:getTable({})出错,status={},错误信息:{}, {}", ip, oid, te.getStatus(), te.getErrorMessage(), te.getException());
-                continue;
-            }
+		for (int i = 0; i < resultSize; i++) {
 
-            VariableBinding[] vbs = te.getColumns();
-            if (vbs != null && vbs.length >= 1) {
-                SnmpLine line = new SnmpLine();
-                lines.add(line);
-                Map<String, String> columnIdValues = new LinkedHashMap<String, String>();
-                line.setColumnIdValues(columnIdValues);
-                for (int j = 0; j < vbs.length; ++j) {
-                    VariableBinding vb = vbs[j];
-                    if (vb != null) {
-                        String key = vb.getOid().toString();
-                        String colID = SnmpUtils.getColID(key, tableOid);
-                        
-                        if (line.getId() == null) {
-                            line.setId(SnmpUtils.getRowID(key, colID, tableOid));
-                        }
-                        columnIdValues.put(colID, vb.getVariable().toString());
-                    }
-                }
-            }
-        }
-        return snmpTable;
+			TableEvent te = list.get(i);
+			if (te == null) {
+				LOG.error("{}:getTable({})异常", ip, tableOid);
+				continue;
+			}
+			int status = te.getStatus();
+			if (status != 0) {
 
-    }
+				LOG.error("{}:getTable({})出错,status={},错误信息:{}, {}", ip, tableOid, te.getStatus(), te.getErrorMessage(), te.getException());
+				continue;
+			}
+
+			VariableBinding[] vbs = te.getColumns();
+			if (vbs != null && vbs.length >= 1) {
+				SnmpLine line = new SnmpLine();
+				lines.add(line);
+				Map<String, String> columnIdValues = new LinkedHashMap<String, String>();
+				line.setColumnIdValues(columnIdValues);
+				for (int j = 0; j < vbs.length; ++j) {
+					VariableBinding vb = vbs[j];
+					if (vb != null) {
+						String key = vb.getOid().toString();
+						String colID = SnmpUtils.getColID(key, tableOid);
+
+						if (line.getId() == null) {
+							line.setId(SnmpUtils.getRowID(key, colID, tableOid));
+						}
+						columnIdValues.put(colID, vb.getVariable().toString());
+					}
+				}
+			}
+		}
+		return snmpTable;
+
+	}
 
     @Override
     public PDU createPDU(Target target) {
