@@ -2,6 +2,7 @@ package com.latico.commons.common.config.bean;
 
 import com.latico.commons.common.config.FieldConfigNameAnnotation;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 /**
  * <PRE>
@@ -14,6 +15,17 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  */
 @XStreamAlias("common")
 public class Common {
+
+    /**
+     * 读取common节点上面的commonId属性
+     */
+    @XStreamAsAttribute
+    private String commonId;
+    /**
+     * 读取common节点上面的commonName属性
+     */
+    @XStreamAsAttribute
+    private String commonName;
     /**
      * 使用注解转换字段名称
      */
@@ -85,7 +97,9 @@ public class Common {
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Common{");
-        sb.append("nameAnnotation='").append(nameAnnotation).append('\'');
+        sb.append("commonId='").append(commonId).append('\'');
+        sb.append(", commonName='").append(commonName).append('\'');
+        sb.append(", nameAnnotation='").append(nameAnnotation).append('\'');
         sb.append(", name2='").append(name2).append('\'');
         sb.append(", nameInt=").append(nameInt);
         sb.append(", name4=").append(name4);

@@ -13,6 +13,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  */
 @XStreamAlias("config")
 public class ConfigInfo {
+
     Common common;
 
     public Common getCommon() {

@@ -53,6 +53,8 @@ public class ConfigExample2 extends AbstractConfig {
      */
     private final String configFile = PathUtils.adapterFilePathSupportWebContainer(CONFIG_FILE_ROOT_DIR + "configExample.xml");
 
+    private ConfigInfo configInfo;
+
     /**
      * 读取common节点上面的commonId属性
      */
@@ -149,21 +151,13 @@ public class ConfigExample2 extends AbstractConfig {
      */
     @Override
     protected boolean initConfig(String fileContent) throws Exception {
-        ConfigInfo bean = XstreamUtils.xmlToBeanByAnnotation(fileContent, ConfigInfo.class, Common.class);
+        this.configInfo = XstreamUtils.xmlToBeanByAnnotation(fileContent, ConfigInfo.class, Common.class);
 
-        Common common = bean.getCommon();
+        Common common = configInfo.getCommon();
         Map<String, Object> allFieldNameValueMap = ObjectUtils.getAllFieldNameValueMap(common);
 
         //通过反射写入字段的值
         writeFieldValueToCurrentInstance(allFieldNameValueMap);
-
-        Element rootElement = Dom4jUtils.getRootElement(fileContent);
-
-        Element commonEle = rootElement.element("common");
-
-//        把属性写进本对象
-        Map<String, String> allAttributeNameValueMap = Dom4jUtils.getAllAttributeNameValueMap(commonEle);
-        writeFieldValue(this, allAttributeNameValueMap);
 
         return true;
     }
@@ -206,10 +200,11 @@ public class ConfigExample2 extends AbstractConfig {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("ConfigExample{");
+        final StringBuilder sb = new StringBuilder("ConfigExample2{");
         sb.append("dataSource=").append(dataSource);
         sb.append(", resourcesConfigFile='").append(resourcesConfigFile).append('\'');
         sb.append(", configFile='").append(configFile).append('\'');
+        sb.append(", configInfo=").append(configInfo);
         sb.append(", commonId='").append(commonId).append('\'');
         sb.append(", commonName='").append(commonName).append('\'');
         sb.append(", nameAnnotation='").append(nameAnnotation).append('\'');
