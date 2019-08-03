@@ -21,6 +21,8 @@ public class Snmp4jClientTest {
         SnmpTable ifTable = snmp4jClient.getSnmpTable("1.3.6.1.2.1.2.2.1",
                 2, 5, 10, 16);
 
+        System.out.println(ifTable);
+
         // 获取所有需要采集流量的端口
         for (SnmpLine ifTableLine : ifTable.getLines()) {
             //截取掉table的OID和列ID后剩余的全部作为行ID

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="accoutId">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1"/>
+        <xs:enumeration value="2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="accountName">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="dengchao"/>
+        <xs:enumeration value="sunli"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="accountMoeny">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="100.0"/>
+        <xs:enumeration value="200.0"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="telNum">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="1333333333"/>
+        <xs:enumeration value="14444444"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="account">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="accoutId"/>
+        <xs:element ref="accountName"/>
+        <xs:element ref="accountMoeny"/>
+        <xs:element ref="telNum"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="address" type="xs:string"/>
+  <xs:element name="accounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="account" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="address"/>
+        <xs:element ref="accounts"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,18 @@
+<bank>
+    <name>中国人民银行</name>
+    <address>地球</address>
+    <accounts>
+        <account>
+            <accoutId>1</accoutId>
+            <accountName>dengchao</accountName>
+            <accountMoeny>100.0</accountMoeny>
+            <telNum>1333333333</telNum>
+        </account>
+        <account>
+            <accoutId>2</accoutId>
+            <accountName>sunli</accountName>
+            <accountMoeny>200.0</accountMoeny>
+            <telNum>14444444</telNum>
+        </account>
+    </accounts>
+</bank>
