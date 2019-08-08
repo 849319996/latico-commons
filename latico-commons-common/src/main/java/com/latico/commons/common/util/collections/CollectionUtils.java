@@ -420,4 +420,28 @@ public class CollectionUtils extends org.apache.commons.collections.CollectionUt
         }
         return list.toArray(new Float[list.size()]);
     }
+
+    /**
+     * 判断大小
+     * @param col
+     * @return
+     */
+    public static int size(Collection col) {
+        if (col == null) {
+            return 0;
+        }
+        return col.size();
+    }
+
+    /**
+     * 判断大小
+     * @param map
+     * @return
+     */
+    public static int size(Map map) {
+        if (map == null) {
+            return 0;
+        }
+        return map.size();
+    }
 }

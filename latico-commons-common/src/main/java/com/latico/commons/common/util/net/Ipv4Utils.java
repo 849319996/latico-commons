@@ -43,8 +43,6 @@ import java.util.regex.Pattern;
  */
 public class Ipv4Utils {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Ipv4Utils.class);
-
     /**
      * 32位掩码
      */
@@ -197,10 +195,6 @@ public class Ipv4Utils {
         return (inetAddress2Int(addr) & 0xFFFFFFFFL);
     }
 
-    /**
-     * @param ip
-     * @return
-     */
     public static InetAddress getInetAddress(String ip) {
         try {
             if (StringUtils.isEmpty(ip)) {
@@ -285,7 +279,6 @@ public class Ipv4Utils {
 
     /**
      * 把整形IP转成字符串形式
-     *
      * @param ip
      * @return
      */
@@ -293,10 +286,6 @@ public class Ipv4Utils {
         return byteToIp(intToByte(ip));
     }
 
-    /**
-     * @param ip
-     * @return
-     */
     public static InetAddress byteToAddr(byte[] ip) {
         return getInetAddress(byteToIp(ip));
     }
@@ -420,15 +409,9 @@ public class Ipv4Utils {
      * @return
      * @throws UnknownHostException
      */
-    public static boolean checkSameNetSegment(String ip1, String ip2, String netmask) {
-        try {
-            netmask = formatNetmaskToIpType(netmask);
-            return checkSameNetSegment(ipToInt(ip1), ipToInt(ip2),
-                    ipToInt(netmask));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
+    public static boolean checkSameNetSegment(String ip1, String ip2, String netmask) throws UnknownHostException {
+        netmask = formatNetmaskToIpType(netmask);
+        return checkSameNetSegment(ipToInt(ip1), ipToInt(ip2), ipToInt(netmask));
     }
 
     /**
@@ -443,6 +426,13 @@ public class Ipv4Utils {
         return (mask & ip1) == (mask & ip2);
     }
 
+    /**
+     * 检查是否在同一个网段
+     * @param ip1
+     * @param ip2
+     * @param mask
+     * @return
+     */
     public static boolean checkSameNetSegment(int[] ip1, int[] ip2,
                                               int[] mask) {
         return checkSameNetSegment(intArrToByteArr(ip1), intArrToByteArr(ip2),
@@ -521,13 +511,8 @@ public class Ipv4Utils {
         return byteArrToIntArr(ipToByte(ip));
     }
 
-    public static int ipToInt(String ip) {
-        try {
-            return byteToInt(ip2Byte(ip));
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-        return 0;
+    public static int ipToInt(String ip) throws UnknownHostException {
+        return byteToInt(ip2Byte(ip));
     }
 
     public static long getIpCompareValue(byte[] ip) {
@@ -565,7 +550,6 @@ public class Ipv4Utils {
 
     /**
      * IP是否在这个范围
-     *
      * @param ip
      * @param ipStart
      * @param ipEnd
@@ -666,6 +650,17 @@ public class Ipv4Utils {
         return result.toString();
     }
 
+    /**
+     * 获取ipv4的网段地址 如ip为4.108.3.5 掩码为255.255.255.252 结果为4.108.3.4
+     *
+     * @param ipV4
+     * @param maskV4
+     * @return
+     */
+    @Deprecated
+    public static String getIpV4Link(String ipV4, String maskV4) {
+        return getNetworkSegmentIp(ipV4, maskV4);
+    }
 
     /**
      * 判断ip v4掩码地址是否合法
@@ -692,7 +687,7 @@ public class Ipv4Utils {
                     temp.append(".");
                 }
             }
-            LOG.info("子网掩码" + netMask + "转换为2进制字符串为" + temp.toString());
+//            LOG.info("子网掩码" + netMask + "转换为2进制字符串为" + temp.toString());
             String temp2 = temp.toString().replace(".", "");
             if (temp2.indexOf("0") > temp2.lastIndexOf("1")
                     || temp2.indexOf("0") < 0) {
@@ -731,7 +726,7 @@ public class Ipv4Utils {
                     temp2.append(".");
                 }
             }
-            LOG.info("子网掩码" + mask + "转换为2进制字符串为" + temp2);
+//            LOG.info("子网掩码" + mask + "转换为2进制字符串为" + temp2);
             if (temp.indexOf("0") > temp.lastIndexOf("1")
                     || temp.indexOf("0") < 0) {
                 result = temp.lastIndexOf("1") + 1;
@@ -1149,7 +1144,7 @@ public class Ipv4Utils {
      * @return true：包含
      */
     public static boolean isIncludeNetwork(String checkedIp,
-                                           Map<String, String> networks) {
+                                           Map<String, String> networks) throws UnknownHostException {
         boolean isInclude = false;
         for (Map.Entry<String, String> entry : networks.entrySet()) {
             if (Ipv4Utils.checkSameNetSegment(checkedIp, entry.getKey(), entry.getValue())) {
@@ -1167,7 +1162,7 @@ public class Ipv4Utils {
      * @param mask
      * @return
      */
-    public static String getSameNetworkMinDiffIp(String srcIp, String mask) {
+    public static String getSameNetworkMinDiffIp(String srcIp, String mask) throws UnknownHostException {
         String network = getNetworkSegmentIp(srcIp, mask);
         String broadcastAddress = getBroadcastAddress(srcIp, mask);
 
@@ -1208,7 +1203,7 @@ public class Ipv4Utils {
      * @param mask
      * @return
      */
-    public static List<String> getAllSameNetworkIps(String ip, String mask) {
+    public static List<String> getAllSameNetworkIps(String ip, String mask) throws UnknownHostException {
         String gw = getIpV4GW(ip, mask);
         String broadcastAddress = getBroadcastAddress(ip, mask);
         List<String> ips = new ArrayList<String>();
@@ -1225,13 +1220,12 @@ public class Ipv4Utils {
     }
 
     /**
-     * 获取一个网段中的所有IP，包括了网络IP和广播IP
-     *
+     * 获取同一个网段所有的IP，包括网络IP和广播IP
      * @param ip
      * @param mask
      * @return
      */
-    public static List<String> getAllSameNetworkIpWithNetworkAndBroadcastIp(String ip, String mask) {
+    public static List<String> getAllSameNetworkIpWithNetworkAndBroadcastIp(String ip, String mask) throws UnknownHostException {
         String gw = getNetworkSegmentIp(ip, mask);
         List<String> ips = new ArrayList<String>();
         String nextIp = gw;
