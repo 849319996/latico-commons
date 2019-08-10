@@ -212,7 +212,6 @@ public class CompareHelper {
 
 					//不包含的时候才添加
 					if(!updateKeys.contains(newObj.getComapreRelatedKey())){
-						compareResult.addUpdateObj(newObj);
 						compareResult.addUpdateNewOldObjMap(newObj, oldObj);
 						updateKeys.add(newObj.getComapreRelatedKey());
 					}else{
@@ -223,7 +222,7 @@ public class CompareHelper {
 
 					//添加到相同对象队列
 					if(!sameKeys.contains(newObj)){
-						compareResult.addSameObj(newObj);
+						compareResult.addSameNewOldObjMap(newObj, oldObj);
 						sameKeys.add(newObj.getComapreRelatedKey());
 					}else{
 						compareResult.addRepeatedObj(newObj);
@@ -425,7 +424,7 @@ public class CompareHelper {
 			if(newObjValues.equals(oldObjValues)){
 
 				if(!sameKeys.contains(newObj)){
-					compareResult.addSameObj(newObj);
+					compareResult.addSameNewOldObjMap(newObj, oldObj);
 					sameKeys.add(newObjKeys);
 				}else{
 					compareResult.addRepeatedObj(newObj);
@@ -436,7 +435,6 @@ public class CompareHelper {
 
 			//数据比较字段有差异，相当于是需要更新的数据,不包含的时候才添加,包含了就添加进重复队列
 			if(!updateKeys.contains(newObjKeys)){
-				compareResult.addUpdateObj(newObj);
 				compareResult.addUpdateNewOldObjMap(newObj, oldObj);
 				updateKeys.add(newObjKeys);
 			}else{
@@ -592,7 +590,7 @@ public class CompareHelper {
 
 				//不包含的时候才添加
 				if(!sameKeys.contains(newObjHashCode)){
-					compareResult.addSameObj(newObj);
+					compareResult.addSameNewOldObjMap(newObj, oldObj);
 					sameKeys.add(newObjHashCode);
 				}else{
 					compareResult.addRepeatedObj(newObj);

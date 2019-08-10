@@ -2,6 +2,8 @@ package com.latico.commons.common.util.net;
 
 import org.junit.Test;
 
+import java.net.UnknownHostException;
+
 public class Ipv4UtilsTest {
 
     @Test
@@ -26,7 +28,7 @@ public class Ipv4UtilsTest {
      *
      */
     @Test
-    public void getAllSameNetworkIps(){
+    public void getAllSameNetworkIps() throws UnknownHostException {
         System.out.println(Ipv4Utils.getAllSameNetworkIps("172.168.10.1", "255.255.255.252"));
     }
 }

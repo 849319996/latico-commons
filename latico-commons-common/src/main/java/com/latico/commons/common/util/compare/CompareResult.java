@@ -37,11 +37,6 @@ public class CompareResult<T> {
     private Collection<T> newObjs = new LinkedHashSet<T>();
 
     /**
-     * updateObjs 需要更新的数据
-     */
-    private Collection<T> updateObjs = new LinkedHashSet<T>();
-
-    /**
      * deleteObjs 过期可以删除的数据
      */
     private Collection<T> deleteObjs = new LinkedHashSet<T>();
@@ -49,17 +44,17 @@ public class CompareResult<T> {
     /**
      * sameObjs 差异比较后，相同数据
      */
-    private Collection<T> sameObjs = new LinkedHashSet<T>();
-
-    /**
-     * 重复的对象，在新队列里面，相同的比较key，存在相同的记录，会把后面的加进来这里
-     */
-    private Collection<T> repeatedObjs = new LinkedHashSet<T>();
+    private Map<T, T> sameNewOldObjMap = new LinkedHashMap<T, T>();
 
     /**
      * updateNewOldObjMap 更新的新老对象映射
      */
     private Map<T, T> updateNewOldObjMap = new LinkedHashMap<T, T>();
+
+    /**
+     * 重复的对象，在新队列里面，相同的比较key，存在相同的记录，会把后面的加进来这里
+     */
+    private Collection<T> repeatedObjs = new LinkedHashSet<T>();
 
     /**
      * 添加一个新增对象
@@ -107,46 +102,25 @@ public class CompareResult<T> {
     }
 
     /**
-     * 添加一个相同的对象进队列
+     * 添加新旧对象映射
      *
-     * @param sameObj
+     * @param newObj
+     * @param oldObj
      */
-    public void addSameObj(T sameObj) {
-        if (sameObj != null) {
-            this.sameObjs.add(sameObj);
+    public void addSameNewOldObjMap(T newObj, T oldObj) {
+        if (newObj != null && oldObj != null) {
+            this.updateNewOldObjMap.put(newObj, oldObj);
         }
     }
 
     /**
-     * 批量添加相同的对象进队列
+     * 批量添加新旧对象映射
      *
-     * @param sameObjs
+     * @param newOldObjMap
      */
-    public void addSameObjs(List<T> sameObjs) {
-        if (sameObjs != null) {
-            this.sameObjs.addAll(sameObjs);
-        }
-    }
-
-    /**
-     * 添加一个更新对象
-     *
-     * @param updateObj
-     */
-    public void addUpdateObj(T updateObj) {
-        if (updateObj != null) {
-            this.updateObjs.add(updateObj);
-        }
-    }
-
-    /**
-     * 批量添加更新的对象进队列
-     *
-     * @param updateObjs
-     */
-    public void addUpdateObjs(List<T> updateObjs) {
-        if (updateObjs != null) {
-            this.updateObjs.addAll(updateObjs);
+    public void addSameNewOldObjMap(Map<T, T> newOldObjMap) {
+        if (newOldObjMap != null) {
+            this.updateNewOldObjMap.putAll(newOldObjMap);
         }
     }
 
@@ -203,14 +177,6 @@ public class CompareResult<T> {
         return newObjs;
     }
 
-    /**
-     * 获取更新数据
-     *
-     * @return
-     */
-    public Collection<T> getUpdateObjs() {
-        return updateObjs;
-    }
 
     /**
      * 获取删除数据
@@ -226,24 +192,29 @@ public class CompareResult<T> {
      *
      * @return
      */
-    public Collection<T> getSameObjs() {
-        return sameObjs;
-    }
-
     public void setNewObjs(Collection<T> newObjs) {
         this.newObjs = newObjs;
     }
 
-    public void setUpdateObjs(Collection<T> updateObjs) {
-        this.updateObjs = updateObjs;
-    }
 
     public void setDeleteObjs(Collection<T> deleteObjs) {
         this.deleteObjs = deleteObjs;
     }
 
-    public void setSameObjs(Collection<T> sameObjs) {
-        this.sameObjs = sameObjs;
+    public Map<T, T> getSameNewOldObjMap() {
+        return sameNewOldObjMap;
+    }
+
+    public void setSameNewOldObjMap(Map<T, T> sameNewOldObjMap) {
+        this.sameNewOldObjMap = sameNewOldObjMap;
+    }
+
+    public Collection<T> getRepeatedObjs() {
+        return repeatedObjs;
+    }
+
+    public void setRepeatedObjs(Collection<T> repeatedObjs) {
+        this.repeatedObjs = repeatedObjs;
     }
 
     /**
@@ -293,10 +264,9 @@ public class CompareResult<T> {
         return sb.append("\r\n差异比较结果CompareResult [newCount=").append(newCount).append(", oldCount=").append(oldCount
         ).append(", newOldCountRatio=").append(newOldCountRatio
         ).append(", \r\n新增对象:newObjs=").append(newObjs
-        ).append(", \r\n更新对象:updateObjs=").append(updateObjs).append(", \r\n删除对象:deleteObjs=").append(deleteObjs
-        ).append(", \r\n相同对象:sameObjs=").append(sameObjs).append(", \r\n重复对象:repeatedObjs=").
-                append(repeatedObjs).append(", \r\n更新的新老对象映射:updateNewOldObjMap=").
-                append(updateNewOldObjMap).append("]").toString();
+        ).append(", \r\n更新对象:updateNewOldObjMap=").append(updateNewOldObjMap).append(", \r\n删除对象:deleteObjs=").append(deleteObjs
+        ).append(", \r\n相同对象:sameNewOldObjMap=").append(sameNewOldObjMap).append(", \r\n重复对象:repeatedObjs=").
+                append(repeatedObjs).append("]").toString();
     }
 
 }
