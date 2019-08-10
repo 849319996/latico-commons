@@ -109,7 +109,7 @@ public class CompareResult<T> {
      */
     public void addSameNewOldObjMap(T newObj, T oldObj) {
         if (newObj != null && oldObj != null) {
-            this.updateNewOldObjMap.put(newObj, oldObj);
+            this.sameNewOldObjMap.put(newObj, oldObj);
         }
     }
 
@@ -120,7 +120,7 @@ public class CompareResult<T> {
      */
     public void addSameNewOldObjMap(Map<T, T> newOldObjMap) {
         if (newOldObjMap != null) {
-            this.updateNewOldObjMap.putAll(newOldObjMap);
+            this.sameNewOldObjMap.putAll(newOldObjMap);
         }
     }
 
