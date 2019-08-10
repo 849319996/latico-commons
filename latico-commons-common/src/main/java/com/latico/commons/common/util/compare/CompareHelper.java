@@ -67,7 +67,7 @@ import java.util.*;
  obj.setSex("女");
  obj.setAge(id);
 
- System.out.println(CompareHelper.diffCompareDataByAnnotion(newObjs, oldObjs));
+ System.out.println(CompareHelper.diffCompareByAnnotation(newObjs, oldObjs));
  *
  * </PRE>
  * @Author: latico
@@ -85,7 +85,7 @@ public class CompareHelper {
 	 * @param <T>
 	 * @throws Exception
 	 */
-	public static <T extends Object> CompareResult<T> diffCompareDataByAnnotion(Collection<T> newObjs, Collection<T> oldObjs) throws Exception {
+	public static <T extends Object> CompareResult<T> diffCompareByAnnotation(Collection<T> newObjs, Collection<T> oldObjs) throws Exception {
 		//比较结果
 		CompareResult<T> compareResult = new CompareResult<T>();
 		if (CollectionUtils.isEmpty(newObjs) && CollectionUtils.isEmpty(oldObjs)) {
@@ -116,7 +116,7 @@ public class CompareHelper {
 	 * 无论是新适配对象还是旧的适配对象，生成比较结果的时候，会进行去重
 	 *
 	 * 过时，请参考建议使用
-	 * {@link CompareHelper#diffCompareDataByAnnotion(Collection, Collection)}
+	 * {@link CompareHelper#diffCompareByAnnotation(Collection, Collection)}
 	 * {@link CompareHelper#diffCompareData(Collection, Collection, String, String[], String[])}
 	 *
 	 * @param newObjs 新适配对象列表
@@ -125,7 +125,7 @@ public class CompareHelper {
 	 * @param <T>
 	 */
 	@Deprecated
-	public static <T extends CompareObj> CompareResult<T> diffCompareDataByExtends(Collection<T> newObjs, Collection<T> oldObjs){
+	public static <T extends CompareObj> CompareResult<T> diffCompareByExtends(Collection<T> newObjs, Collection<T> oldObjs){
 		//比较结果
 		CompareResult<T> compareResult = new CompareResult<T>();
 		if (CollectionUtils.isEmpty(newObjs) && CollectionUtils.isEmpty(oldObjs)) {
@@ -612,5 +612,22 @@ public class CompareHelper {
 		oldMap = null;
 
 		return compareResult;
+	}
+
+	/**
+	 * 比较单个对象
+	 * @param newObj
+	 * @param oldObj
+	 * @param <T>
+	 * @return
+	 * @throws Exception
+	 */
+	public static <T extends Object> CompareResult<T> diffCompareByAnnotation(T newObj, T oldObj) throws Exception {
+		List<T> newObjs = new ArrayList<>();
+		newObjs.add(newObj);
+		List<T> oldObjs = new ArrayList<>();
+		oldObjs.add(oldObj);
+
+		return diffCompareByAnnotation(newObjs, oldObjs);
 	}
 }

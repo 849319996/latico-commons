@@ -35,7 +35,7 @@ public class CompareHelperTest {
     @Test
     public void diffCompareDataByExtends() {
         try {
-            System.out.println(CompareHelper.diffCompareDataByExtends(newObjs, oldObjs));
+            System.out.println(CompareHelper.diffCompareByExtends(newObjs, oldObjs));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,7 +45,7 @@ public class CompareHelperTest {
     public void diffCompareDataByAnnotion() {
 
         try {
-            System.out.println(CompareHelper.diffCompareDataByAnnotion(newObjs, oldObjs));
+            System.out.println(CompareHelper.diffCompareByAnnotation(newObjs, oldObjs));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -244,7 +244,7 @@ public class CompareHelperTest {
     public void diffCompareDataByAnnotion3() {
 
         try {
-            System.out.println(CompareHelper.diffCompareDataByAnnotion(newObjs3, oldObjs3));
+            System.out.println(CompareHelper.diffCompareByAnnotation(newObjs3, oldObjs3));
         } catch (Exception e) {
             e.printStackTrace();
         }
