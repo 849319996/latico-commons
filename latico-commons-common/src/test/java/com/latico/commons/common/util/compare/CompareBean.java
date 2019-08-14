@@ -23,6 +23,8 @@ public class CompareBean extends AbstractCompareObj {
     @NotDBFieldAnnotation
     private String sex;
 
+    private String remark;
+
 
     @Override
     public String toString() {
@@ -32,6 +34,7 @@ public class CompareBean extends AbstractCompareObj {
         sb.append(", nickName='").append(nickName).append('\'');
         sb.append(", age=").append(age);
         sb.append(", sex='").append(sex).append('\'');
+        sb.append(", remark='").append(remark).append('\'');
         sb.append('}');
         return sb.toString();
     }
@@ -74,6 +77,14 @@ public class CompareBean extends AbstractCompareObj {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 
     /**

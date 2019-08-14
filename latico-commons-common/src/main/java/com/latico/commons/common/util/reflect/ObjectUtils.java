@@ -551,6 +551,7 @@ public class ObjectUtils extends org.apache.commons.lang3.ObjectUtils {
 			field.setAccessible(true);
 			map.put(field.getName(), field.get(obj));
 		}
+		map.remove("serialVersionUID");
 		return map;
 	}
 	/**

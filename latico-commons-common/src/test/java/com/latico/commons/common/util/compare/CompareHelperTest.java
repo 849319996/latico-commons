@@ -76,6 +76,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("新");
 
         obj = new CompareBean();
         newObjs.add(obj);
@@ -84,6 +85,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("新");
 
         obj = new CompareBean();
         newObjs.add(obj);
@@ -92,6 +94,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("新");
 
         obj = new CompareBean();
         newObjs.add(obj);
@@ -100,6 +103,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("新");
 
         obj = new CompareBean();
         newObjs.add(obj);
@@ -108,6 +112,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("新");
 
         obj = new CompareBean();
         newObjs.add(obj);
@@ -116,6 +121,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("女");
         obj.setAge(id);
+        obj.setRemark("新");
 
         obj = new CompareBean();
         newObjs.add(obj);
@@ -124,6 +130,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("女");
         obj.setAge(123);
+        obj.setRemark("新");
     }
 
     private void makeOldObj() {
@@ -138,6 +145,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("旧");
 
         obj = new CompareBean();
         oldObjs.add(obj);
@@ -147,6 +155,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("女");
         obj.setAge(id);
+        obj.setRemark("旧");
 
         obj = new CompareBean();
         oldObjs.add(obj);
@@ -156,6 +165,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("旧");
 
         obj = new CompareBean();
         oldObjs.add(obj);
@@ -165,6 +175,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("男");
         obj.setAge(id);
+        obj.setRemark("旧");
 
         obj = new CompareBean();
         oldObjs.add(obj);
@@ -174,6 +185,7 @@ public class CompareHelperTest {
         obj.setNickName("nickName" + id);
         obj.setSex("女");
         obj.setAge(id);
+        obj.setRemark("旧");
     }
 
     @After

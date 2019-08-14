@@ -79,4 +79,12 @@ public class DateTimeUtilsTest {
         System.out.println(new Timestamp(DateTimeUtils.parseDateAssignTodayTimeOffset(new Date(System.currentTimeMillis()), "05:02:34.11").getTime()));
 
     }
+
+    /**
+     *
+     */
+    @Test
+    public void test(){
+        System.out.println(DateTimeUtils.toCookieExpires(new Date(System.currentTimeMillis())));
+    }
 }
