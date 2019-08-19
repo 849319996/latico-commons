@@ -476,19 +476,19 @@ public class CompareHelper {
 
 	/**
 	 * 获取字段值组拼的字符串,最后计算MD5
-	 * @param comapreKeyRelatedFields
+	 * @param fields
 	 * @param obj
 	 * @param <T>
 	 * @return
 	 * @throws IllegalAccessException
 	 */
-	private static <T extends Object> String getCombineFieldValues(Field[] comapreKeyRelatedFields, T obj) throws Exception {
+	private static <T extends Object> String getCombineFieldValues(Field[] fields, T obj) throws Exception {
 		if(obj == null){
 			return null;
 		}
 		StringBuilder sb = new StringBuilder();
-		for (Field comapreKeyRelatedField : comapreKeyRelatedFields) {
-			Object value = comapreKeyRelatedField.get(obj);
+		for (Field field : fields) {
+			Object value = field.get(obj);
 			if(value == null){
 				value = "";
 			}
