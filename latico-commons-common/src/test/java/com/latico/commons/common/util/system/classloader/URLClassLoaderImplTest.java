@@ -1,5 +1,6 @@
 package com.latico.commons.common.util.system.classloader;
 
+import com.latico.commons.common.util.system.classloader.impl.URLClassLoaderImpl;
 import org.junit.Test;
 
 import java.net.URL;

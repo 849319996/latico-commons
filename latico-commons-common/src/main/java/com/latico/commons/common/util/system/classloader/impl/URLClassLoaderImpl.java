@@ -1,4 +1,4 @@
-package com.latico.commons.common.util.system.classloader;
+package com.latico.commons.common.util.system.classloader.impl;
 
 import com.latico.commons.common.util.codec.MD5Utils;
 import com.latico.commons.common.util.io.FileUtils;

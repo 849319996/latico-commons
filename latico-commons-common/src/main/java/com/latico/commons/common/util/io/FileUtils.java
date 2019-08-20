@@ -6,7 +6,7 @@ import com.latico.commons.common.util.math.NumConvertUtils;
 import com.latico.commons.common.util.regex.RegexUtils;
 import com.latico.commons.common.util.string.StringUtils;
 import com.latico.commons.common.util.system.SystemUtils;
-import com.latico.commons.common.util.system.cmd.CmdUtils;
+import com.latico.commons.common.util.system.cli.CmdUtils;
 
 import java.io.*;
 import java.util.*;

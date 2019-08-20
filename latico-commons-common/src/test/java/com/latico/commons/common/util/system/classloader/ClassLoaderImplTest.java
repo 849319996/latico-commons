@@ -2,9 +2,8 @@ package com.latico.commons.common.util.system.classloader;
 
 import com.latico.commons.common.util.io.IOUtils;
 import com.latico.commons.common.util.logging.LogUtils;
+import com.latico.commons.common.util.system.classloader.impl.ClassLoaderImpl;
 import org.junit.Test;
-
-import java.util.List;
 
 public class ClassLoaderImplTest {
     /**
