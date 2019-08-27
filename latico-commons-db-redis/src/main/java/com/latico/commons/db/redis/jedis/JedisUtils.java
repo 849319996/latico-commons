@@ -281,4 +281,41 @@ public class JedisUtils {
             jedisCluster.close();
         }
     }
+
+    /**
+     * 删除多个key
+     * 因为redis没有提供删除多个key的原始命令，这里使用Pipeline实现
+     * @param jedis
+     * @param keys 多个key
+     */
+    public static void mdel(Jedis jedis, List<String> keys) {
+        // 1)生成pipeline对象
+        Pipeline pipeline = jedis.pipelined();
+        // 2)pipeline执行命令，注意此时命令并未真正执行
+        for (String key : keys) {
+            pipeline.del(key);
+        }
+        // 3)执行命令
+        pipeline.sync();
+    }
+
+    /**
+     * 删除多个key
+     * 因为redis没有提供删除多个key的原始命令，这里使用Pipeline实现
+     *
+     * 带返回值
+     * @param jedis
+     * @param keys 多个key
+     * @return 删除每个key的返回值
+     */
+    public static List<Object> mdelWithReturn(Jedis jedis, List<String> keys) {
+        // 1)生成pipeline对象
+        Pipeline pipeline = jedis.pipelined();
+        // 2)pipeline执行命令，注意此时命令并未真正执行
+        for (String key : keys) {
+            pipeline.del(key);
+        }
+        // 3)执行命令
+        return pipeline.syncAndReturnAll();
+    }
 }

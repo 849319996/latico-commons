@@ -5,8 +5,6 @@ import com.dyuproject.protostuff.ProtobufIOUtil;
 import com.dyuproject.protostuff.Schema;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import com.latico.commons.objenesis.ObjenesisUtils;
-import org.objenesis.Objenesis;
-import org.objenesis.ObjenesisStd;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
