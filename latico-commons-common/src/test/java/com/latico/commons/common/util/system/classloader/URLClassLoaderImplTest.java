@@ -12,7 +12,7 @@ public class URLClassLoaderImplTest {
      */
     @Test
     public void testLoadByJar() throws Exception {
-        URLClassLoaderImpl myClassLoader1 = URLClassLoaderImpl.getInstance();
+        URLClassLoaderImpl myClassLoader1 = new URLClassLoaderImpl();
         myClassLoader1.addResourcesByJarFilePath(".\\doc\\latico.jar");
         Class c = myClassLoader1.loadClass("com.latico.web.Main");
         System.out.println(c);
@@ -26,7 +26,7 @@ public class URLClassLoaderImplTest {
      */
     @Test
     public void testLoadByClassFile() throws Exception {
-        URLClassLoaderImpl myClassLoader = URLClassLoaderImpl.getInstance();
+        URLClassLoaderImpl myClassLoader = new URLClassLoaderImpl();
 
         //自定义类加载器的加载路径
         myClassLoader.addResourcesByClassFilePath(".\\doc\\Test.class", ".\\doc\\Test2.class");
@@ -51,7 +51,7 @@ public class URLClassLoaderImplTest {
      */
     @Test
     public void testLoadResourceByJar() throws Exception {
-        URLClassLoaderImpl myClassLoader1 = URLClassLoaderImpl.getInstance();
+        URLClassLoaderImpl myClassLoader1 = new URLClassLoaderImpl();
         myClassLoader1.addResourcesByJarFilePath(".\\doc\\latico.jar");
         URL c = myClassLoader1.getResource("config.properties");
         System.out.println(c);

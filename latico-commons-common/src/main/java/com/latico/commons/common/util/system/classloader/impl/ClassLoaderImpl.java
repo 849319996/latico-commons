@@ -69,8 +69,6 @@ public class ClassLoaderImpl extends ClassLoader {
     public static final Class clazz = ClassLoaderImpl.class;
     private static final Logger LOG = LoggerFactory.getLogger(clazz);
 
-    private static volatile ClassLoaderImpl INSTANCE;
-
     /**
      * class文件字节码内容用字节数组装起来,key是类内容的MD5值
      */
@@ -81,24 +79,11 @@ public class ClassLoaderImpl extends ClassLoader {
      */
     private ConcurrentSkipListMap<String, URL> urls = new ConcurrentSkipListMap<>();
 
-    private ClassLoaderImpl() {
+    public ClassLoaderImpl() {
         //指定父类加载器
         super(Thread.currentThread().getContextClassLoader());
     }
 
-    /**
-     * @return 单例
-     */
-    public static ClassLoaderImpl getInstance() {
-        if (INSTANCE == null) {
-            synchronized (clazz) {
-                if (INSTANCE == null) {
-                    INSTANCE = new ClassLoaderImpl();
-                }
-            }
-        }
-        return INSTANCE;
-    }
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
@@ -292,5 +277,16 @@ public class ClassLoaderImpl extends ClassLoader {
                 LOG.error(e);
             }
         }
+    }
+
+    /**
+     * ClassLoader是个抽象类，而ClassLoader.defineClass 方法是protected的
+     * 所以我们需要定义一个子类将这个方法暴露出来
+     * @param className
+     * @param classByte
+     * @return
+     */
+    public Class<?> defineClass(String className, byte[] classByte) {
+        return super.defineClass(className, classByte, 0, classByte.length);
     }
 }

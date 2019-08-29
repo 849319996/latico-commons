@@ -12,7 +12,7 @@ public class ClassLoaderImplTest {
      */
     @Test
     public void testLoadByJar() throws Exception {
-        ClassLoaderImpl myClassLoader1 = ClassLoaderImpl.getInstance();
+        ClassLoaderImpl myClassLoader1 = new ClassLoaderImpl();
         myClassLoader1.addResourcesByJarFilePath(".\\doc\\latico.jar");
         Class c = myClassLoader1.loadClass("com.latico.web.Main");
         System.out.println(c);
@@ -29,7 +29,7 @@ public class ClassLoaderImplTest {
     @Test
     public void testLoadByClassFile() throws Exception {
         LogUtils.loadLogBackConfigDefault();
-        ClassLoaderImpl myClassLoader = ClassLoaderImpl.getInstance();
+        ClassLoaderImpl myClassLoader = new ClassLoaderImpl();
 
         //自定义类加载器的加载路径
         myClassLoader.addResourcesByClassFilePath(".\\doc\\Test.class", ".\\doc\\Test2.class");
@@ -54,7 +54,7 @@ public class ClassLoaderImplTest {
      */
     @Test
     public void testLoadResourceByJar() throws Exception {
-        ClassLoaderImpl myClassLoader1 = ClassLoaderImpl.getInstance();
+        ClassLoaderImpl myClassLoader1 = new ClassLoaderImpl();
         myClassLoader1.addResourcesByJarFilePath(".\\doc\\latico.jar");
         System.out.println(IOUtils.resourceToString("config.properties", myClassLoader1));
     }

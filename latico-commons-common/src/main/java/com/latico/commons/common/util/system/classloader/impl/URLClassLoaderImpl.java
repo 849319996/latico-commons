@@ -71,8 +71,6 @@ public class URLClassLoaderImpl extends URLClassLoader {
     public static final Class clazz = URLClassLoaderImpl.class;
     private static final Logger LOG = LoggerFactory.getLogger(clazz);
 
-    private static volatile URLClassLoaderImpl INSTANCE;
-
     /**
      * class文件的字节码内容，用字节数组装起来,key是类内容的MD5值，用于去重
      */
@@ -83,23 +81,9 @@ public class URLClassLoaderImpl extends URLClassLoader {
      */
     private Set<String> urlKeys = new ConcurrentSkipListSet<>();
 
-    private URLClassLoaderImpl() {
+    public URLClassLoaderImpl() {
         //指定父类加载器
         super(new URL[]{}, Thread.currentThread().getContextClassLoader());
-    }
-
-    /**
-     * @return 单例
-     */
-    public static URLClassLoaderImpl getInstance() {
-        if (INSTANCE == null) {
-            synchronized (clazz) {
-                if (INSTANCE == null) {
-                    INSTANCE = new URLClassLoaderImpl();
-                }
-            }
-        }
-        return INSTANCE;
     }
 
 
@@ -233,6 +217,17 @@ public class URLClassLoaderImpl extends URLClassLoader {
      */
     public void clearResources() {
         classByteCodes.clear();
+    }
+
+    /**
+     * ClassLoader是个抽象类，而ClassLoader.defineClass 方法是protected的
+     * 所以我们需要定义一个子类将这个方法暴露出来
+     * @param className
+     * @param classByte
+     * @return
+     */
+    public Class<?> defineClass(String className, byte[] classByte) {
+        return super.defineClass(className, classByte, 0, classByte.length);
     }
 
 }

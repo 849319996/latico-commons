@@ -28,7 +28,7 @@ public class ThreadMonitor extends Thread {
 	private static final Logger LOG = LoggerFactory.getLogger(ThreadMonitor.class);
 
 	/** instance 单例实例对象 */
-	private static ThreadMonitor instance;
+	private static volatile ThreadMonitor instance;
 	
 	/** switchStatus 开关状态 */
 	private boolean runStatus = true;
