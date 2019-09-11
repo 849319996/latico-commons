@@ -59,15 +59,15 @@ public class StoredProcedureUtils {
         DBTypeEnum dbType = DBUtils.judgeDBType(conn);
         switch (dbType) {
             case MYSQL: {
-                result = _execSpByMysql(conn, proSql, params);
+                result = execSpByMysql(conn, proSql, params);
                 break;
             }
             case SYBASE: {
-                result = _execSpBySybase(conn, proSql, params);
+                result = execSpBySybase(conn, proSql, params);
                 break;
             }
             case ORACLE: {
-                result = _execSpByOracle(conn, proSql, params);
+                result = execSpByOracle(conn, proSql, params);
                 break;
             }
             default: {
@@ -95,7 +95,7 @@ public class StoredProcedureUtils {
      *
      * @throws SQLException 占位符与入参表个数不一致，或执行异常则抛出错误。
      */
-    private static String _execSpByMysql(Connection conn, String proSql, Object[] params) {
+    private static String execSpByMysql(Connection conn, String proSql, Object[] params) {
         String result = null;
         if(conn == null) {
             LOG.error("DB connection is closed.");
@@ -173,7 +173,7 @@ public class StoredProcedureUtils {
      *
      * @throws SQLException 占位符与入参表个数不一致，或执行异常则抛出错误。
      */
-    private static String _execSpBySybase(Connection conn, String proSql, Object[] params) {
+    private static String execSpBySybase(Connection conn, String proSql, Object[] params) {
         String result = null;
         if(conn == null) {
             LOG.error("DB connection is closed.");
@@ -239,7 +239,7 @@ public class StoredProcedureUtils {
      *
      * @throws SQLException 占位符与入参表个数不一致，或执行异常则抛出错误。
      */
-    private static String _execSpByOracle(Connection conn, String proSql, Object[] params) {
+    private static String execSpByOracle(Connection conn, String proSql, Object[] params) {
         String result = null;
         if(conn == null) {
             LOG.error("DB connection is closed.");
