@@ -57,6 +57,18 @@ public class MD5Utils {
     }
 
     /**
+     * 小写创建MD5
+     * @param source
+     * @return
+     */
+    public static String toLowerCaseMd5(Object source) {
+        if (source == null) {
+            return null;
+        }
+        return getMD5(source.toString(), UTF8, hexDigitsLowerCase);
+    }
+
+    /**
      * 指定编码的小写形式MD5
      *
      * @param source  源字符串
@@ -75,6 +87,18 @@ public class MD5Utils {
      */
     public static String toUpperCaseMd5(String source) {
         return getMD5(source, UTF8, hexDigitsUpperCase);
+    }
+
+    /**
+     * 大写
+     * @param source
+     * @return
+     */
+    public static String toUpperCaseMd5(Object source) {
+        if (source == null) {
+            return null;
+        }
+        return getMD5(source.toString(), UTF8, hexDigitsUpperCase);
     }
 
     /**
@@ -170,7 +194,7 @@ public class MD5Utils {
      * @param hexDigits 十六进制数组
      * @return MD5十六进制表达形式
      */
-    private static String getMD5(String source, String charset, char[] hexDigits) {
+    public static String getMD5(String source, String charset, char[] hexDigits) {
         String md5Str = null;
 
         if (source != null) {

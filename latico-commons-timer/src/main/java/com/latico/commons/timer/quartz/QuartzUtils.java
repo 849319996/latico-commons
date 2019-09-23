@@ -26,6 +26,7 @@ public class QuartzUtils {
         triggerBuilder.startNow();
         // 触发器时间设定
         triggerBuilder.withSchedule(CronScheduleBuilder.cronSchedule(cronExpression));
+
         // 创建Trigger对象
         return (CronTrigger)triggerBuilder.build();
     }
