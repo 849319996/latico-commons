@@ -243,6 +243,8 @@ public class ResourcesLoader {
 
         // 从此jar包 得到一个枚举类,里面包含了jar里面所有内容，可以是目录 和一些jar包里的其他文件 如META-INF等文件
         Enumeration<JarEntry> entries = jar.entries();
+        //        资源正则是否为空
+        final boolean resourcesNameRegexIsEmpty = resourcesNameRegex == null || "".equals(resourcesNameRegex);
 
         // 同样的进行循环迭代
         while (entries.hasMoreElements()) {
@@ -256,27 +258,31 @@ public class ResourcesLoader {
             }
 
             // 如果前半部分和定义的包名相同
-            if (name.startsWith(packageDirName)) {
-                // 如果是一个.class文件 而且不是目录，如果以"/"结尾 是一个包
-                if (!entry.isDirectory()) {
-                    //匹配资源的名字
-                    if(resourcesNameRegex == null || "".equals(resourcesNameRegex) || name.matches(resourcesNameRegex)) {
-                        //如果不是循环迭代，那就判断是否在当前包下
-                        if(!recursive){
-                            //截取最后一个斜杠前的字符串，判断是否跟当前包目录字符长度一样
-                            int last = name.lastIndexOf("/");
-                            if(last != -1){
-                                String currentPackageDirName = name.substring(0, last);
-                                if(packageDirName.length() != currentPackageDirName.length()){
-                                    continue;
-                                }
-                            }
+            if (!name.startsWith(packageDirName)) {
+                continue;
+            }
+
+            // 如果不是目录，如果以"/"结尾 是一个包
+            if (entry.isDirectory()) {
+                continue;
+            }
+
+            //匹配资源的名字
+            if(resourcesNameRegexIsEmpty || name.matches(resourcesNameRegex)){
+                //如果不是循环迭代，那就判断该资源文件是否在当前包下
+                if(!recursive){
+                    //去掉文件名和后缀得到包名路径，通过：截取最后一个斜杠前的字符串，判断是否跟当前包目录字符长度一样
+                    int last = name.lastIndexOf("/");
+                    if(last != -1){
+                        String currentPackageDirName = name.substring(0, last);
+                        //判断长度即可，效率比equals高
+                        if(packageDirName.length() != currentPackageDirName.length()){
+                            continue;
                         }
-
-                        resourcesResults.add(name.replace('/', '.'));
                     }
-
                 }
+
+                resourcesResults.add(name.replace('/', '.'));
             }
         }
     }
@@ -301,7 +307,7 @@ public class ResourcesLoader {
         }
 
 //        资源正则是否为空
-        boolean resourcesNameRegexIsEmpty = resourcesNameRegex == null || "".equals(resourcesNameRegex);
+        final boolean resourcesNameRegexIsEmpty = resourcesNameRegex == null || "".equals(resourcesNameRegex);
 
         // 如果存在 就获取包下的所有文件 包括目录
         File[] dirfiles = dir.listFiles(new FileFilter() {
