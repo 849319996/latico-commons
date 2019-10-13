@@ -125,11 +125,19 @@ public class TrapResult {
 
 	@Override
 	public String toString() {
-		return "TrapResult [upTime=" + upTime + ", receiveTime=" + receiveTime
-		        + ", version=" + version + ", remoteHost=" + remoteHost
-		        + ", remotePort=" + remotePort + ", enterprise=" + enterprise
-		        + ", name=" + name + ", descr=" + descr + ", community="
-		        + community + ", variableBinds=" + variableBinds + "]";
+		final StringBuilder sb = new StringBuilder("TrapResult{");
+		sb.append("upTime=").append(upTime);
+		sb.append(", receiveTime=").append(receiveTime);
+		sb.append(", version='").append(version).append('\'');
+		sb.append(", remoteHost='").append(remoteHost).append('\'');
+		sb.append(", remotePort=").append(remotePort);
+		sb.append(", enterprise='").append(enterprise).append('\'');
+		sb.append(", name='").append(name).append('\'');
+		sb.append(", descr='").append(descr).append('\'');
+		sb.append(", community='").append(community).append('\'');
+		sb.append(", variableBinds=").append(variableBinds);
+		sb.append('}');
+		return sb.toString();
 	}
 
 }

@@ -36,7 +36,8 @@ public interface TrapReceiver {
 	 * 最全参数初始化
 	 * @param ip
 	 * @param port
-	 * @param charset
+	 * @param oriCharset
+	 * @param destCharset
 	 * @param receiveQueueMaxSize
 	 * @param community
 	 * @return

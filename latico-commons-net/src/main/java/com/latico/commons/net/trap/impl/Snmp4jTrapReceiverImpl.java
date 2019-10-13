@@ -33,9 +33,9 @@ import java.util.List;
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
-public class Snmp4jTrapReceiver extends AbstractTrapReceiver implements CommandResponder {
+public class Snmp4jTrapReceiverImpl extends AbstractTrapReceiverImpl implements CommandResponder {
 	/** 日志 */
-	private static final Logger LOG = LoggerFactory.getLogger(Snmp4jTrapReceiver.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Snmp4jTrapReceiverImpl.class);
 
 	private MultiThreadedMessageDispatcher dispatcher;
 
@@ -162,7 +162,7 @@ public class Snmp4jTrapReceiver extends AbstractTrapReceiver implements CommandR
 	}
 	
 	public static void main(String[] args) {
-		Snmp4jTrapReceiver multithreadedtrapreceiver = new Snmp4jTrapReceiver();
+		Snmp4jTrapReceiverImpl multithreadedtrapreceiver = new Snmp4jTrapReceiverImpl();
 		multithreadedtrapreceiver.startListen();
 //		multithreadedtrapreceiver.stopListen();
 //		multithreadedtrapreceiver.startListen();

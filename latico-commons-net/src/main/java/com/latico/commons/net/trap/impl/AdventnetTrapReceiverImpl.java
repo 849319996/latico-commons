@@ -31,9 +31,9 @@ import java.util.Vector;
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
-public class AdventnetTrapReceiver extends AbstractTrapReceiver implements TrapParserListener,TrapListener {
+public class AdventnetTrapReceiverImpl extends AbstractTrapReceiverImpl implements TrapParserListener,TrapListener {
 
-	private static final Logger LOG = LoggerFactory.getLogger(AdventnetTrapReceiver.class);
+	private static final Logger LOG = LoggerFactory.getLogger(AdventnetTrapReceiverImpl.class);
 	
 	/**
 	 * trapReceiver trap接收器
@@ -288,7 +288,7 @@ public class AdventnetTrapReceiver extends AbstractTrapReceiver implements TrapP
 	}
 	
 	public static void main(String[] args) {
-		AdventnetTrapReceiver trap = new AdventnetTrapReceiver();
+		AdventnetTrapReceiverImpl trap = new AdventnetTrapReceiverImpl();
 		if(trap.init(null, 0, null, "utf-8", 1000, null)){
 			if(trap.startListen()){
 				new HandleThread(trap).start();

@@ -1,4 +1,4 @@
-package com.latico.commons.net.trap.test;
+package com.latico.commons.net.trap;
 
 import com.latico.commons.net.trap.impl.AdventnetTrapReceiverImpl;
 import org.snmp4j.CommunityTarget;

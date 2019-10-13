@@ -57,7 +57,9 @@ http://www.dockerinfo.net/document
 
 五、执行Dockerfile文件
 程序打包后，把Dockerfile文件拷贝到target目录下执行。
-
+比如执行如下命令：
+docker build -t nginx:v1.1 .
+-t为执行镜像的名称，千万不要忽略结尾处的.，它表示当前目录，nginx是镜像名称，v1.1是版本
 
 然后访问：
 ===========

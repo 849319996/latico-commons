@@ -24,10 +24,10 @@ import java.util.concurrent.TimeUnit;
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
-public abstract class AbstractTrapReceiver implements TrapReceiver {
+public abstract class AbstractTrapReceiverImpl implements TrapReceiver {
 
 	/** 日志 */
-	private static final Logger LOG = LoggerFactory.getLogger(AbstractTrapReceiver.class);
+	private static final Logger LOG = LoggerFactory.getLogger(AbstractTrapReceiverImpl.class);
 	
 	/** origncharset 转化前的字符集 */
 	public String origncharset = CharsetType.ISO;

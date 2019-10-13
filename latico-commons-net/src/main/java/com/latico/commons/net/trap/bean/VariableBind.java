@@ -58,8 +58,13 @@ public class VariableBind {
 
 	@Override
 	public String toString() {
-		return "VariableBinding [oid=" + oid + ", type=" + type + ", value="
-		        + value + "]";
+		final StringBuilder sb = new StringBuilder("VariableBind{");
+		sb.append("oid='").append(oid).append('\'');
+		sb.append(", name='").append(name).append('\'');
+		sb.append(", type='").append(type).append('\'');
+		sb.append(", value='").append(value).append('\'');
+		sb.append('}');
+		return sb.toString();
 	}
 
 }

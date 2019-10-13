@@ -300,12 +300,15 @@ public class ResourcesLoader {
             return;
         }
 
+//        资源正则是否为空
+        boolean resourcesNameRegexIsEmpty = resourcesNameRegex == null || "".equals(resourcesNameRegex);
+
         // 如果存在 就获取包下的所有文件 包括目录
         File[] dirfiles = dir.listFiles(new FileFilter() {
             // 自定义过滤规则 如果可以循环(包含子目录) 或则是以.class结尾的文件(编译好的java类文件)
             @Override
             public boolean accept(File file) {
-                return (recursive && file.isDirectory()) || resourcesNameRegex == null || "".equals(resourcesNameRegex) || (file.getName().matches(resourcesNameRegex));
+                return (recursive && file.isDirectory()) || resourcesNameRegexIsEmpty || (file.getName().matches(resourcesNameRegex));
             }
         });
 

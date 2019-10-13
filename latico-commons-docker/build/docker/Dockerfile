@@ -2,8 +2,8 @@ FROM hub.c.163.com/library/java
 
 MAINTAINER springboot
 
-RUN mkdir -p /home/laticosoft/springboot
+RUN mkdir -p /home/latico/springboot
 
-COPY ./latico-commons-docker.jar /home/laticosoft/springboot/latico-commons-docker.jar
+ADD ./latico-commons-docker.jar /home/latico/springboot/latico-commons-docker.jar
 
-ENTRYPOINT ["java","-jar","latico-commons-docker.jar"]
+ENTRYPOINT ["java","-jar","/home/latico/springboot/latico-commons-docker.jar"]
