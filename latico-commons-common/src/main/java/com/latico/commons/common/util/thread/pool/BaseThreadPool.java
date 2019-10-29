@@ -174,6 +174,8 @@ public class BaseThreadPool<T> {
         this.reHandler = new ThreadPoolExecutor.CallerRunsPolicy();
 
         this.workQueue = new ArrayBlockingQueue<Runnable>(workQueueSize);
+        LOG.info("创建线程池[核心线程数量:{},最大线程数量:{},空闲时保持激活时间:{},时间单位:{},工作队列大小:{},饱和策略:{}]", corePoolSize, maxPoolSize,
+                keepAliveTime, unit, this.workQueueSize, reHandler.getClass().getSimpleName());
         this.threadPool = new ThreadPoolExecutor(corePoolSize, maxPoolSize,
                 keepAliveTime, unit, workQueue, reHandler);
     }
@@ -202,6 +204,8 @@ public class BaseThreadPool<T> {
         this.reHandler = new ThreadPoolExecutor.CallerRunsPolicy();
 
         this.workQueue = new ArrayBlockingQueue<Runnable>(this.workQueueSize);
+        LOG.info("创建线程池[核心线程数量:{},最大线程数量:{},空闲时保持激活时间:{},时间单位:{},工作队列大小:{}],饱和策略:{}", corePoolSize, maxPoolSize,
+                keepAliveTime, unit, this.workQueueSize, reHandler.getClass().getSimpleName());
         this.threadPool = new ThreadPoolExecutor(corePoolSize, maxPoolSize,
                 keepAliveTime, unit, workQueue, reHandler);
     }
@@ -230,6 +234,8 @@ public class BaseThreadPool<T> {
         this.reHandler = reHandler;
 
         this.workQueue = new ArrayBlockingQueue<Runnable>(workQueueSize);
+        LOG.info("创建线程池[核心线程数量:{},最大线程数量:{},空闲时保持激活时间:{},时间单位:{},工作队列大小:{}],饱和策略:{}", corePoolSize, maxPoolSize,
+                keepAliveTime, unit, this.workQueueSize, reHandler.getClass().getSimpleName());
         this.threadPool = new ThreadPoolExecutor(corePoolSize, maxPoolSize,
                 keepAliveTime, unit, workQueue, reHandler);
     }

@@ -1,7 +1,5 @@
-package com.latico.commons.common.util;
+package com.latico.commons.common.util.other;
 
-import com.latico.commons.common.util.other.OptionalUtils;
-import com.latico.commons.common.util.other.StreamUtils;
 import org.junit.Test;
 
 import java.time.LocalDateTime;
