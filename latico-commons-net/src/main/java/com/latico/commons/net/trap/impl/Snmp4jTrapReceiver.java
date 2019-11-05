@@ -105,7 +105,7 @@ public class Snmp4jTrapReceiver extends AbstractTrapReceiver implements CommandR
 	 * @param result
 	 */
 	protected void processResult(Snmp4jTrapResult result) {
-		LOG.info("在这里处理收到的报文:{}", result);
+		LOG.debug("在这里处理收到的报文:{}", result);
 	}
 
 	/**

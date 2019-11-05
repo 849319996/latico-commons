@@ -16,6 +16,8 @@ public class AdventnetTrapReceiverTest {
 
         trapReceiver.startListen();
 
+        System.out.println("启动完成");
+
 
         ThreadUtils.sleep(1000000);
     }

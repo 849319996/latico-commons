@@ -116,7 +116,7 @@ public class AdventnetTrapReceiver extends AbstractTrapReceiver implements TrapP
 	 * @param result
 	 */
 	protected void processResult(AdventnetTrapResult result) {
-		LOG.info("在这里处理收到的报文:{}", result);
+		LOG.debug("在这里处理收到的报文:{}", result);
 	}
 
 	/**
