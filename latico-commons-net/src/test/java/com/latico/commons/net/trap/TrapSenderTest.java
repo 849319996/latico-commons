@@ -1,6 +1,6 @@
 package com.latico.commons.net.trap;
 
-import com.latico.commons.net.trap.impl.AdventnetTrapReceiverImpl;
+import com.latico.commons.net.trap.impl.AdventnetTrapReceiver;
 import org.snmp4j.CommunityTarget;
 import org.snmp4j.PDU;
 import org.snmp4j.Snmp;
@@ -82,7 +82,7 @@ public class TrapSenderTest {
 
 	public static void main(String[] args) {
 		try {
-			AdventnetTrapReceiverImpl trap = new AdventnetTrapReceiverImpl();
+			AdventnetTrapReceiver trap = new AdventnetTrapReceiver();
 			TrapSenderTest util = new TrapSenderTest();
 			util.initComm();
 			

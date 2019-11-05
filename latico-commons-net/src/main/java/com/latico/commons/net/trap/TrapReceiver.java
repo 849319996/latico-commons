@@ -1,11 +1,6 @@
 package com.latico.commons.net.trap;
 
 
-import com.latico.commons.net.trap.bean.TrapResult;
-
-import java.util.List;
-
-
 /**
  * <PRE>
  * 默认监听162端口
@@ -24,26 +19,18 @@ public interface TrapReceiver {
 	 */
 	public boolean init();
 	
-	/**
-	 * 
-	 * @param receiveQueueMaxSize
-	 * @return
-	 */
-	public boolean init(int receiveQueueMaxSize);
-	
-	
+
 	/**
 	 * 最全参数初始化
 	 * @param ip
 	 * @param port
-	 * @param oriCharset
-	 * @param destCharset
-	 * @param receiveQueueMaxSize
+	 * @param oriCharset 原字符集
+	 * @param convertcharset
 	 * @param community
 	 * @return
 	 */
-	public boolean init(String ip, int port, String oriCharset, String destCharset, int receiveQueueMaxSize, String community);
-	
+	public boolean init(String ip, int port, String oriCharset, String convertcharset, String community);
+
 	/**
 	 * 启动trap监听
 	 * @return
@@ -60,18 +47,5 @@ public interface TrapReceiver {
 	 */
 	public void close();
 	
-	/**
-	 * 获取一个trap采集结果
-	 * @param timeout 小于等于0时进行无限监听获取，单位毫秒
-	 * @return
-	 */
-	public TrapResult getOneResult(long timeout);
-	
-	/**
-	 * 获取当前所有trap采集结果
-	 * @return
-	 */
-	public List<TrapResult> getCurrentAllResult();
-
 }
 

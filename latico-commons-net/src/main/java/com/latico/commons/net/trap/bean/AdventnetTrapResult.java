@@ -12,7 +12,7 @@ import java.util.List;
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
-public class TrapResult {
+public class AdventnetTrapResult {
 
 	/** upTime trap接收时的报文自带的上报时间毫秒值 */
 	private long upTime;

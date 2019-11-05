@@ -1,7 +1,7 @@
 package com.latico.commons.net.trap.impl;
 
-import com.latico.commons.net.trap.bean.TrapResult;
-import com.latico.commons.net.trap.bean.VariableBind;
+import com.latico.commons.net.trap.AbstractTrapReceiver;
+import com.latico.commons.net.trap.bean.Snmp4jTrapResult;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import com.latico.commons.common.util.math.NumberUtils;
@@ -19,8 +19,9 @@ import org.snmp4j.util.MultiThreadedMessageDispatcher;
 import org.snmp4j.util.ThreadPool;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -33,9 +34,9 @@ import java.util.List;
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
-public class Snmp4jTrapReceiverImpl extends AbstractTrapReceiverImpl implements CommandResponder {
+public class Snmp4jTrapReceiver extends AbstractTrapReceiver implements CommandResponder {
 	/** 日志 */
-	private static final Logger LOG = LoggerFactory.getLogger(Snmp4jTrapReceiverImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(Snmp4jTrapReceiver.class);
 
 	private MultiThreadedMessageDispatcher dispatcher;
 
@@ -70,35 +71,41 @@ public class Snmp4jTrapReceiverImpl extends AbstractTrapReceiverImpl implements 
 	 */
 	@Override
 	public void processPdu(CommandResponderEvent respEvnt) {
+		Snmp4jTrapResult result = new Snmp4jTrapResult();
+		result.setReceiveTime(System.currentTimeMillis());
+		Map<String,String> oidValueMap = new HashMap<>();
+		result.setOidVauleMap(oidValueMap);
+
 		// 解析Response
         try {
 			if (respEvnt != null && respEvnt.getPDU() != null) {
-				List<VariableBind> variableBinds = new ArrayList<VariableBind>();
-				VariableBind variableBind = null;
 				List<? extends VariableBinding> recVBs = respEvnt.getPDU().getVariableBindings();
 			   	for (VariableBinding recVB : recVBs) {
-			   		variableBind = new VariableBind();
-			   		variableBind.setOid(recVB.getOid().toString());
-			   		variableBind.setType("");
-			   		variableBind.setValue(recVB.toValueString());
-			   		variableBinds.add(variableBind);
+					oidValueMap.put(recVB.getOid().toString(), recVB.toValueString());
 				}
 			   	
 			   	//组装Trap结果对象
-			   	TrapResult trapResult = new TrapResult();
-			   	trapResult.setVariableBinds(variableBinds);
 			   	String[] socket = respEvnt.getPeerAddress().toString().split("/");
 			   	if(socket.length == 2){
-			   		trapResult.setRemoteHost(socket[0]);
-			   		trapResult.setRemotePort(NumberUtils.toInt(socket[1]));
+					result.setRemoteHost(socket[0]);
+					result.setRemotePort(NumberUtils.toInt(socket[1]));
 			   	}
-			   	
-			   	//添加到结果队列中
-			   	this.trapResults.add(trapResult);
 			}
+
+//			处理结果
+			processResult(result);
         } catch (Exception e) {
-			LOG.error("处理Trap报文异常", e);
+			LOG.error("处理Trap报文异常:{}", e, respEvnt.getPeerAddress());
 		}
+	}
+
+	/**
+	 * TODO
+	 * 继承后复写这个方法，可以把结果添加到缓存队列或者写到kafka中
+	 * @param result
+	 */
+	protected void processResult(Snmp4jTrapResult result) {
+		LOG.info("在这里处理收到的报文:{}", result);
 	}
 
 	/**
@@ -131,7 +138,7 @@ public class Snmp4jTrapReceiverImpl extends AbstractTrapReceiverImpl implements 
 		status = false;
 		LOG.info("开始初始化Trap信息...");
 		try {
-			threadPool = ThreadPool.create(threadName, 10);
+			threadPool = ThreadPool.create(threadName, 20);
 			dispatcher = new MultiThreadedMessageDispatcher(threadPool, new MessageDispatcherImpl());
 			listenAddress = GenericAddress.parse(System.getProperty("snmp4j.listenAddress", "udp:$IP$/$Port$".replace("$IP$", listenIp).replace("$Port$", String.valueOf(listenPort)))); // 本地IP与监听端口
 			TransportMapping<?> transport;
@@ -161,13 +168,4 @@ public class Snmp4jTrapReceiverImpl extends AbstractTrapReceiverImpl implements 
 		return status;
 	}
 	
-	public static void main(String[] args) {
-		Snmp4jTrapReceiverImpl multithreadedtrapreceiver = new Snmp4jTrapReceiverImpl();
-		multithreadedtrapreceiver.startListen();
-//		multithreadedtrapreceiver.stopListen();
-//		multithreadedtrapreceiver.startListen();
-//		multithreadedtrapreceiver.stopListen();
-//		multithreadedtrapreceiver.close();
-		
-	}
 }

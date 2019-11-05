@@ -7,9 +7,10 @@ import com.adventnet.snmp.snmp2.SnmpVarBind;
 import com.adventnet.snmp.snmp2.usm.USMUserEntry;
 import com.latico.commons.net.snmp.enums.VersionEnum;
 import com.latico.commons.net.snmp.mib.SnmpMibUtils;
-import com.latico.commons.net.trap.bean.TrapResult;
+import com.latico.commons.net.trap.AbstractTrapReceiver;
+import com.latico.commons.net.trap.bean.AdventnetTrapResult;
+import com.latico.commons.net.trap.bean.Snmp4jTrapResult;
 import com.latico.commons.net.trap.bean.VariableBind;
-import com.latico.commons.net.trap.test.HandleThread;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import net.percederberg.mibble.MibLoader;
@@ -31,9 +32,9 @@ import java.util.Vector;
  * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
  * @since     <B>JDK1.6</B>
  */
-public class AdventnetTrapReceiverImpl extends AbstractTrapReceiverImpl implements TrapParserListener,TrapListener {
+public class AdventnetTrapReceiver extends AbstractTrapReceiver implements TrapParserListener,TrapListener {
 
-	private static final Logger LOG = LoggerFactory.getLogger(AdventnetTrapReceiverImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(AdventnetTrapReceiver.class);
 	
 	/**
 	 * trapReceiver trap接收器
@@ -87,13 +88,12 @@ public class AdventnetTrapReceiverImpl extends AbstractTrapReceiverImpl implemen
 	 * receivedTrap
 	 *
 	 * @param event TrapEvent
-	 * @todo Implement this com.adventnet.snmp.beans.TrapListener method
 	 */
 	@Override
 	public void receivedTrap(TrapEvent event) {
+		AdventnetTrapResult result = new AdventnetTrapResult();
+		result.setReceiveTime(System.currentTimeMillis());
 		try {
-			
-			TrapResult result = new TrapResult();
 			result.setName(getTrapName(event));
 			result.setCommunity(event.getCommunity());
 			result.setDescr(getTrapDescr(event));
@@ -101,16 +101,24 @@ public class AdventnetTrapReceiverImpl extends AbstractTrapReceiverImpl implemen
 			result.setRemoteHost(event.getRemoteHost());
 			result.setRemotePort(event.getRemotePort());
 			result.setUpTime(event.getUpTime());
-			result.setReceiveTime(System.currentTimeMillis());
 			result.setVersion(getTrapVersion(event));
 			result.setVariableBinds(getVarBinds(event));
-			
-			this.trapResults.add(result);
+
+			processResult(result);
 		} catch (Exception e) {
-			LOG.error("处理Trap报文异常", e);
+			LOG.error("处理Trap报文异常:{}", e, event.getRemoteHost());
 		}
 	}
-	
+
+	/**
+	 * TODO
+	 * 继承后复写这个方法，可以把结果添加到缓存队列或者写到kafka中
+	 * @param result
+	 */
+	protected void processResult(AdventnetTrapResult result) {
+		LOG.info("在这里处理收到的报文:{}", result);
+	}
+
 	/**
 	 * 获取变量绑定的值
 	 * @param event
@@ -245,13 +253,15 @@ public class AdventnetTrapReceiverImpl extends AbstractTrapReceiverImpl implemen
 		String trapname = null;
 		// v1
 		if (trap.getTrapPDU().getCommand() == SnmpAPI.TRP_REQ_MSG) {
-			if (trap.getTrapDefinition() != null)
+			if (trap.getTrapDefinition() != null) {
 				trapname = trap.getTrapDefinition().getName();
+			}
 			// v2
 		} else if (trap.getTrapPDU().getCommand() == SnmpAPI.TRP2_REQ_MSG
 				|| trap.getTrapPDU().getCommand() == SnmpAPI.INFORM_REQ_MSG) {
-			if (trap.getNotificationDefinition() != null)
+			if (trap.getNotificationDefinition() != null) {
 				trapname = trap.getNotificationDefinition().getLabel();
+			}
 		}
 
 		return trapname;
@@ -287,15 +297,4 @@ public class AdventnetTrapReceiverImpl extends AbstractTrapReceiverImpl implemen
 		return status;
 	}
 	
-	public static void main(String[] args) {
-		AdventnetTrapReceiverImpl trap = new AdventnetTrapReceiverImpl();
-		if(trap.init(null, 0, null, "utf-8", 1000, null)){
-			if(trap.startListen()){
-				new HandleThread(trap).start();
-			}
-		}
-//		trap.stopListen();
-//		trap.startListen();
-//		trap.stopListen();
-	}
 }
