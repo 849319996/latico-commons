@@ -115,7 +115,7 @@ public class AdventnetTrapReceiver extends AbstractTrapReceiver implements TrapP
 	 * 继承后复写这个方法，可以把结果添加到缓存队列或者写到kafka中
 	 * @param result
 	 */
-	protected void processResult(AdventnetTrapResult result) {
+	protected void processResult(AdventnetTrapResult result) throws Exception {
 		LOG.debug("在这里处理收到的报文:{}", result);
 	}
 

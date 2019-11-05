@@ -104,7 +104,7 @@ public class Snmp4jTrapReceiver extends AbstractTrapReceiver implements CommandR
 	 * 继承后复写这个方法，可以把结果添加到缓存队列或者写到kafka中
 	 * @param result
 	 */
-	protected void processResult(Snmp4jTrapResult result) {
+	protected void processResult(Snmp4jTrapResult result) throws Exception {
 		LOG.debug("在这里处理收到的报文:{}", result);
 	}
 
