@@ -1,5 +1,7 @@
 package com.latico.commons.net.syslog.server;
 
+import com.latico.commons.net.syslog.server.example.SyslogParamOptions;
+import com.latico.commons.net.syslog.server.example.SyslogServerExample;
 import org.junit.Test;
 
 import java.util.concurrent.atomic.AtomicBoolean;

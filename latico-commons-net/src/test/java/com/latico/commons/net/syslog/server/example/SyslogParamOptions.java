@@ -1,4 +1,4 @@
-package com.latico.commons.net.syslog.server;
+package com.latico.commons.net.syslog.server.example;
 
 /**
  *
@@ -21,9 +21,9 @@ public class SyslogParamOptions {
      */
     private boolean append = false;
     /**
-     * The Quiet.是否打印日志，true：安静的，不打印日志
+     * The Quiet.是否打印日志，true：安静的，不打印System.out日志
      */
-    private boolean quiet = false;
+    private boolean quiet = true;
 
     /**
      * The Host. 主机名称或者IP

@@ -1,4 +1,4 @@
-package com.latico.commons.net.syslog.server;
+package com.latico.commons.net.syslog.server.example;
 
 import com.latico.commons.common.util.io.FileUtils;
 import com.latico.commons.common.util.logging.Logger;
@@ -38,7 +38,6 @@ public class SyslogServerExample extends AbstractThread {
 	/**
 	 * 开关状态
 	 */
-	private AtomicBoolean switchStatus = new AtomicBoolean(true);
 	private SyslogServerIF syslogServer;
 	private SyslogParamOptions options = null;
 
@@ -46,32 +45,6 @@ public class SyslogServerExample extends AbstractThread {
 	public SyslogServerExample(SyslogParamOptions options, AtomicBoolean appStatus) {
 		super("Syslog Server", appStatus);
 		this.options = options;
-	}
-
-
-	/**
-	 * 打印占用信息
-	 * @param problem
-	 */
-	public static void printUsageInfo(String problem) {
-		if (problem != null) {
-			LOG.info("Error: " + problem);
-			LOG.info("\r\n");
-		}
-		
-		LOG.info("Usage:");
-		LOG.info("\r\n");
-		LOG.info("SyslogServerExample [-h <host>] [-p <port>] [-o <file>] [-a] [-q] <protocol>");
-		LOG.info("\r\n");
-		LOG.info("-h <host>    host or IP to bind");
-		LOG.info("-p <port>    port to bind");
-		LOG.info("-t <timeout> socket timeout (in milliseconds)");
-		LOG.info("-o <file>    file to write entries (overwrites by default)");
-		LOG.info("\r\n");
-		LOG.info("-a           append to file (instead of overwrite)");
-		LOG.info("-q           do not write anything to standard out");
-		LOG.info("\r\n");
-		LOG.info("protocol     Syslog4j protocol implementation (tcp, udp, ...)");
 	}
 
 	@Override
@@ -120,7 +93,7 @@ public class SyslogServerExample extends AbstractThread {
 			}
 		}
 
-		if (options.getFileName() != null) {
+		if (options.getFileName() != null && !"".equals(options.getFileName())) {
 			File file = new File(options.getFileName());
 			if(!file.exists()){
 				FileUtils.createFile(options.getFileName());
@@ -151,4 +124,28 @@ public class SyslogServerExample extends AbstractThread {
 		}
 	}
 
+	/**
+	 * 打印占用信息
+	 * @param problem
+	 */
+	public static void printUsageInfo(String problem) {
+		if (problem != null) {
+			LOG.info("Error: " + problem);
+			LOG.info("\r\n");
+		}
+
+		LOG.info("Usage:");
+		LOG.info("\r\n");
+		LOG.info("SyslogServerExample [-h <host>] [-p <port>] [-o <file>] [-a] [-q] <protocol>");
+		LOG.info("\r\n");
+		LOG.info("-h <host>    host or IP to bind");
+		LOG.info("-p <port>    port to bind");
+		LOG.info("-t <timeout> socket timeout (in milliseconds)");
+		LOG.info("-o <file>    file to write entries (overwrites by default)");
+		LOG.info("\r\n");
+		LOG.info("-a           append to file (instead of overwrite)");
+		LOG.info("-q           do not write anything to standard out");
+		LOG.info("\r\n");
+		LOG.info("protocol     Syslog4j protocol implementation (tcp, udp, ...)");
+	}
 }
