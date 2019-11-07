@@ -1280,9 +1280,9 @@ public class Ipv4Utils {
      * @param socketAddress
      * @return
      */
-    public static String getPort(SocketAddress socketAddress) {
+    public static int getPort(SocketAddress socketAddress) {
         String socketStr = socketAddress.toString();
         int indexOf = socketStr.lastIndexOf(":");
-        return socketStr.substring(indexOf + 1);
+        return Integer.parseInt(socketStr.substring(indexOf + 1));
     }
 }
