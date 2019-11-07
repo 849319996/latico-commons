@@ -7,6 +7,7 @@ package com.latico.commons.net.syslog.client;/**
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import org.graylog2.syslog4j.Syslog;
+import org.graylog2.syslog4j.SyslogConstants;
 import org.graylog2.syslog4j.SyslogIF;
 
 import java.net.URLDecoder;
@@ -84,7 +85,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void debug(String msg) {
-        sendMsg(msg, 7);
+        sendMsg(msg, SyslogConstants.LEVEL_DEBUG);
     }
 
     /**
@@ -93,7 +94,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void info(String msg) {
-        sendMsg(msg, 6);
+        sendMsg(msg, SyslogConstants.LEVEL_INFO);
     }
 
     /**
@@ -102,7 +103,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void warn(String msg) {
-        sendMsg(msg, 4);
+        sendMsg(msg, SyslogConstants.LEVEL_WARN);
     }
 
     /**
@@ -111,7 +112,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void error(String msg) {
-        sendMsg(msg, 3);
+        sendMsg(msg, SyslogConstants.LEVEL_ERROR);
     }
 
     /**
@@ -120,7 +121,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void notice(String msg) {
-        sendMsg(msg, 5);
+        sendMsg(msg, SyslogConstants.LEVEL_NOTICE);
     }
 
     /**
@@ -129,7 +130,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void crit(String msg) {
-        sendMsg(msg, 2);
+        sendMsg(msg, SyslogConstants.LEVEL_CRITICAL);
     }
 
     /**
@@ -138,7 +139,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void alert(String msg) {
-        sendMsg(msg, 1);
+        sendMsg(msg, SyslogConstants.LEVEL_ALERT);
     }
 
     /**
@@ -147,7 +148,7 @@ public class SyslogClient {
      * @param msg 消息内容
      */
     public void emerg(String msg) {
-        sendMsg(msg, 0);
+        sendMsg(msg, SyslogConstants.LEVEL_EMERGENCY);
     }
 
 
