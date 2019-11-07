@@ -11,6 +11,7 @@ import org.graylog2.syslog4j.util.SyslogUtility;
 
 import java.io.IOException;
 import java.net.SocketAddress;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -77,11 +78,11 @@ public class SyslogServerThread extends AbstractThread {
      * @param event
      */
     protected void eventHandle(SyslogServerIF syslogServer, SocketAddress socketAddress, SyslogServerEventIF event) {
-		Date date = SyslogUtils.getDate(event);
+		Date date = (event.getDate() == null ? new Timestamp(System.currentTimeMillis()) : new Timestamp(event.getDate().getTime()));
 		String facility = SyslogUtility.getFacilityString(event.getFacility());;
 		String level = SyslogUtility.getLevelString(event.getLevel());
 
-		LOG.debug("收到Syslog消息,客户端地址:[{}] facility:[{}] 时间:[{}] 等级:[{}] 报文:[{}]", socketAddress, facility, date, level, event.getMessage());
+		LOG.debug("收到Syslog消息,客户端地址:[{}] 主机:[{}] facility:[{}] 时间:[{}] 等级:[{}] 报文:[{}]", socketAddress, event.getHost(), facility, date, level, event.getMessage());
     }
 
     private SyslogServerSessionlessEventHandlerIF getEventHandler() {

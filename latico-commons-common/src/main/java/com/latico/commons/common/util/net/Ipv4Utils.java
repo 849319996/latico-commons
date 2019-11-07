@@ -24,6 +24,7 @@ import com.latico.commons.common.util.string.StringUtils;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;
+import java.net.SocketAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -1261,5 +1262,27 @@ public class Ipv4Utils {
         } else {
             return false;
         }
+    }
+
+    /**
+     * 获取主机部分
+     * @param socketAddress
+     * @return
+     */
+    public static String getHost(SocketAddress socketAddress) {
+        String socketStr = socketAddress.toString();
+        int indexOf = socketStr.lastIndexOf(":");
+        return socketStr.substring(1, indexOf);
+    }
+
+    /**
+     * 获取端口部分
+     * @param socketAddress
+     * @return
+     */
+    public static String getPort(SocketAddress socketAddress) {
+        String socketStr = socketAddress.toString();
+        int indexOf = socketStr.lastIndexOf(":");
+        return socketStr.substring(indexOf + 1);
     }
 }

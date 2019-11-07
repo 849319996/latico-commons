@@ -30,6 +30,6 @@ public class SyslogUtils {
     }
 
     public static Date getDate(SyslogServerEventIF event) {
-        return (event.getDate() == null ? new Timestamp(System.currentTimeMillis()) : event.getDate());
+        return (event.getDate() == null ? new Date(System.currentTimeMillis()) : event.getDate());
     }
 }
