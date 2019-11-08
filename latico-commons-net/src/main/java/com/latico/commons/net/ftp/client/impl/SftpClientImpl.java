@@ -47,7 +47,7 @@ public class SftpClientImpl implements FtpClient {
 	 * @param ftpPort 端口号
 	 * @param ftpUsername 账号
 	 * @param ftpPassword 密码
-	 * @param timeOut 超时
+	 * @param timeOut 会话超时
 	 * @throws JSchException 异常
 	 */
 	public SftpClientImpl(String ftpIp, int ftpPort, String ftpUsername,
@@ -64,7 +64,8 @@ public class SftpClientImpl implements FtpClient {
 		sshSession = jsch.getSession(ftpUsername, ftpIp, port);
 		sshSession.setPassword(ftpPassword);
 		Hashtable<String, String> sshConfig = new Hashtable<String, String>();
-		sshConfig.put("StrictHostKeyChecking", "no");
+		sshConfig.put("userauth.gssapi-with-mic", "no");// 不严格检查主机密钥
+		sshConfig.put("StrictHostKeyChecking", "no");// 不严格检查主机密钥
 		sshSession.setConfig(sshConfig);
 		sshSession.connect(15000);
 		sshSession.setTimeout(timeOut);

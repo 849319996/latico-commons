@@ -45,7 +45,7 @@ public class FtpClientImpl implements FtpClient {
 	 * @param ftpPort 端口号
 	 * @param ftpUsername 账号
 	 * @param ftpPassword 密码
-	 * @param timeOut 超时 单位秒
+	 * @param timeOut 会话超时 单位秒
 	 * @throws Exception 异常
 	 */
 	public FtpClientImpl(String ftpIp, int ftpPort, String ftpUsername,
@@ -55,7 +55,7 @@ public class FtpClientImpl implements FtpClient {
 		this.password = ftpPassword;
 		ftpClient = new FTPClient();// 由于重连时不能定位到远程的中文目录，故这里重新赋值一个对象
 		ftpClient.setConnectTimeout(15000);// 连接超时15秒
-		ftpClient.setDataTimeout(timeOut);// 访问超时60秒
+		ftpClient.setDataTimeout(timeOut);
 		ftpClient.setSoTimeout(timeOut);
 //		ftpClient.setControlKeepAliveTimeout(timeOut);
 //		ftpClient.setControlKeepAliveReplyTimeout(timeOut);
