@@ -54,13 +54,14 @@ public class FtpClientImpl implements FtpClient {
 		this.username = ftpUsername;
 		this.password = ftpPassword;
 		ftpClient = new FTPClient();// 由于重连时不能定位到远程的中文目录，故这里重新赋值一个对象
-		ftpClient.setConnectTimeout(timeOut);// 连接超时60秒
+		ftpClient.setConnectTimeout(15000);// 连接超时15秒
 		ftpClient.setDataTimeout(timeOut);// 访问超时60秒
-		ftpClient.setControlKeepAliveTimeout(timeOut);
-		ftpClient.setControlKeepAliveReplyTimeout(timeOut);
+		ftpClient.setSoTimeout(timeOut);
+//		ftpClient.setControlKeepAliveTimeout(timeOut);
+//		ftpClient.setControlKeepAliveReplyTimeout(timeOut);
 		ftpClient.setControlEncoding("UTF-8");
 		if (ftpPort <= 0) {
-			this.port = 22;
+			this.port = 21;
 			ftpClient.connect(ftpIp);
 		} else {
 			ftpClient.connect(ftpIp, ftpPort);
@@ -267,7 +268,7 @@ public class FtpClientImpl implements FtpClient {
 		if(remoteDirectory == null){
 			return null;
 		}
-		Map<String, Long> fileNameSize = new TreeMap<String, Long>();
+		Map<String, Long> filePathFileSizeMap = new TreeMap<String, Long>();
 		try {
 			remoteDirectory = remoteDirectory.replace("\\", "/");
 			if(!remoteDirectory.matches(".*[/\\\\]")){
@@ -279,14 +280,13 @@ public class FtpClientImpl implements FtpClient {
 			}
 			for (FTPFile fileFileTemp : ftpFiles) {
 				if (fileFileTemp.isFile()) {
-					fileNameSize.put(remoteDirectory + fileFileTemp.getName(), fileFileTemp.getSize());
+					filePathFileSizeMap.put(remoteDirectory + fileFileTemp.getName(), fileFileTemp.getSize());
 				}
 			}
 		} catch (Exception e) {
 			LOG.error("", e);
-			return null;
 		}
-		return fileNameSize;
+		return filePathFileSizeMap;
 	}
 
 	@Override

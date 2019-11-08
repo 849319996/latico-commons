@@ -66,10 +66,10 @@ public class SftpClientImpl implements FtpClient {
 		Hashtable<String, String> sshConfig = new Hashtable<String, String>();
 		sshConfig.put("StrictHostKeyChecking", "no");
 		sshSession.setConfig(sshConfig);
-		sshSession.connect();
+		sshSession.connect(15000);
 		sshSession.setTimeout(timeOut);
 		ChannelSftp channel = (ChannelSftp) sshSession.openChannel("sftp");
-		channel.connect();
+		channel.connect(15000);
 		sftp = channel;
 		LOG.info("SFTP连接成功：{}", getConnInfo());
 	}
@@ -260,7 +260,7 @@ public class SftpClientImpl implements FtpClient {
 		if(remoteDirectory == null){
 			return null;
 		}
-		Map<String, Long> fileNameSize = new TreeMap<String, Long>();
+		Map<String, Long> filePathFileSizeMap = new TreeMap<String, Long>();
 		
 		try {
 			remoteDirectory = remoteDirectory.replace("\\", "/");
@@ -276,14 +276,13 @@ public class SftpClientImpl implements FtpClient {
 				String fileName = remoteDirectory + lsEntry.getFilename();
 				SftpATTRS file = sftp.lstat(fileName);
 				if (file.isDir() == false) {
-					fileNameSize.put(fileName, file.getSize());
+					filePathFileSizeMap.put(fileName, file.getSize());
 				}
 			}
 		} catch (Exception e) {
 			LOG.error("", e);
-			return null;
 		}
-		return fileNameSize;
+		return filePathFileSizeMap;
 	}
 
 	/** 
