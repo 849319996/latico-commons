@@ -297,24 +297,26 @@ public class SftpClientImpl implements FtpClient {
 		boolean succ = false;
 		try {
 			remoteDir = remoteDir.replace("\\", "/");
-			String[] arr = remoteDir.split("[/\\\\]");
+			String[] dirNames = remoteDir.split("/");
 			StringBuilder curDir = new StringBuilder("./");
-			boolean has = false;
-			for(String s : arr){
-				has = false;
-				if(StringUtils.isEmpty(s)){
+
+			for(String dirName : dirNames){
+				if(StringUtils.isEmpty(dirName)){
 					continue;
 				}
 				List<String> dirs = listDirs(curDir.toString());
-				curDir.append(s);
+				curDir.append(dirName).append("/");
+
+//				不存在的时候创建
+				boolean existsDir = false;
 				for(String director : dirs){
 					if(curDir.toString().equals(director)){
-						has = true;
+						existsDir = true;
 						break;
 					}
 				}
-				curDir.append("/");
-				if(!has){
+
+				if(!existsDir){
 					sftp.mkdir(curDir.toString());
 				}
 			}

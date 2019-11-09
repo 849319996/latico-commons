@@ -46,4 +46,24 @@ public class FtpClientTest {
 
         }
     }
+
+    /**
+     *
+     */
+    @Test
+    public void testCreateDir(){
+        FtpClient ftpClient = null;
+        try {
+            ftpClient = new FtpClientImpl("127.0.0.1", 21, "cattsoft", "cattsoft", 15000);
+
+            ftpClient.makeDir("abc/cde/baf");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (ftpClient != null) {
+                ftpClient.close();
+            }
+
+        }
+    }
 }

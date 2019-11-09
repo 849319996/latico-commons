@@ -56,7 +56,7 @@ public class FtpClientImpl implements FtpClient {
 		ftpClient = new FTPClient();// 由于重连时不能定位到远程的中文目录，故这里重新赋值一个对象
 		ftpClient.setConnectTimeout(15000);// 连接超时15秒
 		ftpClient.setDataTimeout(timeOut);
-		ftpClient.setSoTimeout(timeOut);
+
 //		ftpClient.setControlKeepAliveTimeout(timeOut);
 //		ftpClient.setControlKeepAliveReplyTimeout(timeOut);
 		ftpClient.setControlEncoding("UTF-8");
@@ -67,6 +67,7 @@ public class FtpClientImpl implements FtpClient {
 			ftpClient.connect(ftpIp, ftpPort);
 			this.port = ftpPort;
 		}
+		ftpClient.setSoTimeout(timeOut);
 		if (FTPReply.isPositiveCompletion(ftpClient.getReplyCode())) {
 			if (ftpClient.login(ftpUsername, ftpPassword)) {
 				ftpClient.enterLocalPassiveMode();
@@ -298,14 +299,28 @@ public class FtpClientImpl implements FtpClient {
 		remoteDir = remoteDir.replace("\\", "/");
 		boolean succ = false;
 		try {
-			String[] arr = remoteDir.split("[/\\\\]");
+			String[] dirNames = remoteDir.split("/");
 			StringBuilder curDir = new StringBuilder();
-			for(String s : arr){
-				if(s == null | "".equals(s.trim())){
+
+			for(String dirName : dirNames){
+				if(dirName == null | "".equals(dirName.trim())){
 					continue;
 				}
-				curDir.append(s).append("/");
-				ftpClient.makeDirectory(curDir.toString());
+				List<String> dirs = listDirs(curDir.toString());
+				curDir.append(dirName).append("/");
+
+				boolean existsDir = false;
+				for(String director : dirs){
+					if(curDir.toString().equals(director)){
+						existsDir = true;
+						break;
+					}
+				}
+
+				if(!existsDir){
+					ftpClient.makeDirectory(curDir.toString());
+				}
+
 			}
 			succ = true;
 		} catch (Exception e) {
