@@ -298,7 +298,7 @@ public class SftpClientImpl implements FtpClient {
 		try {
 			remoteDir = remoteDir.replace("\\", "/");
 			String[] arr = remoteDir.split("[/\\\\]");
-			StringBuffer curDir = new StringBuffer("./");
+			StringBuilder curDir = new StringBuilder("./");
 			boolean has = false;
 			for(String s : arr){
 				has = false;

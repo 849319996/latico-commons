@@ -299,7 +299,7 @@ public class FtpClientImpl implements FtpClient {
 		boolean succ = false;
 		try {
 			String[] arr = remoteDir.split("[/\\\\]");
-			StringBuffer curDir = new StringBuffer();
+			StringBuilder curDir = new StringBuilder();
 			for(String s : arr){
 				if(s == null | "".equals(s.trim())){
 					continue;
