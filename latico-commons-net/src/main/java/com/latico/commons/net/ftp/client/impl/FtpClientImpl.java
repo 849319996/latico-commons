@@ -150,12 +150,16 @@ public class FtpClientImpl implements FtpClient {
 		} catch (Exception e) {
 			LOG.error("", e);
 		}finally{
-			if(is != null){
-				try {
-					is.close();
-				} catch (IOException e) {
-					LOG.error("", e);
+			try {
+				if (ftpClient != null) {
+					ftpClient.changeWorkingDirectory("/");
 				}
+
+				if(is != null){
+					is.close();
+				}
+			}catch (IOException e) {
+				LOG.error("", e);
 			}
 		}
 		return succ;

@@ -1,5 +1,6 @@
 package com.latico.commons.net.ftp.client.impl;
 
+import com.latico.commons.common.util.system.SystemUtils;
 import com.latico.commons.net.ftp.client.FtpClient;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
@@ -64,8 +65,10 @@ public class SftpClientImpl implements FtpClient {
 		sshSession = jsch.getSession(ftpUsername, ftpIp, port);
 		sshSession.setPassword(ftpPassword);
 		Hashtable<String, String> sshConfig = new Hashtable<String, String>();
-		sshConfig.put("userauth.gssapi-with-mic", "no");// 不严格检查主机密钥
-		sshConfig.put("StrictHostKeyChecking", "no");// 不严格检查主机密钥
+		// 不严格检查主机密钥
+		sshConfig.put("userauth.gssapi-with-mic", "no");
+		// 不严格检查主机密钥
+		sshConfig.put("StrictHostKeyChecking", "no");
 		sshSession.setConfig(sshConfig);
 		sshSession.connect(15000);
 		sshSession.setTimeout(timeOut);
@@ -125,6 +128,14 @@ public class SftpClientImpl implements FtpClient {
 		} catch (Exception e) {
 			LOG.error("", e);
 		}finally{
+//			回到用户根目录
+			if (sftp != null) {
+				try {
+					sftp.cd(sftp.getHome());
+				} catch (SftpException e) {
+					LOG.error("", e);
+				}
+			}
 			if(is != null){
 				try {
 					is.close();
