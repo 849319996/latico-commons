@@ -24,7 +24,7 @@ public class SimpleChatServerInitializer extends ChannelInitializer<SocketChanne
 //        pipeline.addLast("FrameDecoder", new ProtobufVarint32FrameDecoder());
         pipeline.addLast("StringDecoder", StringDecoder);
 
-        // 解码只会应用于读数据时、编码只会应用于写数据时，因此解码器与编码器添加的先后顺序在客户端和服务端中可不同，但编码器添加的顺序须桶，解码器亦然。
+        // 解码只会应用于读数据时、编码只会应用于写数据时，因此解码器与编码器添加的先后顺序在客户端和服务端中可不同，但编码器添加的顺序须同，解码器亦然。
         pipeline.addLast("StringEncoder", StringEncoder);
 
         pipeline.addLast("handler", handler);

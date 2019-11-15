@@ -3,6 +3,7 @@ package com.latico.commons.netty.obj.server;
 import com.latico.commons.netty.NettyTcpUtils;
 import com.latico.commons.netty.obj.DemoBean;
 import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
@@ -15,6 +16,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * @Date: 2019-05-24 15:13
  * @Version: 1.0
  */
+@ChannelHandler.Sharable
 public class ServerSimpleChannelInboundHandler extends SimpleChannelInboundHandler<DemoBean> {
     // 一个客户端连上再断开时，六个事件的触发顺序：加入、(连接上(在SimpleChatServerInitializer中))、在线、异常、掉线、离开
     @Override

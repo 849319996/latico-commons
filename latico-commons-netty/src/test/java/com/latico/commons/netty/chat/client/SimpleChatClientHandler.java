@@ -1,8 +1,10 @@
 package com.latico.commons.netty.chat.client;
 
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
+@ChannelHandler.Sharable
 public class SimpleChatClientHandler extends SimpleChannelInboundHandler<String> {
 
     // 优先级高于messageReceived方法，有了这个方法就会屏蔽messageReceived方法

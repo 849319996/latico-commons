@@ -6,7 +6,7 @@
 
     <groupId>com.latico.commons</groupId>
     <artifactId>latico-commons-timer</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <!--邮件管理列表-->
     <mailingLists>
         <mailingList>

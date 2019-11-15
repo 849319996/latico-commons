@@ -9,7 +9,9 @@ import com.latico.commons.common.util.logging.LoggerFactory;
 
 import java.io.IOException;
 import java.net.*;
+import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -108,7 +110,7 @@ public class MultiCastUtils {
      * @param receiveQueue 接收队列，外界传入，并由外界控制从里面读取数据
      * @throws Exception
      */
-    public static void startReceive(String groupIp, int port, int bufferSize, AtomicBoolean switchStatus, ArrayBlockingQueue<DatagramPacket> receiveQueue) throws Exception {
+    public static void startReceive(String groupIp, int port, int bufferSize, AtomicBoolean switchStatus, Queue<DatagramPacket> receiveQueue) throws Exception {
         MulticastSocket ms = null;
         InetSocketAddress inetSocketAddress = new InetSocketAddress(groupIp, port);
         try {
@@ -125,7 +127,7 @@ public class MultiCastUtils {
                     ms.receive(packet);
                     receiveQueue.add(packet);
                 } catch (IOException e) {
-//                    e.printStackTrace();
+                    LOG.error("", e);
                 }
             }
         } finally {

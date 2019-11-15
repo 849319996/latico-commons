@@ -91,4 +91,11 @@ public class QuartzUtils {
         }
     }
 
+    /**
+     * @param cron true:有效的cron表达式
+     * @return
+     */
+    public static boolean isValidCronExpression(String cron) {
+        return CronExpression.isValidExpression(cron);
+    }
 }
