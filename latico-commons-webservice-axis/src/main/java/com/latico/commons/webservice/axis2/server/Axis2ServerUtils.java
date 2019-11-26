@@ -1,4 +1,4 @@
-package com.latico.commons.webservice.axis2;
+package com.latico.commons.webservice.axis2.server;
 
 /**
  * <PRE>
@@ -8,5 +8,5 @@ package com.latico.commons.webservice.axis2;
  * @Date: 2019-04-09 15:52:50
  * @Version: 1.0
  */
-public class Axis2ClientUtils {
+public class Axis2ServerUtils {
 }

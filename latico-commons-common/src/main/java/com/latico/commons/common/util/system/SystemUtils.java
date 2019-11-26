@@ -21,6 +21,7 @@ import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.nio.ByteBuffer;
 import java.util.*;
 import java.util.List;
 
@@ -471,4 +472,12 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
         return Runtime.getRuntime().availableProcessors();
     }
 
+    /**
+     * 分配系统直接内存，不是JVM内存
+     * @param capacity 内存字节数
+     * @return
+     */
+    public static ByteBuffer allocateDirectMem(int capacity) {
+        return ByteBuffer.allocateDirect(capacity);
+    }
 }

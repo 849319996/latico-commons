@@ -1,4 +1,4 @@
-package com.latico.commons.webservice.cxf;
+package com.latico.commons.webservice.cxf.client;
 
 /**
  * <PRE>
