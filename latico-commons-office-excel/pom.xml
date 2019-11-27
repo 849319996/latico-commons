@@ -225,11 +225,14 @@
             <artifactId>jxl</artifactId>
             <version>2.6.12</version>
         </dependency>
+
         <!-- Apache POI- 支持OOXML （XLSX、DOCX、PPTX）以及 OLE2 （XLS, DOC or PPT）格式的文档 -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
             <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.9</version>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
         </dependency>
+
     </dependencies>
 </project>

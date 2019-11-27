@@ -1,0 +1,256 @@
+目录	15
+1 微服务架构概述	24
+	1.1　单体应用架构存在的问题	24
+	1.2　如何解决单体应用架构存在的问题	26
+	1.3　什么是微服务	26
+	1.4　微服务架构的优点与挑战	27
+		1.4.1　微服务架构的优点	28
+		1.4.2　微服务架构面临的挑战	28
+	1.5　微服务设计原则	29
+	1.6　如何实现微服务架构	30
+		1.6.1　技术选型	30
+		1.6.2　架构图及常用组件	31
+2 微服务开发框架——Spring Cloud	32
+	2.1　Spring Cloud 简介	32
+	2.2　Spring Cloud 特点	33
+	2.3　Spring Cloud 版本	33
+		2.3.1　版本简介	33
+		2.3.2　子项目一览	35
+		2.3.3　Spring Cloud/Spring Boot 版本兼容性	36
+3 开始使用Spring Cloud 实战微服务	37
+	3.1　Spring Cloud 实战前提	37
+		3.1.1　技术储备	37
+		3.1.2　工具及软件版本	38
+	3.2　服务提供者与服务消费者	39
+	3.3　编写服务提供者	39
+		3.3.1　手动编写项目	40
+		3.3.2　使用Spring Initializr 快速创建Spring Boot 项目	44
+	3.4　编写服务消费者	46
+	3.5　为项目整合Spring Boot Actuator	48
+	3.6　硬编码有哪些问题	51
+4 微服务注册与发现	53
+	4.1　服务发现简介	53
+	4.2　Eureka 简介	55
+	4.3　Eureka 原理	55
+	4.4　编写Eureka Server	57
+	4.5　将微服务注册到Eureka Server 上	59
+	4.6　Eureka Server 的高可用	61
+		4.6.1　编写高可用Eureka Server	61
+		4.6.2　将应用注册到Eureka Server 集群上	64
+	4.7　用户认证	64
+		4.7.1　为Eureka Server 添加用户认证	64
+		4.7.2　将微服务注册到需认证的Eureka Server	66
+	4.8　Eureka 的元数据	66
+		4.8.1　改造用户微服务	66
+		4.8.2　改造电影微服务	67
+	4.9　Eureka Server 的REST 端点	69
+		4.9.1　示例	70
+		4.9.2　注销微服务实例	75
+	4.10　Eureka 的自我保护模式	76
+	4.11　多网卡环境下的IP 选择	77
+	4.12　Eureka 的健康检查	79
+	4.13　排除Jersey 依赖	80
+5 使用Ribbon 实现客户端侧负载均衡	82
+	5.1　Ribbon 简介	82
+	5.2　为服务消费者整合Ribbon	83
+	5.3　Ribbon 配置自定义	86
+		5.3.1　使用Java 代码自定义Ribbon 配置	86
+		5.3.2　使用属性自定义Ribbon 配置	90
+	5.4　脱离Eureka 使用Ribbon	91
+	5.5　饥饿加载	93
+6 使用Feign 实现声明式REST 调用	95
+	6.1　Feign 简介	96
+	6.2　为服务消费者整合Feign	96
+	6.3　自定义Feign 配置	98
+		6.3.1　使用Java 代码自定义Feign 配置	98
+		6.3.2　使用属性自定义Feign 配置	102
+	6.4　手动创建Feign	103
+		6.4.1　修改用户微服务	103
+		6.4.2　修改电影微服务	107
+	6.5　Feign 对继承的支持	109
+	6.6　Feign 对压缩的支持	110
+	6.7　Feign 的日志	110
+		6.7.1　编码方式设置日志级别	111
+		6.7.2　使用属性配置日志级别	112
+	6.8　使用Feign 构造多参数请求	113
+		6.8.1　GET 请求多参数的URL	113
+		6.8.2　POST 请求包含多个参数	114
+	6.9　使用Feign 上传文件	115
+7 使用Hystrix 实现微服务的容错处理	117
+	7.1　实现容错的手段	117
+		7.1.1　雪崩效应	118
+		7.1.2　如何容错	118
+	7.2　使用Hystrix 实现容错	120
+		7.2.1　Hystrix 简介	120
+		7.2.2　通用方式整合Hystrix	121
+		7.2.3　Hystrix 断路器的状态监控与深入理解	125
+		7.2.4　Hystrix 线程隔离策略与传播上下文	126
+		7.2.5　Feign 使用Hystrix	129
+	7.3　Hystrix 的监控	135
+	7.4　使用Hystrix Dashboard 可视化监控数据	136
+	7.5　使用Turbine 聚合监控数据	139
+		7.5.1　Turbine 简介	139
+		7.5.2　使用Turbine 监控多个微服务	140
+		7.5.3　使用消息中间件收集数据	142
+8 使用Zuul 构建微服务网关	147
+	8.1　为什么要使用微服务网关	147
+	8.2　Zuul 简介	149
+	8.3　编写Zuul 微服务网关	149
+	8.4　管理端点	152
+		8.4.1　routes 端点	152
+		8.4.2　filters 端点	154
+	8.5　路由配置详解	155
+	8.6　Zuul 的安全与Header	159
+		8.6.1　敏感Header 的设置	159
+		8.6.2　忽略Header	159
+	8.7　使用Zuul 上传文件	160
+	8.8　Zuul 的过滤器	163
+		8.8.1　过滤器类型与请求生命周期	163
+		8.8.2　内置过滤器详解	164
+		8.8.3　编写Zuul 过滤器	167
+		8.8.4　禁用Zuul 过滤器	169
+	8.9　Zuul 的容错与回退	169
+	8.10　饥饿加载	172
+	8.11　Query String 编码	173
+	8.12　Hystrix 隔离策略与线程池	173
+		8.12.1　隔离策略	173
+		8.12.2　线程池配置	174
+	8.13　Zuul 的高可用	175
+		8.13.1　Zuul 客户端也注册到了Eureka Server 上	175
+		8.13.2　Zuul 客户端未注册到Eureka Server 上	175
+	8.14　使用Sidecar 整合非JVM 微服务	177
+		8.14.1　编写Node.js 微服务	177
+		8.14.2　编写Sidecar	178
+		8.14.3　Sidecar 的端点	180
+		8.14.4　Sidecar 与Node.js 微服务分离部署	181
+		8.14.5　Sidecar 原理分析	181
+	8.15　使用Zuul 聚合微服务	183
+9 使用Spring Cloud Config 统一管理微服务配置	189
+	9.1　为什么要统一管理微服务配置	189
+	9.2　Spring Cloud Config 简介	190
+	9.3　编写Config Server	191
+	9.4　编写Config Client	194
+	9.5　Config Server 的Git 仓库配置详解	196
+		9.5.1　占位符支持	196
+		9.5.2　模式匹配	197
+		9.5.3　搜索目录	197
+		9.5.4　启动时加载配置文件	198
+	9.6　Config Server 的健康状况指示器	199
+	9.7　配置内容的加解密	200
+		9.7.1　安装JCE	200
+		9.7.2　Config Server 的加解密端点	200
+		9.7.3　对称加密	200
+		9.7.4　存储加密的内容	201
+		9.7.5　非对称加密	202
+	9.8　使用/refresh 端点手动刷新配置	203
+	9.9　使用Spring Cloud Bus 自动刷新配置	204
+		9.9.1　Spring Cloud Bus 简介	204
+		9.9.2　实现自动刷新	205
+		9.9.3　局部刷新	206
+		9.9.4　架构改进	207
+		9.9.5　跟踪总线事件	207
+	9.10　Spring Cloud Config 与Eureka 配合使用	209
+	9.11　Spring Cloud Config 的用户认证	210
+	9.12　Config Server 的高可用	211
+		9.12.1　Git 仓库的高可用	211
+		9.12.2　RabbitMQ 的高可用	212
+		9.12.3　Config Server 自身的高可用	212
+10 使用Spring Cloud Sleuth 实现微服务跟踪	214
+	10.1　为什么要实现微服务跟踪	214
+	10.2　Spring Cloud Sleuth 简介	215
+	10.3　整合Spring Cloud Sleuth	217
+	10.4　Spring Cloud Sleuth 与ELK 配合使用	219
+	10.5　Spring Cloud Sleuth 与Zipkin 配合使用	223
+		10.5.1　Zipkin 简介	223
+		10.5.2　编写Zipkin Server	223
+		10.5.3　微服务整合Zipkin	225
+		10.5.4　Zipkin 与Eureka 配合使用	228
+		10.5.5　使用消息中间件收集数据	229
+		10.5.6　使用Elasticsearch 存储跟踪数据	232
+		10.5.7　依赖关系图	234
+11 Spring Cloud 常见问题与总结	236
+	11.1　Eureka 常见问题	236
+		11.1.1　Eureka 注册服务慢	236
+		11.1.2　已停止的微服务节点注销慢或不注销	237
+		11.1.3　如何自定义微服务的Instance ID	238
+		11.1.4　Eureka 的UNKNOWN 问题总结与解决	240
+	11.2　整合Hystrix 后首次请求失败	241
+		11.2.1　原因分析	241
+		11.2.2　解决方案	241
+	11.3　Turbine 聚合的数据不完整	242
+	11.4　Spring Cloud 各组件超时	243
+		11.4.1　RestTemplate 的超时	244
+		11.4.2　Ribbon 的超时	244
+		11.4.3　Feign 的超时	244
+		11.4.4　Hystrix 的超时	245
+		11.4.5　Zuul 的超时	245
+	11.5　Spring Cloud 各组件重试	246
+		11.5.1　重试步骤	247
+		11.5.2　基于HTTP 响应码重试	247
+		11.5.3　关闭重试	247
+		11.5.4　注意点	247
+	11.6　Spring Cloud 各组件调优	248
+		11.6.1　Tomcat 参数	248
+		11.6.2　Hystrix 参数	248
+		11.6.3　Feign 参数	249
+		11.6.4　Zuul 参数	249
+	11.7　Spring Cloud 各组件配置属性	251
+		11.7.1　Spring Boot 的配置	251
+		11.7.2　Spring Cloud 的配置	251
+		11.7.3　原生配置	252
+	11.8　Spring Cloud 定位问题思路总结	252
+12 Docker 入门	255
+	12.1　Docker 简介	255
+	12.2　版本与迭代计划	255
+		12.2.1　版本区别	256
+		12.2.2　迭代计划	256
+	12.3　Docker 的架构	257
+	12.4　安装Docker	259
+		12.4.1　CentOS 7 安装Docker	259
+		12.4.2　Ubuntu 安装Docker	262
+		12.4.3　Windows 安装Docker	267
+		12.4.4　Mac OS 安装Docker	268
+	12.5　配置镜像加速器	268
+	12.6　Docker 常用命令	269
+		12.6.1　Docker 镜像常用命令	269
+		12.6.2　Docker 容器常用命令	275
+13 将微服务运行在Docker 上	283
+	13.1　使用Dockerfile 构建Docker 镜像	283
+		13.1.1　Dockerfile 常用指令	284
+		13.1.2　使用Dockerfile 构建镜像	289
+	13.2　使用Docker Registry 管理Docker 镜像	291
+		13.2.1　使用Docker Hub 管理镜像	291
+		13.2.2　使用私有仓库管理镜像	293
+	13.3　使用Maven 插件构建Docker 镜像	294
+		13.3.1　快速入门	295
+		13.3.2　插件读取Dockerfile 进行构建	296
+		13.3.3　将插件绑定在某个phase 执行	297
+		13.3.4　推送镜像	298
+	13.4　常见问题与总结	300
+14 使用Docker Compose 编排微服务	301
+	14.1　Docker Compose 简介	301
+	14.2　安装Docker Compose	302
+		14.2.1　安装Compose	302
+		14.2.2　安装Compose 命令补全工具	302
+	14.3　Docker Compose 快速入门	303
+		14.3.1　基本步骤	303
+		14.3.2　入门示例	303
+		14.3.3　工程、服务、容器	304
+	14.4　docker-compose.yml 常用命令	304
+	14.5　docker-compose 常用命令	308
+	14.6　Docker Compose 网络设置	309
+		14.6.1　基本概念	309
+		14.6.2　更新容器	310
+		14.6.3　links	310
+		14.6.4　指定自定义网络	311
+		14.6.5　配置默认网络	312
+		14.6.6　使用已存在的网络	312
+	14.7　综合实战：使用Docker Comose 编排Spring Cloud 微服务	312
+		14.7.1　编排Spring Cloud 微服务	312
+		14.7.2　编排高可用的Eureka Server	316
+		14.7.3　编排高可用Spring Cloud 微服务集群及动态伸缩	318
+	14.8　常见问题与总结	320
+后记	321
+附录A：本书配套代码	322
+附录B：Spring Cloud YES——快速开发脚手架	323
+附录C：使用Docker 快速安装本书中的组件	324

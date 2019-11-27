@@ -18,7 +18,7 @@ import java.io.IOException;
  * @Date: 2019-04-09 10:12:22
  * @Version: 1.0
  */
-public class ExcelUtils {
+public class JxlUtils {
 
 	//通过路径获取可写工作簿对象
 	public static WritableWorkbook getWritableWorkbook(String path){
@@ -206,12 +206,5 @@ public class ExcelUtils {
 		return true;
 	}
 
-	
-	public static void main(String[] args) {
-		String[] columnNames = new String[]{"a", "b", "c"};
-		Object[][] values = {{"21","11"},{"21","22"}}; File file = new File("./12.xls");
-        String sheetName="abc";
-		writeExcel(file, sheetName, columnNames, values);
-		System.out.println("执行完成");
-	}
+
 }
