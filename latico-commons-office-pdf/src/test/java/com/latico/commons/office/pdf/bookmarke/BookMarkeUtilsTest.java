@@ -36,7 +36,7 @@ public class BookMarkeUtilsTest {
         Pattern pat3 = Pattern.compile("^　*(\\S+\\.\\d+\\.\\d+)[\\s\t　]*(.+?)[\\s\t　]*(\\d+)$");
         Pattern pat4 = Pattern.compile("^　*(\\S+\\.\\d+\\.\\d+\\.\\d+)[\\s\t　]*(.+?)[\\s\t　]*(\\d+)$");
         Pattern pat5 = Pattern.compile("^　*(\\S+\\.\\d+\\.\\d+\\.\\d+\\.\\d+)[\\s\t　]*(.+?)[\\s\t　]*(\\d+)$");
-        Pattern dirPat = Pattern.compile("^　*(目\\s*录|作\\s*者|前\\s*言|序|译者序|译者简介|作者简介|评审者简介)\\s.*");
+        Pattern dirPat = Pattern.compile("^　*(目\\s*录|作\\s*者|前\\s*言|序|译者序|译者简介|作者简介|评审者简介|第\\S版前言|使用说明|撰稿人)\\s.*");
         List<String> results = new ArrayList<>();
         int count = 0;
         for (String line : lines) {
@@ -122,12 +122,19 @@ public class BookMarkeUtilsTest {
                 continue;
             }
 
-            results.add("匹配失败:" + line);
+            System.out.println("匹配失败:" + line);
+
+            if (line.matches(".+?\\d")) {
+                results.add(line);
+            } else {
+                results.add(line + "\t1");
+            }
+
 
         }
 
         File file = new File(resourceFile);
-        FileUtils.writeLines(new File("src/test/resources/pdf/result/" + file.getName()), results);
+        FileUtils.writeLines(new File("src/test/resources/bookmarke/result/" + file.getName()), results);
     }
 
 }

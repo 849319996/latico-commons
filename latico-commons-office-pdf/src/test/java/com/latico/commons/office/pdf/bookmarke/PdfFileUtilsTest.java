@@ -131,5 +131,123 @@ public class PdfFileUtilsTest {
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test15() throws Exception {
+        int addNum = 12;
+        String dir = "bookmarke/src/";
+        String file = dir + "深入理解MySQL.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test16() throws Exception {
+        int addNum = 13;
+        String dir = "bookmarke/src/";
+        String file = dir + "深入理解MySQL核心技术.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test17() throws Exception {
+        int addNum = 36;
+        String dir = "bookmarke/src/";
+        String file = dir + "Head First设计模式.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test18() throws Exception {
+        int addNum = 2;
+        String dir = "bookmarke/src/";
+        String file = dir + "陶哲轩实分析-第一版.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test19() throws Exception {
+        int addNum = 10;
+        String dir = "bookmarke/src/";
+        String file = dir + "陶哲轩教你学数学.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test20() throws Exception {
+        int addNum = 11;
+        String dir = "bookmarke/src/";
+        String file = dir + "工程数学-线性代数(第五版).txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test21() throws Exception {
+        int addNum = 15;
+        String dir = "bookmarke/src/";
+        String file = dir + "高等数学 第7版 上册 同济大学.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+
+    @Test
+    public void test22() throws Exception {
+        int addNum = 6;
+        String dir = "bookmarke/src/";
+        String file = dir + "高等数学 第7版 下册 同济大学.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test23() throws Exception {
+        int addNum = 7;
+        String dir = "bookmarke/src/";
+        String file = dir + "高等数学-同济大学第7版-上册-习题答案解析.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test24() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "高等数学-同济大学第7版-下册-习题答案解析-第八章.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test25() throws Exception {
+        int addNum = 6;
+        String dir = "bookmarke/src/";
+        String file = dir + "高等数学-同济大学第7版-下册-习题答案解析.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test26() throws Exception {
+        int addNum = 23;
+        String dir = "bookmarke/src/";
+        String file = dir + "数学指南-实用数学手册.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+    @Test
+    public void test27() throws Exception {
+        int addNum = 30;
+        String dir = "bookmarke/src/";
+        String file = dir + "普林斯顿数学指南 第一卷.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+    @Test
+    public void test28() throws Exception {
+        int addNum = 27;
+        String dir = "bookmarke/src/";
+        String file = dir + "普林斯顿数学指南 第二卷.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+    @Test
+    public void test29() throws Exception {
+        int addNum = 31;
+        String dir = "bookmarke/src/";
+        String file = dir + "普林斯顿数学指南 第三卷.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }
