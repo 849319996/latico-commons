@@ -75,6 +75,12 @@ public class Log4jLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void error(String msg, Object argArray, Throwable e) {
+        incrementErrorCount();
+        log.log(callerFQCN, Level.ERROR, msg, e);
+    }
+
+    @Override
     public void debug(Object msg) {
         incrementDebugCount();
         log.log(callerFQCN, Level.DEBUG, msg, null);
@@ -99,6 +105,12 @@ public class Log4jLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void debug(String msg, Object argArray, Throwable e) {
+        incrementDebugCount();
+        log.log(callerFQCN, Level.DEBUG, concatArgs(msg, argArray), e);
+    }
+
+    @Override
     public void debug(String msg, Throwable e, Object... argArray) {
         incrementDebugCount();
         log.log(callerFQCN, Level.DEBUG, concatArgs(msg, argArray), e);
@@ -119,6 +131,12 @@ public class Log4jLogImpl extends AbstractLogger {
     @Override
     public void warn(String msg, Object... argArray) {
         log.log(callerFQCN, Level.WARN, concatArgs(msg, argArray), null);
+        incrementWarnCount();
+    }
+
+    @Override
+    public void warn(String msg, Object argArray, Throwable e) {
+        log.log(callerFQCN, Level.WARN, concatArgs(msg, argArray), e);
         incrementWarnCount();
     }
 
@@ -161,6 +179,12 @@ public class Log4jLogImpl extends AbstractLogger {
     public void info(String msg, Object... argArray) {
         incrementInfoCount();
         log.log(callerFQCN, Level.INFO, concatArgs(msg, argArray), null);
+    }
+
+    @Override
+    public void info(String msg, Object argArray, Throwable e) {
+        incrementInfoCount();
+        log.log(callerFQCN, Level.INFO, concatArgs(msg, argArray), e);
     }
 
     @Override

@@ -15,7 +15,7 @@ import com.latico.commons.common.util.logging.LogTypeEnum;
 @LogImplAnnotation(LogTypeEnum.console)
 public class NoLoggingLogImpl extends AbstractLogger {
 
-    private boolean debugEnable = false;
+    private boolean debugEnable = true;
     private boolean infoEnable = true;
     private boolean warnEnable = true;
     private boolean errorEnable = true;
@@ -83,6 +83,17 @@ public class NoLoggingLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void error(String msg, Object argArray, Throwable e) {
+        if (!errorEnable) {
+            return;
+        }
+        incrementErrorCount();
+        System.err.println(loggerName + " : " + concatArgs(msg, argArray));
+
+        printThrowable(e);
+    }
+
+    @Override
     public void debug(Object msg) {
         incrementDebugCount();
         System.out.println(loggerName + " : " + msg);
@@ -104,6 +115,13 @@ public class NoLoggingLogImpl extends AbstractLogger {
     public void debug(Object msg, Throwable e) {
         incrementDebugCount();
         System.out.println(loggerName + " : " + msg);
+    }
+
+    @Override
+    public void debug(String msg, Object argArray, Throwable e) {
+        incrementDebugCount();
+        System.out.println(loggerName + " : " + concatArgs(msg, argArray));
+        printThrowable(e);
     }
 
     @Override
@@ -129,6 +147,13 @@ public class NoLoggingLogImpl extends AbstractLogger {
     public void warn(String msg, Object... argArray) {
         incrementWarnCount();
         System.out.println(loggerName + " : " + concatArgs(msg, argArray));
+    }
+
+    @Override
+    public void warn(String msg, Object argArray, Throwable e) {
+        incrementWarnCount();
+        System.out.println(loggerName + " : " + concatArgs(msg, argArray));
+        printThrowable(e);
     }
 
     @Override
@@ -171,6 +196,13 @@ public class NoLoggingLogImpl extends AbstractLogger {
     public void info(String msg, Object... argArray) {
         incrementInfoCount();
         System.out.println(loggerName + " : " + concatArgs(msg, argArray));
+    }
+
+    @Override
+    public void info(String msg, Object argArray, Throwable e) {
+        incrementInfoCount();
+        System.out.println(loggerName + " : " + concatArgs(msg, argArray));
+        printThrowable(e);
     }
 
     @Override

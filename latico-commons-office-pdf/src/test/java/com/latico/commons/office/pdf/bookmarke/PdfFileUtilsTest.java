@@ -248,6 +248,27 @@ public class PdfFileUtilsTest {
         String file = dir + "普林斯顿数学指南 第三卷.txt";
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
+    @Test
+    public void test30() throws Exception {
+        int addNum = 22;
+        String dir = "bookmarke/src/";
+        String file = dir + "写给大家看的大数据.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+    @Test
+    public void test31() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "httpClient4.1入门教程.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+    @Test
+    public void test32() throws Exception {
+        int addNum = 15;
+        String dir = "bookmarke/src/";
+        String file = dir + "数据挖掘  实用案例分析.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
 
 
 }

@@ -66,6 +66,12 @@ public class JakartaCommonsLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void error(String msg, Object argArray, Throwable e) {
+        log.error(concatArgs(msg, argArray), e);
+        incrementErrorCount();
+    }
+
+    @Override
     public void debug(Object msg) {
         incrementDebugCount();
         log.debug(msg);
@@ -90,6 +96,12 @@ public class JakartaCommonsLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void debug(String msg, Object argArray, Throwable e) {
+        incrementDebugCount();
+        log.debug(concatArgs(msg, argArray), e);
+    }
+
+    @Override
     public void debug(String msg, Throwable e, Object... argArray) {
         incrementDebugCount();
         log.debug(concatArgs(msg, argArray), e);
@@ -110,6 +122,12 @@ public class JakartaCommonsLogImpl extends AbstractLogger {
     @Override
     public void warn(String msg, Object... argArray) {
         log.warn(concatArgs(msg, argArray));
+        incrementWarnCount();
+    }
+
+    @Override
+    public void warn(String msg, Object argArray, Throwable e) {
+        log.warn(concatArgs(msg, argArray), e);
         incrementWarnCount();
     }
 
@@ -152,6 +170,12 @@ public class JakartaCommonsLogImpl extends AbstractLogger {
     @Override
     public void info(String msg, Object... argArray) {
         log.info(concatArgs(msg, argArray));
+        incrementInfoCount();
+    }
+
+    @Override
+    public void info(String msg, Object argArray, Throwable e) {
+        log.info(concatArgs(msg, argArray), e);
         incrementInfoCount();
     }
 

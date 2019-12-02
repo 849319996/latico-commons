@@ -30,6 +30,8 @@ public interface Log {
 
     void debug(Object msg, Throwable e);
 
+    void debug(String msg, Object argArray, Throwable e);
+
     void debug(String msg, Throwable e, Object... argArray);
 
     /**
@@ -48,6 +50,8 @@ public interface Log {
      */
     void info(String msg, Object... argArray);
 
+    void info(String msg, Object argArray, Throwable e);
+
     void info(String msg, Throwable e, Object... argArray);
 
     boolean isWarnEnabled();
@@ -57,6 +61,8 @@ public interface Log {
     void warn(Throwable e);
 
     void warn(String msg, Object... argArray);
+
+    void warn(String msg, Object argArray, Throwable e);
 
     void warn(String msg, Throwable e, Object... argArray);
 
@@ -72,6 +78,8 @@ public interface Log {
     void error(Throwable e);
 
     void error(String msg, Object... argArray);
+
+    void error(String msg, Object argArray, Throwable e);
 
     void error(Object msg, Throwable e);
 

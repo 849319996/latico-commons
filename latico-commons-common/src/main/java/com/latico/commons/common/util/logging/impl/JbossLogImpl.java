@@ -53,6 +53,12 @@ public class JbossLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void debug(String msg, Object argArray, Throwable e) {
+        log.debugv(e, msg, argArray);
+        incrementDebugCount();
+    }
+
+    @Override
     public void debug(String msg, Throwable e, Object... argArray) {
         log.debugv(e, msg, argArray);
         incrementDebugCount();
@@ -82,6 +88,12 @@ public class JbossLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void info(String msg, Object argArray, Throwable e) {
+        incrementInfoCount();
+        log.infov(e, msg, argArray);
+    }
+
+    @Override
     public void info(String msg, Throwable e, Object... argArray) {
         incrementInfoCount();
         log.infov(e, msg, argArray);
@@ -107,6 +119,12 @@ public class JbossLogImpl extends AbstractLogger {
     @Override
     public void warn(String msg, Object... argArray) {
         log.warnv(msg, argArray);
+        incrementWarnCount();
+    }
+
+    @Override
+    public void warn(String msg, Object argArray, Throwable e) {
+        log.warnv(e, msg, argArray);
         incrementWarnCount();
     }
 
@@ -142,6 +160,12 @@ public class JbossLogImpl extends AbstractLogger {
     @Override
     public void error(String msg, Object... argArray) {
         log.errorv(msg, argArray);
+        incrementErrorCount();
+    }
+
+    @Override
+    public void error(String msg, Object argArray, Throwable e) {
+        log.errorv(e, msg, argArray);
         incrementErrorCount();
     }
 

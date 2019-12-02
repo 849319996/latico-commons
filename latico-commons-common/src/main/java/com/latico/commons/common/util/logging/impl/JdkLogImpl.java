@@ -60,6 +60,12 @@ public class JdkLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void error(String msg, Object argArray, Throwable e) {
+        log.logp(Level.SEVERE, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), concatArgsToStr(msg, argArray), e);
+        incrementErrorCount();
+    }
+
+    @Override
     public void debug(Object msg) {
         incrementDebugCount();
         log.logp(Level.FINE, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), getString(msg));
@@ -84,6 +90,13 @@ public class JdkLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void debug(String msg, Object argArray, Throwable e) {
+        incrementDebugCount();
+        log.logp(Level.FINE, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), concatArgsToStr(msg, argArray), e);
+
+    }
+
+    @Override
     public void debug(String msg, Throwable e, Object... argArray) {
         incrementDebugCount();
         log.logp(Level.FINE, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), concatArgsToStr(msg, argArray), e);
@@ -105,6 +118,12 @@ public class JdkLogImpl extends AbstractLogger {
     @Override
     public void warn(String msg, Object... argArray) {
         log.logp(Level.WARNING, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), concatArgsToStr(msg, argArray));
+        incrementWarnCount();
+    }
+
+    @Override
+    public void warn(String msg, Object argArray, Throwable e) {
+        log.logp(Level.WARNING, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), concatArgsToStr(msg, argArray), e);
         incrementWarnCount();
     }
 
@@ -146,6 +165,12 @@ public class JdkLogImpl extends AbstractLogger {
     @Override
     public void info(String msg, Object... argArray) {
         log.logp(Level.INFO, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), concatArgsToStr(msg, argArray));
+        incrementInfoCount();
+    }
+
+    @Override
+    public void info(String msg, Object argArray, Throwable e) {
+        log.logp(Level.INFO, loggerName, Thread.currentThread().getStackTrace()[1].getMethodName(), concatArgsToStr(msg, argArray), e);
         incrementInfoCount();
     }
 

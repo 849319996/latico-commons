@@ -87,6 +87,12 @@ public class LogbackLogImpl extends AbstractLogger {
     }
 
     @Override
+    public void error(String msg, Object argArray, Throwable e) {
+        log.log(null, callerFQCN, LocationAwareLogger.ERROR_INT, concatArgsToStr(msg, argArray), null, e);
+        incrementErrorCount();
+    }
+
+    @Override
     public void info(Object msg) {
         incrementInfoCount();
         log.log(null, callerFQCN, LocationAwareLogger.INFO_INT, getString(msg), null, null);
@@ -108,6 +114,12 @@ public class LogbackLogImpl extends AbstractLogger {
     public void info(String msg, Object... argArray) {
         incrementInfoCount();
         log.log(null, callerFQCN, LocationAwareLogger.INFO_INT, msg, argArray, null);
+    }
+
+    @Override
+    public void info(String msg, Object argArray, Throwable e) {
+        log.log(null, callerFQCN, LocationAwareLogger.INFO_INT, concatArgsToStr(msg, argArray), null, e);
+        incrementInfoCount();
     }
 
     @Override
@@ -137,13 +149,19 @@ public class LogbackLogImpl extends AbstractLogger {
     @Override
     public void debug(Object msg, Throwable e) {
         incrementDebugCount();
-        log.log(null, callerFQCN, LocationAwareLogger.ERROR_INT, getString(msg), null, e);
+        log.log(null, callerFQCN, LocationAwareLogger.DEBUG_INT, getString(msg), null, e);
+    }
+
+    @Override
+    public void debug(String msg, Object argArray, Throwable e) {
+        log.log(null, callerFQCN, LocationAwareLogger.DEBUG_INT, concatArgsToStr(msg, argArray), null, e);
+        incrementDebugCount();
     }
 
     @Override
     public void debug(String msg, Throwable e, Object... argArray) {
         incrementDebugCount();
-        log.log(null, callerFQCN, LocationAwareLogger.ERROR_INT, msg, argArray, e);
+        log.log(null, callerFQCN, LocationAwareLogger.DEBUG_INT, msg, argArray, e);
     }
 
     @Override
@@ -171,6 +189,12 @@ public class LogbackLogImpl extends AbstractLogger {
     @Override
     public void warn(String msg, Object... argArray) {
         log.log(null, callerFQCN, LocationAwareLogger.WARN_INT, msg, argArray, null);
+        incrementWarnCount();
+    }
+
+    @Override
+    public void warn(String msg, Object argArray, Throwable e) {
+        log.log(null, callerFQCN, LocationAwareLogger.WARN_INT, concatArgsToStr(msg, argArray), null, e);
         incrementWarnCount();
     }
 

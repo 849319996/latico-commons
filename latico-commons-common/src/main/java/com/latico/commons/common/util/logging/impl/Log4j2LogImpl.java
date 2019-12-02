@@ -74,6 +74,11 @@ public class Log4j2LogImpl extends AbstractLogger {
     }
 
     @Override
+    public void error(String msg, Object argArray, Throwable e) {
+
+    }
+
+    @Override
     public void debug(Object msg) {
         incrementDebugCount();
         log.debug(msg);
@@ -98,6 +103,12 @@ public class Log4j2LogImpl extends AbstractLogger {
     }
 
     @Override
+    public void debug(String msg, Object argArray, Throwable e) {
+        incrementDebugCount();
+        log.debug(concatArgs(msg == null ? null:msg.toString(), argArray), e);
+    }
+
+    @Override
     public void debug(String msg, Throwable e, Object... argArray) {
         incrementDebugCount();
         log.debug(concatArgs(msg == null ? null:msg.toString(), argArray), e);
@@ -118,6 +129,12 @@ public class Log4j2LogImpl extends AbstractLogger {
     @Override
     public void warn(String msg, Object... argArray) {
         log.warn(msg == null ? null:msg.toString(), argArray);
+        incrementWarnCount();
+    }
+
+    @Override
+    public void warn(String msg, Object argArray, Throwable e) {
+        log.warn(concatArgs(msg == null ? null:msg.toString(), argArray), e);
         incrementWarnCount();
     }
 
@@ -159,6 +176,12 @@ public class Log4j2LogImpl extends AbstractLogger {
     @Override
     public void info(String msg, Object... argArray) {
         log.info(msg == null ? null:msg.toString(), argArray);
+        incrementInfoCount();
+    }
+
+    @Override
+    public void info(String msg, Object argArray, Throwable e) {
+        log.info(concatArgs(msg == null ? null:msg.toString(), argArray), e);
         incrementInfoCount();
     }
 

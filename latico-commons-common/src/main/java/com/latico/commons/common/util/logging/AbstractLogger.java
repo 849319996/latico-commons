@@ -72,7 +72,7 @@ public abstract class AbstractLogger implements Logger {
      * @param argArray
      * @return
      */
-    protected static Object concatArgs(Object msg, Object[] argArray) {
+    protected static Object concatArgs(Object msg, Object... argArray) {
         //占位符是{}
         return replaceByPlaceholder(msg, argArray);
     }
@@ -82,7 +82,7 @@ public abstract class AbstractLogger implements Logger {
      * @param argArray
      * @return
      */
-    protected static String concatArgsToStr(Object msg, Object[] argArray) {
+    protected static String concatArgsToStr(Object msg, Object... argArray) {
         //占位符是{}
         Object obj = replaceByPlaceholder(msg, argArray);
         if(obj == null){
