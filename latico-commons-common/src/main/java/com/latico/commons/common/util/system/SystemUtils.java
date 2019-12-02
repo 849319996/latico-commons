@@ -24,6 +24,8 @@ import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 import java.util.*;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * <PRE>
@@ -479,5 +481,36 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
      */
     public static ByteBuffer allocateDirectMem(int capacity) {
         return ByteBuffer.allocateDirect(capacity);
+    }
+
+    /**
+     * 获取物理网卡的地址，排除虚拟网卡
+     * @return
+     */
+    public static List<InetAddress> getAllPhysicsInetAddress() {
+        List<InetAddress> inetAddresses = new ArrayList<>();
+        try {
+            Pattern pat = Pattern.compile("(?i)VMware.*|(?i).*loopback.*|(?i).* Virtual .*|169\\..*");
+            Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
+            while (en.hasMoreElements()) {
+                NetworkInterface intf = en.nextElement();
+
+                Matcher matcher = pat.matcher(intf.getDisplayName());
+                if(matcher.find()){
+                    continue;
+                }
+                Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses();
+                while (enumIpAddr.hasMoreElements()) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress() && !inetAddress.isLinkLocalAddress()) {
+                        inetAddresses.add(inetAddress);
+                    }
+                }
+            }
+        } catch (SocketException e) {
+            LOG.error(e);
+        }
+
+        return inetAddresses;
     }
 }

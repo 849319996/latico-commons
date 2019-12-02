@@ -219,7 +219,17 @@ public class SystemUtilsTest {
             e.printStackTrace();
         }
     }
-
+    /**
+     *
+     */
+    @Test
+    public void getAllPhysicsInetAddress(){
+        try {
+            System.out.println(SystemUtils.getAllPhysicsInetAddress());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @Test
     public void getLocalHostName() {
         System.out.println(SystemUtils.getLocalHostName());
@@ -244,4 +254,6 @@ public class SystemUtilsTest {
     public void getAvailableProcessors() {
         System.out.println(SystemUtils.getAvailableProcessors());
     }
+
+
 }
