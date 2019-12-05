@@ -294,11 +294,25 @@ public class NettyTcpUtils extends NettyUtils {
      * @param inetHost
      * @param inetPort
      * @param workThreadSize
-     * @param serviceHandlers
+     * @param serviceHandlers 业务处理器
      * @return
      */
     public static ChannelFuture createClientByServiceHandlerByString(String inetHost, int inetPort, int workThreadSize, ChannelHandler... serviceHandlers) {
         ChannelInitializer channelInitializer = makeChannelInitializerByString(serviceHandlers);
+        ChannelFuture channelFuture = createClientByChannelInitializer(inetHost, inetPort, workThreadSize, channelInitializer);
+        return channelFuture;
+    }
+
+    /**
+     * @param inetHost
+     * @param inetPort
+     * @param workThreadSize
+     * @param frameDecoderChannelHandler 分隔符处理器
+     * @param serviceHandlers 业务处理器
+     * @return
+     */
+    public static ChannelFuture createClientByServiceHandlerByStringWithFrameDecoder(String inetHost, int inetPort, int workThreadSize, ChannelHandler frameDecoderChannelHandler, ChannelHandler... serviceHandlers) {
+        ChannelInitializer channelInitializer = makeChannelInitializerByStringWithFrameDecoder(frameDecoderChannelHandler, serviceHandlers);
         ChannelFuture channelFuture = createClientByChannelInitializer(inetHost, inetPort, workThreadSize, channelInitializer);
         return channelFuture;
     }
@@ -309,11 +323,23 @@ public class NettyTcpUtils extends NettyUtils {
      *
      * @param inetHost
      * @param inetPort
-     * @param serviceHandlers
+     * @param serviceHandlers 业务处理器
      * @return
      */
     public static ChannelFuture createClientByServiceHandlerByString(String inetHost, int inetPort, ChannelHandler... serviceHandlers) {
         return createClientByServiceHandlerByString(inetHost, inetPort, 0, serviceHandlers);
+    }
+
+    /**
+     * 带分隔符的方式
+     * @param inetHost
+     * @param inetPort
+     * @param frameDecoderChannelHandler 分隔符处理器
+     * @param serviceHandlers 业务处理器
+     * @return
+     */
+    public static ChannelFuture createClientByServiceHandlerByStringWithFrameDecoder(String inetHost, int inetPort, ChannelHandler frameDecoderChannelHandler, ChannelHandler... serviceHandlers) {
+        return createClientByServiceHandlerByStringWithFrameDecoder(inetHost, inetPort, 0, frameDecoderChannelHandler, serviceHandlers);
     }
 
 
@@ -412,6 +438,25 @@ public class NettyTcpUtils extends NettyUtils {
 
         for (int i = 2; i < arr.length; i++) {
             arr[i] = pipelineHandlers[i - 2];
+        }
+
+        return makeChannelInitializer(arr);
+    }
+
+    /**
+     * @param frameDecoderChannelHandler 分隔符处理器
+     * @param pipelineHandlers 业务处理器
+     * @return
+     */
+    public static ChannelInitializer makeChannelInitializerByStringWithFrameDecoder(ChannelHandler frameDecoderChannelHandler, ChannelHandler... pipelineHandlers) {
+
+        ChannelHandler[] arr = new ChannelHandler[pipelineHandlers.length + 3];
+        arr[0] = frameDecoderChannelHandler;
+        arr[1] = new StringEncoder();
+        arr[2] = new StringDecoder();
+
+        for (int i = 3; i < arr.length; i++) {
+            arr[i] = pipelineHandlers[i - 3];
         }
 
         return makeChannelInitializer(arr);

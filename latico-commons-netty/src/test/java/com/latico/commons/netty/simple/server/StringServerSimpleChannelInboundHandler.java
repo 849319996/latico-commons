@@ -17,11 +17,21 @@ import io.netty.channel.SimpleChannelInboundHandler;
  */
 @ChannelHandler.Sharable
 public class StringServerSimpleChannelInboundHandler extends SimpleChannelInboundHandler<String> {
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        Channel channel = NettyTcpUtils.getChannel(ctx);
+        channel.writeAndFlush("Login authentication\n" +
+                "\n" +
+                "\n" +
+                "Username:");
+    }
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String msg) {
         Channel incoming = NettyTcpUtils.getChannel(ctx);
         System.out.println("**" + incoming.remoteAddress() + " 发来: " + msg);
         // System.out.println("server: " + msg);
-        NettyTcpUtils.writeAndFlush(incoming, "服务端的回复: " + msg);
+        NettyTcpUtils.writeAndFlush(incoming, "服务端的回复: " + msg + ">");
     }
 }
