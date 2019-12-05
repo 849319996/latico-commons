@@ -270,5 +270,37 @@ public class PdfFileUtilsTest {
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test33() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "《Spring5高级编程（第5版）》_王净译.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test34() throws Exception {
+        int addNum = 22;
+        String dir = "bookmarke/src/";
+        String file = dir + "Spring Data实战.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test35() throws Exception {
+        int addNum = 11;
+        String dir = "bookmarke/src/";
+        String file = dir + "Spring源码深度解析(第一版).txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test36() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "深入浅出Spring Boot 2.x.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }

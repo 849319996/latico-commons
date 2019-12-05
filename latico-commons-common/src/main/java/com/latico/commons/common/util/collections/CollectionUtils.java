@@ -39,46 +39,44 @@ public class CollectionUtils extends org.apache.commons.collections.CollectionUt
      * 测试数组是否为空(null或长度<=0)
      *
      * @param array 被测试数组
-     * @return true:是; false:否
+     * @return 只要有一个是空，那么就返回true，true:是; false:否
      */
-    public static <E> boolean isEmpty(E... array) {
-        return (array == null || array.length <= 0);
+    public static <E extends Collection> boolean isAllEmpty(E... array) {
+        if(array == null || array.length <= 0){
+            return true;
+        }
+
+        for (E e : array) {
+            if (e == null) {
+                continue;
+            }
+            if (!e.isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
      * 测试数组是否非空(长度>0)
      *
      * @param array 被测试数组
-     * @return true:是; false:否
+     * @return 所有非空，true:是; false:否
      */
-    public static <E> boolean isNotEmpty(E... array) {
-        return !isEmpty(array);
-    }
+    public static <E extends Collection> boolean isAllNotEmpty(E... array) {
+        if(array == null || array.length <= 0){
+            return false;
+        }
 
-    /**
-     * <PRE>
-     * 把数组转换成String字符串.
-     * (空元素用"null"代替, 其他元素调用其toString()方法, 元素间用逗号分隔)
-     * </PRE>
-     *
-     * @param array 数组
-     * @return 若数组为空则返回 [], 否则返回形如 [aa, null, cc, dd]
-     */
-    public static String toString(Object... array) {
-        StringBuffer sb = new StringBuffer();
-        sb.append('[');
-        if (array != null) {
-            for (Object o : array) {
-                sb.append(o == null ? "null" : o.toString()).append(", ");
-            }
-
-            if (array.length > 0) {
-                sb.setLength(sb.length() - 2);
+        for (E e : array) {
+            if (e == null || e.isEmpty()) {
+                return false;
             }
         }
-        sb.append(']');
-        return sb.toString();
+        return true;
     }
+
+
 
     /**
      * <PRE>
@@ -103,69 +101,6 @@ public class CollectionUtils extends org.apache.commons.collections.CollectionUt
             set.clear();
         }
         return cnt;
-    }
-
-    /**
-     * <PRE>
-     * 移除array中的重复元素（其他元素保持顺序不变）
-     * 此方法[不会修改]array的内容.
-     * <PRE>
-     *
-     * @param array 需要移除重复元素的array
-     * @return 移除重复元素后的array
-     */
-    public static <E> E[] removeDuplicate(E... array) {
-        E[] ary = null;
-        if (array != null) {
-            ary = Arrays.copyOf(array, array.length);    // 复制源数组
-            Set<E> set = new HashSet<E>();    // 唯一集
-            for (int i = 0; i < ary.length; i++) {
-                if (set.add(ary[i]) == false) {
-                    ary[i] = null;
-                }
-            }
-            set.clear();
-            int len = cutbackNull(ary);    // 后移null元素(即被删除的元素)
-            ary = Arrays.copyOfRange(ary, 0, len);    // 删除末尾空元素
-        }
-        return ary;
-    }
-
-    /**
-     * 把数组中所有null元素后移，非null元素前移（数组实际长度不变, 非空元素顺序不变）
-     *
-     * @param array 原数组
-     * @return 数组非空元素长度
-     */
-    public static <E> int cutbackNull(E... array) {
-        if (array == null) {
-            return 0;
-        }
-
-        int pNull = 0;    // 上次检索到的空元素指针位置
-        int len = 0;        // 非空数组的实际长度（即非空元素个数）
-        for (; len < array.length; len++) {
-            if (array[len] != null) {
-                continue;
-            }
-
-            for (int j = NumberUtils.max(len, pNull) + 1; j < array.length; j++) {
-                if (array[j] == null) {
-                    continue;
-                }
-
-                array[len] = array[j];
-                array[j] = null;
-                pNull = j;
-                break;
-            }
-
-            // 说明后续所有元素均为null
-            if (array[len] == null) {
-                break;
-            }
-        }
-        return len;
     }
 
 
@@ -248,22 +183,7 @@ public class CollectionUtils extends org.apache.commons.collections.CollectionUt
         return new ArrayList<>(coll);
     }
 
-    /**
-     * 把数组转换成队列
-     *
-     * @param array 数组
-     * @return 队列
-     */
-    public static <E> Set<E> toSet(E... array) {
-        if (array == null || array.length <= 0) {
-            return new HashSet<>();
-        }
-        Set<E> set = new LinkedHashSet<>();
-        for (E e : array) {
-            set.add(e);
-        }
-        return set;
-    }
+
 
     /**
      * 把List转换成Set
@@ -344,26 +264,7 @@ public class CollectionUtils extends org.apache.commons.collections.CollectionUt
      * @return
      */
     public static String[] peerAdd(String[] arrFirst, String[] arrSecond) {
-        if (isEmpty(arrFirst) || isEmpty(arrSecond)) {
-            throw new IllegalArgumentException("指定数组存在空");
-        }
-        if (arrFirst.length != arrSecond.length) {
-            throw new IllegalArgumentException("指定两个数组长度不一致");
-        }
-
-        String[] arr = new String[arrFirst.length];
-        for (int i = 0; i < arrFirst.length; i++) {
-            if (arrFirst[i] != null && arrSecond[i] != null) {
-                arr[i] = arrFirst[i] + arrSecond[i];
-            } else if (arrFirst[i] != null) {
-                arr[i] = arrFirst[i];
-            } else {
-                arr[i] = arrSecond[i];
-            }
-        }
-
-        return arr;
-
+        return ArrayUtils.peerAdd(arrFirst, arrSecond);
     }
 
     /**

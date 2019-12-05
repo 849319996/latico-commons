@@ -1,0 +1,196 @@
+内容摘要	5
+序	7
+前言	9
+关于作者	15
+译者简介	16
+目录	17
+第一部分　背景知识	23
+第1章　Spring Data项目	25
+	1.1　为Spring开发人员提供的NoSQL数据访问功能	25
+	1.2　主题概述	26
+	1.3　领域	27
+	1.4　示例代码	28
+		1.4.1　将源码导入到IDE	28
+第2章　Repository：便利的数据访问层	33
+	2.1　快速入门	33
+	2.2　定义查询方法	36
+		2.2.1　查找查询的策略	36
+		2.2.2　衍生查询	36
+		2.2.3　分页和排序	37
+	2.3　定义Repository	38
+		2.3.1　调整Repository接口	39
+		2.3.2　手动实现Repository方法	40
+	2.4　IDE集成	42
+		2.4.1　Intelli IDEA	43
+第3章　使用Querydsl实现类型安全的查询	45
+	3.1　Querydsl简介	45
+	3.2　生成查询元模型	48
+		3.2.1　构建系统集成	48
+		3.2.2　所支持的注解处理器	49
+		3.2.3　使用Querydsl对存储进行查询	50
+	3.3　集成Spring Data Repository	50
+		3.3.1　执行断言	51
+		3.3.2　手动实现Repository	51
+第二部分　关系型数据库	53
+第4章　JPA Repository	55
+	4.1　示例工程	55
+	4.2　传统方式	60
+	4.3　启动示例代码	61
+	4.4　使用Spring Data Repository	64
+		4.4.1　事务性	67
+		4.4.2　Repository与Querydsl集成	68
+第5章　借助Querydsl SQL实现类型安全的JDBC编程	70
+	5.1　示例工程与搭建过程	70
+		5.1.1　HyperSQL数据库	71
+		5.1.2　Querydsl的SQL模块	72
+		5.1.3　构建系统集成	75
+		5.1.4　数据库模式	76
+		5.1.5　示例工程的领域实现	76
+	5.2　QueryDslJdbcTemplate	79
+	5.3　执行查询	80
+		5.3.1　Repository实现起步	81
+		5.3.2　查询单个对象	82
+		5.3.3　OneToManyResultSetExtractor抽象类	83
+		5.3.4　CustomerListExtractor实现	85
+		5.3.5　RowMapper的实现类	86
+		5.3.6　查询对象列表	87
+	5.4　插入、更新和删除操作	87
+		5.4.1　使用SQLInsertClause进行插入操作	87
+		5.4.2　使用SQLUpdateClause进行更新操作	88
+		5.4.3　使用SQLDeleteClause进行删除行操作	89
+第三部分　NoSQL	91
+第6章　MongoDB: 文档存储	93
+	6.1　MongoDB简介	93
+		6.1.1　设置MongoDB	94
+		6.1.2　使用MongoDB Shell	95
+		6.1.3　MongoDB Java驱动	96
+	6.2　使用Spring命名空间搭建基础设施	97
+	6.3　映射模块	98
+		6.3.1　领域模型	98
+		6.3.2　搭建映射的基础设施	103
+		6.3.3　索引	105
+		6.3.4　自定义转换	106
+	6.4　MongoTemplate	108
+	6.5　Mongo Repository	110
+		6.5.1　搭建基础设施	110
+		6.5.2　Repository详解	110
+		6.5.3　Mongo Querydsl集成	112
+第7章　Neo4j：图数据库	114
+	7.1　图数据库	114
+	7.2　Neo4j	115
+	7.3　Spring Data Neo4j概览	117
+	7.4　将领域建模为图	118
+	7.5　使用Spring Data Neo4j持久化领域对象	123
+		7.5.1　Neo4jTemplate	125
+	7.6　组合发挥图和Repository的威力	126
+		7.6.1　基本的图Repository操作	128
+		7.6.2　衍生和基于注解的查找方法	128
+	7.7　示例领域模型中的高级图用例	131
+		7.7.1　单个节点的多重角色	131
+		7.7.2　以产品分类和标签为例讲解图中的索引	132
+		7.7.3　利用类似的兴趣(协同过滤)	133
+		7.7.4　推荐	133
+	7.8　事务、实体生命周期以及抓取策略	134
+	7.9　高级映射模型	135
+	7.10　使用Neo4j服务器	136
+	7.11　从这里继续学习	137
+第8章　Redis：键/值存储	138
+	8.1　Redis概述	138
+		8.1.1　搭建Redis	138
+		8.1.2　使用Redis Shell	139
+	8.2　连接到Redis	140
+	8.3　对象转换	141
+	8.4　对象映射	143
+	8.5　原子级计数器	145
+	8.6　发布/订阅功能	145
+		8.6.1　对信息进行监听和响应	146
+		8.6.2　在Redis中使用Spring的缓存抽象	147
+第四部分　快速应用开发	149
+第9章　使用Spring Roo实现持久层	151
+	9.1　Roo简介	151
+	9.2　Roo的持久层	153
+	9.3　快速起步	154
+		9.3.1　借助命令行使用Roo	154
+		9.3.2　借助Spring Tool Suite使用Roo	155
+	9.4　Spring Roo JPA Repository示例	157
+		9.4.1　创建工程	157
+		9.4.2　搭建JPA持久化	157
+		9.4.3　创建实体	157
+		9.4.4　定义Repository	159
+		9.4.5　创建Web层	160
+		9.4.6　运行示例	161
+	9.5　Spring MongoDB JPA Repository的例子	162
+		9.5.1　创建工程	162
+		9.5.2　搭建MongoDB持久化	162
+		9.5.3　创建实体	162
+		9.5.4　定义Repository	163
+		9.5.5　创建Web层	163
+		9.5.6　运行示例	163
+第10章　REST Repository导出器	165
+	10.1　示例工程	166
+		10.1.1　与Rest导出器进行交互	168
+		10.1.2　访问Product	170
+		10.1.3　访问Customer	173
+		10.1.4　访问Order	176
+第五部分　大数据	179
+第11章　Spring for Apache Hadoop	181
+	11.1　Hadoop开发面临的挑战	181
+	11.2　Hello World	183
+	11.3　揭秘Hello World	185
+	11.4　使用Spring for Apache Hadoop的Hello World	188
+	11.5　在JVM中编写HDFS脚本	192
+	11.6　结合HDFS脚本与Job提交	194
+	11.7　Job调度	195
+		11.7.1　使用TaskScheduler调度MapReduce Job	195
+		11.7.2　使用Quartz调度MapReduce Job	197
+第12章　使用Hadoop分析数据	198
+	12.1　使用Hive	198
+		12.1.1　Hello World	199
+		12.1.2　运行Hive服务器	200
+		12.1.3　使用Hive Thrift客户端	201
+		12.1.4　使用Hive JDBC客户端	203
+		12.1.5　使用Hive分析Apache日志文件	205
+	12.2　使用Pig	206
+		12.2.1　Hello World	207
+		12.2.2　运行PigServer	209
+		12.2.3　控制运行期脚本的执行	211
+		12.2.4　在Spring Integration数据管道中调用Pig脚本	213
+		12.2.5　使用Pig分析Apache日志文件	214
+	12.3　使用HBase	215
+		12.3.1　Hello World	215
+		12.3.2　使用HBase Java客户端	216
+第13章　使用Spring Batch和Spring Integration创建大数据管道	219
+	13.1　收集并将数据加载到HDFS	219
+		13.1.1　Spring Integration介绍	220
+		13.1.2　复制日志文件	222
+		13.1.3　事件流	225
+		13.1.4　事件转发	228
+		13.1.5　管理	229
+		13.1.6　Spring Batch简介	230
+		13.1.7　从数据库中加载并处理数据	233
+	13.2　Hadoop工作流	236
+		13.2.1　Spring Batch对Hadoop的支持	236
+		13.2.2　将wordcount样例改造为Spring Batch应用	238
+		13.2.3　Hive和Pig的步骤	240
+	13.3　从HDFS导出数据	241
+		13.3.1　从HDFS到JDBC	241
+		13.3.2　从HDFS到MongoDB	246
+	13.4　收集并加载数据到Splunk	247
+第六部分　数据网格	251
+第14章　分布式数据网格：GemFire	253
+	14.1　GemFire简介	253
+	14.2　缓存与域	254
+	14.3　如何获取GemFire	255
+	14.4　通过Spring XML命名空间配置GemFire	256
+		14.4.1　缓存配置	256
+		14.4.2　域配置	260
+		14.4.3　缓存客户端配置	262
+		14.4.4　缓存服务端配置	263
+		14.4.5　WAN配置	264
+		14.4.6　磁盘存储配置	265
+	14.5　使用GemfireTemplate进行数据访问	266
+	14.6　使用Repository	267
+		14.6.1　POJO映射	267
+		14.6.2　创建Repository	268
+		14.6.3　PDX序列化	268
+	14.7　支持持续查询	269

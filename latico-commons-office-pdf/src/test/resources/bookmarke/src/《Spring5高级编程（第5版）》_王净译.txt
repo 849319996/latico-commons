@@ -1,0 +1,405 @@
+目录 2
+第1章 Spring介绍                                                                7
+	1.1 什么是Spring                                                                7
+		1.1.1 Spring框架的演变                                                          7
+		1.1.2 翻转控制或依赖注入                                                        11
+		1.1.3 依赖注入的演变                                                            12
+		1.1.4 除了依赖注入                                                              13
+	1.2 Spring项目                                                                  16
+		1.2.1 Spring的起源                                                              16
+		1.2.2 Spring社区                                                                16
+		1.2.3 Spring工具套件                                                            17
+		1.2.4 Spring Security项目                                                       17
+		1.2.5 Spring Boot                                                               17
+		1.2.6 Spring批处理和集成                                                        17
+		1.2.7 许多其他项目                                                              17
+	1.3 Spring的替代品                                                              18
+		1.3.1 JBoss Seam框架                                                            18
+		1.3.2 Google Guice                                                              18
+		1.3.3 PicoContainer                                                             18
+		1.3.4 JEE 7容器                                                                 18
+	1.4 小结                                                                        18
+第2章 入门                                                                      19
+	2.1 获取Spring框架                                                              19
+		2.1.1 快速入门                                                                  19
+		2.1.2 在GitHub中查找Spring                                                      20
+		2.1.3 使用正确的JDK                                                             20
+	2.2 了解Spring打包                                                              20
+		2.2.1 为自己的应用程序选择模块                                                  21
+		2.2.2 在Maven存储库上访问Spring模块                                             21
+		2.2.3 使用Gradle访问Spring模块                                                  22
+		2.2.4 使用Spring文档                                                            23
+		2.2.5 将Spring放入Hello World中                                                 23
+		2.2.6 构建示例Hello World应用程序                                               23
+		2.2.7 用Spring重构                                                              26
+	2.3 小结                                                                        28
+第3章 在Spring中引入IoC和DI                                                     29
+	3.1 控制反转和依赖注入                                                          29
+	3.2 控制反转的类型                                                              29
+		3.2.1 依赖拉取                                                                  30
+		3.2.2 上下文依赖查找                                                            30
+		3.2.3 构造函数依赖注入                                                          31
+		3.2.4 setter依赖注入                                                            31
+		3.2.5 注入与查找                                                                31
+		3.2.6 setter注入与构造函数注入                                                  32
+	3.3 Spring中的控制反转                                                          34
+	3.4 Spring中的依赖注入                                                          34
+		3.4.1 bean和BeanFactory                                                         34
+		3.4.2 BeanFactory实现                                                           35
+		3.4.3 ApplicationContext                                                        36
+	3.5 配置ApplicationContext                                                      36
+		3.5.1 设置Spring配置选项                                                        36
+		3.5.2 基本配置概述                                                              36
+		3.5.3 声明Spring组件                                                            37
+		3.5.4 使用方法注入                                                              59
+		3.5.5 了解bean命名                                                              66
+		3.5.6 了解bean实例化模式                                                        72
+	3.6 解析依赖项                                                                  75
+	3.7 自动装配bean                                                                77
+	3.8 设置bean继承                                                                83
+	3.9 小结                                                                        85
+第4章 详述Spring配置和Spring Boot                                               86
+	4.1 Spring对应用程序可移植性的影响                                              86
+	4.2 管理bean生命周期                                                            87
+	4.3 挂钩到bean的创建                                                            88
+		4.3.1 在创建bean时执行方法                                                      88
+		4.3.2 实现InitializingBean接口                                                  90
+		4.3.3 使用JSR-250 @PostConstruct注解                                            92
+	4.4 使用@Bean声明一个初始化方法                                                 94
+	4.5 挂钩到bean的销毁                                                            95
+		4.5.1 在bean被销毁时执行一个方法                                                95
+		4.5.2 实现DisposableBean接口                                                    97
+		4.5.3 使用JSR-250 @PreDestroy注解                                               98
+	4.6 使用@Bean声明销毁方法                                                       99
+	4.7 了解解析的顺序                                                              100
+	4.8 让Spring感知bean                                                            100
+		4.8.1 使用BeanNameAware接口                                                     101
+		4.8.2 使用ApplicationContextAware接口                                           102
+	4.9 使用FactoryBean                                                             103
+	4.10 直接访问FactoryBean                                                        106
+	4.11 使用factory-bean和factory-method属性                                       107
+	4.12 JavaBean PropertyEditor                                                    108
+		4.12.1 使用内置的PropertyEditor                                                 108
+		4.12.2 创建自定义PropertyEditor                                                 112
+	4.13 更多的Spring ApplicationContext配置                                        114
+		4.13.1 使用MessageSource进行国际化                                              114
+4.13.2 在独立的应用程序中使用MessageSource                                                                   116
+	4.13.3 应用程序事件                                                             117
+	4.14 访问资源                                                                   118
+	4.15 使用Java类进行配置                                                         119
+		4.15.1 Java中的ApplicationContext配置                                           119
+		4.15.2 Spring混合配置                                                           125
+		4.15.3 Java或XML配置？                                                          127
+	4.16 配置文件                                                                   127
+	4.17 使用Java配置来配置Spring配置文件                                           129
+	4.18 Environment和PropertySource抽象                                            131
+	4.19 使用JSR-330注解进行配置                                                    134
+	4.20 使用Groovy进行配置                                                         136
+	4.21 Spring Boot                                                                138
+	4.22 小结                                                                       141
+第5章 Spring AOP                                                                142
+	5.1 AOP概念                                                                     143
+	5.2 AOP的类型                                                                   143
+		5.2.1 使用静态AOP                                                               143
+		5.2.2 使用动态AOP                                                               143
+		5.2.3 选择AOP类型                                                               144
+	5.3 Spring中的AOP                                                               144
+		5.3.1 AOP Alliance                                                              144
+		5.3.2 AOP中的Hello World示例                                                    144
+	5.4 Spring AOP架构                                                              145
+		5.4.1 Spring中的连接点                                                          145
+		5.4.2 Spring中的切面                                                            146
+		5.4.3 关于ProxyFactory类                                                        146
+		5.4.4 在Spring中创建通知                                                        146
+		5.4.5 通知的接口                                                                147
+		5.4.6 创建前置通知                                                              147
+		5.4.7 通过使用前置通知保护方法访问                                              148
+		5.4.8 创建后置返回通知                                                          151
+		5.4.9 创建环绕通知                                                              153
+		5.4.10 创建异常通知                                                             154
+		5.4.11 选择通知类型                                                             156
+	5.5 在Spring中使用顾问和切入点                                                  156
+		5.5.1 Pointcut接口                                                              157
+		5.5.2 可用的切入点实现                                                          158
+		5.5.3 使用DefaultPointcutAdvisor                                                158
+		5.5.4 使用StaticMethodMatcherPointcut创建静态切入点                             159
+		5.5.5 使用DyanmicMethodMatcherPointcut创建动态切入点                            161
+		5.5.6 使用简单名称匹配                                                          163
+		5.5.7 用正则表达式创建切入点                                                    164
+		5.5.8 使用AspectJ切入点表达式创建切入点                                         165
+		5.5.9 创建注解匹配切入点                                                        166
+		5.5.10 便捷的Advisor实现                                                        167
+	5.6 了解代理                                                                    167
+		5.6.1 使用JDK动态代理                                                           168
+		5.6.2 使用CGLIB代理                                                             168
+		5.6.3 比较代理性能                                                              169
+		5.6.4 选择要使用的代理                                                          171
+	5.7 切入点的高级使用                                                            172
+		5.7.1 使用控制流切入点                                                          172
+		5.7.2 使用组合切入点                                                            174
+		5.7.3 组合和切入点接口                                                          176
+		5.7.4 切入点小结                                                                176
+	5.8 引入入门                                                                    176
+		5.8.1 引入的基础知识                                                            177
+		5.8.2 使用引入进行对象修改检测                                                  178
+		5.8.3 引入小结                                                                  181
+	5.9 AOP的框架服务                                                               181
+		5.9.1 以声明的方式配置AOP                                                       181
+		5.9.2 使用ProxyFactoryBean                                                      182
+		5.9.3 使用aop名称空间                                                           186
+	5.10 使用@AspectJ样式注解                                                       190
+	5.11 AspectJ集成                                                                195
+		5.11.1 关于AspectJ                                                              195
+		5.11.2 使用单例切面                                                             195
+	5.12 小结                                                                       197
+第6章 Spring JDBC支持                                                           198
+	6.1 介绍Lambda表达式                                                            198
+	6.2 示例代码的示例数据模型                                                      199
+	6.3 研究JDBC基础结构                                                            202
+	6.4 Spring JDBC基础结构                                                         205
+	6.5 数据库连接和数据源                                                          206
+	6.6 嵌入数据库支持                                                              209
+	6.7 在DAO类中使用DataSource                                                     210
+	6.8 异常处理                                                                    212
+	6.9 JdbcTemplate类                                                              213
+		6.9.1 在DAO类中初始化JdbcTemplate                                               213
+		6.9.2 通过NamedParameterJdbcTemplate使用命名参数                                215
+		6.9.3 使用RowMapper检索域对象                                                   216
+	6.10 使用ResultSetExtractor检索嵌套域对象                                       217
+	6.11 建模JDBC操作的Spring类                                                     219
+	6.12 使用MappingSqlQuery查询数据                                                221
+	6.13 插入数据并检索生成的键                                                     226
+	6.14 使用BatchSqlUpdate进行批处理操作                                           227
+	6.15 使用SqlFunction调用存储函数                                                231
+	6.16 Spring Data项目：JDBC Extensions                                           232
+	6.17 使用JDBC的注意事项                                                         232
+	6.18 Spring Boot JDBC                                                           233
+	6.19 小结                                                                       235
+第7章 在Spring中使用Hibernate                                                   236
+	7.1 示例代码的示例数据模型                                                      236
+	7.2 配置Hibernate的SessionFactory                                               238
+	7.3 使用Hibernate注解的ORM映射                                                  240
+		7.3.1 简单的映射                                                                241
+		7.3.2 一对多映射                                                                244
+		7.3.3 多对多映射                                                                245
+	7.4 Hibernate会话接口                                                           246
+		7.4.1 使用Hibernate查询语言查询数据                                             247
+		7.4.2 使用延迟获取进行简单查询                                                  247
+		7.4.3 使用关联获取进行查询                                                      249
+	7.5 插入数据                                                                    251
+	7.6 更新数据                                                                    254
+	7.7 删除数据                                                                    255
+	7.8 配置Hibernate以便从实体生成表                                               256
+	7.9 注解方法或字段？                                                            258
+	7.10 使用Hibernate时的注意事项                                                  260
+	7.11 小结                                                                       260
+第8章 在Spring中使用JPA 2进行数据访问                                           261
+	8.1 JPA 2.1介绍                                                                 261
+		8.1.1 示例代码的示例数据模型                                                    262
+		8.1.2 配置JPA的EntityManagerFactory                                             262
+		8.1.3 使用JPA注解进行ORM映射                                                    264
+	8.2 使用JPA执行数据库操作                                                       265
+		8.2.1 使用Java持久化查询语言来查询数据                                          266
+		8.2.2 查询非类型化结果                                                          272
+	8.3 使用构造函数表达式查询自定义结果类型                                        273
+		8.3.1 插入数据                                                                  275
+		8.3.2 更新数据                                                                  277
+		8.3.3 删除数据                                                                  278
+	8.4 使用本地查询                                                                279
+	8.5 使用简单的本地查询                                                          279
+	8.6 使用SQL ResultSet映射进行本地查询                                           280
+	8.7 Spring Data JPA介绍                                                         284
+		8.7.1 添加Spring Data JPA库依赖项                                               285
+8.7.2 使用Spring Data JPA Repository抽象进行数据库操作                                                                  285
+	8.8 使用JpaRepository                                                           289
+	8.9 带有自定义查询的Spring Data JPA                                             290
+8.10 通过使用Hibernate Envers保存实体版本                                                                        299
+	8.10.1 为实体版本控制添加表                                                     299
+8.10.2 为实体版本控制配置EntityManagerFactory                                                            300
+	8.10.3 启用实体版本控制和历史检索                                               302
+	8.10.4 测试实体版本控制                                                         303
+	8.11 Spring Boot JPA                                                            304
+	8.12 使用JPA时的注意事项                                                        308
+	8.13 小结                                                                       308
+第9章 事务管理                                                                  309
+	9.1 研究Spring事务抽象层                                                        309
+	9.2 PlatformTransactionManager的实现                                            310
+	9.3 分析事务属性                                                                311
+		9.3.1 TransactionDefinition接口                                                 311
+		9.3.2 TransactionStatus接口                                                     312
+	9.4 示例代码的示例数据模型和基础结构                                            313
+		9.4.1 创建一个带有依赖项的简单Spring JPA项目                                    313
+		9.4.2 示例数据模型和通用类                                                      314
+		9.4.3 使用AOP配置进行事务管理                                                   321
+	9.5 使用编程式事务                                                              322
+	9.6 使用Spring实现全局事务                                                      324
+		9.6.1 实现JTA示例的基础结构                                                     324
+		9.6.2 使用JTA实现全局事务                                                       325
+		9.6.3 Spring Boot JTA                                                           331
+		9.6.4 使用JTA事务管理器的注意事项                                               334
+	9.7 小结                                                                        335
+第10章 使用类型转换和格式化进行验证                                             336
+	10.1 依赖项                                                                     336
+	10.2 Spring类型转换系统                                                         337
+	10.3 使用PropertyEditors从字符串进行转换                                        337
+	10.4 Spring类型转换介绍                                                         339
+		10.4.1 实现自定义转换器                                                         339
+		10.4.2 配置ConversionService                                                    340
+		10.4.3 任意类型之间的转换                                                       341
+	10.5 Spring中的字段格式化                                                       344
+		10.5.1 实现自定义格式化器                                                       344
+		10.5.2 配置ConversionServiceFactoryBean                                         345
+	10.6 Spring中的验证                                                             346
+		10.6.1 使用Spring Validator接口                                                 346
+		10.6.2 使用JSR-349 Bean Validation                                              348
+		10.6.3 在Spring中配置Bean Validation支持                                        349
+		10.6.4 创建自定义验证器                                                         350
+	10.7 使用AssertTrue进行自定义验证                                               352
+	10.8 自定义验证的注意事项                                                       353
+	10.9 决定使用哪种验证API                                                        353
+	10.10 小结                                                                      353
+第11章 任务调度                                                                 354
+	11.1 任务调度示例的依赖项                                                       354
+	11.2 Spring中的任务调度                                                         355
+		11.2.1 Spring TaskScheduler抽象介绍                                             355
+		11.2.2 研究示例任务                                                             356
+		11.2.3 使用注解进行任务调度                                                     361
+		11.2.4 Spring中异步任务的执行                                                   363
+	11.3 Spring中任务的执行                                                         365
+	11.4 小结                                                                       366
+第12章 使用Spring远程处理                                                       367
+	12.1 使用示例的数据模型                                                         368
+	12.2 为JPA后端添加必需的依赖项                                                  369
+	12.3 实现和配置SingerService                                                    370
+		12.3.1 实现SingerService                                                        370
+		12.3.2 配置SingerService                                                        371
+		12.3.3 公开服务                                                                 373
+		12.3.4 调用服务                                                                 374
+	12.4 在Spring中使用JMS                                                          375
+		12.4.1 在Spring中实现JMS监听器                                                  377
+		12.4.2 在Spring中发送JMS消息                                                    378
+	12.5 Spring Boot Artemis启动器                                                  379
+	12.6 在Spring中使用RESTful-WS                                                   381
+		12.6.1 RESTful Web服务介绍                                                      381
+		12.6.2 为示例添加必需的依赖项                                                   382
+		12.6.3 设计Singer RESTful Web服务                                               382
+		12.6.4 使用Spring MVC展示REST样式的Web服务                                      382
+	12.7 配置Castor XML                                                             383
+		12.7.1 实现SingerController                                                     384
+		12.7.2 配置Spring Web应用程序                                                   386
+		12.7.3 使用curl测试RESTful-WS                                                   388
+		12.7.4 使用RestTemplate访问RESTful-WS                                           389
+12.7.5 使用Spring Security来保护RESTful-WS                                                                      392
+	12.8 使用Spring Boot开发RESTful-WS                                              395
+	12.9 在Spring中使用AMQP                                                         398
+	12.10 小结                                                                      403
+第13章 Spring测试                                                               404
+	13.1 测试类别介绍                                                               404
+	13.2 使用Spring测试注解                                                         405
+	13.3 实施逻辑单元测试                                                           406
+		13.3.1 添加所需的依赖项                                                         406
+		13.3.2 单元测试Spring MVC控制器                                                 407
+	13.4 实现集成测试                                                               409
+		13.4.1 添加所需的依赖项                                                         409
+		13.4.2 配置用于服务层测试的配置文件                                             409
+		13.4.3 Java配置版本                                                             410
+		13.4.4 实施基础结构类                                                           411
+		13.4.5 对服务层进行单元测试                                                     414
+		13.4.6 丢弃DbUnit                                                               416
+	13.5 实现前端单元测试                                                           419
+	13.6 小结                                                                       419
+第14章 Spring中的脚本支持                                                       420
+	14.1 在Java中使用脚本支持                                                       420
+	14.2 Groovy介绍                                                                 421
+		14.2.1 动态类型化                                                               422
+		14.2.2 简化的语法                                                               422
+		14.2.3 闭包                                                                     423
+	14.3 与Spring一起使用Groovy                                                     424
+		14.3.1 开发Singer对象域                                                         424
+		14.3.2 实现规则引擎                                                             424
+		14.3.3 将规则工厂实现为Spring可刷新bean                                         426
+		14.3.4 测试年龄分类规则                                                         427
+		14.3.5 内联动态语言代码                                                         429
+	14.4 小结                                                                       430
+第15章 应用程序监控                                                             431
+	15.1 Spring中的JMX支持                                                          431
+	15.2 将Spring bean导出为JMX                                                     431
+	15.3 使用Java VisualVM进行JMX监控                                               432
+	15.4 监视Hibernate统计信息                                                      434
+	15.5 使用了Spring Boot的JMX                                                     435
+	15.6 小结                                                                       437
+第16章 Web应用程序                                                              438
+	16.1 实现示例的服务层                                                           439
+		16.1.1 对示例使用数据模型                                                       439
+		16.1.2 实现DAO层                                                                441
+		16.1.3 实现服务层                                                               441
+	16.2 配置SingerService                                                          442
+	16.3 MVC和Spring MVC介绍                                                        443
+		16.3.1 MVC介绍                                                                  444
+		16.3.2 Spring MVC介绍                                                           444
+		16.3.3 Spring MVC WebApplicationContext层次结构                                 445
+		16.3.4 Spring MVC请求生命周期                                                   445
+		16.3.5 Spring MVC配置                                                           446
+		16.3.6 在Spring MVC中创建第一个视图                                             448
+		16.3.7 配置DispatcherServlet                                                    449
+		16.3.8 实现SingerController                                                     450
+		16.3.9 实现歌手列表视图                                                         451
+		16.3.10 测试歌手列表视图                                                        451
+	16.4 理解Spring MVC项目结构                                                     451
+	16.5 实现国际化(il8n)                                                           452
+		16.5.1 在DispatcherServlet配置中配置国际化                                      452
+		16.5.2 为国际化支持而修改歌手列表视图                                           454
+	16.6 使用主题和模板                                                             454
+	16.7 使用Apache Tiles查看模板                                                   456
+		16.7.1 设计模板布局                                                             456
+		16.7.2 实现页面布局组件                                                         457
+	16.8 在Spring MVC中配置Tiles                                                    459
+	16.9 实现歌手信息视图                                                           460
+		16.9.1 将URL映射到视图                                                          460
+		16.9.2 实现显示歌手视图                                                         460
+		16.9.3 实现编辑歌手视图                                                         462
+		16.9.4 实现添加歌手视图                                                         465
+		16.9.5 启用JSR-349(bean验证)                                                    466
+	16.10 使用jQuery和jQuery UI                                                     468
+		16.10.1 jQuery和jQuery UI介绍                                                   468
+		16.10.2 在视图中使用jQuery和jQuery UI                                           468
+		16.10.3 使用CKEditor进行富文本编辑                                              469
+		16.10.4 使用jqGrid实现具有分页支持的数据网格                                    470
+		16.10.5 在歌手列表视图中启用jqGrid                                              470
+		16.10.6 在服务器端启用分页                                                      472
+	16.11 处理文件上传                                                              474
+		16.11.1 配置文件上传支持                                                        474
+		16.11.2 修改视图以支持文件上传                                                  475
+		16.11.3 修改控制器以支持文件上传                                                476
+	16.12 用Spring Security保护Web应用程序                                          477
+		16.12.1 配置Spring安全性                                                        477
+		16.12.2 将登录功能添加到应用程序中                                              479
+		16.12.3 使用注解来保护控制器方法                                                481
+16.13 使用Spring Boot创建Spring Web应用程序                                                                        481
+	16.14 设置DAO层                                                                 482
+		16.14.1 设置服务层                                                              483
+		16.14.2 设置Web层                                                               484
+		16.14.3 设置Spring安全性                                                        485
+	16.15 创建Thymeleaf视图                                                         485
+	16.16 使用Thymeleaf扩展                                                         488
+	16.17 小结                                                                      492
+第17章 WebSocket                                                                493
+	17.1 WebSocket介绍                                                              493
+	17.2 与Spring一起使用WebSocket                                                  493
+	17.3 使用WebSocket API                                                          494
+	17.4 使用STOMP发送消息                                                          502
+	17.5 小结                                                                       506
+第18章 Spring项目：批处理、集成和XD等                                           507
+	18.1 Spring Batch                                                               508
+	18.2 JSR-352                                                                    513
+	18.3 Spring Boot Batch                                                          515
+	18.4 Spring Integration                                                         518
+	18.5 Spring XD                                                                  522
+	18.6 Spring框架的五个最显著的功能                                               523
+		18.6.1 功能性Web框架                                                            524
+		18.6.2 Java 9 互操作性                                                          532
+		18.6.3 JDK模块化                                                                532
+		18.6.4 使用Java 9和Spring WebFlux进行反应式编程                                 534
+		18.6.5 Spring支持JUnit 5 Jupiter                                                535
+	18.7 小结                                                                       542
+附录A 设置开发环境                                                              543
