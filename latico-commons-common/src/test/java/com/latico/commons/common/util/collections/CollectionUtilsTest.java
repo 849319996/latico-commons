@@ -37,6 +37,52 @@ public class CollectionUtilsTest {
     }
 
     @Test
+    public void isAllEmpty() {
+
+        List<String> list1 = new ArrayList<String>();
+
+        list1.add("abc");
+        list1.add("abc1");
+        list1.add("abc2");
+
+        List<String> list2 = new ArrayList<String>();
+
+        list2.add("abc1");
+        list2.add("abc2");
+        list2.add("abc");
+
+        List<String> list3 = new ArrayList<String>();
+
+        // list3.add("abc");
+        // list3.add("abc1");
+        // list3.add("abc3");
+        System.out.println(CollectionUtils.isAllEmpty(list1, list2, list3));
+    }
+
+    @Test
+    public void isAllNotEmpty() {
+
+        List<String> list1 = new ArrayList<String>();
+
+        list1.add("abc");
+        list1.add("abc1");
+        list1.add("abc2");
+
+        List<String> list2 = new ArrayList<String>();
+
+        list2.add("abc1");
+        list2.add("abc2");
+        list2.add("abc");
+
+        List<String> list3 = new ArrayList<String>();
+        list3 = null;
+        // list3.add("abc");
+        // list3.add("abc1");
+        // list3.add("abc3");
+        System.out.println(CollectionUtils.isAllNotEmpty(list1, list2, list3));
+    }
+
+    @Test
     public void toList() {
         String[] arr = new String[]{"jag", "jgaj"};
         System.out.println(CollectionUtils.toList(arr));

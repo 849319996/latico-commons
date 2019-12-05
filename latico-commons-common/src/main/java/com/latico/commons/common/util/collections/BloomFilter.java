@@ -371,8 +371,9 @@ public class BloomFilter<E> implements Serializable {
      */
     public void add(byte[] bytes) {
         int[] hashes = createHashes(bytes, k);
-        for (int hash : hashes)
+        for (int hash : hashes) {
             bitset.set(Math.abs(hash % bitSetSize), true);
+        }
         numberOfAddedElements++;
     }
 
@@ -382,8 +383,9 @@ public class BloomFilter<E> implements Serializable {
      * @param c Collection of elements.
      */
     public void addAll(Collection<? extends E> c) {
-        for (E element : c)
+        for (E element : c) {
             add(element);
+        }
     }
 
     /**
@@ -425,9 +427,11 @@ public class BloomFilter<E> implements Serializable {
      * @return true if all the elements in c could have been inserted into the  Bloom filter.
      */
     public boolean containsAll(Collection<? extends E> c) {
-        for (E element : c)
-            if (!contains(element))
+        for (E element : c) {
+            if (!contains(element)) {
                 return false;
+            }
+        }
         return true;
     }
 

@@ -1,5 +1,6 @@
 package com.latico.commons.common.util.math;
 
+import com.latico.commons.common.util.collections.ArrayUtils;
 import com.latico.commons.common.util.collections.CollectionUtils;
 import com.latico.commons.common.util.string.StringUtils;
 
@@ -295,12 +296,12 @@ public class RandomUtils extends org.apache.commons.lang3.RandomUtils {
 	
 	/**
 	 * 随机获取集合中的某个元素
-	 * @param list 队列（建议使用ArrayList）
+	 * @param array 队列（建议使用ArrayList）
 	 * @return 队列中的元素, 若队列为空, 则返回null
 	 */
 	public static <E> E genElement(E... array) {
 		E e = null;
-		if(CollectionUtils.isNotEmpty(array)) {
+		if(ArrayUtils.isNotEmpty(array)) {
 			int idx = genInt(array.length);
 			e = array[idx];
 		}

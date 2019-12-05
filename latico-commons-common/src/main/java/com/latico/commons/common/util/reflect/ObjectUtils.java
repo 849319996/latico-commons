@@ -1,6 +1,7 @@
 package com.latico.commons.common.util.reflect;
 
 import com.latico.commons.common.envm.DateFormat;
+import com.latico.commons.common.util.collections.ArrayUtils;
 import com.latico.commons.common.util.collections.CollectionUtils;
 import com.latico.commons.common.util.collections.MapUtils;
 import com.latico.commons.common.util.io.IOUtils;
@@ -109,7 +110,7 @@ public class ObjectUtils extends org.apache.commons.lang3.ObjectUtils {
 		}
 
 		boolean isSetValue = false;
-		if(CollectionUtils.isNotEmpty(fieldNames) && CollectionUtils.isNotEmpty(fieldValuesList) && fieldNames.length == fieldValuesList.get(0).length){
+		if(ArrayUtils.isNotEmpty(fieldNames) && CollectionUtils.isNotEmpty(fieldValuesList) && fieldNames.length == fieldValuesList.get(0).length){
 			isSetValue = true;
 		}
 		List<T> objs = new ArrayList<T>();
