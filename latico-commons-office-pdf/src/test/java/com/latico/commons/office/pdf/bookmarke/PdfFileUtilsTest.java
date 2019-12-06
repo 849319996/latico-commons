@@ -310,5 +310,21 @@ public class PdfFileUtilsTest {
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test38() throws Exception {
+        int addNum = 16;
+        String dir = "bookmarke/src/";
+        String file = dir + "大数据架构师指南.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test39() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "《疯狂Spring Cloud》电子书（一）.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }
