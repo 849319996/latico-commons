@@ -12,13 +12,11 @@ import java.util.*;
 
 /**
  * <PRE>
- * 
+ *
  * </PRE>
- * <B>项	       目：</B>
- * <B>技术支持：</B>
- * @version   <B>V1.0 2017年3月28日</B>
- * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
- * @since     <B>JDK1.6</B>
+ * @Author: latico
+ * @Date: 2019-12-10 12:51:02
+ * @Version: 1.0
  */
 public abstract class AbstractSnmpClient implements SnmpClient {
 
@@ -56,7 +54,7 @@ public abstract class AbstractSnmpClient implements SnmpClient {
 	/**
 	 * 超时时间，默认为5秒
 	 */
-	protected int timeout = 30000;
+	protected int timeout = 15000;
 
 	/** 通信不成功时的重连次数，默认1 */
 	protected int retries = 1;
@@ -229,14 +227,21 @@ public abstract class AbstractSnmpClient implements SnmpClient {
 
 	@Override
 	public boolean testSnmpConn() {
+		setTestTimeout();
 		String sysOid = getSysOID();
+		resetTestTimeout();
 		if(sysOid == null || sysOid.length() == 0){
 			close();
 			return false;
 		}else{
 			return true;
 		}
+
 	}
+
+	protected abstract void resetTestTimeout();
+
+	protected abstract void setTestTimeout();
 
 	@Override
 	public String getConnInfo(){

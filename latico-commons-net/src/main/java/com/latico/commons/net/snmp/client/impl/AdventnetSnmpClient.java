@@ -24,11 +24,9 @@ import java.util.regex.Pattern;
  * Adventnet 实现SNMP
  * 【注意：Adventnet的实现，OID的值必须前面带英文句号'.'，否则无法识别】
  * </PRE>
- * <B>项	       目：</B>
- * <B>技术支持：</B>
- * @version   <B>V1.0 2017年3月28日</B>
- * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
- * @since     <B>JDK1.6</B>
+ * @Author: latico
+ * @Date: 2019-12-10 12:51:22
+ * @Version: 1.0
  */
 public class AdventnetSnmpClient extends AbstractSnmpClient {
 
@@ -44,6 +42,17 @@ public class AdventnetSnmpClient extends AbstractSnmpClient {
 	protected boolean connect() {
 		return initSnmpTarget();
 	}
+
+	@Override
+	protected void resetTestTimeout() {
+
+	}
+
+	@Override
+	protected void setTestTimeout() {
+
+	}
+
 
 	/**
 	 * 初始化SNMP目标

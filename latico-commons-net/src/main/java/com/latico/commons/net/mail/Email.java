@@ -6,6 +6,7 @@ import com.latico.commons.common.util.codec.CodecUtils;
 import com.latico.commons.common.util.codec.sea.SymmetricEncryptAlgorithm;
 import com.latico.commons.common.util.codec.sea.common.SymmetricEncryptAlgorithmFactory;
 import com.latico.commons.common.util.codec.sea.common.SymmetricEncryptAlgorithmType;
+import com.latico.commons.common.util.collections.ArrayUtils;
 import com.latico.commons.common.util.collections.CollectionUtils;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
@@ -315,7 +316,7 @@ public class Email {
     private Address[] toAddress(String[] mailAddr) {
         mailAddr = (mailAddr == null || mailAddr.length <= 0 ?
                 new String[]{sender} : mailAddr);
-        int size = CollectionUtils.cutbackNull(mailAddr);
+        int size = ArrayUtils.cutbackNull(mailAddr);
 
         Address[] address = new InternetAddress[size];
         for (int i = 0; i < size; i++) {

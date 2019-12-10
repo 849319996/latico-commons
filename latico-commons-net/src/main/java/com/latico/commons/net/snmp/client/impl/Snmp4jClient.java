@@ -30,13 +30,11 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <PRE>
- * SNMP4J 方式实现SNMP
+ *  SNMP4J 方式实现SNMP
  * </PRE>
- * <B>项	       目：</B>
- * <B>技术支持：</B>
- * @version   <B>V1.0 2017年3月28日</B>
- * @author    <B><a href="mailto:latico@qq.com"> latico </a></B>
- * @since     <B>JDK1.6</B>
+ * @Author: latico
+ * @Date: 2019-12-10 12:51:12
+ * @Version: 1.0
  */
 public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
 
@@ -54,15 +52,35 @@ public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
 	
 	/** timeoutModel 连接的时候的超时模型 */
 	private static final TimeoutModel timeoutModel = new TimeoutModel() {
-        
+
+		/**
+		 * 每次
+		 * @param retryCount 0是第一次访问，1是第一次重试访问（也就是第二次访问）
+		 * @param totalNumberOfRetries
+		 * @param targetTimeout 每次访问的超时时间，
+		 * @return
+		 */
         @Override
         public long getRetryTimeout(int retryCount, int totalNumberOfRetries, long targetTimeout) {
-            return 15000;
+        	//第一次的时候使用默认超时时间
+			if (retryCount == 0) {
+				return targetTimeout;
+			} else {
+				//后面的次数的，超时时间翻倍
+				return targetTimeout * 2;
+			}
         }
-        
+
+		/**
+		 *
+		 * @param totalNumberOfRetries 总的重试次数
+		 * @param targetTimeout
+		 * @return 总的超时时间，
+		 */
         @Override
         public long getRequestTimeout(int totalNumberOfRetries, long targetTimeout) {
-            return targetTimeout;
+        	// 第一次时间加上重试的时候的超时时间，重试的时候超时时间翻倍了
+            return targetTimeout + totalNumberOfRetries * targetTimeout * 2;
         }
     };
 	
@@ -91,6 +109,19 @@ public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
 
 		return status;
 	}
+
+	@Override
+	protected void resetTestTimeout() {
+		target.setTimeout(timeout);
+		target.setRetries(retries);
+	}
+
+	@Override
+	protected void setTestTimeout() {
+		target.setTimeout(5000);
+		target.setRetries(0);
+	}
+
 
 	/**
 	 * 初始化SNMP连接监听对象
@@ -166,6 +197,7 @@ public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
 		// 读取超时时间,毫秒
 		target.setTimeout(timeout);
 
+		//设置计算超时时间的模型
 		snmp.setTimeoutModel(timeoutModel);
 	}
 

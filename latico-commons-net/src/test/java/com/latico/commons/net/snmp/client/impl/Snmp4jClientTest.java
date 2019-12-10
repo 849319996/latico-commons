@@ -7,6 +7,7 @@ import com.latico.commons.net.snmp.client.SnmpClient;
 import com.latico.commons.net.snmp.client.SnmpClientFactory;
 import org.junit.Test;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public class Snmp4jClientTest {
@@ -15,13 +16,16 @@ public class Snmp4jClientTest {
     public void getTable() {
         SnmpClient snmp4jClient = SnmpClientFactory.getSnmp4jClient();
         //初始化
+        System.out.println(new Timestamp(System.currentTimeMillis()));
         snmp4jClient.init("172.168.7.25", "public");
+        System.out.println(new Timestamp(System.currentTimeMillis()));
 
         //采集一个table的指定列
         SnmpTable ifTable = snmp4jClient.getSnmpTable("1.3.6.1.2.1.2.2.1",
                 2, 5, 10, 16);
 
         System.out.println(ifTable);
+        System.out.println(new Timestamp(System.currentTimeMillis()));
 
         // 获取所有需要采集流量的端口
         for (SnmpLine ifTableLine : ifTable.getLines()) {
