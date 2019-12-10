@@ -90,7 +90,7 @@ public abstract class AbstractSnmpClient implements SnmpClient {
 	protected String contextID;
 
 	/** walkMaxLines 使用walk的时候读取的最大行数（防止数据溢出） */
-	protected int walkMaxLines = 1000000;
+	protected int walkMaxLines = 3000000;
 
 	/**
 	 * 设备系统OID的值

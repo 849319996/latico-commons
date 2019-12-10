@@ -17,7 +17,7 @@ public class Snmp4jClientTest {
         SnmpClient snmp4jClient = SnmpClientFactory.getSnmp4jClient();
         //初始化
         System.out.println(new Timestamp(System.currentTimeMillis()));
-        snmp4jClient.init("172.168.7.25", "public");
+        snmp4jClient.init("172.168.7.31", 161, "public", "v2", 30000);
         System.out.println(new Timestamp(System.currentTimeMillis()));
 
         //采集一个table的指定列
