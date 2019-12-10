@@ -57,12 +57,12 @@ public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
         
         @Override
         public long getRetryTimeout(int retryCount, int totalNumberOfRetries, long targetTimeout) {
-            return 5000;
+            return 15000;
         }
         
         @Override
         public long getRequestTimeout(int totalNumberOfRetries, long targetTimeout) {
-            return 3000;
+            return targetTimeout;
         }
     };
 	
