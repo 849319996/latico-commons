@@ -239,7 +239,7 @@ public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
 
 			respEvnt = snmp.send(pdu, target);
 			if (respEvnt != null && respEvnt.getResponse() != null) {
-				Vector<? extends VariableBinding> variableBindings = respEvnt.getResponse().getVariableBindings();
+				List<? extends VariableBinding> variableBindings = respEvnt.getResponse().getVariableBindings();
 				for (int i = 0; i < variableBindings.size(); i++) {
 					VariableBinding recVB = variableBindings.get(i);
 					snmpRow = new SnmpRow();
