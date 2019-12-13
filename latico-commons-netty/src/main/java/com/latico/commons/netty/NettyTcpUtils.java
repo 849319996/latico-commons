@@ -76,8 +76,8 @@ public class NettyTcpUtils extends NettyUtils {
 
 //            绑定IO处理类channelHandler
             serverBootstrap.childHandler(childHandler);
-//            绑定端口
-            channelFuture = serverBootstrap.bind(inetPort);
+//            绑定端口，阻塞知道绑定完成
+            channelFuture = serverBootstrap.bind(inetPort).sync();
         } catch (Exception e) {
             LOG.error("创建Netty服务端异常", e);
 
@@ -205,8 +205,8 @@ public class NettyTcpUtils extends NettyUtils {
 //            IO通道业务处理器
             bootstrap.handler(channelInitializer);
 
-//            连接服务端
-            channelFuture = bootstrap.connect(inetHost, inetPort);
+//            连接服务端，阻塞到连接完成
+            channelFuture = bootstrap.connect(inetHost, inetPort).sync();
 
         } catch (Exception e) {
             LOG.error("创建Netty客户端异常", e);

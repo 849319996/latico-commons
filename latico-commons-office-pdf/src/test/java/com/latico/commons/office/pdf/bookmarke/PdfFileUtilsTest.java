@@ -334,5 +334,37 @@ public class PdfFileUtilsTest {
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test41() throws Exception {
+        int addNum = 18;
+        String dir = "bookmarke/src/";
+        String file = dir + "Maven实战.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test42() throws Exception {
+        int addNum = 1;
+        String dir = "bookmarke/src/";
+        String file = dir + "PostgreSQL实战1.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test43() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "PostgreSQL实战2.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test44() throws Exception {
+        int addNum = -1;
+        String dir = "bookmarke/src/";
+        String file = dir + "PostgreSQL实战3.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }

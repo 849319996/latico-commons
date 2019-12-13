@@ -93,11 +93,12 @@ public class NettyUtils {
             return;
         }
         try {
-            channelFuture.sync();
+            //阻塞服务端通道线程，直到关闭，最后在finally释放资源
             channelFuture.channel().closeFuture().sync();
         } catch (Exception e) {
             LOG.error(e);
         } finally {
+            //finally释放资源
             closeAll(channelFuture);
         }
     }

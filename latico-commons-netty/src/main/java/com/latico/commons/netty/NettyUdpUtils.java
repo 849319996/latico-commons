@@ -45,7 +45,8 @@ public class NettyUdpUtils extends NettyUtils {
                     .option(ChannelOption.SO_BROADCAST, true);
 
             bootstrap.handler(childHandler);
-            channelFuture = bootstrap.bind(localInetPort);
+            //阻塞到绑定端口成功
+            channelFuture = bootstrap.bind(localInetPort).sync();
         } catch (Exception e) {
             LOG.error(e);
             closeAll(channelFuture);
