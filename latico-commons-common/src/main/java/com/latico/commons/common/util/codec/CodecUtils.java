@@ -157,4 +157,16 @@ public class CodecUtils {
 		}
 		return string.getBytes(charset);
 	}
+
+	/**
+	 * short转换成byte数组
+	 * @param s
+	 * @return
+	 */
+	public static byte[] shortToByte(short s) {
+		byte[] targets = new byte[2];
+		targets[0] = (byte) (s >> 8 & 0xFF);
+		targets[1] = (byte) (s & 0xFF);
+		return targets;
+	}
 }
