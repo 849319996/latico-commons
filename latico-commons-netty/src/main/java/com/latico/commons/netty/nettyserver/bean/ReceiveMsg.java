@@ -1,6 +1,8 @@
 package com.latico.commons.netty.nettyserver.bean;
 
 
+import io.netty.channel.Channel;
+
 /**
  * <PRE>
  *
@@ -14,6 +16,7 @@ public class ReceiveMsg <MSG> {
     private String remoteIp;
     private int remotePort;
     private MSG msg;
+    private Channel remoteChannel;
 
     public String getRemoteIp() {
         return remoteIp;
@@ -37,6 +40,14 @@ public class ReceiveMsg <MSG> {
 
     public void setMsg(MSG msg) {
         this.msg = msg;
+    }
+
+    public Channel getRemoteChannel() {
+        return remoteChannel;
+    }
+
+    public void setRemoteChannel(Channel remoteChannel) {
+        this.remoteChannel = remoteChannel;
     }
 
     @Override

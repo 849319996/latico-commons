@@ -67,7 +67,7 @@ public class OmcServerChannelInboundHandlerImpl extends SimpleChannelInboundHand
         LOG.debug("客户端:[{}] 发来:{}", channel.remoteAddress(), msg);
 
         //如果业务直接在这个方法处理的话，那么这里也可以不加入队列让外界处理
-        nettyServer.addReceivedData(msg, channel.remoteAddress());
+        nettyServer.addReceivedData(msg, channel);
     }
 
 

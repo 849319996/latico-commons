@@ -1,9 +1,9 @@
 package com.latico.commons.netty.nettyserver;
 
 import com.latico.commons.netty.nettyserver.bean.ReceiveMsg;
+import io.netty.channel.Channel;
 import io.netty.channel.group.ChannelGroup;
 
-import java.net.SocketAddress;
 import java.util.List;
 
 /**
@@ -80,7 +80,15 @@ public interface NettyServer<MSG> {
      * 添加接收数据尽量，调用者不要使用此方法
      * @param data
      */
-    public void addReceivedData(MSG data, SocketAddress remoteAddress);
+    public void addReceivedData(MSG data, Channel remoteChannel);
+
+
+    /**
+     * @param remoteChannel
+     * @param msg
+     * @return
+     */
+    boolean sendMsg(Channel remoteChannel, MSG msg);
 
     /**
      * 发送消息给所有客户端
@@ -88,4 +96,5 @@ public interface NettyServer<MSG> {
      * @return
      */
     boolean sendMsgToAllClient(MSG msg);
+
 }

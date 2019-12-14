@@ -6,6 +6,7 @@ import com.latico.commons.common.util.math.NumberUtils;
 import com.latico.commons.common.util.thread.thread.AbstractThread;
 import com.latico.commons.netty.NettyTcpUtils;
 import com.latico.commons.netty.nettyserver.bean.ReceiveMsg;
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
@@ -197,24 +198,45 @@ public abstract class AbstractNettyServer<MSG> extends AbstractThread implements
      * @param data
      */
     @Override
-    public void addReceivedData(MSG data, SocketAddress remoteAddress){
+    public void addReceivedData(MSG data, Channel remoteChannel){
         ReceiveMsg<MSG> receiveMsg = new ReceiveMsg<>();
         receiveMsg.setMsg(data);
-        String socketStr = remoteAddress.toString();
-        Matcher matcher = socketAddressPattern.matcher(socketStr);
-        if (matcher.find()) {
-            receiveMsg.setRemoteIp(matcher.group(1));
-            receiveMsg.setRemotePort(NumberUtils.toInt(matcher.group(2)));
+        receiveMsg.setRemoteChannel(remoteChannel);
+        SocketAddress remoteAddress = remoteChannel.remoteAddress();
+        if (remoteAddress != null) {
+            String socketStr = remoteAddress.toString();
+            Matcher matcher = socketAddressPattern.matcher(socketStr);
+            if (matcher.find()) {
+                receiveMsg.setRemoteIp(matcher.group(1));
+                receiveMsg.setRemotePort(NumberUtils.toInt(matcher.group(2)));
+            }
         }
 
         receiveQueue.add(receiveMsg);
     }
 
     @Override
+    public boolean sendMsg(Channel remoteChannel, MSG msg) {
+        if (isStatusValid()) {
+            if (remoteChannel != null && remoteChannel.isActive()) {
+                LOG.debug("发送消息给:{},内容:{}", remoteChannel.remoteAddress()
+                        , msg);
+                remoteChannel.writeAndFlush(msg);
+                return true;
+            } else {
+                LOG.warn("客户端{}状态异常", remoteChannel.remoteAddress());
+            }
+        } else {
+            LOG.warn("无效的状态");
+        }
+        return false;
+    }
+
+    @Override
     public boolean sendMsgToAllClient(MSG msg) {
         if (isStatusValid()) {
             if (channelGroup != null && channelGroup.size() >= 1) {
-                LOG.debug("发送消息:{}", msg);
+                LOG.debug("发送消息给所有客户端,内容:{}", msg);
                 channelGroup.writeAndFlush(msg);
                 return true;
             } else {
