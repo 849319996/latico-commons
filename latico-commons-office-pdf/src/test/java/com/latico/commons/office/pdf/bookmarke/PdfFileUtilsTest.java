@@ -366,5 +366,13 @@ public class PdfFileUtilsTest {
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test45() throws Exception {
+        int addNum = -1;
+        String dir = "bookmarke/src/";
+        String file = dir + "Netty实战.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }

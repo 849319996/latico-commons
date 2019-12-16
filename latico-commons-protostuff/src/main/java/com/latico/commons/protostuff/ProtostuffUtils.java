@@ -56,7 +56,29 @@ public class ProtostuffUtils {
         }
     }
 
+    /**
+     * @param data
+     * @param cls
+     * @param <T>
+     * @return
+     * @throws UnsupportedEncodingException
+     */
     public static <T> T deserializeFromString(String data, Class<T> cls) throws UnsupportedEncodingException {
+        Schema<T> schema = getSchema(cls);
+        T message = schema.newMessage();
+        ProtobufIOUtil.mergeFrom(data.getBytes("ISO8859-1"), message, schema);
+        return message;
+    }
+
+    /**
+     * 反序列化
+     * @param data
+     * @param cls
+     * @param <T>
+     * @return
+     * @throws UnsupportedEncodingException
+     */
+    public static <T> T deserializeFromStringByObjenesis(String data, Class<T> cls) throws UnsupportedEncodingException {
         T message = ObjenesisUtils.createObject(cls);
         Schema<T> schema = getSchema(cls);
         ProtobufIOUtil.mergeFrom(data.getBytes("ISO8859-1"), message, schema);
@@ -76,7 +98,28 @@ public class ProtostuffUtils {
         }
     }
 
+    /**
+     * 反序列化
+     * @param data
+     * @param cls
+     * @param <T>
+     * @return
+     */
     public static <T> T deserializeFromByte(byte[] data, Class<T> cls) {
+        Schema<T> schema = getSchema(cls);
+        T obj = schema.newMessage();
+        ProtobufIOUtil.mergeFrom(data, obj, schema);
+        return obj;
+    }
+
+    /**
+     * 反序列化
+     * @param data
+     * @param cls
+     * @param <T>
+     * @return
+     */
+    public static <T> T deserializeFromByteByObjenesis(byte[] data, Class<T> cls) {
         T obj = ObjenesisUtils.createObject(cls);
         Schema<T> schema = getSchema(cls);
         ProtobufIOUtil.mergeFrom(data, obj, schema);

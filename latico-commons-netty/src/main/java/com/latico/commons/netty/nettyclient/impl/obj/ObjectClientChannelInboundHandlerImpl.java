@@ -7,6 +7,8 @@ import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
+import java.io.Serializable;
+
 /**
  * <PRE>
  *
@@ -17,7 +19,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * @Version: 1.0
  */
 @ChannelHandler.Sharable
-public class ObjectClientChannelInboundHandlerImpl extends SimpleChannelInboundHandler<String> {
+public class ObjectClientChannelInboundHandlerImpl extends SimpleChannelInboundHandler<Serializable> {
 
     private static final Logger LOG = LoggerFactory.getLogger(ObjectClientChannelInboundHandlerImpl.class);
     private NettyClient nettyClient;
@@ -27,7 +29,7 @@ public class ObjectClientChannelInboundHandlerImpl extends SimpleChannelInboundH
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, String msg) {
+    protected void channelRead0(ChannelHandlerContext ctx, Serializable msg) {
         LOG.debug("收到数据:{}", msg);
 
         //如果业务直接在这个方法处理的话，那么这里也可以不加入队列让外界处理

@@ -7,6 +7,8 @@ import com.latico.commons.netty.nettyclient.AbstractNettyClient;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.SimpleChannelInboundHandler;
 
+import java.io.Serializable;
+
 /**
  * <PRE>
  * 报文最大长度控制，分隔符列表
@@ -17,7 +19,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * @Date: 2019-12-05 14:26
  * @Version: 1.0
  */
-public class ObjectNettyClientImpl extends AbstractNettyClient<Object> {
+public class ObjectNettyClientImpl extends AbstractNettyClient<Serializable> {
     private static final Logger LOG = LoggerFactory.getLogger(ObjectNettyClientImpl.class);
 
     @Override

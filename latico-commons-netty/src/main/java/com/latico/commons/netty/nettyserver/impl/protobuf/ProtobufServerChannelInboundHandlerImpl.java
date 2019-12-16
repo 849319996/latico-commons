@@ -1,4 +1,4 @@
-package com.latico.commons.netty.nettyserver.impl.obj;
+package com.latico.commons.netty.nettyserver.impl.protobuf;
 
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
@@ -22,13 +22,13 @@ import java.io.Serializable;
  * @Version: 1.0
  */
 @ChannelHandler.Sharable
-public class ObjectServerChannelInboundHandlerImpl extends SimpleChannelInboundHandler<Serializable> {
+public class ProtobufServerChannelInboundHandlerImpl extends SimpleChannelInboundHandler<Serializable> {
 
-    private static final Logger LOG = LoggerFactory.getLogger(ObjectServerChannelInboundHandlerImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ProtobufServerChannelInboundHandlerImpl.class);
     private ChannelGroup channelGroup;
     private NettyServer nettyServer;
 
-    public ObjectServerChannelInboundHandlerImpl(NettyServer nettyServer) {
+    public ProtobufServerChannelInboundHandlerImpl(NettyServer nettyServer) {
         this.channelGroup = nettyServer.getClientChannelGroup();
         this.nettyServer = nettyServer;
     }

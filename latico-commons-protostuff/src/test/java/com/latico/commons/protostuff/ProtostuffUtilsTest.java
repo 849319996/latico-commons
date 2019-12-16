@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import java.io.UnsupportedEncodingException;
 
-import static org.junit.Assert.*;
-
 public class ProtostuffUtilsTest {
 
     @Test
@@ -50,7 +48,7 @@ public class ProtostuffUtilsTest {
         user.setNameCn("小明");
 
         byte[] bytes = ProtostuffUtils.serializeToByte(user);
-        User user1 = ProtostuffUtils.deserializeFromByte(bytes, User.class);
+        User user1 = ProtostuffUtils.deserializeFromByteByObjenesis(bytes, User.class);
         System.out.println(user1);
     }
 }
