@@ -490,13 +490,12 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
     public static List<InetAddress> getAllPhysicsInetAddress() {
         List<InetAddress> inetAddresses = new ArrayList<>();
         try {
-            Pattern pat = Pattern.compile("(?i)VMware.*|(?i).*loopback.*|(?i).* Virtual .*|169\\..*");
+            String netcardRegex = "(?i)VMware.*|(?i).*loopback.*|(?i).* Virtual .*|169\\..*";
             Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
             while (en.hasMoreElements()) {
                 NetworkInterface intf = en.nextElement();
 
-                Matcher matcher = pat.matcher(intf.getDisplayName());
-                if(matcher.find()){
+                if (intf.getDisplayName().matches(netcardRegex)) {
                     continue;
                 }
                 Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses();
