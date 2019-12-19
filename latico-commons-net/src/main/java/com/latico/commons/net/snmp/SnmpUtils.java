@@ -29,10 +29,20 @@ public class SnmpUtils {
             return true;
         }
 
-        if (str.indexOf("No Such") < 0 && str.indexOf("noSuchInstance") < 0) {
+        if (str.indexOf("No Such") >= 0 || str.indexOf("noSuchInstance") >= 0) {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 是不是空的结果
+     *
+     * @param obj
+     * @return
+     */
+    public static boolean isNull(Object obj) {
+        return isNullResult(obj);
     }
 
     /**
@@ -42,6 +52,10 @@ public class SnmpUtils {
      * @return
      */
     public static boolean isNotNullResult(Object obj) {
+        return !isNullResult(obj);
+    }
+
+    public static boolean isNotNull(Object obj) {
         return !isNullResult(obj);
     }
 
