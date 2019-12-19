@@ -337,4 +337,29 @@ public abstract class AbstractSnmpClient implements SnmpClient {
 			return new SnmpTable();
 		}
 	}
+
+	@Override
+	public String getIp() {
+		return ip;
+	}
+
+	@Override
+	public int getPort() {
+		return getPort;
+	}
+
+	@Override
+	public String getReadCommunity() {
+		return readCommunity;
+	}
+
+	@Override
+	public String getWriteCommunity() {
+		return writeCommunity;
+	}
+
+	@Override
+	public VersionEnum getVersionEnum() {
+		return version;
+	}
 }

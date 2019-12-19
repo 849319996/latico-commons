@@ -374,5 +374,13 @@ public class PdfFileUtilsTest {
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test46() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "Java 8实战.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }
