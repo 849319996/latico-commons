@@ -490,7 +490,7 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
     public static List<InetAddress> getAllPhysicsInetAddress() {
         List<InetAddress> inetAddresses = new ArrayList<>();
         try {
-            String netcardRegex = "(?i)VMware.*|(?i).*loopback.*|(?i).* Virtual .*|169\\..*";
+            String netcardRegex = "(?i)VMware.*|(?i).*loopback.*|(?i).* Virtual .*|169\\..*|(?i)vir.*";
             Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
             while (en.hasMoreElements()) {
                 NetworkInterface intf = en.nextElement();
@@ -512,4 +512,5 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
 
         return inetAddresses;
     }
+
 }

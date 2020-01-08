@@ -27,7 +27,7 @@ import java.io.ObjectInputStream;
  * @author    EXP: 272629724@qq.com
  * @since     jdk版本：jdk1.6
  */
-public class SerialFlowReader extends _SerialFlow {
+public class SerialFlowReader extends SerialFlow {
 	/** LOG 日志工具 */
 	private static final Logger LOG = LoggerFactory.getLogger(SerialFlowReader.class);
 	/** 序列化文件 */

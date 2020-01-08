@@ -23,8 +23,15 @@ public class ThreadUtils extends org.apache.commons.lang3.ThreadUtils {
 	 * 主线程名称
 	 */
 	static final String MAIN_TH_NAME = "main";
-	/** 私有化构造函数 */
-	protected ThreadUtils() {}
+
+	/**
+	 * 获取最合适的线程数量
+	 * 处理器的数量减一，因为当前的线程占用了一个处理器，所以开线程池最好是处理器减一
+	 * @return
+	 */
+	public static int getBestThreadSize() {
+		return Runtime.getRuntime().availableProcessors() - 1;
+	}
 
 	public static ThreadGroup getMainThreadGroup() {
 		ThreadGroup threadGroup = Thread.currentThread().getThreadGroup();

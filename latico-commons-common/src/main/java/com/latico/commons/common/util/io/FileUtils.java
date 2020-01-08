@@ -842,14 +842,14 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
 		if(StringUtils.isNotBlank(ext)) {
 			Integer headLen = HEAD_LENS.get(ext);
 			if(headLen != null) {
-				String header = _getHeader(file, headLen.intValue());
-				fileType = _toFileType(header, ext);
+				String header = getHeader(file, headLen.intValue());
+				fileType = toFileType(header, ext);
 			}
 		}
 		
 		// 基于文件后缀ext与文件头header是不匹配的前提下, 通过文件头猜测文件类型
 		if(fileType == FileType.UNKNOW) {
-			String fileHeader = _getHeader(file, MAX_HEAD_LEN);
+			String fileHeader = getHeader(file, MAX_HEAD_LEN);
 			Iterator<String> headers = FILE_TYPES.keySet().iterator();
 			while(headers.hasNext()) {
 				String header = headers.next();
@@ -876,7 +876,7 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
 	 * @param ext 含.的文件后缀
 	 * @return 文件类型对象
 	 */
-	private static FileType _toFileType(String header, String ext) {
+	private static FileType toFileType(String header, String ext) {
 		FileType fileType = null;
 		if(StringUtils.isNoneBlank(header, ext)) {
 			header = header.trim().toUpperCase();
@@ -898,7 +898,7 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
 	 * @param headLen 文件头信息长度
 	 * @return 文件头信息
 	 */
-	private static String _getHeader(File file, int headLen) throws IOException {
+	private static String getHeader(File file, int headLen) throws IOException {
 		String header = "";
 		if(headLen <= 0) {
 			return header;
@@ -969,14 +969,14 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
 		if(dir != null) {
 			if(dir.exists()) {
 				if(dir.isFile()) {
-					if(_match(dir, extension)) {
+					if(match(dir, extension)) {
 						list.add(dir);
 					}
 					
 				} else {
 					File[] files = dir.listFiles();
 					for(File file : files) {
-						if(_match(file, extension)) {
+						if(match(file, extension)) {
 							list.add(file);
 						}
 					}
@@ -992,7 +992,7 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
 	 * @param extension 后缀
 	 * @return true:匹配; false:不匹配
 	 */
-	private static boolean _match(File file, String extension) {
+	private static boolean match(File file, String extension) {
 		return (StringUtils.isEmpty(extension) ||
 				file.getName().toLowerCase().endsWith(extension.toLowerCase()));
 	}

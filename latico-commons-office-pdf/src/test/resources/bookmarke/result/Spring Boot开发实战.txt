@@ -1,0 +1,249 @@
+目录	11
+前 言	8
+第Ⅰ部分 Spring Boot框架基础	17
+第1章　Spring Boot简介	18
+	1.1　从Spring到Spring Boot	18
+		1.1.1　从EJB到Spring	19
+		1.1.2　Spring框架发展简史	20
+		1.1.3　Spring框架的核心模块	21
+	1.2　Spring Boot简介	23
+		1.2.1　Spring Boot是什么	23
+		1.2.2　Spring Boot核心模块	26
+	1.3　约定优于配置极简化理念	27
+	1.4　本章小结	28
+第2章　快速开始HelloWorld	29
+	2.1　创建Spring Boot项目	29
+	2.2　Spring Boot项目的入口类	32
+	2.3　添加HelloWorldController	34
+	2.4　Spring Boot应用注解@Spring BootApplication	35
+		2.4.1　Spring Boot配置类注解	36
+		2.4.2　启用自动配置注解	37
+		2.4.3　组件扫描注解	37
+	2.5　XML配置与注解配置	38
+	2.6　本章小结	38
+第3章　深入理解Spring Boot自动配置	39
+	3.1　传统的SSM开发过程	39
+	3.2　Spring Boot自动配置原理	42
+		3.2.1　Java配置	42
+		3.2.2　条件化Bean	43
+		3.2.3　组合注解	48
+	3.3　Spring Boot自动配置过程	49
+		3.3.1　@EnableAutoConfiguration注解	49
+		3.3.2　spring.factories文件	50
+		3.3.3　获取候选配置类	51
+	3.4　FreeMarkerAutoConfiguration实例分析	51
+		3.4.1　spring-boot-starter-freemarker工程	51
+		3.4.2　spring-boot-autoconfigure工程	53
+	3.5　本章小结	55
+第Ⅱ部分 Spring Boot项目综合实战	56
+第4章　Spring Boot集成MyBatis数据库层开发	57
+	4.1　Java EE分层架构	57
+	4.2　MyBatis简介	58
+		4.2.1　概述	58
+		4.2.2　MyBatis框架组成	59
+		4.2.3　MyBatis基础设施	61
+	4.3　项目实战	69
+		4.3.1　使用Spring Boot CLI创建工程	69
+		4.3.2　Spring Boot命令行CLI简介	69
+		4.3.3　配置application.properties	73
+		4.3.4　使用IDEA中自带的连接数据库客户端	74
+		4.3.5　使用MyBatis Generator生成dao层代码	75
+		4.3.6　设置MyBatis同时使用Mapper.xml和注解	77
+		4.3.7　使用@Select注解	77
+		4.3.8　使用MyBatis分页插件pagehelper	78
+		4.3.9　MyBatis插件机制	79
+		4.3.10　实现分页接口	79
+		4.3.11　PageHelper工作原理	82
+		4.3.12　多表关联查询级联	89
+	4.4　本章小结	93
+第5章　Spring Boot集成JPA数据库层开发	94
+	5.1　JPA简介	94
+		5.1.1　JPA生态	96
+		5.1.2　JPA技术栈	97
+	5.2　ORM框架概述	98
+	5.3　Hibernate简介	98
+	5.4　Spring Data JPA简介	103
+	5.5　项目实战	105
+		5.5.1　Spring Data JPA提供的接口	105
+		5.5.2　创建项目	106
+		5.5.3　配置数据库连接	106
+		5.5.4　自动生成Entity实体类代码	106
+		5.5.5　配置项目数据源信息	110
+		5.5.6　实现查询接口	111
+		5.5.7　分页查询	112
+		5.5.8　多表级联查询	114
+		5.5.9　级联类型	116
+		5.5.10　模糊搜索接口	117
+		5.5.11　JPQL语法基础	118
+		5.5.12　JPA常用注解	123
+	5.6　本章小结	124
+第6章　Spring Boot Gradle插件应用开发	125
+	6.1　Gradle简介	125
+	6.2　用Gradle构建生命周期	127
+	6.3　Gradle 插件	129
+	6.4　项目实战	133
+		6.4.1　创建项目	133
+		6.4.2　添加依赖	136
+		6.4.3　配置上传本地Maven仓库	136
+		6.4.4　实现插件	137
+		6.4.5　添加插件属性配置	139
+		6.4.6　运行测试	139
+		6.4.7　在项目中使用kor插件	141
+	6.5　本章小结	143
+第7章　使用Spring MVC开发Web应用	144
+	7.1　Spring MVC简介	144
+		7.1.1　Servlet概述	144
+		7.1.2　MVC简介	146
+		7.1.3　Spring、Spring MVC与Spring Boot 2.0	147
+		7.1.4　Spring MVC框架	148
+	7.2　Spring MVC常用注解	151
+	7.3　项目实战：使用FreeMarker模板引擎	152
+		7.3.1　FreeMarker简介	152
+		7.3.2　实现一个分页查询页面	153
+	7.4　实现文件下载	159
+	7.5　本章小结	160
+第8章　Spring Boot自定义Web MVC配置	161
+	8.1　Web MVC配置简介	161
+		8.1.1　静态资源配置	162
+		8.1.2　拦截器配置	163
+		8.1.3　跨域配置	163
+		8.1.4　视图控制器配置	164
+		8.1.5　消息转换器配置	165
+		8.1.6　数据格式化器配置	165
+		8.1.7　视图解析器配置	166
+	8.2　全局异常处理	167
+		8.2.1　使用@ControllerAdvice和@ExceptionHandler注解	167
+		8.2.2　实现HandlerExceptionResolver接口	169
+	8.3　定制Web容器	172
+	8.4　定制Spring Boot应用程序启动Banner	173
+	8.5　自定义注册Servlet、Filter和Listener	176
+		8.5.1　注册Servlet	176
+		8.5.2　注册Filter	178
+		8.5.3　注册Listener	183
+	8.6　本章小结	184
+第9章　Spring Boot中的AOP编程	185
+	9.1　Spring Boot与AOP	185
+		9.1.1　AOP简介	185
+		9.1.2　Spring AOP介绍	187
+		9.1.3　实现一个简单的日志切面	187
+	9.2　项目实战：使用AOP + Filter实现登录鉴权与权限控制	190
+		9.2.1　系统整体架构	190
+		9.2.2　创建工程	191
+		9.2.3　数据库表结构设计	192
+		9.2.4　用户登录逻辑	194
+		9.2.5　登录态鉴权过滤器	196
+		9.2.6　AOP实现用户权限管理	200
+		9.2.7　用户注册	202
+		9.2.8　数据后端校验	203
+	9.3　本章小结	207
+第10章　Spring Boot集成Spring Security安全开发	208
+	10.1　Spring Security简介	208
+	10.2　Spring Security核心组件	209
+	10.3　项目实战	216
+		10.3.1　初阶Security：默认认证用户名密码	216
+		10.3.2　中阶Security：内存用户名密码认证	219
+		10.3.3　角色权限控制	221
+		10.3.4　进阶Security：基于数据库的用户和角色权限	226
+	10.4　本章小结	240
+第11章　Spring Boot集成React.js开发前后端分离项目	241
+	11.1　Web前端技术简史	241
+	11.2　前后端分离架构	243
+	11.3　项目实战	244
+		11.3.1　系统功能介绍	244
+		11.3.2　实现登录后端接口	245
+		11.3.3　实现登录前端页面	246
+		11.3.4　实现列表展示后端接口	247
+		11.3.5　前后端联调测试	248
+	11.4　本章小结	250
+第12章　任务调度与邮件服务开发	251
+	12.1　定时任务	251
+		12.1.1　通用实现方法	251
+		12.1.2　静态定时任务	252
+		12.1.3　Cron简介	253
+		12.1.4　动态定时任务	255
+		12.1.5　多线程执行任务	258
+	12.2　开发任务调度服务	260
+		12.2.1　同步与异步	260
+		12.2.2　同步任务执行	260
+		12.2.3　异步任务执行	262
+	12.3　开发邮件服务	265
+		12.3.1　发送富文本邮件	267
+		12.3.2　发送带附件的富文本邮件	268
+	12.4　本章小结	269
+第13章　Spring Boot集成WebFlux开发响应式Web应用	270
+	13.1　响应式宣言及架构	270
+	13.2　项目实战	271
+		13.2.1　创建项目	271
+		13.2.2　代码分析	273
+	13.3　本章小结	277
+第14章　Spring Boot缓存	278
+	14.1　Spring Cache简介	278
+	14.2　Cache注解	279
+	14.3　项目实战	281
+	14.4　本章小结	287
+第15章　使用Spring Session集成Redis实现Session共享	288
+	15.1　Spring Session简介	288
+	15.2　Redis简介	290
+		15.2.1　Redis是什么	290
+		15.2.2　安装Redis	290
+		15.2.3　设置Redis密码	291
+		15.2.4　Redis数据类型	292
+		15.2.5　Spring Boot集成Redis	294
+	15.3　项目实战	296
+	15.4　本章小结	300
+第16章　使用Zuul开发API Gateway	301
+	16.1　API Gateway简介	301
+	16.2　Zuul简介	302
+	16.3　项目实战	305
+	16.4　本章小结	309
+第17章　Spring Boot日志	310
+	17.1　Logback简介	310
+	17.2　配置logback日志	311
+	17.3　logback.groovy配置文件	313
+		17.3.1　显示系统Log级别	313
+		17.3.2　使用logback.groovy配置	314
+		17.3.3　配置文件说明	316
+	17.4　本章小结	321
+第Ⅲ部分 Spring Boot系统监控、测试与运维	322
+第18章　Spring Boot应用的监控：Actuator与Admin	323
+	18.1　Actuator简介	323
+	18.2　启用Actuator	324
+	18.3　揭秘端点	326
+		18.3.1　常用的Actuator端点	326
+		18.3.2　启用和禁用端点	332
+	18.4　自定义Actuator端点	333
+		18.4.1　Endpoint接口	334
+		18.4.2　实现Endpoint接口	335
+		18.4.3　继承AbstractEndpoint抽象类	336
+		18.4.4　实现健康指标接口HealthIndicator	338
+		18.4.5　实现度量指标接口PublicMetrics	339
+		18.4.6　统计方法执行数据	343
+	18.5　使用Admin	346
+		18.5.1　Admin简介	346
+		18.5.2　创建Admin Server项目	349
+		18.5.3　在客户端使用Admin Server	350
+	18.6　本章小结	354
+第19章　Spring Boot应用的测试	355
+	19.1　准备工作	355
+	19.2　分层测试	355
+		19.2.1　dao层测试	356
+		19.2.2　service层测试	357
+		19.2.3　使用Mockito测试service层代码	357
+		19.2.4　controller层测试	359
+		19.2.5　JSON接口测试	361
+	19.3　本章小结	362
+第20章　Spring Boot应用Docker化	363
+	20.1　Spring Boot应用打包	363
+	20.2　Spring Boot应用运维	367
+		20.2.1　查看JVM参数的值	367
+		20.2.2　应用重启	368
+	20.3　使用Docker构建部署运行Spring Boot应用	368
+		20.3.1　Docker简介	369
+		20.3.2　环境搭建	370
+	20.4　项目实战	371
+		20.4.1　添加Docker构建插件	371
+		20.4.2　配置Dockerfile文件创建自定义的镜像	372
+		20.4.3　Dockerfile配置说明	373
+		20.4.4　构建镜像	377
+		20.4.5　运行测试	378
+	20.5　本章小结	379

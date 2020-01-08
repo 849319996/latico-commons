@@ -26,24 +26,54 @@ import java.util.Map;
 
 /**
  * <PRE>
- *
+ * 建议创建完ES客户端后，使用单例进行连接持有，因为创建客户端的过程比较耗时
  * </PRE>
  *
  * @Author: latico
  * @Date: 2019-03-21 17:04
  * @Version: 1.0
  */
-public class Elastic6ClientUtils {
-    private static final Logger LOG = LoggerFactory.getLogger(Elastic6ClientUtils.class);
+public class Es6Utils {
+    private static final Logger LOG = LoggerFactory.getLogger(Es6Utils.class);
 
+    /**
+     * 集群名字的配置key
+     */
+    private static final String cluster_name = "cluster.name";
+    /**
+     * 自动嗅探的配置key
+     */
+    private static final String client_transport_sniff = "client.transport.sniff";
+
+    /**
+     * 不需要指定ES的IP和端口，通过自动嗅探的方式进行连接，
+     * 这需要把客户端项目放到跟es服务端在同一个子网下，
+     *
+     * ip问题
+     * 当ES服务器监听使用内网服务器IP而访问使用外网IP时，不要使用client.transport.sniff为true，在自动发现时会使用内网IP进行通信，导致无法连接到ES服务器，而直接使用addTransportAddress方法进行指定ES服务器。
+     *
+     * 版本问题
+     * 使用的elasticsearch 5.4.0版本，API使用的5.2.1，client.transport.sniff = true ，连接和查询正常
+     * 使用的elasticsearch 5.4.0版本，API使用的5.4.0，client.transport.sniff = true ，查询时报出异常
+     * @param clusterName
+     * @return
+     * @throws Exception
+     */
+    public static TransportClient createClientByAutoSniff(String clusterName) throws Exception {
+        Settings settings = Settings.builder().put(cluster_name, clusterName)
+                .put(client_transport_sniff, "true").build();
+        TransportClient client = new PreBuiltTransportClient(settings);
+        return client;
+    }
     /**
      * elasticsearch服务器的默认集群名字是elasticsearch，客户端连接端口默认是9300
      * @return
      */
-    public static TransportClient getClientLocalDefault() throws Exception {
-        Settings settings = Settings.builder().put("cluster.name", "elasticsearch").build();
+    public static TransportClient createClientLocalDefault() throws Exception {
+        Settings settings = Settings.builder().put(cluster_name, "elasticsearch").build();
         TransportClient client = new PreBuiltTransportClient(settings);
-        TransportAddress transportAddress = new TransportAddress(InetAddress.getByName("localhost"), 9300);
+        TransportAddress transportAddress =
+                new TransportAddress(InetAddress.getByName("localhost"), 9300);
         client.addTransportAddress(transportAddress);
         return client;
     }
@@ -52,10 +82,11 @@ public class Elastic6ClientUtils {
      * @param clusterName 集群名称
      * @return
      */
-    public static TransportClient getClientLocal(String clusterName) throws Exception {
-        Settings settings = Settings.builder().put("cluster.name", clusterName).build();
+    public static TransportClient createClientLocal(String clusterName) throws Exception {
+        Settings settings = Settings.builder().put(cluster_name, clusterName).build();
         TransportClient client = new PreBuiltTransportClient(settings);
-        TransportAddress transportAddress = new TransportAddress(InetAddress.getByName("localhost"), 9300);
+        TransportAddress transportAddress =
+                new TransportAddress(InetAddress.getByName("localhost"), 9300);
         client.addTransportAddress(transportAddress);
         return client;
     }
@@ -65,11 +96,12 @@ public class Elastic6ClientUtils {
      * @param hostInfos   主机信息，如果集群有多台机器，那么都传进来，key是主机名或者ID，value是端口
      * @return
      */
-    public static TransportClient getClient(String clusterName, Map<String, Integer> hostInfos) throws Exception {
-        Settings settings = Settings.builder().put("cluster.name", clusterName).build();
+    public static TransportClient createClient(String clusterName, Map<String, Integer> hostInfos) throws Exception {
+        Settings settings = Settings.builder().put(cluster_name, clusterName).build();
         TransportClient client = new PreBuiltTransportClient(settings);
         for (Map.Entry<String, Integer> entry : hostInfos.entrySet()) {
-            TransportAddress transportAddress = new TransportAddress(InetAddress.getByName(entry.getKey()), entry.getValue());
+            TransportAddress transportAddress =
+                    new TransportAddress(InetAddress.getByName(entry.getKey()), entry.getValue());
             client.addTransportAddress(transportAddress);
         }
         return client;

@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Elastic6ClientUtilsTest {
+public class Es6UtilsTest {
 
     @Test
     public void getClient() {
@@ -41,13 +41,13 @@ public class Elastic6ClientUtilsTest {
         source2.put("age", 17);
         TransportClient client = null;
         try {
-            client = Elastic6ClientUtils.getClientLocalDefault();
-            IndexResponse indexResponse = Elastic6ClientUtils.addOneToIndexAutoId(client, "test", "map", source, source2);
+            client = Es6Utils.createClientLocalDefault();
+            IndexResponse indexResponse = Es6Utils.addOneToIndexAutoId(client, "test", "map", source, source2);
             System.out.println(indexResponse);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            Elastic6ClientUtils.close(client);
+            Es6Utils.close(client);
         }
     }
 
@@ -63,13 +63,13 @@ public class Elastic6ClientUtilsTest {
     public void createIndex() {
         TransportClient client = null;
         try {
-            client = Elastic6ClientUtils.getClientLocalDefault();
-            boolean test = Elastic6ClientUtils.createIndex(client, "test", "map", 5, 1, 10);
+            client = Es6Utils.createClientLocalDefault();
+            boolean test = Es6Utils.createIndex(client, "test", "map", 5, 1, 10);
             System.out.println(test);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            Elastic6ClientUtils.close(client);
+            Es6Utils.close(client);
         }
     }
 
@@ -101,13 +101,13 @@ public class Elastic6ClientUtilsTest {
 
         TransportClient client = null;
         try {
-            client = Elastic6ClientUtils.getClientLocalDefault();
-            IndexResponse indexResponse = Elastic6ClientUtils.addOneJsonToIndex(client, "test", "map", "source3", json);
+            client = Es6Utils.createClientLocalDefault();
+            IndexResponse indexResponse = Es6Utils.addOneJsonToIndex(client, "test", "map", "source3", json);
             System.out.println(indexResponse);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            Elastic6ClientUtils.close(client);
+            Es6Utils.close(client);
         }
     }
     @Test
@@ -124,13 +124,13 @@ public class Elastic6ClientUtilsTest {
 
         TransportClient client = null;
         try {
-            client = Elastic6ClientUtils.getClientLocalDefault();
-            IndexResponse indexResponse = Elastic6ClientUtils.addOneMapToIndex(client, "test", "map", "source4", source4);
+            client = Es6Utils.createClientLocalDefault();
+            IndexResponse indexResponse = Es6Utils.addOneMapToIndex(client, "test", "map", "source4", source4);
             System.out.println(indexResponse);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            Elastic6ClientUtils.close(client);
+            Es6Utils.close(client);
         }
     }
 
@@ -148,13 +148,13 @@ public class Elastic6ClientUtilsTest {
 
         TransportClient client = null;
         try {
-            client = Elastic6ClientUtils.getClientLocalDefault();
-            UpdateResponse indexResponse = Elastic6ClientUtils.updateById(client, "test", "map", "source4", source4);
+            client = Es6Utils.createClientLocalDefault();
+            UpdateResponse indexResponse = Es6Utils.updateById(client, "test", "map", "source4", source4);
             System.out.println(indexResponse);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            Elastic6ClientUtils.close(client);
+            Es6Utils.close(client);
         }
     }
 
@@ -162,13 +162,13 @@ public class Elastic6ClientUtilsTest {
     public void deleteById() {
         TransportClient client = null;
         try {
-            client = Elastic6ClientUtils.getClientLocalDefault();
-            boolean indexResponse = Elastic6ClientUtils.deleteById(client, "test", "map", "source4");
+            client = Es6Utils.createClientLocalDefault();
+            boolean indexResponse = Es6Utils.deleteById(client, "test", "map", "source4");
             System.out.println(indexResponse);
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            Elastic6ClientUtils.close(client);
+            Es6Utils.close(client);
         }
     }
 }

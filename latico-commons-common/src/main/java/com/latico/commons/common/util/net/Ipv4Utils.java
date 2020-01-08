@@ -21,6 +21,7 @@ package com.latico.commons.common.util.net;
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import com.latico.commons.common.util.string.StringUtils;
+import sun.net.util.IPAddressUtil;
 
 import java.net.Inet4Address;
 import java.net.InetAddress;
@@ -132,6 +133,13 @@ public class Ipv4Utils {
      */
     private static final String IPV4_REGEX = "((\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(\\.(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3})";
 //    public static final String IPV4_REGEX = "\\d+\\.\\d+\\.\\d+\\.\\d+";
+
+    /**
+     * 是不是有效的IPV4地址
+     */
+    public boolean isIPv4LiteralAddress(String ipStr){
+        return IPAddressUtil.isIPv4LiteralAddress(ipStr);
+    }
 
     /**
      * Converts 32 bits int to IPv4 <tt>InetAddress</tt>.

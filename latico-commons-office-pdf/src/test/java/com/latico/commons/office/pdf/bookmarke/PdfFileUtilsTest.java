@@ -382,5 +382,62 @@ public class PdfFileUtilsTest {
         BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test47() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "Spring Data JPA从入门到精通.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test48() throws Exception {
+        int addNum = 20;
+        String dir = "bookmarke/src/";
+        String file = dir + "微服务架构实战-张锋.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+
+    @Test
+    public void test49() throws Exception {
+        int addNum = 14;
+        String dir = "bookmarke/src/";
+        String file = dir + "HBase企业应用开发实战.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test50() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "深入理解Java虚拟机 JVM高级特性与最佳实践.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test51() throws Exception {
+        int addNum = 13;
+        String dir = "bookmarke/src/";
+        String file = dir + "ELK Stack权威指南  第2版.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test52() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "Spring Boot开发实战.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test53() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "Flume日志收集与MapReduce模式.txt";
+        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }

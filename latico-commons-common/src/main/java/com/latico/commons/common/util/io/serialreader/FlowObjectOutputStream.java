@@ -18,10 +18,10 @@ import java.io.*;
  * @author    EXP: 272629724@qq.com
  * @since     jdk版本：jdk1.6
  */
-final class _FlowObjectOutputStream {
+final class FlowObjectOutputStream {
 
 	/** LOG 日志工具 */
-	private static final Logger LOG = LoggerFactory.getLogger(_FlowObjectOutputStream.class);
+	private static final Logger LOG = LoggerFactory.getLogger(FlowObjectOutputStream.class);
 	
 	private File file;
 	
@@ -31,7 +31,7 @@ final class _FlowObjectOutputStream {
 	
 	private boolean closed;
 	
-	protected _FlowObjectOutputStream(File file, boolean append) {
+	protected FlowObjectOutputStream(File file, boolean append) {
 		this.file = file;
 		this.append = append;
 		try {

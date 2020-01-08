@@ -28,13 +28,13 @@ import java.io.Serializable;
  * @author    EXP: 272629724@qq.com
  * @since     jdk版本：jdk1.6
  */
-public class SerialFlowWriter extends _SerialFlow {
+public class SerialFlowWriter extends SerialFlow {
 
 	/** 序列化文件 */
 	private File file;
 	
 	/** 序列化输出流 */
-	private _FlowObjectOutputStream foos;
+	private FlowObjectOutputStream foos;
 	
 	/**
 	 * <PRE>
@@ -108,7 +108,7 @@ public class SerialFlowWriter extends _SerialFlow {
 	private void init(File file, boolean append) {
 		this.file = (file == null ? new File(DEFAULT_FILEPATH) : file);
 		this.file.getParentFile().mkdirs();
-		this.foos = new _FlowObjectOutputStream(this.file, append);
+		this.foos = new FlowObjectOutputStream(this.file, append);
 	}
 	
 	/**

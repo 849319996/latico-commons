@@ -12,13 +12,13 @@
         <blockWhenExhausted caption="连接耗尽的时候，是否阻塞，false会抛出异常，true阻塞直到超时。默认为true。">true</blockWhenExhausted>
         <password caption="授权密码，假如redis配置了密码的时候用到"></password>
 
-        <clusterName caption="哨兵用到，主节点名字">master</clusterName>
+        <masterName caption="哨兵用到，主节点名字">master</masterName>
         <database caption="哨兵用到，数据库ID">0</database>
         <clientName caption="哨兵用到，客户端名称"></clientName>
         <maxAttempts caption="最大尝试次数">3</maxAttempts>
     </JedisPoolConfig>
 
-    <HostAndPorts caption="主机和端口，可以多个，socket字符串">
+    <HostAndPorts caption="主机和端口，可以多个，socket字符串,如果是哨兵，就是哨兵的IP和端口">
         <HostAndPort></HostAndPort>
     </HostAndPorts>
 </config>

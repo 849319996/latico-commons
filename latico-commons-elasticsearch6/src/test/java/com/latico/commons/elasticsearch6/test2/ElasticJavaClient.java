@@ -1,6 +1,6 @@
 package com.latico.commons.elasticsearch6.test2;
 
-import com.latico.commons.elasticsearch6.Elastic6ClientUtils;
+import com.latico.commons.elasticsearch6.Es6Utils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
@@ -22,7 +22,7 @@ import java.util.*;
 public class ElasticJavaClient {
 
     public TransportClient getClient() throws Exception {
-        return Elastic6ClientUtils.getClientLocalDefault();
+        return Es6Utils.createClientLocalDefault();
     }
     /**
      * 创建索引
@@ -167,7 +167,7 @@ public class ElasticJavaClient {
     @Test
     public void deleteIndex() throws Exception {
         TransportClient client = getClient();
-        System.out.println(Elastic6ClientUtils.deleteIndex(client, "product"));
+        System.out.println(Es6Utils.deleteIndex(client, "product"));
     }
 
     /**
