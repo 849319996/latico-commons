@@ -1,9 +1,10 @@
-package com.latico.commons.zookeeper.client;
+package com.latico.commons.zookeeper.zkclient;
 
 import com.latico.commons.common.util.logging.Logger;
 import com.latico.commons.common.util.logging.LoggerFactory;
 import com.latico.commons.common.util.thread.ThreadUtils;
 import com.latico.commons.zookeeper.ZookeeperUtils;
+import com.latico.commons.zookeeper.client.zookeeper.ZookeeperClient;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;

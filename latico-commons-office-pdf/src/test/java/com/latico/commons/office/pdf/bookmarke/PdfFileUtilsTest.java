@@ -12,7 +12,7 @@ public class PdfFileUtilsTest {
         int addNum = 19;
         String dir = "bookmarke/src/";
         String file = dir + "test.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     /**
      * 增加页码
@@ -22,14 +22,14 @@ public class PdfFileUtilsTest {
         int addNum = 19;
         String dir = "bookmarke/src/";
         String file = dir + "hadoop实战第二版目录书签.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     @Test
     public void test2() throws Exception {
         int addNum = 19;
         String dir = "bookmarke/src/";
         String file = dir + "精通Hadoop目录书签.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class PdfFileUtilsTest {
         int addNum = 19;
         String dir = "bookmarke/src/";
         String file = dir + "test2.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
 
@@ -46,7 +46,7 @@ public class PdfFileUtilsTest {
         int addNum = 15;
         String dir = "bookmarke/src/";
         String file = dir + "深入理解hadoop第二版.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class PdfFileUtilsTest {
         int addNum = 14;
         String dir = "bookmarke/src/";
         String file = dir + "Java性能优化权威指南.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
 
@@ -63,7 +63,7 @@ public class PdfFileUtilsTest {
         int addNum = 21;
         String dir = "bookmarke/src/";
         String file = dir + "Java软件结构与数据结构（第4版）.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class PdfFileUtilsTest {
         int addNum = 18;
         String dir = "bookmarke/src/";
         String file = dir + "深入理解Elasticsearch（原书第2版）.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -79,7 +79,7 @@ public class PdfFileUtilsTest {
         int addNum = 19;
         String dir = "bookmarke/src/";
         String file = dir + "Kafka权威指南.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -87,7 +87,7 @@ public class PdfFileUtilsTest {
         int addNum = 13;
         String dir = "bookmarke/src/";
         String file = dir + "MyBatis技术内幕.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -95,7 +95,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "深入浅出Netty.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
 
@@ -104,7 +104,7 @@ public class PdfFileUtilsTest {
         int addNum = 22;
         String dir = "bookmarke/src/";
         String file = dir + "[实战Nginx 取代Apache的高性能Web服务器].张宴.扫描版.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -112,7 +112,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "Hadoop实战第2版-陆嘉恒.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -120,7 +120,7 @@ public class PdfFileUtilsTest {
         int addNum = 12;
         String dir = "bookmarke/src/";
         String file = dir + "微服务架构基础-Spring Boot+Spring Cloud+Docker.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -128,7 +128,7 @@ public class PdfFileUtilsTest {
         int addNum = 23;
         String dir = "bookmarke/src/";
         String file = dir + "Spring Cloud与Docker微服务架构实战（第2版）.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -136,7 +136,7 @@ public class PdfFileUtilsTest {
         int addNum = 12;
         String dir = "bookmarke/src/";
         String file = dir + "深入理解MySQL.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -144,7 +144,7 @@ public class PdfFileUtilsTest {
         int addNum = 13;
         String dir = "bookmarke/src/";
         String file = dir + "深入理解MySQL核心技术.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -152,7 +152,7 @@ public class PdfFileUtilsTest {
         int addNum = 36;
         String dir = "bookmarke/src/";
         String file = dir + "Head First设计模式.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -160,7 +160,7 @@ public class PdfFileUtilsTest {
         int addNum = 2;
         String dir = "bookmarke/src/";
         String file = dir + "陶哲轩实分析-第一版.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -168,7 +168,7 @@ public class PdfFileUtilsTest {
         int addNum = 10;
         String dir = "bookmarke/src/";
         String file = dir + "陶哲轩教你学数学.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -176,7 +176,7 @@ public class PdfFileUtilsTest {
         int addNum = 11;
         String dir = "bookmarke/src/";
         String file = dir + "工程数学-线性代数(第五版).txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -184,7 +184,7 @@ public class PdfFileUtilsTest {
         int addNum = 15;
         String dir = "bookmarke/src/";
         String file = dir + "高等数学 第7版 上册 同济大学.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
 
@@ -193,7 +193,7 @@ public class PdfFileUtilsTest {
         int addNum = 6;
         String dir = "bookmarke/src/";
         String file = dir + "高等数学 第7版 下册 同济大学.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -201,7 +201,7 @@ public class PdfFileUtilsTest {
         int addNum = 7;
         String dir = "bookmarke/src/";
         String file = dir + "高等数学-同济大学第7版-上册-习题答案解析.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -209,7 +209,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "高等数学-同济大学第7版-下册-习题答案解析-第八章.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -217,7 +217,7 @@ public class PdfFileUtilsTest {
         int addNum = 6;
         String dir = "bookmarke/src/";
         String file = dir + "高等数学-同济大学第7版-下册-习题答案解析.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -225,49 +225,49 @@ public class PdfFileUtilsTest {
         int addNum = 23;
         String dir = "bookmarke/src/";
         String file = dir + "数学指南-实用数学手册.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     @Test
     public void test27() throws Exception {
         int addNum = 30;
         String dir = "bookmarke/src/";
         String file = dir + "普林斯顿数学指南 第一卷.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     @Test
     public void test28() throws Exception {
         int addNum = 27;
         String dir = "bookmarke/src/";
         String file = dir + "普林斯顿数学指南 第二卷.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     @Test
     public void test29() throws Exception {
         int addNum = 31;
         String dir = "bookmarke/src/";
         String file = dir + "普林斯顿数学指南 第三卷.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     @Test
     public void test30() throws Exception {
         int addNum = 22;
         String dir = "bookmarke/src/";
         String file = dir + "写给大家看的大数据.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     @Test
     public void test31() throws Exception {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "httpClient4.1入门教程.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
     @Test
     public void test32() throws Exception {
         int addNum = 15;
         String dir = "bookmarke/src/";
         String file = dir + "数据挖掘  实用案例分析.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -275,7 +275,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "《Spring5高级编程（第5版）》_王净译.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -283,7 +283,7 @@ public class PdfFileUtilsTest {
         int addNum = 22;
         String dir = "bookmarke/src/";
         String file = dir + "Spring Data实战.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -291,7 +291,7 @@ public class PdfFileUtilsTest {
         int addNum = 11;
         String dir = "bookmarke/src/";
         String file = dir + "Spring源码深度解析(第一版).txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -299,7 +299,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "深入浅出Spring Boot 2.x.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -307,7 +307,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "JavaScript基础教程（第9版）.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -315,7 +315,7 @@ public class PdfFileUtilsTest {
         int addNum = 16;
         String dir = "bookmarke/src/";
         String file = dir + "大数据架构师指南.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -323,7 +323,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "《疯狂Spring Cloud》电子书（一）.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -331,7 +331,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "疯狂Spring Cloud微服务架构实战.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -339,7 +339,7 @@ public class PdfFileUtilsTest {
         int addNum = 18;
         String dir = "bookmarke/src/";
         String file = dir + "Maven实战.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -347,7 +347,7 @@ public class PdfFileUtilsTest {
         int addNum = 1;
         String dir = "bookmarke/src/";
         String file = dir + "PostgreSQL实战1.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -355,7 +355,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "PostgreSQL实战2.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -363,7 +363,7 @@ public class PdfFileUtilsTest {
         int addNum = -1;
         String dir = "bookmarke/src/";
         String file = dir + "PostgreSQL实战3.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -371,7 +371,7 @@ public class PdfFileUtilsTest {
         int addNum = -1;
         String dir = "bookmarke/src/";
         String file = dir + "Netty实战.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -379,7 +379,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "Java 8实战.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -387,7 +387,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "Spring Data JPA从入门到精通.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -395,7 +395,7 @@ public class PdfFileUtilsTest {
         int addNum = 20;
         String dir = "bookmarke/src/";
         String file = dir + "微服务架构实战-张锋.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
 
@@ -404,7 +404,7 @@ public class PdfFileUtilsTest {
         int addNum = 14;
         String dir = "bookmarke/src/";
         String file = dir + "HBase企业应用开发实战.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -412,7 +412,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "深入理解Java虚拟机 JVM高级特性与最佳实践.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -420,7 +420,7 @@ public class PdfFileUtilsTest {
         int addNum = 13;
         String dir = "bookmarke/src/";
         String file = dir + "ELK Stack权威指南  第2版.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -428,7 +428,7 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "Spring Boot开发实战.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
     @Test
@@ -436,7 +436,31 @@ public class PdfFileUtilsTest {
         int addNum = 0;
         String dir = "bookmarke/src/";
         String file = dir + "Flume日志收集与MapReduce模式.txt";
-        BookMarkeUtilsTest.makeBookMarkePageAdd(file, addNum);
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test54() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "分布式数据库架构及企业实践-基于Mycat中间件.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test55() throws Exception {
+        int addNum = 12;
+        String dir = "bookmarke/src/";
+        String file = dir + "Elasticsearch技术解析与实战.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test56() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "2019高德技术应用.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
 

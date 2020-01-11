@@ -76,4 +76,4 @@
  * @Date: 2019-02-12 17:47
  * @Version: 1.0
  */
-package com.latico.commons.zookeeper.client;
+package com.latico.commons.zookeeper.client.zookeeper;

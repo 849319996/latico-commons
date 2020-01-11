@@ -265,7 +265,7 @@ public class RafUtils {
      * @return
      * @throws Exception
      */
-    public static byte[] readBytes(File file, long position, int byteSize) throws Exception {
+    public static byte[] readBytes(File file, long position, int byteSize) throws IOException {
 
         RandomAccessFile raf = null;
         try {
@@ -290,7 +290,7 @@ public class RafUtils {
 
             //开始进行数据插入
             return bytes;
-        } catch (Exception e) {
+        } catch (IOException e) {
             throw e;
         } finally {
             IOUtils.close(raf);

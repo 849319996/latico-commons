@@ -240,5 +240,39 @@
             <artifactId>jetty-dhcpServiceHandler</artifactId>
             <version>9.4.18.v20190429</version>
         </dependency>-->
+
+        <!--
+        Curator包含了几个包：
+curator-framework：对zookeeper的底层api的一些封装
+curator-client：提供一些客户端的操作，例如重试策略等
+curator-recipes：封装了一些高级特性，如：Cache事件监听、选举、分布式锁、分布式计数器、分布式Barrier等
+Maven依赖(使用curator的版本：2.12.0，对应Zookeeper的版本为：3.4.x，如果跨版本会有兼容性问题，很有可能导致节点操作失败)：
+        -->
+        <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>2.12.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.zookeeper</groupId>
+                    <artifactId>zookeeper</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-client -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-client</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+
     </dependencies>
 </project>

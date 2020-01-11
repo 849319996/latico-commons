@@ -14,7 +14,10 @@ public class RafUtilsTest {
     public void openRandomAccessFileByReadWrite() {
         try {
             System.out.println(RafUtils.readLines("src/test/resources/raf.txt", 0, 0));
+            System.out.println(RafUtils.readBytes("", 0, 0));
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
