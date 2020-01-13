@@ -2,6 +2,8 @@ package com.latico.commons.common.util.version;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * <PRE>
@@ -20,12 +22,12 @@ public class VersionExample2 {
     /**
      * 存储的版本信息
      */
-    private final List<VersionInfo> versionInfos = new ArrayList<>();
+    private final Queue<VersionInfo> versionInfos = new ConcurrentLinkedQueue<>();
 
     /**
      * @return 所有版本信息
      */
-    public List<VersionInfo> getVersionInfos() {
+    public Queue<VersionInfo> getVersionInfos() {
         return versionInfos;
     }
 
@@ -36,7 +38,7 @@ public class VersionExample2 {
      * @return
      */
     public String getVersionInfosByMarkdown() {
-        return VersionInfo.toVersionInfosToMarkdownStr(versionInfos);
+        return VersionUtils.toVersionInfosToMarkdownStr(versionInfos);
     }
 
     /**
@@ -45,7 +47,7 @@ public class VersionExample2 {
      * @return
      */
     public String getVersionInfosByHtml() {
-        return VersionInfo.toVersionInfosToHtmlTable(versionInfos);
+        return VersionUtils.toVersionInfosToHtmlTable(versionInfos);
     }
 
     /**
@@ -56,8 +58,8 @@ public class VersionExample2 {
      * @param updateTime 更新时间
      * @param updateInfo 更新信息
      */
-    private void addVersionInfo(String version, String author, String updateTime, String updateInfo) {
-        versionInfos.add(VersionInfo.build(version, author, updateTime, updateInfo));
+    private void addVersionInfo(String projectName, String version, String author, String updateTime, String updateInfo) {
+        versionInfos.add(VersionInfo.build(projectName, version, author, updateTime, updateInfo));
     }
 
     /**
@@ -65,7 +67,7 @@ public class VersionExample2 {
      */
     public VersionExample2() {
         //在这里不断增加
-        addVersionInfo("1.0", "latico", "2020-01-13", "构建项目");
+        addVersionInfo("项目名称", "1.0", "latico", "2020-01-13", "构建项目");
     }
 
 }

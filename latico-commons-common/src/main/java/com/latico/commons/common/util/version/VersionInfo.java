@@ -12,7 +12,10 @@ import java.util.List;
  */
 public class VersionInfo {
 
-    public final static String LINE_SEPARATOR = "\r\n";
+    /**
+     * 项目名称
+     */
+    private String projectName;
 
     /**
      * 版本号
@@ -35,7 +38,15 @@ public class VersionInfo {
     public VersionInfo() {
     }
 
-    public VersionInfo(String version, String author, String updateTime, String updateInfo) {
+    /**
+     * @param projectName 项目名称
+     * @param version 版本
+     * @param author 作者
+     * @param updateTime 更新时间
+     * @param updateInfo 更新内容
+     */
+    public VersionInfo(String projectName, String version, String author, String updateTime, String updateInfo) {
+        this.projectName = projectName;
         this.version = version;
         this.author = author;
         this.updateTime = updateTime;
@@ -60,13 +71,27 @@ public class VersionInfo {
      * @param updateInfo 更新信息
      * @return
      */
-    public static VersionInfo build(String version, String author, String updateTime, String updateInfo) {
+    public static VersionInfo build(String projectName, String version, String author, String updateTime, String updateInfo) {
         VersionInfo versionInfo = new VersionInfo();
+        versionInfo.projectName = projectName;
         versionInfo.version = version;
         versionInfo.author = author;
         versionInfo.updateTime = updateTime;
         versionInfo.updateInfo = updateInfo;
         return versionInfo;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public VersionInfo buildProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
     public String getAuthor() {
@@ -146,56 +171,12 @@ public class VersionInfo {
         this.updateInfo = updateInfo;
     }
 
-    /**
-     * @return 字符串打印方式
-     */
-    public static String toVersionInfosToMarkdownStr(List<VersionInfo> versionInfos ) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(LINE_SEPARATOR).append("——————————————————————————————————————————————").append(LINE_SEPARATOR);
-        sb.append("| 版本号 | 作者 | 更新时间 | 更新内容 |").append(LINE_SEPARATOR);
-        sb.append("|:------:|:------:|:------:|:------:|").append(LINE_SEPARATOR);
-        for (VersionInfo versionInfo : versionInfos) {
-            sb.append("| ").append(versionInfo.getVersion());
-            sb.append(" | ").append(versionInfo.getAuthor());
-            sb.append(" | ").append(versionInfo.getUpdateTime());
-            sb.append(" | ").append(versionInfo.getUpdateInfo());
-            sb.append(" |").append(LINE_SEPARATOR);
-        }
-        sb.append("——————————————————————————————————————————————").append(LINE_SEPARATOR);
-        return sb.toString();
-    }
-
-    /**
-     * @return HTML的table方式
-     */
-    public static String toVersionInfosToHtmlTable(List<VersionInfo> versionInfos ) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(LINE_SEPARATOR).append("<html>\n<body>\n<table border=\"1\">");
-
-        sb.append("<tr>").append(LINE_SEPARATOR);
-        sb.append("<th>").append("版本号").append("</th>").append(LINE_SEPARATOR);
-        sb.append("<th>").append("作者").append("</th>").append(LINE_SEPARATOR);
-        sb.append("<th>").append("更新时间").append("</th>").append(LINE_SEPARATOR);
-        sb.append("<th>").append("更新内容").append("</th>").append(LINE_SEPARATOR);
-        sb.append("</tr>");
-
-        for (VersionInfo versionInfo : versionInfos) {
-            sb.append("<tr>").append(LINE_SEPARATOR);
-            sb.append("<td>").append(versionInfo.getVersion()).append("</td>");
-            sb.append("<td>").append(versionInfo.getAuthor()).append("</td>");
-            sb.append("<td>").append(versionInfo.getUpdateTime()).append("</td>");
-            sb.append("<td>").append(versionInfo.getUpdateInfo()).append("</td>");
-            sb.append("</tr>");
-            sb.append(LINE_SEPARATOR);
-        }
-        sb.append("</table>\n</body>\n</html>");
-        return sb.toString();
-    }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("VersionInfo{");
-        sb.append("version='").append(version).append('\'');
+        sb.append("projectName='").append(projectName).append('\'');
+        sb.append(", version='").append(version).append('\'');
         sb.append(", author='").append(author).append('\'');
         sb.append(", updateTime='").append(updateTime).append('\'');
         sb.append(", updateInfo='").append(updateInfo).append('\'');
