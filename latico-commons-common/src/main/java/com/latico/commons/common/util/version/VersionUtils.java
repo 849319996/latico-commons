@@ -1,13 +1,11 @@
 package com.latico.commons.common.util.version;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * <PRE>
- *
+ * 把版本记录通过 addVersionInfo写进 VersionUtils 中，然后通过 VersionUtils.getVersionInfosToMarkdown()读取
  * </PRE>
  *
  * @Author: latico

@@ -13,13 +13,14 @@ public class ObjectNettyClient {
         Channel channel = channelFuture.channel();
         System.out.println("启动完成");
         int i = 0;
-        while (true) {
-            i++;
+        while (i++ <= 3) {
             DemoBean bean = new DemoBean();
             bean.setId(i);
             bean.setName("name" + i);
             channel.writeAndFlush(bean);
             Thread.sleep(2000);
         }
+        NettyTcpUtils.closeAll(channelFuture);
+        channel.close();
     }
 }

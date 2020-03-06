@@ -413,15 +413,20 @@ public class NettyTcpUtils extends NettyUtils {
      */
     public static ChannelInitializer makeChannelInitializerByObject(ChannelHandler... pipelineHandlers) {
         //                Object解析器需要放在前面
-        ChannelHandler[] arr = new ChannelHandler[pipelineHandlers.length + 2];
-        arr[0] = new ObjectEncoder();
-        arr[1] = new ObjectDecoder(Integer.MAX_VALUE, ClassResolvers.cacheDisabled(null));
+        ObjectEncoder objectEncoder = new ObjectEncoder();
 
-        for (int i = 2; i < arr.length; i++) {
-            arr[i] = pipelineHandlers[i - 2];
-        }
+        ChannelInitializer<SocketChannel> channelInitializer = new ChannelInitializer<SocketChannel>() {
+            @Override
+            protected void initChannel(SocketChannel ch) throws Exception {
+//                在ChannelPipeline中注册所有的业务处理对象，顺序是传进来的顺序
+                ChannelPipeline pipeline = ch.pipeline();
+                pipeline.addLast(objectEncoder);
+                pipeline.addLast(new ObjectDecoder(Integer.MAX_VALUE, ClassResolvers.cacheDisabled(null)));
+                pipeline.addLast(pipelineHandlers);
+            }
+        };
 
-        return makeChannelInitializer(arr);
+        return channelInitializer;
     }
 
     /**

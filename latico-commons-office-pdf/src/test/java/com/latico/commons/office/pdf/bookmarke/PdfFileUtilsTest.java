@@ -463,5 +463,53 @@ public class PdfFileUtilsTest {
         BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test57() throws Exception {
+        int addNum = 15;
+        String dir = "bookmarke/src/";
+        String file = dir + "Linux shell 命令行及脚本编程实例详解.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test58() throws Exception {
+        int addNum = 12;
+        String dir = "bookmarke/src/";
+        String file = dir + "Linux+Shell编程从入门到精通.张昊.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test59() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "Activiti实战.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test60() throws Exception {
+        int addNum = 15;
+        String dir = "bookmarke/src/";
+        String file = dir + "《疯狂工作流讲义 基于Activiti 6.x的应用开发》.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test61() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "企业IT架构转型之道  阿里巴巴中台战略思想与架构实战.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
+    @Test
+    public void test62() throws Exception {
+        int addNum = 11;
+        String dir = "bookmarke/src/";
+        String file = dir + "微信公众平台搭建与开发揭秘.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }
