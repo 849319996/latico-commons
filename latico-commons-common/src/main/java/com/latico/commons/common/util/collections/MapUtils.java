@@ -77,7 +77,8 @@ public class MapUtils extends org.apache.commons.collections.MapUtils {
 
         }
 
-        return sb.toString();
+        String str = sb.toString();
+        return str.substring(0, str.length() - elementDelimiter.length());
     }
 
     /**

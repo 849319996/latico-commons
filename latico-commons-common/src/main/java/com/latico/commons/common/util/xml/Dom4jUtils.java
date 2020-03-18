@@ -15,6 +15,7 @@ import org.dom4j.io.XMLWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * <PRE>
@@ -62,6 +63,11 @@ public class Dom4jUtils {
      * 默认编码
      */
     private final static String DEFAULT_CHARSET = CharsetType.UTF8;
+
+    /**
+     * 空节点正则
+     */
+    private static final Pattern emptyNodePattern = Pattern.compile("<[^>\r\n]+/>");
 
     /**
      * 获取到文档对象
@@ -565,6 +571,33 @@ public class Dom4jUtils {
      */
     public static String formatDefault(String xml){
         return formatXml(xml, "    ", true, DEFAULT_CHARSET);
+    }
+
+    /**
+     * 对于值，当值不能被解析出数据的时候，映射成XML
+     * @param element
+     * @return
+     */
+    public static Map<String, String> getChildsNameValueAsXmlWhenValueCannotParseMap(Element element) {
+        if (element == null) {
+            return null;
+        }
+        Map<String, String> map = new LinkedHashMap<String, String>();
+        List<Element> list = element.elements();
+        if (list != null) {
+            for (Element e : list) {
+                String value = e.getTextTrim();
+                if (StringUtils.isBlank(value)) {
+                    String asXML = e.asXML();
+                    //如果匹配是空节点，就不转换
+                    if (!emptyNodePattern.matcher(asXML).find()) {
+                        value = asXML;
+                    }
+                }
+                map.put(e.getName(), value);
+            }
+        }
+        return map;
     }
 
 }
