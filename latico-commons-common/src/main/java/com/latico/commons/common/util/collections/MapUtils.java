@@ -3,6 +3,7 @@ package com.latico.commons.common.util.collections;
 import com.latico.commons.common.util.string.StringUtils;
 
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -24,10 +25,10 @@ public class MapUtils extends org.apache.commons.collections.MapUtils {
      */
     public static Map<String, String> strToMap(String str, String elementDelimiter, String keyValueDelimiter) {
         if (StringUtils.isEmpty(str)) {
-            return new Hashtable<String, String>();
+            return new Hashtable<>();
         }
         String[] strArray = StringUtils.split(str, elementDelimiter);
-        Hashtable<String, String> hsb = new Hashtable<String, String>();
+        Map<String, String> map = new LinkedHashMap<>();
         for (int i = 0; i < strArray.length; i++) {
             String substr = strArray[i];
             int index = substr.indexOf(keyValueDelimiter);
@@ -35,12 +36,12 @@ public class MapUtils extends org.apache.commons.collections.MapUtils {
                 String key = substr.substring(0, index);
                 if (substr.length() > index + 1) {
                     String value = substr.substring(index + 1);
-                    hsb.put(key, value);
+                    map.put(key, value);
                 }
             }
         }
 
-        return hsb;
+        return map;
     }
 
     /**
