@@ -83,6 +83,7 @@
             <url>http://172.168.10.100:8081/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+
     <properties>
 
         <!-- JDK版本配置 -->
@@ -224,12 +225,22 @@
             <version>1.0.0</version>
         </dependency>
         <!--公共包系列-->
+
+        <!--二维码工具-->
         <!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
             <version>3.4.0</version>
         </dependency>
+        <!--二维码工具-->
 
+        <!--美化后的二维码工具-->
+       <!-- <dependency>
+            <groupId>com.github.hui.media</groupId>
+            <artifactId>qrcode-plugin</artifactId>
+            <version>2.2</version>
+        </dependency>-->
+        <!--美化后的二维码工具-->
     </dependencies>
 </project>
