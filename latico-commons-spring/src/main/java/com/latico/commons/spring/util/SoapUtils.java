@@ -56,7 +56,7 @@ public class SoapUtils {
         //读取数据的timeout 15分钟
         httpRequestFactory.setReadTimeout(readTimeout);
 
-        RestTemplate restTmpl = new RestTemplate(httpRequestFactory);
+        RestTemplate restTmpl = new SoapRestTemplateImpl(httpRequestFactory);
 
         return restTmpl;
     }
@@ -90,7 +90,7 @@ public class SoapUtils {
             requestFactory.setReadTimeout(readTimeout);
 
             requestFactory.setHttpClient(httpClient);
-            RestTemplate restTemplate = new RestTemplate(requestFactory);
+            RestTemplate restTemplate = new SoapRestTemplateImpl(requestFactory);
             return restTemplate;
         } catch (Exception e) {
             LOG.error("", e);

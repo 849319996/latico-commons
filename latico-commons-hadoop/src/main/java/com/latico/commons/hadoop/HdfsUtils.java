@@ -29,6 +29,7 @@ public class HdfsUtils {
     private static final Logger LOG = LoggerFactory.getLogger(HdfsUtils.class);
 
     public static final String DEFAULT_HDFS_URI_KEY = "fs.defaultFS";
+    public static final String MAPRED_JOB_TRACKER_KEY = "mapred.job.tracker";
     /**
      * 关闭HDFS文件系统对象
      * get方法不是每次都创建FileSystem对象，会从缓存中获取FileSystem对象，
@@ -54,6 +55,7 @@ public class HdfsUtils {
     public static Configuration getConfiguration(String hdfsUrl) {
         Configuration configuration = new Configuration();
         configuration.set(DEFAULT_HDFS_URI_KEY, hdfsUrl);
+        configuration.set(MAPRED_JOB_TRACKER_KEY, hdfsUrl);
         return configuration;
     }
 

@@ -67,7 +67,7 @@ public class Dom4jUtils {
     /**
      * 空节点正则
      */
-    private static final Pattern emptyNodePattern = Pattern.compile("<[^>\r\n]+/>");
+    private static final Pattern emptyNodePattern = Pattern.compile("^<[^>\r\n]+/>$");
 
     /**
      * 获取到文档对象

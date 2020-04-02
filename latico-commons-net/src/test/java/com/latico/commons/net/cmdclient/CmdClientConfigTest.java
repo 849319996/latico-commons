@@ -29,10 +29,10 @@ public class CmdClientConfigTest {
     public void ping() {
         CmdClient cmdClient = CmdClientFactory.getCmdClient(CmdClientTypeEnum.SSH);
         try {
-            boolean isLoginSucc = cmdClient.login("172.168.10.7", 22, "laticosoft", "laticoosft");
+            boolean isLoginSucc = cmdClient.login("172.168.10.7", 22, "cattsoft", "cattsoft");
             if (isLoginSucc) {
                 String receiveData = cmdClient.execCmdAndReceiveData("ping www.baidu.com -c 5");
-                System.out.println(receiveData);
+                System.out.println("执行命令的结果:\r\rn" + receiveData);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -4,11 +4,11 @@
 
     <!--骨架的版本号最好带上 RELEASE/SNAPSHOT 或者其他版本号字符，而且版本号最好3位长度，也可以在版本号前面加一些特殊字符，以防止跟其他开源包版本冲突，要不然maven的骨架插件会错把其他字符替换掉，比如：假如版本号是1.0的话，生成骨架后xml文件头的版本号是1.0也会变成变量，别人用骨架生成项目的时候就会把它给替换-->
     <groupId>com.latico.commons</groupId>
-    <artifactId>latico-commons-hadoop</artifactId>
-    <version>1.0.0</version>
+    <artifactId>latico-commons-qrcode</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>latico-commons-hadoop</name>
+    <name>latico-commons-qrcode</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -111,7 +111,6 @@
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <janino.version>3.0.11</janino.version>
-        <hadoop.version>3.2.1</hadoop.version>
     </properties>
     <!-- 打包配置 -->
     <build>
@@ -225,32 +224,12 @@
             <version>1.0.0</version>
         </dependency>
         <!--公共包系列-->
-        <!--hadoop配置-->
+        <!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-common</artifactId>
-            <version>${hadoop.version}</version>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.4.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-hdfs</artifactId>
-            <version>${hadoop.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-client</artifactId>
-            <version>${hadoop.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-mapreduce-client-core</artifactId>
-            <version>${hadoop.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.bestwu</groupId>
-            <artifactId>ik-analyzers</artifactId>
-            <version>5.1.0</version>
-        </dependency>
-        <!--hadoop配置-->
+
     </dependencies>
 </project>
