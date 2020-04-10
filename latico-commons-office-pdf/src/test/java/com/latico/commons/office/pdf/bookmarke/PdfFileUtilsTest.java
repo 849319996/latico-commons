@@ -511,5 +511,13 @@ public class PdfFileUtilsTest {
         BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test63() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "丁圣元译《股票大作手回忆录(修订版)》.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }
