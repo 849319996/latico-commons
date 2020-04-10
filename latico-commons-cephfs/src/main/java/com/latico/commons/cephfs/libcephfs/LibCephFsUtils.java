@@ -104,6 +104,11 @@ public class LibCephFsUtils {
         return mkdirs(cephMount, dirPath, 0666);
     }
 
+    /**
+     * @param cephMount
+     * @param dirPath
+     * @return
+     */
     public static String[] listdir(CephMount cephMount, String dirPath)  {
         String[] paths = null;
         try {
@@ -114,6 +119,11 @@ public class LibCephFsUtils {
         return paths;
     }
 
+    /**
+     * @param cephMount
+     * @param dirPath
+     * @return
+     */
     public static boolean rmdir(CephMount cephMount, String dirPath) {
         try {
             cephMount.rmdir(dirPath);
@@ -124,10 +134,21 @@ public class LibCephFsUtils {
         return false;
     }
 
+    /**
+     * @param cephMount
+     * @param filePath
+     * @return
+     */
     public static CephStat getFileStatus(CephMount cephMount, String filePath) {
         return getFileStatus(cephMount, filePath, true);
     }
-    
+
+    /**
+     * @param cephMount
+     * @param filePath
+     * @param isPrintErrLog
+     * @return
+     */
     public static CephStat getFileStatus(CephMount cephMount, String filePath, boolean isPrintErrLog) {
         CephStat stat = null;
         try {
@@ -141,7 +162,12 @@ public class LibCephFsUtils {
         }
         return null;
     }
-    
+
+    /**
+     * @param cephMount
+     * @param filePath
+     * @return
+     */
     public static byte[] readFile(CephMount cephMount, String filePath) {
         CephStat stat = new CephStat();
         Integer fd = null;

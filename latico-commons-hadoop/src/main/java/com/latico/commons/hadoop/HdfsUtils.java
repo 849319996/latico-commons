@@ -240,6 +240,25 @@ public class HdfsUtils {
     }
 
     /**
+     * 查询文件状态
+     * @param fs
+     * @param path
+     * @return 不存在时，返回null
+     */
+    public static FileStatus getFileStatus(FileSystem fs, String path) {
+        if (StringUtils.isBlank(path)) {
+            return null;
+        }
+        Path srcPath = new Path(path);
+        try {
+            return fs.getFileStatus(srcPath);
+        } catch (Exception e) {
+            LOG.error("", e);
+        }
+        return null;
+    }
+
+    /**
      * HDFS重命名文件
      *
      * @param fs
@@ -272,9 +291,6 @@ public class HdfsUtils {
         if (StringUtils.isBlank(path)) {
             return false;
         }
-        if (!existPath(fs, path)) {
-            return false;
-        }
         Path srcPath = new Path(path);
         boolean isOk = fs.deleteOnExit(srcPath);
         return isOk;
@@ -294,11 +310,24 @@ public class HdfsUtils {
         if (StringUtils.isBlank(path)) {
             return false;
         }
-        if (!existPath(fs, path)) {
+        Path srcPath = new Path(path);
+        boolean isOk = fs.delete(srcPath, recursive);
+        return isOk;
+    }
+
+    /**
+     * 删除目录
+     * @param fs 文件系统
+     * @param path 目录路径
+     * @return
+     * @throws Exception
+     */
+    public static boolean deleteDir(FileSystem fs, String path) throws Exception {
+        if (StringUtils.isBlank(path)) {
             return false;
         }
         Path srcPath = new Path(path);
-        boolean isOk = fs.delete(srcPath, recursive);
+        boolean isOk = fs.delete(srcPath, true);
         return isOk;
     }
 
