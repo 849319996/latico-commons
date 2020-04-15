@@ -52,7 +52,9 @@ public abstract class AbstractTrapReceiver implements TrapReceiver {
 
 	@Override
 	public boolean init(String ip, int port, String oriCharset, String convertcharset, String community) {
-		this.listenIp = ip;
+		if(StringUtils.isNotEmpty(ip)){
+			this.listenIp = ip;
+		}
 		if(StringUtils.isNotEmpty(community)){
 			this.community = community;
 		}
