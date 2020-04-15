@@ -519,5 +519,13 @@ public class PdfFileUtilsTest {
         BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test64() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "数据中心虚拟化技术权威指南.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }

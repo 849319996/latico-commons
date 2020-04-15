@@ -1,5 +1,6 @@
 package com.latico.commons.net.trap.impl;
 
+import com.latico.commons.common.util.string.StringUtils;
 import com.latico.commons.net.trap.AbstractTrapReceiver;
 import com.latico.commons.net.trap.bean.Snmp4jTrapResult;
 import com.latico.commons.common.util.logging.Logger;
@@ -140,14 +141,24 @@ public class Snmp4jTrapReceiver extends AbstractTrapReceiver implements CommandR
 		try {
 			threadPool = ThreadPool.create(threadName, 20);
 			dispatcher = new MultiThreadedMessageDispatcher(threadPool, new MessageDispatcherImpl());
-			listenAddress = GenericAddress.parse(System.getProperty("snmp4j.listenAddress", "udp:$IP$/$Port$".replace("$IP$", listenIp).replace("$Port$", String.valueOf(listenPort)))); // 本地IP与监听端口
-			TransportMapping<?> transport;
-		
-			// 对TCP与UDP协议进行处理
-			if (listenAddress instanceof UdpAddress) {
-				transport = new DefaultUdpTransportMapping((UdpAddress) listenAddress);
+			if (StringUtils.isEmpty(listenIp)) {
+				listenAddress = null;
 			} else {
-				transport = new DefaultTcpTransportMapping((TcpAddress) listenAddress);
+				// 本地IP与监听端口
+				listenAddress = GenericAddress.parse(System.getProperty("snmp4j.listenAddress", "udp:$IP$/$Port$".replace("$IP$", listenIp).replace("$Port$", String.valueOf(listenPort))));
+			}
+
+			TransportMapping<?> transport;
+
+			if (listenAddress != null) {
+				// 对TCP与UDP协议进行处理
+				if (listenAddress instanceof UdpAddress) {
+					transport = new DefaultUdpTransportMapping((UdpAddress) listenAddress);
+				} else {
+					transport = new DefaultTcpTransportMapping((TcpAddress) listenAddress);
+				}
+			} else {
+				transport = new DefaultUdpTransportMapping();
 			}
 			
 			snmp = new Snmp(dispatcher, transport);
