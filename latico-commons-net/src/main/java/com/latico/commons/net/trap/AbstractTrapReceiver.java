@@ -28,7 +28,7 @@ public abstract class AbstractTrapReceiver implements TrapReceiver {
 	public String convertcharset = CharsetType.UTF8;
 
 	/** listenIp 监听的IP */
-	public String listenIp = "127.0.0.1";
+	public String listenIp = "0.0.0.0";
 	
 	/** listenPort 监听的端口 */
 	public int listenPort = 162;

@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @SuppressWarnings("JavadocReference")
 public class SyslogServerThread extends AbstractThread {
     private static final Logger LOG = LoggerFactory.getLogger(SyslogServerThread.class);
-    private String host = "127.0.0.1";
+    private String host = "0.0.0.0";
     private int port = 514;
     /**
      * udp/tcp
