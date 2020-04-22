@@ -1,9 +1,7 @@
 package com.latico.commons.common.util.time;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.Month;
-import java.time.temporal.ChronoField;
+import java.time.*;
+import java.util.Date;
 
 /**
  * <PRE>
@@ -44,6 +42,14 @@ public class LocalDateUtils {
 
     public static DayOfWeek getDayOfWeek(LocalDate localDate) {
         return localDate.getDayOfWeek();
+    }
+
+    public static Date asDate(LocalDate localDate) {
+        return Date.from(localDate.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+    }
+
+    public static LocalDate asLocalDate(Date date) {
+        return Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
 }
