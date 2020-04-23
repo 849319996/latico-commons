@@ -9,9 +9,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * <PRE>
  *  主函数的抽象类
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 13:39:32
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 13:39:32
+ * @version: 1.0
  */
 public abstract class AbstractMain {
 

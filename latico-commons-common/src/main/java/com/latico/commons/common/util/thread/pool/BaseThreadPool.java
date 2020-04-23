@@ -65,9 +65,9 @@ System.out.println("线程任务");
 
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-01-15 15:38:40
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-15 15:38:40
+ * @version: 1.0
  * @param <T> 对Callaable有用
  */
 public class BaseThreadPool<T> {

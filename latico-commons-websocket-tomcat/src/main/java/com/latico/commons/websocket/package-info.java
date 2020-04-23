@@ -7,8 +7,8 @@
   http://localhost:8080/latico-commons-websocket-tomcat/websocket.jsp
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-13 18:18
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-13 18:18
+ * @version: 1.0
  */
 package com.latico.commons.websocket;

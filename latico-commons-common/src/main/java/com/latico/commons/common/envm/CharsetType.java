@@ -2,9 +2,9 @@ package com.latico.commons.common.envm;
 
 /**
  * 枚举类：编码
- * @Author: latico
- * @Date: 2018/12/16 02:50:41
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 02:50:41
+ * @version: 1.0
  */
 public class CharsetType {
 

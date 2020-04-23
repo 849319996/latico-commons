@@ -12,9 +12,9 @@ import java.util.List;
  * apache的QueryRunner工具
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-11 1:32
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-11 1:32
+ * @version: 1.0
  */
 public class QueryRunnerUtils {
 

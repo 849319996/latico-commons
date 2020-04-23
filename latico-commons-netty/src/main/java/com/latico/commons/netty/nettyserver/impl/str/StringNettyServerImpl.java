@@ -12,9 +12,9 @@ import io.netty.channel.SimpleChannelInboundHandler;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-11-08 23:14:01
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-11-08 23:14:01
+ * @version: 1.0
  */
 public class StringNettyServerImpl extends AbstractNettyServer<String> {
     private static final Logger LOG = LoggerFactory.getLogger(StringNettyServerImpl.class);

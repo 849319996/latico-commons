@@ -9,9 +9,9 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * 服务注册中心
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-08 14:48:58
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-08 14:48:58
+ * @version: 1.0
  */
 @SpringBootApplication(scanBasePackages={"com.latico.commons.docker"})
 //该注解启动一个服务注册中心提供给其他应用进行对话。

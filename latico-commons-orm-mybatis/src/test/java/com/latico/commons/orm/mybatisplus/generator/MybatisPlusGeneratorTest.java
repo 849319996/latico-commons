@@ -14,9 +14,9 @@ import java.util.List;
  *
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-06 15:15:24
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-06 15:15:24
+ * @version: 1.0
  */
 public class MybatisPlusGeneratorTest {
 

@@ -31,9 +31,9 @@ import javax.xml.bind.Unmarshaller;
  (2). 进入如下界面,注意生成Java的路径,等问题.点击 OK.即可看到生成的JavaBean.注意一下生成 勾选:Make generated files read-only. 选项.
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-03 23:59:44
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-03 23:59:44
+ * @version: 1.0
  */
 public class JaxbUtils {
 

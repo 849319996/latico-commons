@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
  * <PRE>
  *  默认主页
  * </PRE>
- * @Author: latico
- * @Date: 2019-03-15 10:34:32
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-15 10:34:32
+ * @version: 1.0
  */
 @RestController
 @Configuration

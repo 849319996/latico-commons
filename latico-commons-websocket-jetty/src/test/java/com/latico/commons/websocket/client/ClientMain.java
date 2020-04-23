@@ -11,9 +11,9 @@ import java.util.concurrent.TimeUnit;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-04 9:13
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-04 9:13
+ * @version: 1.0
  */
 public class ClientMain {
     public static void main(String args[]) {

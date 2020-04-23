@@ -8,9 +8,9 @@ import org.eclipse.jetty.server.Server;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-04 9:14
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-04 9:14
+ * @version: 1.0
  */
 public class ServerMain {
     public static void main(String args[]) {

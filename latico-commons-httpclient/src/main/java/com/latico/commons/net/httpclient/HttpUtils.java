@@ -18,9 +18,9 @@ import java.util.regex.Pattern;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-03 0:31
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-03 0:31
+ * @version: 1.0
  */
 public class HttpUtils {
     private static final Logger LOG = LoggerFactory.getLogger(HttpUtils.class);

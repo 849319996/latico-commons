@@ -24,9 +24,9 @@ import java.util.List;
  * <PRE>
  *  WSDL解析工具，可以拿到WSDL地址的请求和响应XML报文
  * </PRE>
- * @Author: latico
- * @Date: 2019-04-09 11:50:37
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-04-09 11:50:37
+ * @version: 1.0
  */
 public class WsdlParerUtils {
     private static final Log LOG = LogUtils.getLog(WsdlParerUtils.class);

@@ -16,9 +16,9 @@ import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
  *     华为OMC系统告警
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-05 14:26
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-05 14:26
+ * @version: 1.0
  */
 public class OmcNettyClientImpl extends AbstractNettyClient<OmcProtocol> {
     private static final Logger LOG = LoggerFactory.getLogger(OmcNettyClientImpl.class);

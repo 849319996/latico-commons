@@ -7,9 +7,9 @@ import java.lang.annotation.*;
  * 用于构建URL路径的子路径
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-10 0:50
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-10 0:50
+ * @version: 1.0
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

@@ -37,9 +37,9 @@ package com.latico.commons.common.util.xml;
  4）子结点文本值：node.getChildText("子结点名")；
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-26 9:17
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-26 9:17
+ * @version: 1.0
  */
 @Deprecated
 public class JdomUtils {

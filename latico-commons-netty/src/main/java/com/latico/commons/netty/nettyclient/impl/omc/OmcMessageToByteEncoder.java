@@ -9,9 +9,9 @@ import io.netty.handler.codec.MessageToByteEncoder;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-12-13 22:23:25
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-13 22:23:25
+ * @version: 1.0
  */
 @ChannelHandler.Sharable
 public class OmcMessageToByteEncoder extends MessageToByteEncoder<OmcProtocol> {

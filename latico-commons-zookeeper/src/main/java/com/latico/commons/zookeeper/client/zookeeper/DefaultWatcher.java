@@ -13,9 +13,9 @@ import java.util.concurrent.TimeUnit;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2020-01-10 11:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-10 11:07
+ * @version: 1.0
  */
 public class DefaultWatcher implements Watcher {
     private static final Logger LOG = LoggerFactory.getLogger(DefaultWatcher.class);

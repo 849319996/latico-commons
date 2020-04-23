@@ -31,9 +31,9 @@ import java.util.Iterator;
  *        使用datagramChannel.write(write);代替datagramChannel.send(write,socketAddress);发送数据
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-21 0:37
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-21 0:37
+ * @version: 1.0
  */
 public class UdpNioSocketServer {
 

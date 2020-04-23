@@ -10,9 +10,9 @@ import java.sql.Connection;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-24 9:17
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-24 9:17
+ * @version: 1.0
  */
 public class BaseDaoImplExample2 extends BaseDao<CompareBean2> {
 

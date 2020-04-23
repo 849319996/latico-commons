@@ -17,9 +17,9 @@ import java.util.jar.JarFile;
 
 /**
  * jar工具
- * @Author: latico
- * @Date: 2018/12/16 02:53:04
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 02:53:04
+ * @version: 1.0
  */
 public class JarUtils {
 

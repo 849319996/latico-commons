@@ -7,9 +7,9 @@ import com.latico.commons.net.socket.io.tcp.common.SocketHandler;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-17 13:54
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-17 13:54
+ * @version: 1.0
  */
 public interface TcpServerServiceTask extends Runnable {
 

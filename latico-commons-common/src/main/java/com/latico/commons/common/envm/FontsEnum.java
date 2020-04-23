@@ -4,9 +4,9 @@ package com.latico.commons.common.envm;
  * <PRE>
  *  枚举类：字体
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 01:25:02
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 01:25:02
+ * @version: 1.0
  */
 public enum FontsEnum {
 

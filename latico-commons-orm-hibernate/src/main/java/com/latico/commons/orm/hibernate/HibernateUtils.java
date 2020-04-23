@@ -5,9 +5,9 @@ package com.latico.commons.orm.hibernate;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-31 23:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-31 23:07
+ * @version: 1.0
  */
 public class HibernateUtils {
 }

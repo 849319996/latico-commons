@@ -52,9 +52,9 @@ import java.util.concurrent.TimeUnit;
 
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 14:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 14:59
+ * @version: 1.0
  */
 public class DisruptorUtils {
     private static final Logger LOG = LoggerFactory.getLogger(DisruptorUtils.class);

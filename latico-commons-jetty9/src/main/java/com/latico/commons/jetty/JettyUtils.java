@@ -15,9 +15,9 @@ import java.util.Map;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 11:01
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 11:01
+ * @version: 1.0
  */
 public class JettyUtils {
     private static final Logger LOG = LoggerFactory.getLogger(JettyUtils.class);

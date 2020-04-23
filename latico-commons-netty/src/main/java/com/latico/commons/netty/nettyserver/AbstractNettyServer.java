@@ -27,9 +27,9 @@ import java.util.regex.Pattern;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-13 16:49
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-13 16:49
+ * @version: 1.0
  */
 public abstract class AbstractNettyServer<MSG> extends AbstractThread implements NettyServer<MSG> {
     private static final Logger LOG = LoggerFactory.getLogger(AbstractNettyServer.class);

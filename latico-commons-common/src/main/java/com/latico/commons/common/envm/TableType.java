@@ -4,9 +4,9 @@ package com.latico.commons.common.envm;
  * <PRE>
  *  元信息中表的类型
  * </PRE>
- * @Author: latico
- * @Date: 2019-02-07 00:01:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-07 00:01:59
+ * @version: 1.0
  */
 public enum TableType {
 	TABLE("TABLE"),

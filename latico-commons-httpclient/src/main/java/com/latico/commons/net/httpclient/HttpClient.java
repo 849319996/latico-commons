@@ -7,9 +7,9 @@ import java.io.Closeable;
  * http客户端
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-03 0:31
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-03 0:31
+ * @version: 1.0
  */
 public interface HttpClient extends Closeable {
 

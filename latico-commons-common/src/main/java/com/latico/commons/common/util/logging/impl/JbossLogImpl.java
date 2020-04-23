@@ -11,9 +11,9 @@ import org.jboss.logging.Logger;
  * JBOSS日志实现类
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-09 17:20
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-09 17:20
+ * @version: 1.0
  */
 @LogImplAnnotation(LogTypeEnum.jbossLogger)
 public class JbossLogImpl extends AbstractLogger {

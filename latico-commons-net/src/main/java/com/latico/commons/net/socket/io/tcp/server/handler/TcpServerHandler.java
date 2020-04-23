@@ -22,9 +22,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  try {Thread.sleep(5000000);} catch (InterruptedException e) {}
 
  *
- * @Author: latico
- * @Date: 2019-01-17 9:57
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-17 9:57
+ * @version: 1.0
  */
 public class TcpServerHandler implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(TcpServerHandler.class);

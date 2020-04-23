@@ -15,9 +15,9 @@ import java.util.Map;
 
 /**
  * 字段工具
- * @Author: latico
- * @Date: 2018/12/11 23:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/11 23:59
+ * @version: 1.0
  */
 public class FieldUtils extends org.apache.commons.lang3.reflect.FieldUtils {
     /** LOG 日志工具 */

@@ -21,9 +21,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * 组播工具类
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-07-19 21:45:39
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-19 21:45:39
+ * @version: 1.0
  */
 public class MultiCastUtils {
     private static final Logger LOG = LoggerFactory.getLogger(MultiCastUtils.class);

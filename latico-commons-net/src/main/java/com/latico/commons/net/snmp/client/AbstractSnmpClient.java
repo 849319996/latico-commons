@@ -14,9 +14,9 @@ import java.util.*;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-12-10 12:51:02
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-10 12:51:02
+ * @version: 1.0
  */
 public abstract class AbstractSnmpClient implements SnmpClient {
 

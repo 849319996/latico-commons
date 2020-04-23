@@ -17,9 +17,9 @@ import com.latico.commons.common.util.string.StringUtils;
  * JSONArray：fastJson提供json数组对象。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-26 9:23
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-26 9:23
+ * @version: 1.0
  */
 public class FastJsonUtils {
     private static final Logger LOG = LoggerFactory.getLogger(FastJsonUtils.class);

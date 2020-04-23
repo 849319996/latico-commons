@@ -5,9 +5,9 @@ package com.latico.commons.javaagent.onload;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-07-12 11:38
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-12 11:38
+ * @version: 1.0
  */
 public class BeanExample {
     /**

@@ -29,9 +29,9 @@ import java.util.zip.GZIPOutputStream;
  * 压缩/解压工具（目前该类是使用了apache的开源包）
  * JDK自带也有
  * </PRE>
- * @Author: latico
- * @Date: 2019-03-13 10:18:35
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-13 10:18:35
+ * @version: 1.0
  */
 public class CompressUtils {
 

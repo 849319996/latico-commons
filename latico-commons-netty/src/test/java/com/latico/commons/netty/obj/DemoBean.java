@@ -7,9 +7,9 @@ import java.io.Serializable;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-24 21:09
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-24 21:09
+ * @version: 1.0
  */
 public class DemoBean implements Serializable {
     private int id;

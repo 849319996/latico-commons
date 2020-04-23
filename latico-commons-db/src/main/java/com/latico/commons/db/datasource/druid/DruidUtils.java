@@ -21,9 +21,9 @@ import com.latico.commons.db.datasource.DataSourceParam;
  }
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-02 14:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-02 14:07
+ * @version: 1.0
  */
 public class DruidUtils {
 

@@ -273,8 +273,8 @@
  总耗时:2056
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-06 15:55
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-06 15:55
+ * @version: 1.0
  */
 package com.latico.commons.disruptor;

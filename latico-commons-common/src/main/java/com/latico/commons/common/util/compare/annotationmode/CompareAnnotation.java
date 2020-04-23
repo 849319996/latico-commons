@@ -7,9 +7,9 @@ import java.lang.annotation.*;
  *  差异比较的注解，也可以指定父类所有字段
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-13 16:40:01
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-13 16:40:01
+ * @version: 1.0
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

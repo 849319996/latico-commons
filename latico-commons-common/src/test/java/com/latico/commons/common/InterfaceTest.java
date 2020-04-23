@@ -5,9 +5,9 @@ package com.latico.commons.common;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-26 16:49
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-26 16:49
+ * @version: 1.0
  */
 public interface InterfaceTest {
 

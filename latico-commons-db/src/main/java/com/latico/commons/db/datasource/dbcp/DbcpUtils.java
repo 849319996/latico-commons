@@ -11,9 +11,9 @@ import java.util.Properties;
  * apache的DBCP数据源
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-02 17:44
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-02 17:44
+ * @version: 1.0
  */
 public class DbcpUtils {
 

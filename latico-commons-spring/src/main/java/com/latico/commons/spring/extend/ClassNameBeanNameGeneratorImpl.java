@@ -15,9 +15,9 @@ import org.springframework.beans.factory.support.BeanNameGenerator;
  * 2、如果是通过类对象获取bean，那可以使用实现类的bean或者接口bean都可以。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-01 18:16
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-01 18:16
+ * @version: 1.0
  */
 public class ClassNameBeanNameGeneratorImpl implements BeanNameGenerator {
 

@@ -5,9 +5,9 @@ package com.latico.commons.html.jsoup;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-26 23:39
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-26 23:39
+ * @version: 1.0
  */
 public class JsoupUtils {
 }

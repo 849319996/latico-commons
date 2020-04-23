@@ -10,9 +10,9 @@ import java.util.logging.Level;
  * <PRE>
  *  JDK日志实现类
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:49:29
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:49:29
+ * @version: 1.0
  */
 @LogImplAnnotation(LogTypeEnum.jdkLogger)
 public class JdkLogImpl extends AbstractLogger {

@@ -8,9 +8,9 @@ import com.latico.commons.common.util.logging.LogTypeEnum;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:50:14
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:50:14
+ * @version: 1.0
  */
 @LogImplAnnotation(LogTypeEnum.console)
 public class NoLoggingLogImpl extends AbstractLogger {

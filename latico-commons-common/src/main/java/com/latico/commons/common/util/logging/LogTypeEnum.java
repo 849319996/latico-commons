@@ -4,9 +4,9 @@ package com.latico.commons.common.util.logging;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:47:40
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:47:40
+ * @version: 1.0
  */
 public enum LogTypeEnum {
     console("console", -1, "console", "控制台"),

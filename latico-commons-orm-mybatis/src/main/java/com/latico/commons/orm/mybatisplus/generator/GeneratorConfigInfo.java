@@ -12,9 +12,9 @@ import java.util.List;
  * 代码生成器所需的配置信息
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-31 23:39
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-31 23:39
+ * @version: 1.0
  */
 public class GeneratorConfigInfo {
 

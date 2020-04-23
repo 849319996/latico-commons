@@ -3,9 +3,9 @@ package com.latico.commons.common.util.thread;
 import org.junit.Test;
 
 /**
- * @Author: latico
- * @Date: 2018/12/08 23:37
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/08 23:37
+ * @version: 1.0
  */
 public class ThreadUtilsTest {
 

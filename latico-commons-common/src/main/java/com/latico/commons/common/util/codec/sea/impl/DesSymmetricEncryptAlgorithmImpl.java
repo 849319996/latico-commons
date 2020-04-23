@@ -14,9 +14,9 @@ import java.security.Key;
  * 高级加密标准(AES,Advanced Encryption Standard)为最常见的对称加密算法(微信小程序加密传输就是用这个加密算法的)。对称加密算法也就是加密和解密用相同的密钥。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-03 14:14
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-03 14:14
+ * @version: 1.0
  */
 @SymmetricEncryptAlgorithmTypeAnnotation(type = SymmetricEncryptAlgorithmType.DES)
 public class DesSymmetricEncryptAlgorithmImpl extends AbstractSymmetricEncryptAlgorithm {

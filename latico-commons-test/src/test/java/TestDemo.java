@@ -9,9 +9,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2020-01-01 22:58
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-01 22:58
+ * @version: 1.0
  */
 public class TestDemo {
 

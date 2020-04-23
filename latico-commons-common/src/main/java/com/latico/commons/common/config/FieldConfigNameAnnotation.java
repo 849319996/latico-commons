@@ -6,9 +6,9 @@ import java.lang.annotation.*;
  * <PRE>
  *  字段在配置文件中的名称
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:26:08
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:26:08
+ * @version: 1.0
  */
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)

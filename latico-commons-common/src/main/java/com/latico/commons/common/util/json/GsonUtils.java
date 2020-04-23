@@ -7,9 +7,9 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 /**
- * @Author: latico
- * @Date: 2018/12/11 16:54
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/11 16:54
+ * @version: 1.0
  */
 public class GsonUtils extends JsonUtils {
     private static final Logger LOG = LoggerFactory.getLogger(GsonUtils.class);

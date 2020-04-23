@@ -17,9 +17,9 @@ import java.util.concurrent.TimeUnit;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-05 14:26
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-05 14:26
+ * @version: 1.0
  */
 public abstract class AbstractNettyClient<T> implements NettyClient<T> {
 

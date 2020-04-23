@@ -15,9 +15,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * Protostuff序列化工具
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-22 15:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-22 15:07
+ * @version: 1.0
  */
 public class ProtostuffUtils {
 

@@ -7,9 +7,9 @@ import com.lmax.disruptor.EventFactory;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 16:36
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 16:36
+ * @version: 1.0
  */
 public class EventFactoryDefaultImpl <Arg> implements EventFactory<OneArgEventDefault<Arg>> {
     @Override

@@ -23,9 +23,9 @@ import java.util.*;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-18 14:45:36
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-18 14:45:36
+ * @version: 1.0
  */
 public class DBBeanUtils {
 

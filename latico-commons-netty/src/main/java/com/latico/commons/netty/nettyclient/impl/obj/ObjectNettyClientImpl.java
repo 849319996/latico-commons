@@ -15,9 +15,9 @@ import java.io.Serializable;
  * 注意事项：netty会对分隔符切割后，会丢掉分隔符，跟split的效果一样。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-05 14:26
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-05 14:26
+ * @version: 1.0
  */
 public class ObjectNettyClientImpl extends AbstractNettyClient<Serializable> {
     private static final Logger LOG = LoggerFactory.getLogger(ObjectNettyClientImpl.class);

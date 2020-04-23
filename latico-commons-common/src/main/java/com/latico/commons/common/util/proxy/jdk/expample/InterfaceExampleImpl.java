@@ -5,9 +5,9 @@ package com.latico.commons.common.util.proxy.jdk.expample;
  * 接口实现类
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-31 19:53
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-31 19:53
+ * @version: 1.0
  */
 public class InterfaceExampleImpl implements InterfaceExample {
     @Override

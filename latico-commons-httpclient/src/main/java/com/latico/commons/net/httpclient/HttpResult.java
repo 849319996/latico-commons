@@ -5,9 +5,9 @@ package com.latico.commons.net.httpclient;
  * HTTP响应结果
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-03 0:34
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-03 0:34
+ * @version: 1.0
  */
 public class HttpResult {
     /**

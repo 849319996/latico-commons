@@ -15,9 +15,9 @@ import java.util.Set;
  * 切片模式，分布式
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-24 20:51
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-24 20:51
+ * @version: 1.0
  */
 public class ShardedJedisManager {
     /**

@@ -27,9 +27,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-16 17:47
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-16 17:47
+ * @version: 1.0
  */
 public class SocketHandler implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(SocketHandler.class);

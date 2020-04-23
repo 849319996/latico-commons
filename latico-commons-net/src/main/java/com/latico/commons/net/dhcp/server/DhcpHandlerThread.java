@@ -14,9 +14,9 @@ import java.net.DatagramPacket;
  *  DHCP 处理线程
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-05-31 16:11:50
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-31 16:11:50
+ * @version: 1.0
  */
 public class DhcpHandlerThread implements Runnable {
     private static final Logger logger = LoggerFactory.getLogger(DhcpHandlerThread.class);

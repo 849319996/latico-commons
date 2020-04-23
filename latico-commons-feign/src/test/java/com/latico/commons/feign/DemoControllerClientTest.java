@@ -8,9 +8,9 @@ import org.junit.Test;
  *  DemoControllerClient的测试用例,调用的是springboot骨架latico-springboot-mix
  *  
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 10:54:20
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 10:54:20
+ * @version: 1.0
  */
 public class DemoControllerClientTest {
 

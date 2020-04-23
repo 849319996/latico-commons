@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
  * UDP客户端
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-15 15:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-15 15:07
+ * @version: 1.0
  */
 public class UdpSocketClient implements Runnable {
 

@@ -29,9 +29,9 @@ import java.util.Map;
  * 建议创建完ES客户端后，使用单例进行连接持有，因为创建客户端的过程比较耗时
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-21 17:04
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-21 17:04
+ * @version: 1.0
  */
 public class Es6Utils {
     private static final Logger LOG = LoggerFactory.getLogger(Es6Utils.class);

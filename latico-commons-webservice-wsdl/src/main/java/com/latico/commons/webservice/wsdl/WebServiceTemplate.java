@@ -10,9 +10,9 @@ import java.util.Map;
  * wsdl
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-24 21:21
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-24 21:21
+ * @version: 1.0
  */
 public class WebServiceTemplate {
 

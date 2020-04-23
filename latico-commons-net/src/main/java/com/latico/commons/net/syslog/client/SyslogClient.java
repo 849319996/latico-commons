@@ -1,7 +1,7 @@
 package com.latico.commons.net.syslog.client;/**
- * @Author: latico
- * @Date: 2018/12/06 11:09
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/06 11:09
+ * @version: 1.0
  */
 
 import com.latico.commons.common.util.logging.Logger;
@@ -24,9 +24,9 @@ import java.net.URLDecoder;
  * LOG_INFO：情报信息，正常的系统消息，比如骚扰报告，带宽数据等，不需要处理。
  * LOG_DEBUG：包含详细的开发情报的信息，通常只在调试一个程序时使用。
  *
- * @Author: latico
- * @Date: 2018/12/06 11:09
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/06 11:09
+ * @version: 1.0
  */
 public class SyslogClient {
     private static final Logger LOG = LoggerFactory.getLogger(SyslogClient.class);

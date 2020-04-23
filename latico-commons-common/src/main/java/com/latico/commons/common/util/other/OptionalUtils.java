@@ -10,9 +10,9 @@ import java.util.stream.Stream;
  * 用于代替空指针判断的if else代码
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-20 15:10
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-20 15:10
+ * @version: 1.0
  */
 public class OptionalUtils {
 

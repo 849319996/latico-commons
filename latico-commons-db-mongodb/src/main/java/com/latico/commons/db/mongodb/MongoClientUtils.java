@@ -19,9 +19,9 @@ import java.util.List;
  * 对于大多数应用MongoClient可以使用单例模式，连接信息使用配置文件的方式
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-02-07 0:23
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-07 0:23
+ * @version: 1.0
  */
 public class MongoClientUtils {
     /**

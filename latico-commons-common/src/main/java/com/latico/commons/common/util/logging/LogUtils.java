@@ -24,9 +24,9 @@ import java.util.logging.LogManager;
  * 2、jdk自带的sun的log配置也需要使用工具加载；
  * 3、log4j的只需要在资源目录的根目录下添加log4j.properties文件，会自动加载；
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:47:46
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:47:46
+ * @version: 1.0
  */
 public class LogUtils {
     /**

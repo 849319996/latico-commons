@@ -44,9 +44,9 @@ import java.util.jar.JarFile;
  对资源路径进行了处理
  {@link Class# resolveName(java.lang.String)}
 
- * @Author: latico
- * @Date: 2018/12/11 1:34
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/11 1:34
+ * @version: 1.0
  */
 public class ResourcesUtils {
 

@@ -10,9 +10,9 @@ import com.latico.commons.common.util.regex.RegexUtils;
  * <PRE>
  *  校验工具，建议可以使用hibernate的
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 01:27:14
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 01:27:14
+ * @version: 1.0
  */
 public class VerifyUtils {
 
@@ -30,7 +30,7 @@ public class VerifyUtils {
 	
 	/**
 	 * 测试字符是否为[ASCII控制字符].
-	 * @param ch 被测试字符
+	 * @param c 被测试字符
 	 * @return true:是; false:否
 	 */
 	public static boolean isASCIICtrl(final char c) {

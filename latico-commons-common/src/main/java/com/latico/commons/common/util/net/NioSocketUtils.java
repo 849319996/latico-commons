@@ -29,9 +29,9 @@ import java.nio.channels.*;
  客户端采用NIO实现，而服务端依旧使用BIO实现,或者客户端使用了BIO，服务端使用了NIO都是不受影响。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-20 13:45
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-20 13:45
+ * @version: 1.0
  */
 public class NioSocketUtils {
     private static final Logger LOG = LoggerFactory.getLogger(NioSocketUtils.class);

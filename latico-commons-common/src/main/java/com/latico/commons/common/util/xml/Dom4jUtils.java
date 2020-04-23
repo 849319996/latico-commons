@@ -48,9 +48,9 @@ import java.util.regex.Pattern;
  4）子结点文本值：node.elementText("子结点名")
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018/12/16 03:03:43
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 03:03:43
+ * @version: 1.0
  */
 public class Dom4jUtils {
 

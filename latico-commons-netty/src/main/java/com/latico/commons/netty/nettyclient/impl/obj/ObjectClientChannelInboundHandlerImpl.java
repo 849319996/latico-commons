@@ -14,9 +14,9 @@ import java.io.Serializable;
  *
  * </PRE>
  *
- * @Author: LanDingDong
- * @Date: 2019-05-24 17:27
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-24 17:27
+ * @version: 1.0
  */
 @ChannelHandler.Sharable
 public class ObjectClientChannelInboundHandlerImpl extends SimpleChannelInboundHandler<Serializable> {

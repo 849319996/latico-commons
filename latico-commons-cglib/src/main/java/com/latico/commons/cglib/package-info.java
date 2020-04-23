@@ -6,8 +6,8 @@
  只能对接口进行代理。如果要代理的类为一个普通类、没有接口，那么Java动态代理就没法使用了。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-07-12 0:52
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-12 0:52
+ * @version: 1.0
  */
 package com.latico.commons.cglib;

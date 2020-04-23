@@ -7,9 +7,9 @@ import com.latico.commons.javaagent.onload.BeanExample;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-07-12 11:37
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-12 11:37
+ * @version: 1.0
  */
 public class RuntimeApplication {
     public static void main(String[] args) {

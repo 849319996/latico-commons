@@ -4,9 +4,9 @@ import com.latico.commons.common.util.other.IDUtils;
 import org.junit.Test;
 
 /**
- * @Author: latico
- * @Date: 2018/12/08 14:02
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/08 14:02
+ * @version: 1.0
  */
 public class IDUtilsTest {
 

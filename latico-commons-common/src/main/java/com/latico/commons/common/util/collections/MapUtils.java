@@ -7,9 +7,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @Author: latico
- * @Date: 2018/12/12 22:56
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/12 22:56
+ * @version: 1.0
  */
 public class MapUtils extends org.apache.commons.collections.MapUtils {
 

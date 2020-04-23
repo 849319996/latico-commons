@@ -61,9 +61,9 @@ import java.util.concurrent.ConcurrentSkipListMap;
  }
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-12 18:47
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-12 18:47
+ * @version: 1.0
  */
 public class ClassLoaderImpl extends ClassLoader {
     public static final Class clazz = ClassLoaderImpl.class;

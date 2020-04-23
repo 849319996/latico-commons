@@ -12,9 +12,9 @@ import org.quartz.spi.JobStore;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-02-06 21:33
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-06 21:33
+ * @version: 1.0
  */
 public class QuartzUtils {
 

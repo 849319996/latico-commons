@@ -11,9 +11,9 @@ import io.netty.channel.SimpleChannelInboundHandler;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-24 15:13
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-24 15:13
+ * @version: 1.0
  */
 public class ClientSimpleChannelInboundHandler extends SimpleChannelInboundHandler<DemoBean> {
     // 一个客户端连上再断开时，六个事件的触发顺序：加入、(连接上(在SimpleChatServerInitializer中))、在线、异常、掉线、离开

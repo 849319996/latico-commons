@@ -9,9 +9,9 @@ import com.lmax.disruptor.ExceptionHandler;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 16:56
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 16:56
+ * @version: 1.0
  */
 public class ExceptionHandlerDefaultImpl <Arg> implements ExceptionHandler<OneArgEventDefault<Arg>> {
     private static final Logger LOG = LoggerFactory.getLogger(ExceptionHandlerDefaultImpl.class);

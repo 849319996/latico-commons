@@ -4,8 +4,8 @@
  * 服务端可以独立启动，这里的服务端是可以集成进我们自己的项目代码中启动
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-02-12 17:47
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-12 17:47
+ * @version: 1.0
  */
 package com.latico.commons.zookeeper;

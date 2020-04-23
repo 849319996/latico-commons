@@ -19,9 +19,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  *     假如是用线程方式启动，会不断的从输入流中读取数据进缓存队列中
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-20 17:22
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-20 17:22
+ * @version: 1.0
  */
 public class SocketChannelHandler implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(SocketChannelHandler.class);

@@ -15,9 +15,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @JsonFormat 此注解用于属性上，作用是把Date类型直接转化为想要的格式，如@JsonFormat(pattern = "yyyy-MM-dd HH-mm-ss")。
  * @JsonProperty 此注解用于属性上，作用是把该属性的名称序列化为另外一个名称，如把trueName属性序列化为name，@JsonProperty("name")。
  *
- * @Author: latico
- * @Date: 2018/12/16 02:53:26
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 02:53:26
+ * @version: 1.0
  */
 public class JacksonUtils {
 

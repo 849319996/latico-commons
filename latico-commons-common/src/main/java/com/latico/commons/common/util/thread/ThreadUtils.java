@@ -11,9 +11,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * 线程工具
- * @Author: latico
- * @Date: 2018/12/09 00:44:23
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/09 00:44:23
+ * @version: 1.0
  */
 public class ThreadUtils extends org.apache.commons.lang3.ThreadUtils {
 

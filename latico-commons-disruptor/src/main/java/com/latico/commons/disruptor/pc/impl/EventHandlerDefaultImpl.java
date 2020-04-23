@@ -10,9 +10,9 @@ import com.lmax.disruptor.EventHandler;
  * 继承EventHandlerDefaultImpl后，子类需要重写onEvent方法
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 17:16
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 17:16
+ * @version: 1.0
  */
 public class EventHandlerDefaultImpl implements EventHandler<OneArgEventDefault<String>> {
     private static final Logger LOG = LoggerFactory.getLogger(EventHandlerDefaultImpl.class);

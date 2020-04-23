@@ -10,9 +10,9 @@ import org.apache.log4j.Logger;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:50:09
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:50:09
+ * @version: 1.0
  */
 @LogImplAnnotation(LogTypeEnum.log4j)
 public class Log4jLogImpl extends AbstractLogger {

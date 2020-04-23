@@ -14,9 +14,9 @@ import java.sql.SQLException;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-17 17:13
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-17 17:13
+ * @version: 1.0
  */
 public class DemoDao extends BaseDao<Demo> {
     private static final Logger LOG = LoggerFactory.getLogger(DemoDao.class);

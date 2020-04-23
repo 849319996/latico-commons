@@ -11,9 +11,9 @@ import org.apache.zookeeper.ZooKeeper;
  * zookeeper客户端对象
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-23 13:53
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-23 13:53
+ * @version: 1.0
  */
 public class ZookeeperClient {
     private static final Logger LOG = LoggerFactory.getLogger(ZookeeperClient.class);

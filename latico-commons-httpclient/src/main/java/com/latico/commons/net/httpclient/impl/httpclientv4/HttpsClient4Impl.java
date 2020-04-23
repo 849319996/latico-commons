@@ -22,9 +22,9 @@ import java.util.Set;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-26 23:31
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-26 23:31
+ * @version: 1.0
  */
 public class HttpsClient4Impl extends AbstractHttpClient {
     private static final Logger LOG = LoggerFactory.getLogger(HttpsClient4Impl.class);

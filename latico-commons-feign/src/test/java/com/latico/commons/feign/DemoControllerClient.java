@@ -10,9 +10,9 @@ import javax.ws.rs.core.MediaType;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-05 16:13
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-05 16:13
+ * @version: 1.0
  */
 @Path("/demo")
 public interface DemoControllerClient {

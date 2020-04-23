@@ -13,9 +13,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  System.out.println(version.getVersionInfosByMarkdown());
  * </PRE>
  *
- * @Author: latico
- * @Date: 2020-01-13 10:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-13 10:07
+ * @version: 1.0
  */
 public class VersionExample2 {
 

@@ -14,9 +14,9 @@ import java.io.*;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-04 14:25
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-04 14:25
+ * @version: 1.0
  */
 public class FreemarkerUtils {
 

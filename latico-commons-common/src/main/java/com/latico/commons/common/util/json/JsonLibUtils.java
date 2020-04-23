@@ -14,9 +14,9 @@ import java.util.*;
  * 官方停止更新，不建议使用
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-26 9:28
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-26 9:28
+ * @version: 1.0
  */
 @Deprecated
 public class JsonLibUtils {

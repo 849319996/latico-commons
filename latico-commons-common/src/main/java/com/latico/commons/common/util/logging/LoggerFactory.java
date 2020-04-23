@@ -7,9 +7,9 @@ package com.latico.commons.common.util.logging;
  2、初始化日志对象：private final static Log LOG = LogFactory.getLog(VersionExample.class);
  3、使用日志对象打印日志：LOG.info("123");
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:48:39
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:48:39
+ * @version: 1.0
  */
 public class LoggerFactory extends LogFactory {
 

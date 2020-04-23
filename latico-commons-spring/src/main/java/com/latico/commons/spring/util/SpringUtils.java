@@ -20,9 +20,9 @@ import java.util.Map;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-01 17:01
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-01 17:01
+ * @version: 1.0
  */
 public class SpringUtils {
 

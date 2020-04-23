@@ -20,9 +20,9 @@ import io.netty.handler.codec.string.StringEncoder;
  * netty工具类，tcp、udp等
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-30 11:29
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-30 11:29
+ * @version: 1.0
  */
 public class NettyTcpUtils extends NettyUtils {
 

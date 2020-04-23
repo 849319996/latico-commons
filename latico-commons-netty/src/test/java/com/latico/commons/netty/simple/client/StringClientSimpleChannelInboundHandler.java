@@ -9,9 +9,9 @@ import io.netty.channel.SimpleChannelInboundHandler;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-24 17:27
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-24 17:27
+ * @version: 1.0
  */
 @ChannelHandler.Sharable
 public class StringClientSimpleChannelInboundHandler extends SimpleChannelInboundHandler<String> {

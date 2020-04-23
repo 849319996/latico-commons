@@ -126,8 +126,8 @@ MQTT一般用于手机android移动端
 
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-30 9:36
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-30 9:36
+ * @version: 1.0
  */
 package com.latico.commons.mq.activemq;

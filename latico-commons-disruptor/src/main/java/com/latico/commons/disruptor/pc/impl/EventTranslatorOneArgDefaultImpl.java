@@ -7,9 +7,9 @@ import com.lmax.disruptor.EventTranslatorOneArg;
  * 一个参数的事件
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 16:09
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 16:09
+ * @version: 1.0
  */
 public class EventTranslatorOneArgDefaultImpl<Arg> implements EventTranslatorOneArg<OneArgEventDefault<Arg>, Arg> {
     @Override

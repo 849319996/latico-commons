@@ -1,9 +1,9 @@
 package com.latico.commons.common.util.reflect;
 
 /**
- * @Author: latico
- * @Date: 2018/12/16 1:39
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 1:39
+ * @version: 1.0
  */
 public class TestObjectUitlsBean2 extends TestObjectUitlsBean {
     private int age;

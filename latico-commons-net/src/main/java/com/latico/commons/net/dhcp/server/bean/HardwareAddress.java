@@ -29,9 +29,9 @@ import java.util.Arrays;
  * Class is immutable.
  * 硬件地址MAC
  * </PRE>
- * @Author: latico
- * @Date: 2019-07-13 14:06:44
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-13 14:06:44
+ * @version: 1.0
  */
 public class HardwareAddress implements Serializable {
 

@@ -17,9 +17,9 @@ import java.sql.Statement;
 
 /**
  * IO工具.处理IO流相关
- * @Author: latico
- * @Date: 2018/12/16 02:52:37
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 02:52:37
+ * @version: 1.0
  */
 public class IOUtils extends org.apache.commons.io.IOUtils {
 	/** LOG 日志工具 */

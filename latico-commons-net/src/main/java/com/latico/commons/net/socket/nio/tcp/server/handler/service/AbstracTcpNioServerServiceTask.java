@@ -20,9 +20,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-21 13:34
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-21 13:34
+ * @version: 1.0
  */
 public abstract class AbstracTcpNioServerServiceTask implements TcpNioServerServiceTask {
     private static final Logger LOG = LoggerFactory.getLogger(AbstracTcpNioServerServiceTask.class);

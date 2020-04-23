@@ -26,9 +26,9 @@ import java.util.Properties;
  * Mybatis-Plus代码生成插件
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-31 23:26
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-31 23:26
+ * @version: 1.0
  */
 public class MybatisPlusGenerator {
     private static final Log LOG = LogUtils.getLog(MybatisPlusGenerator.class);

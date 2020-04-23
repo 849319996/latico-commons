@@ -13,9 +13,9 @@ import java.beans.PropertyVetoException;
  * 3、每个数据源只能实例化一次；
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-02 21:02
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-02 21:02
+ * @version: 1.0
  */
 public class C3p0Utils {
 

@@ -53,9 +53,9 @@ import java.io.Serializable;
  public static final int MAX_OID_LENGTH = 127;
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-21 15:53
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-21 15:53
+ * @version: 1.0
  */
 public class SnmpRow implements Serializable {
     private static final long serialVersionUID = 1063115730717644669L;

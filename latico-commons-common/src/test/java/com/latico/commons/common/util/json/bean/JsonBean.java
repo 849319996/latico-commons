@@ -7,9 +7,9 @@ import java.util.Arrays;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-07-16 15:42
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-16 15:42
+ * @version: 1.0
  */
 public class JsonBean<T> {
 

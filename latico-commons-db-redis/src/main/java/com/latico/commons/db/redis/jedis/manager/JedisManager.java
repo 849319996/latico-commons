@@ -11,9 +11,9 @@ import redis.clients.jedis.JedisPoolConfig;
  * 单机模式
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-24 20:50
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-24 20:50
+ * @version: 1.0
  */
 public class JedisManager {
 

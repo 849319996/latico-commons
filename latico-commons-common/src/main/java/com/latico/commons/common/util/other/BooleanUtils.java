@@ -9,9 +9,9 @@ import java.util.Collection;
  * <PRE>
  * 布尔数据处理工具
  * </PRE>
- * @Author: latico
- * @Date: 2018/12/08 20:43:32
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/08 20:43:32
+ * @version: 1.0
  */
 public class BooleanUtils extends org.apache.commons.lang3.BooleanUtils {
 	private static final Logger LOG = LoggerFactory.getLogger(BooleanUtils.class);

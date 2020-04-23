@@ -9,9 +9,9 @@ import java.util.Date;
  *  时间对象
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-25 14:25:20
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-25 14:25:20
+ * @version: 1.0
  */
 public class DemoTimeParam implements Serializable {
 

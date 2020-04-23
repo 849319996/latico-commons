@@ -8,9 +8,9 @@ import org.eclipse.jetty.websocket.servlet.ServletUpgradeResponse;
  *  在调用websocket的业务处理类前，在这里创建具体的业务处理类
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-04 11:45:50
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-04 11:45:50
+ * @version: 1.0
  */
 public class WebSocketCreatorImpl implements org.eclipse.jetty.websocket.servlet.WebSocketCreator {
 

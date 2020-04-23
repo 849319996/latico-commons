@@ -8,9 +8,9 @@ import com.latico.commons.common.util.db.dao.NotDBFieldAnnotation;
 
 
 /**
- * @Author: latico
- * @Date: 2018/12/05 16:00
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/05 16:00
+ * @version: 1.0
  */
 @DBTableNameAnnotation("Compare_Bean")
 @CompareAnnotation(autoIncrementFieldName = "id", comapreKeyRelatedFieldNames = {"name", "nickName"}, compareValueRelatedFieldNames = {"age", "sex"})

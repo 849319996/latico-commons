@@ -13,9 +13,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-20 16:48
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-20 16:48
+ * @version: 1.0
  */
 public class TcpNioSocketClient {
 

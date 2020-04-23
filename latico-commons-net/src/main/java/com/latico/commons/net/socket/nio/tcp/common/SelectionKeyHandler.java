@@ -7,9 +7,9 @@ import java.nio.channels.SelectionKey;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-21 11:41
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-21 11:41
+ * @version: 1.0
  */
 public class SelectionKeyHandler {
     private final SelectionKey selectionKey;

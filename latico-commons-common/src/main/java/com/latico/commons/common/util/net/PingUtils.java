@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-14 11:48
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-14 11:48
+ * @version: 1.0
  */
 public class PingUtils {
     private static final Logger LOG = LoggerFactory.getLogger(PingUtils.class);

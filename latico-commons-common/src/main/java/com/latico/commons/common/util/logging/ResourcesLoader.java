@@ -16,9 +16,9 @@ import java.util.jar.JarFile;
  * <PRE>
  *  资源加载
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:48:00
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:48:00
+ * @version: 1.0
  */
 public class ResourcesLoader {
 

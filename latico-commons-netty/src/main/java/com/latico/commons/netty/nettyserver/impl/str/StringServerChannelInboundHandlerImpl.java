@@ -15,9 +15,9 @@ import io.netty.channel.group.ChannelGroup;
  * 如果这个类注解了Sharable.class, 说明这个类会被多个channel共享
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-24 17:27
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-24 17:27
+ * @version: 1.0
  */
 @ChannelHandler.Sharable
 public class StringServerChannelInboundHandlerImpl extends SimpleChannelInboundHandler<String> {

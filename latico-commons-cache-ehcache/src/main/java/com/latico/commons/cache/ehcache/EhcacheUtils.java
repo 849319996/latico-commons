@@ -11,9 +11,9 @@ import org.ehcache.config.builders.ResourcePoolsBuilder;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-02-06 23:16
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-06 23:16
+ * @version: 1.0
  */
 public class EhcacheUtils {
 

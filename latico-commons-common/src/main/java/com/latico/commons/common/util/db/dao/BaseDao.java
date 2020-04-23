@@ -24,9 +24,9 @@ import java.util.Map;
  * 对于数据库字段名，假如没有使用DBFieldNameAnnotation或者 javax.persistence.Column注解，那么就是使用bean对象的字段名称
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-24 1:17
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-24 1:17
+ * @version: 1.0
  */
 public abstract class BaseDao<T> {
 

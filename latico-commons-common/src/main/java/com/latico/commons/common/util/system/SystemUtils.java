@@ -32,9 +32,9 @@ import java.util.regex.Pattern;
  * OS工具类
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018/12/16 03:02:29
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 03:02:29
+ * @version: 1.0
  */
 public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
     private static final Logger LOG = LoggerFactory.getLogger(SystemUtils.class);

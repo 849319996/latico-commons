@@ -8,9 +8,9 @@ import java.util.Map;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-09 22:27:29
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-09 22:27:29
+ * @version: 1.0
  */
 public class BeanExample implements Serializable {
     /**

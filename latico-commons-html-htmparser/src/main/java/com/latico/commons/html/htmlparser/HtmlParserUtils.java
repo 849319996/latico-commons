@@ -15,9 +15,9 @@ import java.io.IOException;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-26 23:38
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-26 23:38
+ * @version: 1.0
  */
 public class HtmlParserUtils {
 

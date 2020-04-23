@@ -18,9 +18,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * SelectionKey：选择键，跟一个客户端连接的保持者
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-20 20:08
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-20 20:08
+ * @version: 1.0
  */
 public class TcpNioSocketServer {
 

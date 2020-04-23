@@ -11,9 +11,9 @@ import com.lmax.disruptor.dsl.Disruptor;
  * 把消息推送到RingBuffer队列中
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 17:02
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 17:02
+ * @version: 1.0
  */
 public class EventProducerDefault<Arg> {
     /**

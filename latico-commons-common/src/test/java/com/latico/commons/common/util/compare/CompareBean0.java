@@ -4,9 +4,9 @@ import com.latico.commons.common.util.compare.extendsmode.AbstractCompareObj;
 
 
 /**
- * @Author: latico
- * @Date: 2018/12/05 16:00
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/05 16:00
+ * @version: 1.0
  */
 public class CompareBean0 extends AbstractCompareObj {
     private int id;

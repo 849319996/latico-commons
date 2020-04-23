@@ -11,9 +11,9 @@ import java.lang.reflect.Method;
  * 动态代理调用处理器
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-31 19:42
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-31 19:42
+ * @version: 1.0
  */
 public class InvocationHandlerExample implements InvocationHandler {
     private static final Logger LOG = LoggerFactory.getLogger(InvocationHandlerExample.class);

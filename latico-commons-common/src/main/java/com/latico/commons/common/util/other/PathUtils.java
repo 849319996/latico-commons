@@ -17,9 +17,9 @@ import java.util.regex.Pattern;
  * <PRE>
  * 路径处理工具.
  * </PRE>
- * @Author: latico
- * @Date: 2019-07-07 19:42:33
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-07 19:42:33
+ * @version: 1.0
  */
 public class PathUtils {
 

@@ -19,9 +19,9 @@ import java.util.Properties;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-17 17:13
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-17 17:13
+ * @version: 1.0
  */
 public class Config extends AbstractConfig {
 

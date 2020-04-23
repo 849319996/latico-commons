@@ -20,9 +20,9 @@ import java.util.List;
  * rwd：与rws类似，只是仅对文件的内容同步更新到磁盘，而不修改文件的元数据
  * </PRE>
  *
- * @Author: latico
- * @Date: 2020-01-08 14:16
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-08 14:16
+ * @version: 1.0
  */
 public class RafUtils {
     private static final Logger LOG = LoggerFactory.getLogger(RafUtils.class);

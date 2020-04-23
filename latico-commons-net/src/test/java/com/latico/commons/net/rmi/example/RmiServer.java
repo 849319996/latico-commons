@@ -13,9 +13,9 @@ import java.util.Map;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-11-15 9:50
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-11-15 9:50
+ * @version: 1.0
  */
 public class RmiServer {
     public static void main(String[] args) throws Exception {

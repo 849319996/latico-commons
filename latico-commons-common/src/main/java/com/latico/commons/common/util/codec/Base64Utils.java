@@ -10,9 +10,9 @@ import sun.misc.BASE64Encoder;
  *  Base64编解码工具
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-05-28 23:33:51
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-28 23:33:51
+ * @version: 1.0
  */
 public class Base64Utils {
 

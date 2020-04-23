@@ -26,9 +26,9 @@ import java.nio.charset.Charset;
  * UNICODEstr -> UNICODEbyte -> ISOstr -> ISObyte -> UNICODEstr
  *  
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-24 00:27:46
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-24 00:27:46
+ * @version: 1.0
  */
 public class CodecUtils {
 

@@ -16,9 +16,9 @@ import java.util.*;
  *
  * 也可以用JDK1.7开始自带的文件工具类{@link java.nio.file.Files}
  *
- * @Author: latico
- * @Date: 2018/12/16 02:52:23
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 02:52:23
+ * @version: 1.0
  */
 public class FileUtils extends org.apache.commons.io.FileUtils {
 

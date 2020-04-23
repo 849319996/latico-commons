@@ -6,9 +6,9 @@ package com.latico.commons.db.datasource;
  * 数据源参数
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-02 14:09
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-02 14:09
+ * @version: 1.0
  */
 public class DataSourceParam {
 

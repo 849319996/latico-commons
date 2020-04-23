@@ -9,9 +9,9 @@ import java.net.MalformedURLException;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-09 22:11
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-09 22:11
+ * @version: 1.0
  */
 public class HessianUtils {
     private static final HessianProxyFactory hessianProxyFactory = new HessianProxyFactory();

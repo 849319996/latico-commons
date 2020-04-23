@@ -7,9 +7,9 @@ import com.latico.commons.net.socket.nio.tcp.common.SelectionKeyHandler;
  * 注意使用是单次任务
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-17 13:54
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-17 13:54
+ * @version: 1.0
  */
 public interface TcpNioServerServiceTask extends Runnable {
 

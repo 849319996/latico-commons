@@ -14,9 +14,9 @@ import java.util.Set;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-24 22:23
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-24 22:23
+ * @version: 1.0
  */
 public class JedisConfig extends AbstractConfig {
     //池中最多可以有多少个jedis实例，默认值是8

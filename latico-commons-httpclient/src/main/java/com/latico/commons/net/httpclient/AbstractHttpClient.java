@@ -13,9 +13,9 @@ import java.util.Map;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-03 0:45
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-03 0:45
+ * @version: 1.0
  */
 public abstract class AbstractHttpClient implements HttpClient {
 

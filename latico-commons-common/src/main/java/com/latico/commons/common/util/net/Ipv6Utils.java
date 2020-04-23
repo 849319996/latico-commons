@@ -29,9 +29,9 @@ import sun.net.util.IPAddressUtil;
 
  * </PRE>
  *
- * @Author: latico
- * @Date: 2020-01-07 16:41
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-07 16:41
+ * @version: 1.0
  */
 public class Ipv6Utils {
 

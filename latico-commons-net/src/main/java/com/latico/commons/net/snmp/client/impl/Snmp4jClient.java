@@ -32,9 +32,9 @@ import java.util.concurrent.TimeUnit;
  * <PRE>
  *  SNMP4J 方式实现SNMP
  * </PRE>
- * @Author: latico
- * @Date: 2019-12-10 12:51:12
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-10 12:51:12
+ * @version: 1.0
  */
 public class Snmp4jClient extends AbstractSnmpClient implements PDUFactory {
 

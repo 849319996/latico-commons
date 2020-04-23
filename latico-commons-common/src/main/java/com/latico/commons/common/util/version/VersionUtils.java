@@ -8,9 +8,9 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * 把版本记录通过 addVersionInfo写进 VersionUtils 中，然后通过 VersionUtils.getVersionInfosToMarkdown()读取
  * </PRE>
  *
- * @Author: latico
- * @Date: 2020-01-13 14:52
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-13 14:52
+ * @version: 1.0
  */
 public class VersionUtils {
     public final static String LINE_SEPARATOR = "\r\n";

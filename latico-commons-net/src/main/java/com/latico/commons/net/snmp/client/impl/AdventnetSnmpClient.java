@@ -24,9 +24,9 @@ import java.util.regex.Pattern;
  * Adventnet 实现SNMP
  * 【注意：Adventnet的实现，OID的值必须前面带英文句号'.'，否则无法识别】
  * </PRE>
- * @Author: latico
- * @Date: 2019-12-10 12:51:22
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-10 12:51:22
+ * @version: 1.0
  */
 public class AdventnetSnmpClient extends AbstractSnmpClient {
 

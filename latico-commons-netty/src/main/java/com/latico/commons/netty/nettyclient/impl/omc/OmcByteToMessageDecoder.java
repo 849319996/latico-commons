@@ -13,9 +13,9 @@ import java.util.List;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-13 22:40:06
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-13 22:40:06
+ * @version: 1.0
  */
 public class OmcByteToMessageDecoder extends ByteToMessageDecoder {
 

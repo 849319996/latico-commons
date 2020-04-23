@@ -5,9 +5,9 @@ package com.latico.commons.common.util.system.cli;
  * <PRE>
  *  系统命令行返回结果.
  * </PRE>
- * @Author: latico
- * @Date: 2019-07-07 18:46:47
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-07 18:46:47
+ * @version: 1.0
  */
 public class CmdResult {
 

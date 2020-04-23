@@ -6,9 +6,9 @@ import java.util.*;
 
 /**
  * 方法工具
- * @Author: latico
- * @Date: 2018/12/12 0:29
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/12 0:29
+ * @version: 1.0
  */
 public class MethodUtils extends org.apache.commons.lang3.reflect.MethodUtils {
 

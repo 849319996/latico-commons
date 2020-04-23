@@ -11,9 +11,9 @@ import org.slf4j.spi.LocationAwareLogger;
  * <PRE>
  *  logback日志实现类
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:49:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:49:59
+ * @version: 1.0
  */
 @LogImplAnnotation(LogTypeEnum.logback)
 public class LogbackLogImpl extends AbstractLogger {

@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-02-06 22:36
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-06 22:36
+ * @version: 1.0
  */
 public class JdkScheduledManager {
     private static volatile JdkScheduledManager instance;

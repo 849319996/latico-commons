@@ -8,9 +8,9 @@ import java.util.regex.Pattern;
  * <PRE>
  *  枚举类：正则表达式
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 01:25:47
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 01:25:47
+ * @version: 1.0
  */
 public enum RegexEnum {
 

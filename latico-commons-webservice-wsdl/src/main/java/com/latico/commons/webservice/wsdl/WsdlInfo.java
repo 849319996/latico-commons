@@ -5,9 +5,9 @@ package com.latico.commons.webservice.wsdl;
  * wsdl
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-24 21:22
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-24 21:22
+ * @version: 1.0
  */
 public class WsdlInfo {
     /**

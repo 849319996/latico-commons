@@ -9,9 +9,9 @@ import com.latico.commons.common.util.logging.LoggerFactory;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-12 14:42
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-12 14:42
+ * @version: 1.0
  */
 public class ClassLoaderUtils {
     private static final Logger LOG = LoggerFactory.getLogger(ClassLoaderUtils.class);

@@ -12,9 +12,9 @@ import java.nio.channels.SocketChannel;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-21 0:27
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-21 0:27
+ * @version: 1.0
  */
 public class TcpNioServerServiceTaskImplExample extends AbstracTcpNioServerServiceTask {
     private static final Logger LOG = LoggerFactory.getLogger(TcpNioServerServiceTaskImplExample.class);

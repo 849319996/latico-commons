@@ -70,9 +70,9 @@ import java.util.*;
  System.out.println(CompareHelper.diffCompareByAnnotation(newObjs, oldObjs));
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-05-28 23:34:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-28 23:34:07
+ * @version: 1.0
  */
 public class CompareHelper {
 

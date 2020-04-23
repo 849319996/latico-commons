@@ -19,9 +19,9 @@ import java.util.Arrays;
  * <PRE>
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-26 22:05
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-26 22:05
+ * @version: 1.0
  */
 @SuppressWarnings("JavadocReference")
 public class ActiveMQUtils {

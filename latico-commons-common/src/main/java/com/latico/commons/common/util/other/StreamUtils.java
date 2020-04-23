@@ -11,9 +11,9 @@ import java.util.stream.Stream;
  * stream流式处理
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-21 10:06
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-21 10:06
+ * @version: 1.0
  */
 public class StreamUtils {
 

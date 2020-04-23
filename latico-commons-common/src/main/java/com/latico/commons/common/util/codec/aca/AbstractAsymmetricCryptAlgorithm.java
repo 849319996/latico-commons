@@ -11,9 +11,9 @@ import java.security.PublicKey;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-03 16:24
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-03 16:24
+ * @version: 1.0
  */
 public abstract class AbstractAsymmetricCryptAlgorithm implements AsymmetricCryptAlgorithm {
 

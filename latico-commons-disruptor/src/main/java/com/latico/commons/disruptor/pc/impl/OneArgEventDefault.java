@@ -5,9 +5,9 @@ package com.latico.commons.disruptor.pc.impl;
  * 事件包装类，用来装事件的实际数据
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-22 15:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-22 15:59
+ * @version: 1.0
  */
 public class OneArgEventDefault<Arg> {
     /**

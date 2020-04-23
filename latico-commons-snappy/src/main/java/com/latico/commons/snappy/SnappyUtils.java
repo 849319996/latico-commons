@@ -10,9 +10,9 @@ import java.io.UnsupportedEncodingException;
  * 压缩/解压工具
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-26 17:51
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-26 17:51
+ * @version: 1.0
  */
 public class SnappyUtils {
 

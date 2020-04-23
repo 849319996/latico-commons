@@ -12,9 +12,9 @@ import java.util.Properties;
  *  zookeeper服务器，单例
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-05-23 13:45:11
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-23 13:45:11
+ * @version: 1.0
  */
 public class ZookeeperServer {
 

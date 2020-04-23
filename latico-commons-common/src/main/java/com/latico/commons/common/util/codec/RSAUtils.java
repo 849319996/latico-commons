@@ -14,9 +14,9 @@ import java.util.Base64;
  * RSA算法工具类
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-03 21:33
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-03 21:33
+ * @version: 1.0
  */
 public class RSAUtils {
     /**

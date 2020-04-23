@@ -12,9 +12,9 @@ import io.netty.channel.SimpleChannelInboundHandler;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-05-24 15:13
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-05-24 15:13
+ * @version: 1.0
  */
 @ChannelHandler.Sharable
 public class ServerSimpleChannelInboundHandler extends SimpleChannelInboundHandler<DemoBean> {

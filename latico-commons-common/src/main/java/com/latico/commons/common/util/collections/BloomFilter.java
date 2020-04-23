@@ -54,9 +54,9 @@ import java.util.Collection;
 
  * @param <E> 元素类型
  * </PRE>
- * @Author: latico
- * @Date: 2018/12/16 03:04:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 03:04:59
+ * @version: 1.0
  */
 public class BloomFilter<E> implements Serializable {
 

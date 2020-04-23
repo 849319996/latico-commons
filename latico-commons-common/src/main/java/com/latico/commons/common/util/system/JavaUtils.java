@@ -20,9 +20,9 @@ import java.util.*;
  * <PRE>
  *  // 实时打印命令行执行结果
  * </PRE>
- * @Author: latico
- * @Date: 2019-07-07 18:50:46
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-07 18:50:46
+ * @version: 1.0
  */
 public class JavaUtils {
 

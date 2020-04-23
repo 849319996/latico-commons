@@ -8,9 +8,9 @@ import java.net.URL;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-22 0:46
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-22 0:46
+ * @version: 1.0
  */
 public class UriUtils {
     /**

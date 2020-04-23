@@ -7,9 +7,9 @@ import com.latico.commons.common.util.version.VersionExample;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-22 16:58
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-22 16:58
+ * @version: 1.0
  */
 public class GenericBeanImpl extends AbstractGenericBean<VersionExample> {
     private int age;

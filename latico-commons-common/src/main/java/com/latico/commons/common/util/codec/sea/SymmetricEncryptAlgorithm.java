@@ -16,9 +16,9 @@ package com.latico.commons.common.util.codec.sea;
  }
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-03 13:57
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-03 13:57
+ * @version: 1.0
  */
 public interface SymmetricEncryptAlgorithm {
 

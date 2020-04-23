@@ -8,9 +8,9 @@ import com.latico.commons.common.util.logging.LogTypeEnum;
  * <PRE>
  * apache的日志实现类
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:48:50
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:48:50
+ * @version: 1.0
  */
 @LogImplAnnotation(LogTypeEnum.commonsLogging)
 public class JakartaCommonsLogImpl extends AbstractLogger {

@@ -11,9 +11,9 @@ import java.net.Socket;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-21 13:42
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-21 13:42
+ * @version: 1.0
  */
 public abstract class AbstractTcpServerServiceTask implements TcpServerServiceTask {
 

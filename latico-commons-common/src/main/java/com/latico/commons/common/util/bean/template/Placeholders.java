@@ -5,9 +5,9 @@ package com.latico.commons.common.util.bean.template;
  * 占位符名称定义。
  * 要求所有模板文件中用到的占位符都要先在此处定义，以便管理。
  * </PRE>
- * @Author: latico
- * @Date: 2019-07-16 17:40:02
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-16 17:40:02
+ * @version: 1.0
  */
 public class Placeholders {
 

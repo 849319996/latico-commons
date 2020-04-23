@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author: latico
- * @Date: 2018/12/05 15:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/05 15:59
+ * @version: 1.0
  */
 public class CompareHelperTest {
 

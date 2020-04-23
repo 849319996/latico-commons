@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-01 18:12
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-01 18:12
+ * @version: 1.0
  */
 @Component
 public class Student implements Study {

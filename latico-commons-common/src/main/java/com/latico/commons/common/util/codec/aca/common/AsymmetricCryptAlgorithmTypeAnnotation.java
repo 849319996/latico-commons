@@ -7,9 +7,9 @@ import java.lang.annotation.*;
  * 非对称加密算法类型
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-03 14:53
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-03 14:53
+ * @version: 1.0
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

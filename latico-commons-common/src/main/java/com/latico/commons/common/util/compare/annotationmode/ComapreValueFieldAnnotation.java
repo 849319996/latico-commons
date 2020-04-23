@@ -8,9 +8,9 @@ import java.lang.annotation.*;
  * 该注解标志的字段，会作为比较的值来关联
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-13 16:39:43
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-13 16:39:43
+ * @version: 1.0
  */
 @SuppressWarnings("JavadocReference")
 @Target({ElementType.FIELD})

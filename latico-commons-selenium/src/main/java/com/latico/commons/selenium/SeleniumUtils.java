@@ -10,9 +10,9 @@ package com.latico.commons.selenium;
  * .Net、Java、Perl等不同语言的测试脚本。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-07 0:21
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-07 0:21
+ * @version: 1.0
  */
 public class SeleniumUtils {
 }

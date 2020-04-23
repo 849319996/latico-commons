@@ -22,9 +22,9 @@ import java.util.concurrent.TimeUnit;
  * DatagramPacket包含了客户端的IP和端口，所以做业务处理的时候，需要注意判断是哪个客户端IP的包
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-15 15:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-15 15:07
+ * @version: 1.0
  */
 public class UdpSocketServer implements Runnable {
 

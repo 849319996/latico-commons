@@ -15,9 +15,9 @@ import java.util.regex.Pattern;
  * <PRE>
  *  字符串处理工具，集成了apache的进行扩展
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:50:44
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:50:44
+ * @version: 1.0
  */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
 

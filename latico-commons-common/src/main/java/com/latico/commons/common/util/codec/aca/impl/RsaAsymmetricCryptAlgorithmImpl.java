@@ -16,9 +16,9 @@ import java.util.Base64;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-03 15:48
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-03 15:48
+ * @version: 1.0
  */
 @AsymmetricCryptAlgorithmTypeAnnotation(type = AsymmetricCryptAlgorithmType.RSA)
 public class RsaAsymmetricCryptAlgorithmImpl extends AbstractAsymmetricCryptAlgorithm {

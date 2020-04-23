@@ -7,9 +7,9 @@ import java.util.List;
  * 设备非分页输出命令
  * </PRE>
  *
- * @Author: LanDingDong
- * @Date: 2019-04-09 17:21
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-04-09 17:21
+ * @version: 1.0
  */
 public class DevPageBreakCmd {
 

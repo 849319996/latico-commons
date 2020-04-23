@@ -15,9 +15,9 @@ import java.net.*;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-15 10:12
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-15 10:12
+ * @version: 1.0
  */
 public class UdpSocketUtils {
 

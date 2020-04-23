@@ -15,9 +15,9 @@ import java.net.InetSocketAddress;
  * JGroups工具类
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-10 17:36
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-10 17:36
+ * @version: 1.0
  */
 public class JGroupsUtils {
 

@@ -6,9 +6,9 @@ import com.latico.commons.hessian.common.bean.BeanExample;
  * <PRE>
  * @UrlPath("/hessian") 需要跟web.xml中servlet配置的一致
  * </PRE>
- * @Author: latico
- * @Date: 2019-01-09 22:27:43
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-09 22:27:43
+ * @version: 1.0
  */
 @UrlPath("/hessian")
 public interface HelloService {

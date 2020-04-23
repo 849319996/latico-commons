@@ -7,9 +7,9 @@ import java.lang.annotation.*;
  * 差异比较的key注解，效果跟{@link CompareAnnotation#comapreKeyRelatedFieldNames()}一样
  * 该注解标志的字段，会作为key来关联
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-13 16:39:27
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-13 16:39:27
+ * @version: 1.0
  */
 @SuppressWarnings("JavadocReference")
 @Target({ElementType.FIELD})

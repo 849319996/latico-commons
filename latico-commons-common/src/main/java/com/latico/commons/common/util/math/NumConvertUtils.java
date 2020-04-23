@@ -10,9 +10,9 @@ import com.latico.commons.common.util.string.StringUtils;
  * D:dec
  * H:hex
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:45:40
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:45:40
+ * @version: 1.0
  */
 public class NumConvertUtils extends org.apache.commons.lang3.Conversion {
 

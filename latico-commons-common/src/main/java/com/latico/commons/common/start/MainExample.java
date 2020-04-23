@@ -10,9 +10,9 @@ import com.latico.commons.common.util.logging.LoggerFactory;
  * <PRE>
  *  程序启动入口类
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 13:39:21
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 13:39:21
+ * @version: 1.0
  */
 public class MainExample extends AbstractMain {
 

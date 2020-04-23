@@ -6,9 +6,9 @@ package com.latico.commons.webservice.server.demo;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-04-09 13:00
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-04-09 13:00
+ * @version: 1.0
  */
 @javax.jws.WebService
 public class WebServiceImpl implements WebService {

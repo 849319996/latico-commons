@@ -9,9 +9,9 @@ import java.util.Map;
 /**
  * 注解工具
  *
- * @Author: latico
- * @Date: 2018/12/02 20:56
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/02 20:56
+ * @version: 1.0
  */
 public class AnnotationUtils extends org.apache.commons.lang3.AnnotationUtils {
 

@@ -15,9 +15,9 @@ import java.io.Serializable;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-11-08 23:14:01
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-11-08 23:14:01
+ * @version: 1.0
  */
 public class ProtobufNettyServerImpl extends AbstractNettyServer<Serializable> {
     private static final Logger LOG = LoggerFactory.getLogger(ProtobufNettyServerImpl.class);

@@ -5,9 +5,9 @@ package com.latico.commons.common.util.reflect.bean;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-24 0:39
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-24 0:39
+ * @version: 1.0
  */
 public class TestBean {
     private String name;

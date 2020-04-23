@@ -22,9 +22,9 @@ import java.util.Properties;
  * 3：setProperties它是允许你在使用插件的时候设置参数值。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-29 9:05
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-29 9:05
+ * @version: 1.0
  */
 @Intercepts(
         {

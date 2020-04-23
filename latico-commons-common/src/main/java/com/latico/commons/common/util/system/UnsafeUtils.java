@@ -12,9 +12,9 @@ import java.lang.reflect.Field;
  * Unsafe对象，能操作内存，{@link Unsafe}
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-15 20:18
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-15 20:18
+ * @version: 1.0
  */
 @SuppressWarnings("JavadocReference")
 public class UnsafeUtils {

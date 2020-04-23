@@ -13,9 +13,9 @@ import com.latico.pub.db.DBUtils;
  * <PRE>
  * Table Name : @{table_name}@
  * </PRE>
- * @Author: DBBeanUtils
- * @Date: 2019-01-22 0:46
- * @Version: 1.0
+ * @author: DBBeanUtils
+ * @date: 2019-01-22 0:46
+ * @version: 1.0
  */
 public class @{class_name}@  {
     

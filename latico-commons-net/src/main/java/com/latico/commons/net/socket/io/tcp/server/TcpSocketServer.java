@@ -21,9 +21,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-16 17:16
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-16 17:16
+ * @version: 1.0
  */
 public class TcpSocketServer implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(TcpSocketServer.class);

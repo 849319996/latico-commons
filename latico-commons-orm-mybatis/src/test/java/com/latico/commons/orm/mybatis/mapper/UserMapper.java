@@ -9,9 +9,9 @@ import java.util.List;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-31 22:58
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-31 22:58
+ * @version: 1.0
  */
 public interface UserMapper {
 

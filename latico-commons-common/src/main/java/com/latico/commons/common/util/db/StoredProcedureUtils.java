@@ -16,9 +16,9 @@ import java.util.Map;
  * <PRE>
  *  存储过程工具
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:46:20
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:46:20
+ * @version: 1.0
  */
 public class StoredProcedureUtils {
     private static final Logger LOG = LoggerFactory.getLogger(StoredProcedureUtils.class);

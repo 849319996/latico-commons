@@ -14,9 +14,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-11-07 10:50
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-11-07 10:50
+ * @version: 1.0
  */
 public class SyslogServerThreadImpl extends SyslogServerThread {
 

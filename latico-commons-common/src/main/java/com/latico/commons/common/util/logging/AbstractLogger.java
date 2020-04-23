@@ -5,9 +5,9 @@ package com.latico.commons.common.util.logging;
  * <PRE>
  *  抽象的日志对象
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:47:28
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:47:28
+ * @version: 1.0
  */
 public abstract class AbstractLogger implements Logger {
 

@@ -20,9 +20,9 @@ import java.util.regex.Pattern;
  * <PRE>
  *  日期/时间工具
  * </PRE>
- * @Author: latico
- * @Date: 2018/12/16 03:03:19
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 03:03:19
+ * @version: 1.0
  */
 public class DateTimeUtils extends org.apache.commons.lang3.time.DateUtils {
 

@@ -8,9 +8,9 @@ import io.netty.channel.Channel;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-13 18:02
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-13 18:02
+ * @version: 1.0
  */
 public class ReceiveMsg <MSG> {
     private String remoteIp;

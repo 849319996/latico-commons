@@ -9,9 +9,9 @@ import com.latico.commons.net.socket.io.tcp.common.SocketHandler;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-16 18:38
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-16 18:38
+ * @version: 1.0
  */
 public class TcpServerServiceHandler implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(TcpServerServiceHandler.class);

@@ -4,9 +4,9 @@ package com.latico.commons.common.envm;
  * <PRE>
  *  枚举类：计算机存储单位
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 01:26:17
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 01:26:17
+ * @version: 1.0
  */
 public enum TimeUnitEnum {
 

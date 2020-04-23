@@ -14,9 +14,9 @@ import java.io.IOException;
  * <PRE>
  *  jxl工具
  * </PRE>
- * @Author: latico
- * @Date: 2019-04-09 10:12:22
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-04-09 10:12:22
+ * @version: 1.0
  */
 public class JxlUtils {
 

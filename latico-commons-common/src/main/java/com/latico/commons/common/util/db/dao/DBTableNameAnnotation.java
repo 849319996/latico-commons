@@ -8,9 +8,9 @@ import java.lang.annotation.*;
  * 也可以使用{@link javax.persistence.Table}
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018-12-23 15:40
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018-12-23 15:40
+ * @version: 1.0
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

@@ -4,9 +4,9 @@ package com.latico.commons.common.envm;
  * <PRE>
  *  枚举类：日期格式
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 01:24:40
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 01:24:40
+ * @version: 1.0
  */
 public class DateFormat {
 

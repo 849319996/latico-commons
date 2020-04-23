@@ -10,9 +10,9 @@ import java.util.*;
  * jdk自带有{@link Collections}工具类，建议同时使用
  * </PRE>
  *
- * @Author: latico
- * @Date: 2018/12/08 20:44:00
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/08 20:44:00
+ * @version: 1.0
  */
 public class CollectionUtils extends org.apache.commons.collections.CollectionUtils {
     /**

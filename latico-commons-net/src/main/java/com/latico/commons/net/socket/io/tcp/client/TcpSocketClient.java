@@ -12,9 +12,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * 创建连接后，创建一个SocketHandler进行流操作
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-16 16:09
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-16 16:09
+ * @version: 1.0
  */
 public class TcpSocketClient {
     private static final Logger LOG = LoggerFactory.getLogger(TcpSocketClient.class);

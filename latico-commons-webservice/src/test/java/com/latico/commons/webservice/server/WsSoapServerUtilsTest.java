@@ -7,9 +7,9 @@ import org.junit.Test;
  * <PRE>
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 00:51:08
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 00:51:08
+ * @version: 1.0
  */
 public class WsSoapServerUtilsTest {
 

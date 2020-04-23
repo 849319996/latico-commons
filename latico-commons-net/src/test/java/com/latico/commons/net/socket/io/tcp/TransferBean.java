@@ -7,9 +7,9 @@ import java.io.Serializable;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-16 20:33
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-16 20:33
+ * @version: 1.0
  */
 public class TransferBean implements Serializable {
 

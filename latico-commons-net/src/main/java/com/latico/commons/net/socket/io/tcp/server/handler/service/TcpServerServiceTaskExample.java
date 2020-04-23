@@ -8,9 +8,9 @@ import com.latico.commons.common.util.logging.LoggerFactory;
  * TcpServerServiceTask示例
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-17 11:01
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-17 11:01
+ * @version: 1.0
  */
 public class TcpServerServiceTaskExample extends AbstractTcpServerServiceTask {
     private static final Logger LOG = LoggerFactory.getLogger(TcpServerServiceTaskExample.class);

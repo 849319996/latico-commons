@@ -17,9 +17,9 @@ import java.util.concurrent.TimeUnit;
  *  可以在{@link WebSocketCreatorImpl}类中的创建控制成单例
  *  
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-04 11:43:57
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-04 11:43:57
+ * @version: 1.0
  */
 @WebSocket(maxTextMessageSize = 128 * 1024, maxBinaryMessageSize = 128 * 1024)
 public class ServerWebSocketService {

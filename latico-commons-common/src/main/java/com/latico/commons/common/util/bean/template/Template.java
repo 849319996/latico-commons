@@ -18,9 +18,9 @@ import java.util.regex.Pattern;
  * （2）模板文件中的占位符为  @{占位符名称}@，而代码替换只需 set(占位符名称, 值)。
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-07-16 17:40:13
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-16 17:40:13
+ * @version: 1.0
  */
 public class Template {
 	

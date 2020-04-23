@@ -181,9 +181,9 @@ import java.util.Map;
  简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-04 0:42
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-04 0:42
+ * @version: 1.0
  */
 public class XstreamUtils {
 

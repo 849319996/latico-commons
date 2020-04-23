@@ -6,9 +6,9 @@ import sun.misc.VM;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2020-01-04 21:48
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-04 21:48
+ * @version: 1.0
  */
 public class Test2 {
     /**

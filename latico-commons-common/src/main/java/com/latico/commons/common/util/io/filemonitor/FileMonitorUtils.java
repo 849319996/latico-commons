@@ -13,9 +13,9 @@ import java.io.File;
  * 文件监控器工具
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-20 14:07
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-20 14:07
+ * @version: 1.0
  */
 public class FileMonitorUtils {
     private static final Logger LOG = LoggerFactory.getLogger(FileMonitorUtils.class);

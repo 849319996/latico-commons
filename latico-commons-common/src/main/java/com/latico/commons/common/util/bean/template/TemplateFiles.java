@@ -6,9 +6,9 @@ package com.latico.commons.common.util.bean.template;
  * 要求所有模板文件名称都要先在此处定义，以便管理。
  *
  * </PRE>
- * @Author: latico
- * @Date: 2019-07-16 17:40:23
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-07-16 17:40:23
+ * @version: 1.0
  */
 public class TemplateFiles {
 

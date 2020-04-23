@@ -10,9 +10,9 @@ import java.security.NoSuchAlgorithmException;
  *  MD5工具类,支持使用默认编码格式的，指定编码格式的，区分结果大小写的
  *  
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-24 00:26:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-24 00:26:59
+ * @version: 1.0
  */
 public class MD5Utils {
     /** LOG 日志工具 */

@@ -11,9 +11,9 @@ import java.util.Random;
  * <PRE>
  *  随机生成器工具.
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:45:53
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:45:53
+ * @version: 1.0
  */
 public class RandomUtils extends org.apache.commons.lang3.RandomUtils {
 	

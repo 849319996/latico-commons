@@ -27,9 +27,9 @@ import java.util.concurrent.atomic.AtomicLong;
  * Reactor模式是基于同步I/O的，而Proactor模式是和异步I/O相关的。
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-02-05 19:55
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-05 19:55
+ * @version: 1.0
  */
 public class AIOUtils {
 

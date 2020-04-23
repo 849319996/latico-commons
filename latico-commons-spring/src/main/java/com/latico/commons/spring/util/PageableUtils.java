@@ -9,9 +9,9 @@ import org.springframework.data.domain.Sort;
  * spring data jpa的分页工具
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-06-13 9:59
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-13 9:59
+ * @version: 1.0
  */
 public class PageableUtils {
 

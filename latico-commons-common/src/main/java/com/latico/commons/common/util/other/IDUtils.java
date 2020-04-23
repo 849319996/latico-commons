@@ -10,9 +10,9 @@ import java.util.UUID;
  * <PRE>
  *  唯一性ID生成器工具.
  * </PRE>
- * @Author: latico
- * @Date: 2018/12/16 02:57:38
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/16 02:57:38
+ * @version: 1.0
  */
 public class IDUtils {
 

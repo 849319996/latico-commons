@@ -11,9 +11,9 @@ import java.util.Date;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-11-07 10:20
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-11-07 10:20
+ * @version: 1.0
  */
 public class SyslogUtils {
 

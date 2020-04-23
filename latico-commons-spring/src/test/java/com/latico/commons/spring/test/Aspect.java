@@ -7,9 +7,9 @@ import org.aspectj.lang.JoinPoint;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-01 21:35
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-01 21:35
+ * @version: 1.0
  */
 public class Aspect {
 

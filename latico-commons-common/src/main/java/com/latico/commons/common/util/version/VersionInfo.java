@@ -6,9 +6,9 @@ import java.util.List;
  * <PRE>
  *  版本信息
  * </PRE>
- * @Author: latico
- * @Date: 2020-01-13 11:10:37
- * @Version: 1.0
+ * @author: latico
+ * @date: 2020-01-13 11:10:37
+ * @version: 1.0
  */
 public class VersionInfo {
 

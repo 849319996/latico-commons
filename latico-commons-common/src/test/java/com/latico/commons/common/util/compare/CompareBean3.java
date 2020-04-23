@@ -11,9 +11,9 @@ import javax.persistence.Table;
 
 
 /**
- * @Author: latico
- * @Date: 2018/12/05 16:00
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/05 16:00
+ * @version: 1.0
  */
 @Table(name = "Compare_Bean")
 @CompareAnnotation

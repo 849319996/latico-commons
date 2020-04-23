@@ -6,9 +6,9 @@ import java.lang.annotation.*;
  * <PRE>
  *  日志实现注解
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:47:35
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:47:35
+ * @version: 1.0
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

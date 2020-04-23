@@ -11,9 +11,9 @@ import java.util.Properties;
 
 /**
  * properties文件工具
- * @Author: latico
- * @Date: 2018/12/11 1:25
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/11 1:25
+ * @version: 1.0
  */
 public class PropertiesUtils {
 

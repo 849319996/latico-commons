@@ -19,9 +19,9 @@ import com.latico.commons.common.util.codec.CodecUtils;
  * 10:closeConnAlarm
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-13 22:08
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-13 22:08
+ * @version: 1.0
  */
 public class OmcProtocol {
     /**

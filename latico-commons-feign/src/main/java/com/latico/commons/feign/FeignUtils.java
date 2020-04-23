@@ -12,9 +12,9 @@ import feign.jaxrs.JAXRSContract;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-03-05 17:10
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-03-05 17:10
+ * @version: 1.0
  */
 public class FeignUtils {
 

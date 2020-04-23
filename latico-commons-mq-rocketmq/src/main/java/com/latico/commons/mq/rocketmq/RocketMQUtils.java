@@ -15,9 +15,9 @@ package com.latico.commons.mq.rocketmq;
  二、linux方式启动
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-26 22:05
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-26 22:05
+ * @version: 1.0
  */
 public class RocketMQUtils {
 }

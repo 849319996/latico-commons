@@ -20,9 +20,9 @@ import java.util.Properties;
  * mail.send("title-1", "content-abcdefg");
  * mail.send("title-2", "content-xyzzyx");
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 01:11:53
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 01:11:53
+ * @version: 1.0
  */
 public class SmtpEmailClient {
 

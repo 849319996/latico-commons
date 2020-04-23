@@ -8,9 +8,9 @@ import java.util.BitSet;
  * 里面用了一个long数组存储数据：{@link BitSet#words}
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-08-20 14:14
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-08-20 14:14
+ * @version: 1.0
  */
 @SuppressWarnings("JavadocReference")
 public class BitSetUtils {

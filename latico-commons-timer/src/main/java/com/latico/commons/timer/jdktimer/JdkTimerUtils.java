@@ -5,9 +5,9 @@ package com.latico.commons.timer.jdktimer;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-02-06 22:21
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-02-06 22:21
+ * @version: 1.0
  */
 public class JdkTimerUtils {
 }

@@ -12,9 +12,9 @@ import java.util.Collection;
  * 管理器
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-11-08 23:21
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-11-08 23:21
+ * @version: 1.0
  */
 public class NettyServerManager <SEND_DATA, RECEIVE_DATA> {
 

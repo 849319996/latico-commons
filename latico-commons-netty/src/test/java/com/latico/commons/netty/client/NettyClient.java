@@ -7,9 +7,9 @@ import java.util.List;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-12-05 14:25
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-12-05 14:25
+ * @version: 1.0
  */
 public interface NettyClient<T> {
 

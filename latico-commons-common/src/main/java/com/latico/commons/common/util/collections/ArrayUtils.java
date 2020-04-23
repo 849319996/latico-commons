@@ -11,9 +11,9 @@ import java.util.Set;
  * 数组工具类
  *
  * JDK自带的数组工具类{@link java.util.Arrays}
- * @Author: latico
- * @Date: 2018/12/12 22:06
- * @Version: 1.0
+ * @author: latico
+ * @date: 2018/12/12 22:06
+ * @version: 1.0
  */
 public class ArrayUtils extends org.apache.commons.lang3.ArrayUtils {
 

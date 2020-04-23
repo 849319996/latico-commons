@@ -29,9 +29,9 @@ import java.util.concurrent.ConcurrentSkipListMap;
  Log LOG5 = LogFactory.getLog(Version.class);
  Logger LOG6 = LogFactory.getLogger(Version.class);
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-27 11:47:08
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-27 11:47:08
+ * @version: 1.0
  */
 public class LogFactory {
 

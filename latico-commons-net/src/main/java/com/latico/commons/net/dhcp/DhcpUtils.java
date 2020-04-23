@@ -17,9 +17,9 @@ import java.net.InetAddress;
  *
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-22 9:46
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-22 9:46
+ * @version: 1.0
  */
 public class DhcpUtils {
 

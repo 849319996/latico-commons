@@ -16,9 +16,9 @@ package com.latico.commons.common.envm;
  * Referer:http://live.bilibili.com/269706
  * User-Agent:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
  * </PRE>
- * @Author: latico
- * @Date: 2019-06-30 01:25:08
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-06-30 01:25:08
+ * @version: 1.0
  */
 public class HttpHead {
 

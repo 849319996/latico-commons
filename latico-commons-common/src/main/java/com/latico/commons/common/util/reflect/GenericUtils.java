@@ -12,9 +12,9 @@ import java.util.List;
  * 泛型工具类
  * </PRE>
  *
- * @Author: latico
- * @Date: 2019-01-17 10:23:28
- * @Version: 1.0
+ * @author: latico
+ * @date: 2019-01-17 10:23:28
+ * @version: 1.0
  */
 public class GenericUtils {
 
