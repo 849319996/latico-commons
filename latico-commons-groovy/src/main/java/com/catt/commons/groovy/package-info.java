@@ -1,5 +1,12 @@
 /**
  * <PRE>
+ * 多种groovy的实现
+ *
+ * java整合Groovy的四种方式：
+ * ScriptEngineManager
+ * GroovyShell
+ * GroovyClassLoader
+ * GroovyScriptEngine
  *
  * </PRE>
  *
