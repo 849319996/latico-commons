@@ -224,6 +224,12 @@
             <version>1.0.0</version>
         </dependency>
         <!--公共包系列-->
+        <!-- https://mvnrepository.com/artifact/org.apache.hbase/hbase-client -->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>1.6.0</version>
+        </dependency>
 
     </dependencies>
 </project>

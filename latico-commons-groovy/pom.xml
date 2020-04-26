@@ -225,11 +225,13 @@
         </dependency>
         <!--公共包系列-->
 
-        <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
+        <!-- 直接使用JDK自带的解析器（com.catt.commons.groovy.GroovyScriptEngineManagerUtils）的话，不需要下面这个依赖 -->
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>3.0.3</version>
+            <version>3.0.2</version>
+            <type>pom</type>
+            <optional>true</optional>
         </dependency>
 
         <dependency>

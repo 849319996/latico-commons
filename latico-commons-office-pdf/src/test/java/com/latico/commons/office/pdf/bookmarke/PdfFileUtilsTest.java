@@ -527,5 +527,13 @@ public class PdfFileUtilsTest {
         BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
     }
 
+    @Test
+    public void test65() throws Exception {
+        int addNum = 0;
+        String dir = "bookmarke/src/";
+        String file = dir + "Groovy中文教程.txt";
+        BookMarkeUtils.makeBookMarkePageAdd(file, addNum);
+    }
+
 
 }
